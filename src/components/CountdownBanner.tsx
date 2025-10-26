@@ -30,7 +30,7 @@ const CountdownBanner = () => {
     <div className="bg-[hsl(var(--sale-banner))] text-[hsl(var(--sale-banner-foreground))] py-3 px-4">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-4 text-center">
         <span className="font-semibold text-sm md:text-base">
-          🎃 Early Halloween Sale ends in 🎃
+          🎃 La Venta de Halloween Termina en 🎃
         </span>
         <div className="flex items-center gap-2">
           <div className="flex gap-1">

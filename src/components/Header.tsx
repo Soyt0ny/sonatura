@@ -8,13 +8,13 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <nav className="hidden md:flex items-center gap-6">
             <Button variant="default" className="bg-primary hover:bg-primary/90">
-              SHOP
+              TIENDA
             </Button>
             <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">
-              ABOUT
+              NOSOTROS
             </a>
             <a href="#reviews" className="text-sm font-medium hover:text-primary transition-colors">
-              REVIEWS
+              RESEÑAS
             </a>
             <a href="#blog" className="text-sm font-medium hover:text-primary transition-colors">
               BLOG

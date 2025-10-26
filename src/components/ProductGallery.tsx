@@ -12,7 +12,7 @@ const ProductGallery = () => {
       <div className="relative aspect-square bg-accent rounded-lg overflow-hidden">
         <img
           src={images[selectedImage]}
-          alt="Product"
+          alt="Producto"
           className="w-full h-full object-cover"
         />
       </div>

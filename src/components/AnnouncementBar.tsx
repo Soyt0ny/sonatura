@@ -7,11 +7,11 @@ const AnnouncementBar = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center">
           <div className="flex items-center gap-2">
             <Truck className="h-5 w-5" />
-            <span className="text-sm font-medium">Free Shipping Today</span>
+            <span className="text-sm font-medium">Envío Gratis Hoy</span>
           </div>
           <div className="flex items-center gap-2">
             <Heart className="h-5 w-5" />
-            <span className="text-sm font-medium">72,500+ Happy Babes</span>
+            <span className="text-sm font-medium">72,500+ Clientas Felices</span>
           </div>
         </div>
       </div>
