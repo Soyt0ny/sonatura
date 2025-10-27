@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
+import ProductGallery from "@/components/ProductGallery";
 
 const ProductInfo = () => {
   const [selectedPackage, setSelectedPackage] = useState("4");
@@ -29,6 +30,11 @@ const ProductInfo = () => {
         <h1 className="text-3xl md:text-4xl font-bold mb-2">
           Sérum de Crecimiento de Pestañas
         </h1>
+      </div>
+
+      <ProductGallery />
+
+      <div>
         <p className="text-xl text-primary font-semibold">
           - Ahorra Hasta 56% Hoy + 4 Regalos GRATIS
         </p>

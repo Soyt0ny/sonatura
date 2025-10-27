@@ -1,7 +1,6 @@
 import CountdownBanner from "@/components/CountdownBanner";
 import Header from "@/components/Header";
 import AnnouncementBar from "@/components/AnnouncementBar";
-import ProductGallery from "@/components/ProductGallery";
 import ProductInfo from "@/components/ProductInfo";
 
 const Index = () => {
@@ -12,13 +11,8 @@ const Index = () => {
       <AnnouncementBar />
       
       <main className="container mx-auto px-4 py-8 md:py-12">
-        <div className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto">
-          <div className="order-2 md:order-1">
-            <ProductGallery />
-          </div>
-          <div className="order-1 md:order-2">
-            <ProductInfo />
-          </div>
+        <div className="max-w-7xl mx-auto">
+          <ProductInfo />
         </div>
 
         {/* How It Works Section */}
