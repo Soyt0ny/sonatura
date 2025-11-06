@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 import ProductGallery from "@/components/ProductGallery";
 import { ReviewsCarousel } from "@/components/ReviewsCarousel";
 const ProductInfo = () => {
-  return <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+  return <div className="grid md:grid-cols-2 gap-6 md:gap-12 px-4 md:px-0">
       {/* Columna izquierda - Imágenes (solo en desktop) */}
       <div className="hidden md:block">
         <ProductGallery />
       </div>
 
       {/* Columna derecha - Información */}
-      <div className="space-y-6">
+      <div className="space-y-4 md:space-y-6">
         <div className="flex items-center gap-2">
           <div className="flex">
             {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
@@ -19,23 +19,23 @@ const ProductInfo = () => {
         </div>
 
         <div>
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">50% DE DESCUENTO + 4 REGALOS EXTRA</h1>
+          <h1 className="text-2xl md:text-4xl font-bold mb-2 leading-tight">50% DE DESCUENTO + 4 REGALOS EXTRA</h1>
         </div>
 
         {/* Imágenes en móvil - después del título */}
-        <div className="md:hidden">
+        <div className="md:hidden -mx-4">
           <ProductGallery />
         </div>
 
         <div>
-          <p className="text-xl text-primary font-semibold">
+          <p className="text-lg md:text-xl text-primary font-semibold">
             - Ahorra Hasta 56% Hoy + 4 Regalos GRATIS
           </p>
         </div>
 
-        <div className="bg-accent/50 border border-primary/20 rounded-lg p-4">
-          <h3 className="font-semibold text-lg mb-3">Obtén pestañas más llenas y saludables en 30 días</h3>
-          <div className="grid grid-cols-2 gap-4">
+        <div className="bg-accent/50 border border-primary/20 rounded-lg p-3 md:p-4">
+          <h3 className="font-semibold text-base md:text-lg mb-3">Obtén pestañas más llenas y saludables en 30 días</h3>
+          <div className="grid grid-cols-2 gap-3 md:gap-4">
             <div className="flex items-start gap-2">
               <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
               <span className="text-sm">Resultados en 2 semanas</span>
@@ -66,20 +66,20 @@ const ProductInfo = () => {
         </div>
 
         <div className="space-y-3">
-          <Button size="lg" className="w-full text-lg h-14">
+          <Button size="lg" className="w-full text-base md:text-lg h-12 md:h-14">
             Agregar al Carrito
           </Button>
-          <p className="text-center text-sm text-muted-foreground">
+          <p className="text-center text-xs md:text-sm text-muted-foreground">
             3ML = 30 APLICACIONES, SOLO $0.10/APLICACIÓN
           </p>
         </div>
 
-        <div className="bg-secondary rounded-lg p-4">
-          <h4 className="font-semibold mb-3 text-center">¡VENTA EXCLUSIVA! Regalos GRATIS con tu Primera Orden</h4>
-          <div className="grid grid-cols-4 gap-2">
-            {["GRATIS $10", "GRATIS $6", "GRATIS $19", "GRATIS $25"].map((gift, idx) => <div key={idx} className="bg-accent rounded-lg p-3 text-center">
-                <div className="aspect-square bg-primary/10 rounded mb-2 flex items-center justify-center">
-                  <span className="text-xs font-bold text-primary">{gift}</span>
+        <div className="bg-secondary rounded-lg p-3 md:p-4">
+          <h4 className="font-semibold mb-3 text-center text-sm md:text-base">¡VENTA EXCLUSIVA! Regalos GRATIS con tu Primera Orden</h4>
+          <div className="grid grid-cols-4 gap-1.5 md:gap-2">
+            {["GRATIS $10", "GRATIS $6", "GRATIS $19", "GRATIS $25"].map((gift, idx) => <div key={idx} className="bg-accent rounded-lg p-2 md:p-3 text-center">
+                <div className="aspect-square bg-primary/10 rounded mb-1 md:mb-2 flex items-center justify-center">
+                  <span className="text-[10px] md:text-xs font-bold text-primary">{gift}</span>
                 </div>
               </div>)}
           </div>

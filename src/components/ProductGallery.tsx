@@ -8,7 +8,7 @@ const ProductGallery = () => {
   const [selectedImage, setSelectedImage] = useState(0);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-3 md:space-y-4">
       <div className="relative aspect-square bg-accent rounded-lg overflow-hidden">
         <img
           src={images[selectedImage]}
@@ -16,7 +16,7 @@ const ProductGallery = () => {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="grid grid-cols-5 gap-2">
+      <div className="grid grid-cols-5 gap-1.5 md:gap-2 px-4 md:px-0">
         {images.map((img, idx) => (
           <button
             key={idx}

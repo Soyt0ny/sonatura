@@ -57,18 +57,19 @@ export const ReviewsCarousel = () => {
         <CarouselContent>
           {reviews.map((review, index) => (
             <CarouselItem key={index}>
-              <Card className="p-4 bg-card">
-                <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <p className="font-semibold text-foreground">{review.name}</p>
+              <Card className="p-3 md:p-4 bg-card">
+                <div className="flex items-start justify-between mb-2 gap-2">
+                  <div className="min-w-0">
+                    <p className="font-semibold text-foreground text-sm md:text-base truncate">{review.name}</p>
                     <p className="text-xs text-muted-foreground">{review.date}</p>
                   </div>
-                  <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                    <CheckCircle className="w-4 h-4 text-primary" />
-                    <span>Cliente verificado</span>
+                  <div className="flex items-center gap-1 text-xs text-muted-foreground flex-shrink-0">
+                    <CheckCircle className="w-3 h-3 md:w-4 md:h-4 text-primary" />
+                    <span className="hidden sm:inline">Cliente verificado</span>
+                    <span className="sm:hidden">Verificado</span>
                   </div>
                 </div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                   {review.text}
                 </p>
               </Card>
