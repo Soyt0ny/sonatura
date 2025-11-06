@@ -1,41 +1,8 @@
 import { Star, Clock, DollarSign, Sparkles, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
-import { useState } from "react";
 import ProductGallery from "@/components/ProductGallery";
+import { ReviewsCarousel } from "@/components/ReviewsCarousel";
 const ProductInfo = () => {
-  const [selectedPackage, setSelectedPackage] = useState("4");
-  const packages = [{
-    id: "1",
-    bottles: "1 Botella",
-    discount: "38%",
-    price: "$24",
-    originalPrice: "$39",
-    perUnit: "$24/cada una"
-  }, {
-    id: "2",
-    bottles: "2 Botellas",
-    discount: "45%",
-    price: "$43",
-    originalPrice: "$78",
-    perUnit: "$21.5/cada una"
-  }, {
-    id: "3",
-    bottles: "3 Botellas",
-    discount: "50%",
-    price: "$59",
-    originalPrice: "$117",
-    perUnit: "$19.6/cada una"
-  }, {
-    id: "4",
-    bottles: "4 Botellas",
-    discount: "53%",
-    price: "$70",
-    originalPrice: "$149",
-    perUnit: "$17.5/cada una",
-    badge: "MEJOR OFERTA"
-  }];
   return <div className="grid md:grid-cols-2 gap-8 md:gap-12">
       {/* Columna izquierda - Imágenes (solo en desktop) */}
       <div className="hidden md:block">
@@ -95,32 +62,7 @@ const ProductInfo = () => {
         </div>
 
         <div>
-          <h3 className="font-semibold mb-3">Cantidad:</h3>
-          <RadioGroup value={selectedPackage} onValueChange={setSelectedPackage}>
-            <div className="space-y-3">
-              {packages.map(pkg => <div key={pkg.id} className="relative">
-                  {pkg.badge && <div className="absolute -top-2 left-1/2 -translate-x-1/2 z-10">
-                      <span className="bg-[hsl(var(--badge-best))] text-[hsl(var(--badge-best-foreground))] text-xs font-bold px-3 py-1 rounded-full">
-                        {pkg.badge}
-                      </span>
-                    </div>}
-                  <Label htmlFor={pkg.id} className={`flex items-center justify-between p-4 rounded-lg border-2 cursor-pointer transition-all ${selectedPackage === pkg.id ? "border-primary bg-accent" : "border-border hover:border-primary/50"}`}>
-                    <div className="flex items-center gap-3">
-                      <RadioGroupItem value={pkg.id} id={pkg.id} />
-                      <div>
-                        <p className="font-semibold">{pkg.bottles}</p>
-                        <p className="text-sm text-muted-foreground">Ahorra {pkg.discount}</p>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <p className="font-bold text-lg">{pkg.price}</p>
-                      <p className="text-xs text-muted-foreground line-through">{pkg.originalPrice}</p>
-                      <p className="text-xs text-primary">{pkg.perUnit}</p>
-                    </div>
-                  </Label>
-                </div>)}
-            </div>
-          </RadioGroup>
+          <ReviewsCarousel />
         </div>
 
         <div className="space-y-3">
