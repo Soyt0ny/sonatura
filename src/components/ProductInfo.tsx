@@ -144,7 +144,7 @@ const ProductInfo = () => {
             <div className="flex items-baseline gap-2">
               <p className="text-2xl font-bold text-foreground">$49.99</p>
             </div>
-            <p className="text-xs text-foreground mt-1">O solo $14.08/mo affirm<span className="font-semibold underline">$14.08/mo</span> <span className="text-primary font-semibold">affirm</span>
+            <p className="text-xs text-foreground mt-1">O solo $8.3/mes Shopay<span className="font-semibold underline">$14.08/mo</span> <span className="text-primary font-semibold">affirm</span>
             </p>
           </div>
 
@@ -195,13 +195,23 @@ const ProductInfo = () => {
             <span className="font-extrabold">EXCLUSIVE SALE!</span> FREE Gifts With Your First Order
           </h4>
           <div className="grid grid-cols-4 gap-3">
-            {[
-              { value: "$10", name: "Digital Book", image: giftDigitalBook },
-              { value: "$6", name: "Free Shipping", image: giftFreeShipping },
-              { value: "$19", name: "Lash Curler", image: giftLashCurler },
-              { value: "$25", name: "Mascara", image: giftMascara }
-            ].map((gift, idx) => (
-              <div key={idx} className="flex flex-col items-center">
+            {[{
+            value: "$10",
+            name: "Digital Book",
+            image: giftDigitalBook
+          }, {
+            value: "$6",
+            name: "Free Shipping",
+            image: giftFreeShipping
+          }, {
+            value: "$19",
+            name: "Lash Curler",
+            image: giftLashCurler
+          }, {
+            value: "$25",
+            name: "Mascara",
+            image: giftMascara
+          }].map((gift, idx) => <div key={idx} className="flex flex-col items-center">
                 <div className="border border-dashed border-foreground/30 rounded-sm p-2.5 w-full">
                   <div className="text-center mb-2">
                     <span className="text-[9px] font-bold">GRATIS <span className="line-through decoration-1">{gift.value}</span></span>
@@ -213,8 +223,7 @@ const ProductInfo = () => {
                 <div className="text-center mt-2">
                   <span className="text-[11px] font-semibold leading-tight">{gift.name}</span>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
 
@@ -223,12 +232,7 @@ const ProductInfo = () => {
           <CountdownTimer />
           
           <div className="space-y-0">
-            <Button 
-              id="original-cart-button"
-              size="lg" 
-              variant="cta"
-              className="w-full text-base font-bold h-14 uppercase tracking-wide"
-            >
+            <Button id="original-cart-button" size="lg" variant="cta" className="w-full text-base font-bold h-14 uppercase tracking-wide">
               Agregar al Carrito | $169
             </Button>
             
