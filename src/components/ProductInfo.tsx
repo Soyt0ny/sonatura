@@ -144,7 +144,9 @@ const ProductInfo = () => {
             <div className="flex items-baseline gap-2">
               <p className="text-2xl font-bold text-foreground">$49.99</p>
             </div>
-            
+            <p className="text-sm text-foreground mt-1">
+              O solo <span className="font-semibold">$9 al mes X6 meses</span>
+            </p>
           </div>
 
           <p className="text-base text-foreground leading-relaxed">
