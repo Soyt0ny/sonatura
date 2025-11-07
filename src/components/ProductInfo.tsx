@@ -373,27 +373,27 @@ const ProductInfo = () => {
           </div>
 
           {/* Product Information Accordion */}
-          <div className="mt-8">
+          <div className="mt-8 pt-6 border-t border-border">
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="good-to-know">
-                <AccordionTrigger className="text-lg font-bold">Good To Know</AccordionTrigger>
-                <AccordionContent className="text-sm text-muted-foreground space-y-2">
+                <AccordionTrigger className="text-base font-bold">Good To Know</AccordionTrigger>
+                <AccordionContent className="text-xs text-muted-foreground space-y-2">
                   <p>The 4-in-1 Radiant Renewal Skincare Wand combines red light therapy, therapeutic warmth, galvanic current, and facial massage to deliver professional-grade skincare results at home.</p>
                   <p>Clinically proven to reduce fine lines and wrinkles while boosting collagen production for firmer, more youthful-looking skin.</p>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="description">
-                <AccordionTrigger className="text-lg font-bold">Description</AccordionTrigger>
-                <AccordionContent className="text-sm text-muted-foreground space-y-2">
+                <AccordionTrigger className="text-base font-bold">Description</AccordionTrigger>
+                <AccordionContent className="text-xs text-muted-foreground space-y-2">
                   <p>This award-winning skincare wand uses 4 science-backed technologies to transform your skin in just 12 minutes a day. With its rotating head and built-in timer, you have complete control over targeting specific areas of concern.</p>
                   <p>Perfect for all skin types, this device helps reduce puffiness, smooth fine lines, boost radiance, and refresh tired skin for a naturally glowing complexion.</p>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="technology">
-                <AccordionTrigger className="text-lg font-bold">Technology</AccordionTrigger>
-                <AccordionContent className="text-sm text-muted-foreground space-y-2">
+                <AccordionTrigger className="text-base font-bold">Technology</AccordionTrigger>
+                <AccordionContent className="text-xs text-muted-foreground space-y-2">
                   <p><strong>Red Light Therapy (630nm):</strong> Stimulates collagen production and reduces the appearance of fine lines and wrinkles.</p>
                   <p><strong>Therapeutic Warmth:</strong> Relaxes facial muscles and soothes skin for enhanced product absorption.</p>
                   <p><strong>Galvanic Current:</strong> Activates serums and deeply hydrates skin for maximum effectiveness.</p>
@@ -402,8 +402,8 @@ const ProductInfo = () => {
               </AccordionItem>
 
               <AccordionItem value="how-to-use">
-                <AccordionTrigger className="text-lg font-bold">How to Use</AccordionTrigger>
-                <AccordionContent className="text-sm text-muted-foreground space-y-2">
+                <AccordionTrigger className="text-base font-bold">How to Use</AccordionTrigger>
+                <AccordionContent className="text-xs text-muted-foreground space-y-2">
                   <p>1. Cleanse your face and apply your favorite serum or moisturizer</p>
                   <p>2. Turn on the device and select your desired mode</p>
                   <p>3. Gently glide the wand across your face in upward motions</p>
@@ -414,8 +414,8 @@ const ProductInfo = () => {
               </AccordionItem>
 
               <AccordionItem value="specs">
-                <AccordionTrigger className="text-lg font-bold">Specs & What's Included</AccordionTrigger>
-                <AccordionContent className="text-sm text-muted-foreground space-y-2">
+                <AccordionTrigger className="text-base font-bold">Specs & What's Included</AccordionTrigger>
+                <AccordionContent className="text-xs text-muted-foreground space-y-2">
                   <p><strong>What's Included:</strong></p>
                   <ul className="list-disc pl-5 space-y-1">
                     <li>1x Radiant Renewal Skincare Wand</li>
@@ -436,8 +436,8 @@ const ProductInfo = () => {
               </AccordionItem>
 
               <AccordionItem value="sustainability">
-                <AccordionTrigger className="text-lg font-bold">Sustainability</AccordionTrigger>
-                <AccordionContent className="text-sm text-muted-foreground space-y-2">
+                <AccordionTrigger className="text-base font-bold">Sustainability</AccordionTrigger>
+                <AccordionContent className="text-xs text-muted-foreground space-y-2">
                   <p>We're committed to sustainable beauty practices. Our device is built to last for years, reducing the need for disposable beauty products.</p>
                   <p>Packaging is made from 100% recyclable materials, and we partner with carbon-neutral shipping providers to minimize our environmental impact.</p>
                 </AccordionContent>
