@@ -181,23 +181,23 @@ const ProductInfo = () => {
         </div>
 
         <div className="border border-border rounded-lg p-4">
-          <h3 className="font-bold text-base mb-4">Baja tu cortisol y </h3>
+          <h3 className="font-bold text-base mb-4">Recupera tu belleza, tu salud y tu energía en 14 días sin productos químicos...</h3>
           <div className="space-y-3">
             <div className="flex items-start gap-3">
               <div className="text-primary text-xl flex-shrink-0">✦</div>
-              <span className="text-sm">Boosts collagen & reduces wrinkles (Red Light Therapy, 630nm)</span>
+              <span className="text-sm">Deshincha tu abdomen y tu rostro (bajando tu cortisol)</span>
             </div>
             <div className="flex items-start gap-3">
               <div className="text-primary text-xl flex-shrink-0">≈</div>
-              <span className="text-sm">Relaxes & soothes skin (Therapeutic Warmth)</span>
+              <span className="text-sm">Elimina acne hormonal (protocolo super calm y protocolo Afrodita)</span>
             </div>
             <div className="flex items-start gap-3">
               <div className="text-primary text-xl flex-shrink-0">⇈</div>
-              <span className="text-sm">Activates serum & deeply hydrates (Galvanic Current)</span>
+              <span className="text-sm">Elimina fatiga durante el día, insomnio y apariencia de cansancio.</span>
             </div>
             <div className="flex items-start gap-3">
               <div className="text-primary text-xl flex-shrink-0">◎</div>
-              <span className="text-sm">Reduces puffiness (Facial Massage)</span>
+              <span className="text-sm">Reduce tu estrés de forma natural y acelera tu metabolismo sin depender de productos químicos que dañan tu salud.</span>
             </div>
           </div>
         </div>
@@ -215,22 +215,22 @@ const ProductInfo = () => {
           </h4>
           <div className="grid grid-cols-4 gap-3">
             {[{
-            value: "$10",
-            name: "Digital Book",
-            image: giftDigitalBook
-          }, {
-            value: "$6",
-            name: "Free Shipping",
-            image: giftFreeShipping
-          }, {
-            value: "$19",
-            name: "Lash Curler",
-            image: giftLashCurler
-          }, {
-            value: "$25",
-            name: "Mascara",
-            image: giftMascara
-          }].map((gift, idx) => <div key={idx} className="flex flex-col items-center">
+              value: "$10",
+              name: "Digital Book",
+              image: giftDigitalBook
+            }, {
+              value: "$6",
+              name: "Free Shipping",
+              image: giftFreeShipping
+            }, {
+              value: "$19",
+              name: "Lash Curler",
+              image: giftLashCurler
+            }, {
+              value: "$25",
+              name: "Mascara",
+              image: giftMascara
+            }].map((gift, idx) => <div key={idx} className="flex flex-col items-center">
                 <div className="border border-dashed border-foreground/30 rounded-sm p-2.5 w-full">
                   <div className="text-center mb-2">
                     <span className="text-[9px] font-bold">GRATIS <span className="line-through decoration-1">{gift.value}</span></span>
@@ -264,14 +264,11 @@ const ProductInfo = () => {
             <span className={copied ? "text-primary font-medium" : "text-muted-foreground"}>
               {copied ? "✓ ¡Código copiado!" : "Para 10% extra usa el código"}
             </span>
-            <button
-              onClick={() => {
-                navigator.clipboard.writeText("2026");
-                setCopied(true);
-                setTimeout(() => setCopied(false), 2000);
-              }}
-              className="inline-flex items-center gap-1 font-semibold text-foreground underline decoration-primary/40 underline-offset-2 hover:decoration-primary transition-colors"
-            >
+            <button onClick={() => {
+              navigator.clipboard.writeText("2026");
+              setCopied(true);
+              setTimeout(() => setCopied(false), 2000);
+            }} className="inline-flex items-center gap-1 font-semibold text-foreground underline decoration-primary/40 underline-offset-2 hover:decoration-primary transition-colors">
               2026
               <Copy className="w-3 h-3 opacity-50" />
             </button>
@@ -513,23 +510,21 @@ const ProductInfo = () => {
           Inspirado en prácticas aprobadas por...
         </p>
         <div className="grid grid-cols-4 gap-4 md:gap-8 items-center justify-items-center">
-          {[
-            { src: logoApa, alt: "American Psychological Association" },
-            { src: logoNonGmo, alt: "Non GMO Project" },
-            { src: logoCrueltyFree, alt: "Cruelty Free" },
-            { src: logoUsdaOrganic, alt: "USDA Organic" }
-          ].map((logo, i) => (
-            <div 
-              key={i} 
-              className="w-full h-28 md:h-32 flex items-center justify-center p-2"
-            >
-              <img 
-                src={logo.src} 
-                alt={logo.alt} 
-                className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
-              />
-            </div>
-          ))}
+          {[{
+            src: logoApa,
+            alt: "American Psychological Association"
+          }, {
+            src: logoNonGmo,
+            alt: "Non GMO Project"
+          }, {
+            src: logoCrueltyFree,
+            alt: "Cruelty Free"
+          }, {
+            src: logoUsdaOrganic,
+            alt: "USDA Organic"
+          }].map((logo, i) => <div key={i} className="w-full h-28 md:h-32 flex items-center justify-center p-2">
+              <img src={logo.src} alt={logo.alt} className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-300" />
+            </div>)}
         </div>
       </div>
     </div>
