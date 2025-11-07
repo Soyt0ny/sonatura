@@ -487,7 +487,7 @@ const ProductInfo = () => {
         <p className="text-center text-sm font-medium text-muted-foreground mb-6">
           Inspirado en prácticas aprobadas por...
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 items-center justify-items-center">
+        <div className="grid grid-cols-4 gap-4 md:gap-8 items-center justify-items-center">
           {[1, 2, 3, 4].map((i) => (
             <div 
               key={i} 
