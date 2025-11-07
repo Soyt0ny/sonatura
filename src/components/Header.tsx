@@ -4,7 +4,7 @@ import sonaturaLogo from "@/assets/sonatura-logo.png";
 
 const Header = () => {
   return (
-    <header className="bg-background border-b sticky top-0 z-50">
+    <header className="bg-background border-b border-border/40 sticky top-0 z-50 backdrop-blur-sm bg-background/95">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Menú hamburguesa a la izquierda */}

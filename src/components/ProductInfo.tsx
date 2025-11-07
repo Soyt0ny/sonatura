@@ -78,7 +78,7 @@ const ProductInfo = () => {
           
         </div>
 
-        <div className="bg-accent/50 border border-primary/20 rounded-lg p-4">
+        <div className="bg-accent/30 border border-border/50 rounded-lg p-4">
           <h3 className="font-semibold text-lg mb-3">Regula tu cortisol y tu metabolismo en 14 días</h3>
           <div className="grid grid-cols-2 gap-4">
             <div className="flex items-start gap-2">
@@ -100,7 +100,7 @@ const ProductInfo = () => {
           </div>
         </div>
 
-        <div className="bg-primary/10 border-2 border-dashed border-primary rounded-lg p-3 text-center">
+        <div className="bg-accent/30 border border-dashed border-border rounded-lg p-3 text-center">
           <p className="text-sm font-semibold">
             🎁 Ordena antes del 28 de Oct. para recibir Regalos GRATIS garantizados
           </p>
@@ -132,7 +132,7 @@ const ProductInfo = () => {
           </div>
 
           {/* Sección de Stock Limitado */}
-          <div className="bg-background border rounded-lg p-3 space-y-2">
+          <div className="bg-accent/20 border border-border/60 rounded-lg p-3 space-y-2">
             <h3 className="text-base font-bold">SE ESTÁ AGOTANDO</h3>
             <p className="text-xs text-muted-foreground">Debido a la alta demanda, cantidades limitadas disponibles</p>
             <div className="space-y-1">
@@ -142,10 +142,10 @@ const ProductInfo = () => {
           </div>
 
           {/* Sección de Garantía */}
-          <div className="bg-accent/30 rounded-lg p-3">
+          <div className="bg-accent/20 border border-border/60 rounded-lg p-3">
             <div className="flex gap-3 items-start">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 rounded-full border-2 border-primary bg-background flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full border border-border bg-background flex items-center justify-center">
                   <div className="text-center">
                     <div className="text-xl font-bold text-primary">60</div>
                     <div className="text-[10px] text-muted-foreground">Días</div>
