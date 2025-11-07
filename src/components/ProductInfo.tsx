@@ -253,20 +253,9 @@ const ProductInfo = () => {
           </div>
           
           <div className="space-y-0">
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <Button id="original-cart-button" size="lg" variant="cta" className="flex-1 text-base font-bold h-14 uppercase tracking-wide rounded-xl">
-                  Agregar al Carrito | $49.99
-                </Button>
-                <div className="flex flex-col items-end">
-                  <span className="text-xs text-muted-foreground line-through">$99</span>
-                </div>
-              </div>
-              
-              <div className="flex justify-center">
-                <img src={paymentIcons} alt="Métodos de pago aceptados" className="h-8" />
-              </div>
-            </div>
+            <Button id="original-cart-button" size="lg" variant="cta" className="w-full text-base font-bold h-14 uppercase tracking-wide">
+              Agregar al Carrito | $169
+            </Button>
             
             {/* Warranty Icons Section */}
             <div className="grid grid-cols-3 gap-3 py-3 border-b border-border">
@@ -304,6 +293,10 @@ const ProductInfo = () => {
                 </div>
               </div>
             </div>
+          </div>
+          
+          <div className="flex justify-center">
+            <img src={paymentIcons} alt="Métodos de pago aceptados" className="h-8" />
           </div>
 
           {/* Sección de Stock Limitado */}
