@@ -132,7 +132,7 @@ const ProductInfo = () => {
             Agregar al Carrito
           </Button>
           
-          <div className="flex justify-center pt-2">
+          <div className="flex justify-center pt-1">
             <img src={paymentIcons} alt="Métodos de pago aceptados" className="h-8" />
           </div>
         </div>
