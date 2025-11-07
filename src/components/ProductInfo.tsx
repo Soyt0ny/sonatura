@@ -5,43 +5,33 @@ import ProductGallery from "@/components/ProductGallery";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
 import paymentIcons from "@/assets/payment-icons.png";
 import { useState, useEffect } from "react";
-
-const featuredReviews = [
-  {
-    name: "Christina A.",
-    date: "April 4, 2025",
-    review: "I love the Solawave Wand so much! It helps with any puffiness and I am seeing a reduction of fine lines."
-  },
-  {
-    name: "Sarah M.",
-    date: "March 28, 2025",
-    review: "After just 2 weeks, my skin looks brighter and feels so much smoother. The red light therapy is incredible!"
-  },
-  {
-    name: "Jessica L.",
-    date: "March 15, 2025",
-    review: "This wand has become part of my daily routine. My friends keep asking what I'm doing differently - my skin glows!"
-  },
-  {
-    name: "Amanda K.",
-    date: "February 22, 2025",
-    review: "Best investment for my skin! The combination of technologies really works. I've noticed fewer fine lines around my eyes."
-  },
-  {
-    name: "Rachel T.",
-    date: "February 10, 2025",
-    review: "I was skeptical at first, but wow! My skin feels tighter and looks more radiant. The built-in timer makes it so easy to use."
-  }
-];
-
+const featuredReviews = [{
+  name: "Christina A.",
+  date: "April 4, 2025",
+  review: "I love the Solawave Wand so much! It helps with any puffiness and I am seeing a reduction of fine lines."
+}, {
+  name: "Sarah M.",
+  date: "March 28, 2025",
+  review: "After just 2 weeks, my skin looks brighter and feels so much smoother. The red light therapy is incredible!"
+}, {
+  name: "Jessica L.",
+  date: "March 15, 2025",
+  review: "This wand has become part of my daily routine. My friends keep asking what I'm doing differently - my skin glows!"
+}, {
+  name: "Amanda K.",
+  date: "February 22, 2025",
+  review: "Best investment for my skin! The combination of technologies really works. I've noticed fewer fine lines around my eyes."
+}, {
+  name: "Rachel T.",
+  date: "February 10, 2025",
+  review: "I was skeptical at first, but wow! My skin feels tighter and looks more radiant. The built-in timer makes it so easy to use."
+}];
 const ProductInfo = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
-
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentReviewIndex((prev) => (prev + 1) % featuredReviews.length);
+      setCurrentReviewIndex(prev => (prev + 1) % featuredReviews.length);
     }, 7000);
-
     return () => clearInterval(interval);
   }, []);
   return <div className="grid md:grid-cols-2 gap-8 md:gap-12">
@@ -160,7 +150,7 @@ const ProductInfo = () => {
         </div>
 
         <div>
-          <h3 className="font-semibold mb-3">Reseñas de Clientes:</h3>
+          
           <ReviewsCarousel />
         </div>
 
@@ -220,15 +210,13 @@ const ProductInfo = () => {
             
             {/* Video Testimonials Grid - Optimized for Reels/TikTok */}
             <div className="grid grid-cols-4 gap-2 mb-4">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="relative aspect-[9/16] bg-muted rounded-lg overflow-hidden">
+              {[1, 2, 3, 4].map(i => <div key={i} className="relative aspect-[9/16] bg-muted rounded-lg overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-12 h-12 rounded-full bg-[#C83C2E] flex items-center justify-center">
                       <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             {/* Featured Reviews Carousel */}
@@ -256,18 +244,7 @@ const ProductInfo = () => {
               
               {/* Carousel Indicators */}
               <div className="flex justify-center gap-1.5 mt-3">
-                {featuredReviews.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setCurrentReviewIndex(idx)}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${
-                      idx === currentReviewIndex 
-                        ? 'w-6 bg-primary' 
-                        : 'w-1.5 bg-border hover:bg-primary/50'
-                    }`}
-                    aria-label={`Go to review ${idx + 1}`}
-                  />
-                ))}
+                {featuredReviews.map((_, idx) => <button key={idx} onClick={() => setCurrentReviewIndex(idx)} className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentReviewIndex ? 'w-6 bg-primary' : 'w-1.5 bg-border hover:bg-primary/50'}`} aria-label={`Go to review ${idx + 1}`} />)}
               </div>
             </div>
           </div>
