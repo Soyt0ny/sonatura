@@ -4,7 +4,7 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductInfo from "@/components/ProductInfo";
 const Index = () => {
   return <div className="min-h-screen">
-      <CountdownBanner />
+      
       <Header />
       
       
