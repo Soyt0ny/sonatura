@@ -15,6 +15,8 @@ import logoUsdaOrganic from "@/assets/logo-usda-organic.png";
 import { useState, useEffect } from "react";
 import { addDays, format } from "date-fns";
 import { es } from "date-fns/locale";
+import { toast } from "@/hooks/use-toast";
+import { Copy, Check } from "lucide-react";
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(59 * 60); // 59 minutos en segundos
 
@@ -69,6 +71,7 @@ const featuredReviews = [{
 const ProductInfo = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const [liveUsers, setLiveUsers] = useState(1150);
+  const [copied, setCopied] = useState(false);
 
   // Calcular la fecha de mañana
   const tomorrow = addDays(new Date(), 1);
@@ -254,6 +257,51 @@ const ProductInfo = () => {
               <span className="text-sm font-semibold text-foreground">{liveUsers.toLocaleString()}</span>
             </div>
             <span className="text-sm text-muted-foreground">personas viendo este producto</span>
+          </div>
+          
+          {/* Código de Descuento */}
+          <div className="bg-gradient-to-r from-primary/10 to-accent/20 border-2 border-dashed border-primary/40 rounded-lg p-4">
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex-1">
+                <p className="text-xs font-semibold text-muted-foreground mb-1">
+                  🎉 CÓDIGO DE DESCUENTO EXCLUSIVO
+                </p>
+                <p className="text-sm font-bold text-foreground mb-1">
+                  Obtén 10% OFF adicional
+                </p>
+                <div className="flex items-center gap-2">
+                  <code className="bg-background/80 border border-border px-3 py-1.5 rounded text-base font-bold text-primary tracking-wider">
+                    2026
+                  </code>
+                </div>
+              </div>
+              <Button
+                size="sm"
+                variant={copied ? "outline" : "default"}
+                className="flex-shrink-0"
+                onClick={() => {
+                  navigator.clipboard.writeText("2026");
+                  setCopied(true);
+                  toast({
+                    title: "¡Código copiado!",
+                    description: "Pégalo en el carrito para obtener tu descuento",
+                  });
+                  setTimeout(() => setCopied(false), 2000);
+                }}
+              >
+                {copied ? (
+                  <>
+                    <Check className="w-4 h-4 mr-2" />
+                    Copiado
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-4 h-4 mr-2" />
+                    Copiar
+                  </>
+                )}
+              </Button>
+            </div>
           </div>
           
           <div className="space-y-0">
