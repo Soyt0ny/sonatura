@@ -1,4 +1,4 @@
-import { Star, Clock, DollarSign, Sparkles, TrendingUp, Timer } from "lucide-react";
+import { Star, Clock, DollarSign, Sparkles, TrendingUp, Timer, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import ProductGallery from "@/components/ProductGallery";
@@ -222,9 +222,7 @@ const ProductInfo = () => {
               
               <div className="flex flex-col items-center text-center gap-1.5">
                 <div className="w-6 h-6 rounded-full border-2 border-[#4A5A8B] flex items-center justify-center">
-                  <svg className="w-3.5 h-3.5 text-[#4A5A8B]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Mail className="w-3.5 h-3.5 text-[#4A5A8B]" strokeWidth={2.5} />
                 </div>
                 <div className="text-[10px] font-semibold leading-tight">
                   <div>Entrega</div>
