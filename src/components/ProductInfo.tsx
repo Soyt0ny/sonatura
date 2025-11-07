@@ -194,10 +194,13 @@ const ProductInfo = () => {
           </div>
         </div>
 
-        <div className="bg-accent/30 border border-dashed border-border rounded-lg p-3 text-center">
-          <p className="text-sm font-semibold">
-            🎁 Ordena antes del {formattedDate} para recibir Regalos GRATIS garantizados
-          </p>
+        <div className="bg-background border-2 border-dashed border-[#FF6B6B] rounded-2xl p-4">
+          <div className="flex items-center gap-3">
+            <div className="w-4 h-4 rounded-full bg-[#FF6B6B] flex-shrink-0"></div>
+            <p className="text-base font-bold text-foreground">
+              Ordena antes del {formattedDate} para recibir Regalos GRATIS garantizados
+            </p>
+          </div>
         </div>
 
 
