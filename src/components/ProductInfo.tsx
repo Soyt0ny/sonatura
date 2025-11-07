@@ -186,14 +186,29 @@ const ProductInfo = () => {
         </div>
 
 
-        <div className="bg-secondary rounded-lg p-4">
-          <h4 className="font-semibold mb-3 text-center">¡VENTA EXCLUSIVA! Regalos GRATIS con tu Primera Orden</h4>
-          <div className="grid grid-cols-4 gap-2">
-            {["GRATIS $10", "GRATIS $6", "GRATIS $19", "GRATIS $25"].map((gift, idx) => <div key={idx} className="bg-accent rounded-lg p-3 text-center">
-                <div className="aspect-square bg-primary/10 rounded mb-2 flex items-center justify-center">
-                  <span className="text-xs font-bold text-primary">{gift}</span>
+        <div className="bg-secondary/30 rounded-lg p-4">
+          <h4 className="font-bold mb-4 text-center text-sm">¡VENTA EXCLUSIVA! Regalos GRATIS con tu Primera Orden</h4>
+          <div className="grid grid-cols-4 gap-3">
+            {[
+              { value: "$10", name: "Digital Book" },
+              { value: "$6", name: "Free Shipping" },
+              { value: "$19", name: "Lash Curler" },
+              { value: "$25", name: "Mascara" }
+            ].map((gift, idx) => (
+              <div key={idx} className="flex flex-col items-center">
+                <div className="border border-dashed border-border/60 rounded-md p-2 w-full">
+                  <div className="text-center mb-2">
+                    <span className="text-[10px] font-bold">FREE {gift.value}</span>
+                  </div>
+                  <div className="aspect-square bg-accent/20 rounded flex items-center justify-center mb-2">
+                    <span className="text-2xl">🎁</span>
+                  </div>
+                  <div className="text-center">
+                    <span className="text-[10px] font-medium leading-tight">{gift.name}</span>
+                  </div>
                 </div>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
 
