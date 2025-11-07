@@ -2,33 +2,27 @@ import { Star, Clock, DollarSign, Sparkles, TrendingUp, Timer } from "lucide-rea
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import ProductGallery from "@/components/ProductGallery";
-
 import paymentIcons from "@/assets/payment-icons.png";
 import { useState, useEffect } from "react";
 import { addDays, format } from "date-fns";
 import { es } from "date-fns/locale";
-
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(59 * 60); // 59 minutos en segundos
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft((prev) => {
+      setTimeLeft(prev => {
         if (prev <= 0) {
           return 59 * 60; // Reinicia a 59 minutos cuando llega a 0
         }
         return prev - 1;
       });
     }, 1000);
-
     return () => clearInterval(timer);
   }, []);
-
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
-
-  return (
-    <div className="border border-border/40 rounded-lg py-2 px-3">
+  return <div className="border border-border/40 rounded-lg py-2 px-3">
       <div className="flex items-center justify-between gap-3">
         <p className="text-[11px] font-medium text-muted-foreground">
           La oferta termina en
@@ -40,8 +34,7 @@ const CountdownTimer = () => {
           </span>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
 const featuredReviews = [{
   name: "Christina A.",
@@ -66,11 +59,12 @@ const featuredReviews = [{
 }];
 const ProductInfo = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
-  
+
   // Calcular la fecha de mañana
   const tomorrow = addDays(new Date(), 1);
-  const formattedDate = format(tomorrow, "d 'de' MMMM", { locale: es });
-  
+  const formattedDate = format(tomorrow, "d 'de' MMMM", {
+    locale: es
+  });
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentReviewIndex(prev => (prev + 1) % featuredReviews.length);
@@ -259,11 +253,11 @@ const ProductInfo = () => {
 
           {/* Sección de Stock Limitado */}
           <div className="bg-accent/20 border border-border/60 rounded-lg p-3 space-y-2">
-            <h3 className="text-base font-bold">SE ESTÁ AGOTANDO</h3>
-            <p className="text-xs text-muted-foreground">Debido a la alta demanda, cantidades limitadas disponibles</p>
+            <h3 className="text-base font-bold">SOLO 1,000 COPIAS A ESTE PRECIO</h3>
+            <p className="text-xs text-muted-foreground">Una vez lleguemos a las 1,000 ventas el precio regresará a $97 dólares.</p>
             <div className="space-y-1">
               <Progress value={88} className="h-5" />
-              <p className="text-xs font-semibold">88% VENDIDO</p>
+              <p className="text-xs font-semibold">87% VENDIDO</p>
             </div>
           </div>
 
