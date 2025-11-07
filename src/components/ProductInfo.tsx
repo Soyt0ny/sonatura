@@ -14,33 +14,38 @@ const ProductInfo = () => {
       {/* Columna derecha - Información */}
       <div className="space-y-6">
         {/* Desktop: mostrar rating, título y precio primero */}
-        <div className="hidden md:block space-y-6">
-          <div className="space-y-1">
-            <div className="flex items-center gap-2">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
-              </div>
-              <span className="text-sm text-foreground font-semibold">Excelente 5.0 | 9903 Reseñas</span>
+        <div className="hidden md:block space-y-4">
+          <div className="flex items-center gap-2">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
             </div>
-            <p className="text-xs text-foreground font-semibold">
-              #1 Best Seller transformación Holística y Wellness
-            </p>
+            <span className="text-base text-foreground font-medium">4.7 / 5</span>
+            <span className="text-muted-foreground">●</span>
+            <span className="text-base text-muted-foreground">Loved by 726,000+ customers</span>
           </div>
 
           <div>
-            <h1 className="text-2xl md:text-3xl font-bold mb-2">
-              Sérum de Crecimiento de Pestañas
+            <h1 className="text-3xl font-bold leading-tight">
+              4-in-1 Radiant Renewal Skincare Wand with Red Light Therapy
             </h1>
           </div>
 
           <div>
-            <div className="flex items-center gap-3 flex-wrap">
-              <p className="text-2xl text-muted-foreground line-through">$99.99</p>
-              <p className="text-3xl font-bold text-foreground">$49.99</p>
-              <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">50% OFF</span>
+            <div className="flex items-baseline gap-2">
+              <p className="text-4xl font-bold text-foreground">$169</p>
             </div>
-            <p className="text-sm text-foreground mt-1"><span className="font-bold">O 6 meses sin intereses de $9 dólares</span></p>
+            <p className="text-sm text-foreground mt-1">
+              or just <span className="font-semibold underline">$14.08/mo</span> <span className="text-primary font-semibold">affirm</span>
+            </p>
           </div>
+
+          <p className="text-base text-foreground leading-relaxed">
+            Visibly softens fine lines, boosts radiance, and refreshes tired skin.
+          </p>
+
+          <p className="text-sm text-foreground leading-relaxed">
+            This 12-minute award-winning Skincare Wand uses 4 advanced technologies. With a rotating head and built-in timer, you're in control of where results appear.
+          </p>
         </div>
 
         {/* Móvil: mostrar galería primero */}
@@ -49,53 +54,62 @@ const ProductInfo = () => {
         </div>
 
         {/* Móvil: mostrar rating, título y precio después de galería */}
-        <div className="md:hidden space-y-6">
-          <div className="space-y-1">
-            <div className="flex items-center gap-2">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
-              </div>
-              <span className="text-sm text-foreground font-semibold">Excelente 5.0 | 9903 Reseñas</span>
+        <div className="md:hidden space-y-4">
+          <div className="flex items-center gap-2 flex-wrap">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
             </div>
-            <p className="text-xs text-foreground font-semibold">#1 Best Seller en transformación Holística y Wellness</p>
+            <span className="text-base text-foreground font-medium">4.7 / 5</span>
+            <span className="text-muted-foreground">●</span>
+            <span className="text-base text-muted-foreground">Loved by 726,000+ customers</span>
           </div>
 
           <div>
-            <h1 className="text-2xl md:text-3xl font-bold mb-2">Ahorra Hasta 50% Hoy + 4 Regalos GRATIS</h1>
+            <h1 className="text-2xl font-bold leading-tight">
+              4-in-1 Radiant Renewal Skincare Wand with Red Light Therapy
+            </h1>
           </div>
 
           <div>
-            <div className="flex items-center gap-3 flex-wrap">
-              <p className="text-2xl text-muted-foreground line-through">$99.99</p>
-              <p className="text-3xl font-bold text-foreground">$49.99</p>
-              <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">50% OFF</span>
+            <div className="flex items-baseline gap-2">
+              <p className="text-3xl font-bold text-foreground">$169</p>
             </div>
-            <p className="text-sm text-foreground mt-1"><span className="font-bold">O 6 meses sin intereses de $9 dólares</span></p>
+            <p className="text-sm text-foreground mt-1">
+              or just <span className="font-semibold underline">$14.08/mo</span> <span className="text-primary font-semibold">affirm</span>
+            </p>
           </div>
+
+          <p className="text-base text-foreground leading-relaxed">
+            Visibly softens fine lines, boosts radiance, and refreshes tired skin.
+          </p>
+
+          <p className="text-sm text-foreground leading-relaxed">
+            This 12-minute award-winning Skincare Wand uses 4 advanced technologies. With a rotating head and built-in timer, you're in control of where results appear.
+          </p>
         </div>
 
         <div>
           
         </div>
 
-        <div className="bg-accent/30 border border-border/50 rounded-lg p-4">
-          <h3 className="font-semibold text-lg mb-3">Regula tu cortisol y tu metabolismo en 14 días</h3>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="flex items-start gap-2">
-              <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-              <span className="text-sm">Resultados en 2 semanas</span>
+        <div className="border border-border rounded-lg p-4">
+          <h3 className="font-bold text-base mb-4">4 science-backed technologies:</h3>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
+              <div className="text-primary text-xl flex-shrink-0">✦</div>
+              <span className="text-sm">Boosts collagen & reduces wrinkles (Red Light Therapy, 630nm)</span>
             </div>
-            <div className="flex items-start gap-2">
-              <DollarSign className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-              <span className="text-sm">Tratamiento económico</span>
+            <div className="flex items-start gap-3">
+              <div className="text-primary text-xl flex-shrink-0">≈</div>
+              <span className="text-sm">Relaxes & soothes skin (Therapeutic Warmth)</span>
             </div>
-            <div className="flex items-start gap-2">
-              <Sparkles className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-              <span className="text-sm">Resultado duradero</span>
+            <div className="flex items-start gap-3">
+              <div className="text-primary text-xl flex-shrink-0">⇈</div>
+              <span className="text-sm">Activates serum & deeply hydrates (Galvanic Current)</span>
             </div>
-            <div className="flex items-start gap-2">
-              <TrendingUp className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-              <span className="text-sm">Revitaliza el folículo</span>
+            <div className="flex items-start gap-3">
+              <div className="text-primary text-xl flex-shrink-0">◎</div>
+              <span className="text-sm">Reduces puffiness (Facial Massage)</span>
             </div>
           </div>
         </div>
