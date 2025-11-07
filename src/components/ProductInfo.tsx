@@ -138,10 +138,9 @@ const ProductInfo = () => {
 
           <div>
             <div className="flex items-baseline gap-2">
-              <p className="text-2xl font-bold text-foreground">$169</p>
+              <p className="text-2xl font-bold text-foreground">$49.99</p>
             </div>
-            <p className="text-xs text-foreground mt-1">
-              or just <span className="font-semibold underline">$14.08/mo</span> <span className="text-primary font-semibold">affirm</span>
+            <p className="text-xs text-foreground mt-1">O solo $14.08/mo affirm<span className="font-semibold underline">$14.08/mo</span> <span className="text-primary font-semibold">affirm</span>
             </p>
           </div>
 
@@ -203,7 +202,7 @@ const ProductInfo = () => {
           <CountdownTimer />
           
           <div className="space-y-0">
-            <Button variant="cta" className="w-full text-base font-bold h-14 rounded-full uppercase tracking-wide">
+            <Button size="lg" className="w-full text-sm font-bold h-12 rounded-full bg-[#4A5A8B] hover:bg-[#3A4A7B] text-white uppercase tracking-wide">
               Agregar al Carrito | $169
             </Button>
             
@@ -216,8 +215,8 @@ const ProductInfo = () => {
                   </svg>
                 </div>
                 <div className="text-[10px] font-semibold leading-tight">
-                  <div>Free 60-Day</div>
-                  <div>Returns</div>
+                  <div>60 Dias de</div>
+                  <div>Garantía</div>
                 </div>
               </div>
               
@@ -228,8 +227,8 @@ const ProductInfo = () => {
                   </svg>
                 </div>
                 <div className="text-[10px] font-semibold leading-tight">
-                  <div>1-Year</div>
-                  <div>Warranty</div>
+                  <div>Entrega</div>
+                  <div>Inmediata</div>
                 </div>
               </div>
               
@@ -240,8 +239,8 @@ const ProductInfo = () => {
                   </svg>
                 </div>
                 <div className="text-[10px] font-semibold leading-tight">
-                  <div>Free Expedited</div>
-                  <div>Shipping</div>
+                  <div>Soporte</div>
+                  <div>24/7</div>
                 </div>
               </div>
             </div>
