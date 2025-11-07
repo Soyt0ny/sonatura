@@ -47,7 +47,7 @@ const ProductInfo = () => {
         </div>
 
         {/* Móvil: mostrar galería primero */}
-        <div className="md:hidden">
+        <div className="md:hidden mb-4">
           <ProductGallery />
         </div>
 
