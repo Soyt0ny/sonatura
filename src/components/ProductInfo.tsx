@@ -20,15 +20,15 @@ const ProductInfo = () => {
               <div className="flex">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
               </div>
-              <span className="text-sm text-muted-foreground">Excelente 5.0 | 9903 Reseñas</span>
+              <span className="text-sm text-foreground font-semibold">Excelente 5.0 | 9903 Reseñas</span>
             </div>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-foreground font-semibold">
               #1 Best Seller transformación Holística y Wellness
             </p>
           </div>
 
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-2">
+            <h1 className="text-2xl md:text-3xl font-bold mb-2">
               Sérum de Crecimiento de Pestañas
             </h1>
           </div>
@@ -39,7 +39,7 @@ const ProductInfo = () => {
               <p className="text-3xl font-bold text-foreground">$49.99</p>
               <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">50% OFF</span>
             </div>
-            <p className="text-sm text-muted-foreground mt-1"><span className="font-bold">O 6 meses sin intereses de $9 dólares</span></p>
+            <p className="text-sm text-foreground mt-1"><span className="font-bold">O 6 meses sin intereses de $9 dólares</span></p>
           </div>
         </div>
 
@@ -55,15 +55,15 @@ const ProductInfo = () => {
               <div className="flex">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
               </div>
-              <span className="text-sm text-muted-foreground">Excelente 5.0 | 9903 Reseñas</span>
+              <span className="text-sm text-foreground font-semibold">Excelente 5.0 | 9903 Reseñas</span>
             </div>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-foreground font-semibold">
               #1 Best Seller transformación Holística y Wellness
             </p>
           </div>
 
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-2">Ahorra Hasta 50% Hoy + 4 Regalos GRATIS</h1>
+            <h1 className="text-2xl md:text-3xl font-bold mb-2">Ahorra Hasta 50% Hoy + 4 Regalos GRATIS</h1>
           </div>
 
           <div>
@@ -72,7 +72,7 @@ const ProductInfo = () => {
               <p className="text-3xl font-bold text-foreground">$49.99</p>
               <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">50% OFF</span>
             </div>
-            <p className="text-sm text-muted-foreground mt-1"><span className="font-bold">O 6 meses sin intereses de $9 dólares</span></p>
+            <p className="text-sm text-foreground mt-1"><span className="font-bold">O 6 meses sin intereses de $9 dólares</span></p>
           </div>
         </div>
 
