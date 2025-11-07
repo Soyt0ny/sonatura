@@ -1,5 +1,6 @@
 import { Star, Clock, DollarSign, Sparkles, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import ProductGallery from "@/components/ProductGallery";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
 const ProductInfo = () => {
@@ -133,6 +134,16 @@ const ProductInfo = () => {
           <p className="text-center text-sm text-muted-foreground">
             3ML = 30 APLICACIONES, SOLO $0.10/APLICACIÓN
           </p>
+          <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+            <Badge variant="outline" className="bg-background">AMEX</Badge>
+            <Badge variant="outline" className="bg-background">Apple Pay</Badge>
+            <Badge variant="outline" className="bg-background">Google Pay</Badge>
+            <Badge variant="outline" className="bg-background">Maestro</Badge>
+            <Badge variant="outline" className="bg-background">Mastercard</Badge>
+            <Badge variant="outline" className="bg-background">PayPal</Badge>
+            <Badge variant="outline" className="bg-background">Shop Pay</Badge>
+            <Badge variant="outline" className="bg-background">Visa</Badge>
+          </div>
         </div>
       </div>
     </div>;
