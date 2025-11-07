@@ -5,6 +5,8 @@ import ProductGallery from "@/components/ProductGallery";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
 import paymentIcons from "@/assets/payment-icons.png";
 import { useState, useEffect } from "react";
+import { addDays, format } from "date-fns";
+import { es } from "date-fns/locale";
 const featuredReviews = [{
   name: "Christina A.",
   date: "April 4, 2025",
@@ -28,6 +30,11 @@ const featuredReviews = [{
 }];
 const ProductInfo = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+  
+  // Calcular la fecha de mañana
+  const tomorrow = addDays(new Date(), 1);
+  const formattedDate = format(tomorrow, "d 'de' MMMM", { locale: es });
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentReviewIndex(prev => (prev + 1) % featuredReviews.length);
@@ -145,7 +152,7 @@ const ProductInfo = () => {
 
         <div className="bg-accent/30 border border-dashed border-border rounded-lg p-3 text-center">
           <p className="text-sm font-semibold">
-            🎁 Ordena antes del 28 de Oct. para recibir Regalos GRATIS garantizados
+            🎁 Ordena antes del {formattedDate} para recibir Regalos GRATIS garantizados
           </p>
         </div>
 
