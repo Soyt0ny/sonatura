@@ -274,7 +274,7 @@ const ProductInfo = () => {
               </div>
               <div className="flex-1">
                 <h3 className="text-base font-bold mb-1">Garantía de devolución de dinero de 60 días</h3>
-                <p className="text-xs text-muted-foreground">Una piel hermosa y cambio físico toma tiempo. Ama tus resultados o recibe un reembolso completo. 100% sin riesgo.</p>
+                <p className="text-xs text-muted-foreground">Una piel hermosa y un cambio físico toman tiempo. Ama tus resultados o recibe un reembolso completo. 100% sin riesgo.</p>
               </div>
             </div>
           </div>
