@@ -173,45 +173,47 @@ const ProductInfo = () => {
         </div>
 
         <div className="space-y-3">
-          <Button size="lg" className="w-full text-sm font-bold h-12 rounded-full bg-[#7B3945] hover:bg-[#6B2F3A] text-white uppercase tracking-wide">
-            Agregar al Carrito | $169
-          </Button>
-          
-          {/* Warranty Icons Section */}
-          <div className="grid grid-cols-3 gap-3 py-3 border-b border-border">
-            <div className="flex flex-col items-center text-center gap-1.5">
-              <div className="w-6 h-6 rounded-full border-2 border-[#7B3945] flex items-center justify-center">
-                <svg className="w-3.5 h-3.5 text-[#7B3945]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <div className="text-[10px] font-semibold leading-tight">
-                <div>Free 60-Day</div>
-                <div>Returns</div>
-              </div>
-            </div>
+          <div className="space-y-0">
+            <Button size="lg" className="w-full text-sm font-bold h-12 rounded-full bg-[#7B3945] hover:bg-[#6B2F3A] text-white uppercase tracking-wide">
+              Agregar al Carrito | $169
+            </Button>
             
-            <div className="flex flex-col items-center text-center gap-1.5">
-              <div className="w-6 h-6 rounded-full border-2 border-[#7B3945] flex items-center justify-center">
-                <svg className="w-3.5 h-3.5 text-[#7B3945]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                </svg>
+            {/* Warranty Icons Section */}
+            <div className="grid grid-cols-3 gap-3 py-3 border-b border-border">
+              <div className="flex flex-col items-center text-center gap-1.5">
+                <div className="w-6 h-6 rounded-full border-2 border-[#7B3945] flex items-center justify-center">
+                  <svg className="w-3.5 h-3.5 text-[#7B3945]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div className="text-[10px] font-semibold leading-tight">
+                  <div>Free 60-Day</div>
+                  <div>Returns</div>
+                </div>
               </div>
-              <div className="text-[10px] font-semibold leading-tight">
-                <div>1-Year</div>
-                <div>Warranty</div>
+              
+              <div className="flex flex-col items-center text-center gap-1.5">
+                <div className="w-6 h-6 rounded-full border-2 border-[#7B3945] flex items-center justify-center">
+                  <svg className="w-3.5 h-3.5 text-[#7B3945]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div className="text-[10px] font-semibold leading-tight">
+                  <div>1-Year</div>
+                  <div>Warranty</div>
+                </div>
               </div>
-            </div>
-            
-            <div className="flex flex-col items-center text-center gap-1.5">
-              <div className="w-6 h-6 rounded-full border-2 border-[#7B3945] flex items-center justify-center">
-                <svg className="w-3.5 h-3.5 text-[#7B3945]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <div className="text-[10px] font-semibold leading-tight">
-                <div>Free Expedited</div>
-                <div>Shipping</div>
+              
+              <div className="flex flex-col items-center text-center gap-1.5">
+                <div className="w-6 h-6 rounded-full border-2 border-[#7B3945] flex items-center justify-center">
+                  <svg className="w-3.5 h-3.5 text-[#7B3945]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <div className="text-[10px] font-semibold leading-tight">
+                  <div>Free Expedited</div>
+                  <div>Shipping</div>
+                </div>
               </div>
             </div>
           </div>
