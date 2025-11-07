@@ -142,9 +142,12 @@ const ProductInfo = () => {
           </div>
 
           <div>
-            <div className="flex items-baseline gap-2">
-              <p className="text-xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$99</p>
-              <p className="text-xl font-bold text-foreground">$49.99</p>
+            <div className="flex items-center gap-2">
+              <div className="flex items-baseline gap-2">
+                <p className="text-xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$99</p>
+                <p className="text-xl font-bold text-foreground">$49.99</p>
+              </div>
+              <span className="bg-[#C83C2E] text-white text-xs font-bold px-2 py-1 rounded">50% OFF</span>
             </div>
             <p className="text-xs text-foreground mt-1">O solo $8.3/mes Shopay<span className="font-semibold underline">$14.08/mo</span> <span className="text-primary font-semibold">affirm</span>
             </p>
