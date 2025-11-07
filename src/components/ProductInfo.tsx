@@ -2,11 +2,8 @@ import { Star, Clock, DollarSign, Sparkles, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ProductGallery from "@/components/ProductGallery";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
-
 const ProductInfo = () => {
-
-  return (
-    <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+  return <div className="grid md:grid-cols-2 gap-8 md:gap-12">
       {/* Columna izquierda - Imágenes (solo en desktop) */}
       <div className="hidden md:block">
         <ProductGallery />
@@ -19,9 +16,7 @@ const ProductInfo = () => {
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
               </div>
               <span className="text-sm text-muted-foreground">Excelente 5.0 | 9903 Reseñas</span>
             </div>
@@ -56,9 +51,7 @@ const ProductInfo = () => {
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />
-                ))}
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
               </div>
               <span className="text-sm text-muted-foreground">Excelente 5.0 | 9903 Reseñas</span>
             </div>
@@ -90,7 +83,7 @@ const ProductInfo = () => {
         </div>
 
         <div className="bg-accent/50 border border-primary/20 rounded-lg p-4">
-          <h3 className="font-semibold text-lg mb-3">Obtén pestañas más llenas y saludables en 30 días</h3>
+          <h3 className="font-semibold text-lg mb-3">Regula tu cortisol y tu metabolismo en 14 días</h3>
           <div className="grid grid-cols-2 gap-4">
             <div className="flex items-start gap-2">
               <Clock className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -134,18 +127,14 @@ const ProductInfo = () => {
         <div className="bg-secondary rounded-lg p-4">
           <h4 className="font-semibold mb-3 text-center">¡VENTA EXCLUSIVA! Regalos GRATIS con tu Primera Orden</h4>
           <div className="grid grid-cols-4 gap-2">
-            {["GRATIS $10", "GRATIS $6", "GRATIS $19", "GRATIS $25"].map((gift, idx) => (
-              <div key={idx} className="bg-accent rounded-lg p-3 text-center">
+            {["GRATIS $10", "GRATIS $6", "GRATIS $19", "GRATIS $25"].map((gift, idx) => <div key={idx} className="bg-accent rounded-lg p-3 text-center">
                 <div className="aspect-square bg-primary/10 rounded mb-2 flex items-center justify-center">
                   <span className="text-xs font-bold text-primary">{gift}</span>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ProductInfo;
