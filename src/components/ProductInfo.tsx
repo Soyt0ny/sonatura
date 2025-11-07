@@ -28,21 +28,16 @@ const CountdownTimer = () => {
   const seconds = timeLeft % 60;
 
   return (
-    <div className="bg-gradient-to-r from-red-50 to-red-100 dark:from-red-950/20 dark:to-red-900/20 border-2 border-red-200 dark:border-red-800 rounded-lg p-3">
-      <div className="flex items-center justify-center gap-2">
-        <Timer className="w-4 h-4 text-red-600 dark:text-red-400 animate-pulse" />
-        <div className="text-center">
-          <p className="text-xs font-semibold text-red-600 dark:text-red-400 mb-0.5">
-            ⚡ OFERTA TERMINA EN
-          </p>
-          <div className="flex items-center justify-center gap-1">
-            <span className="text-2xl font-bold text-red-700 dark:text-red-300 tabular-nums">
-              {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
-            </span>
-          </div>
-          <p className="text-[10px] font-medium text-red-600/80 dark:text-red-400/80 mt-0.5">
-            50% OFF + Regalos GRATIS
-          </p>
+    <div className="border border-border/40 rounded-lg py-2 px-3">
+      <div className="flex items-center justify-between gap-3">
+        <p className="text-[11px] font-medium text-muted-foreground">
+          La oferta termina en
+        </p>
+        <div className="flex items-center gap-1.5">
+          <Clock className="w-3 h-3 text-muted-foreground" />
+          <span className="text-sm font-semibold text-foreground tabular-nums tracking-tight">
+            {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
+          </span>
         </div>
       </div>
     </div>
