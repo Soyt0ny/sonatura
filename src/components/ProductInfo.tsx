@@ -63,9 +63,7 @@ const ProductInfo = () => {
           </div>
 
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-2">
-              Sérum de Crecimiento de Pestañas
-            </h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-2">Sérum de Crecimiento de Pestañas</h1>
           </div>
 
           <div>
@@ -79,9 +77,7 @@ const ProductInfo = () => {
         </div>
 
         <div>
-          <p className="text-xl text-primary font-semibold">
-            - Ahorra Hasta 56% Hoy + 4 Regalos GRATIS
-          </p>
+          
         </div>
 
         <div className="bg-accent/50 border border-primary/20 rounded-lg p-4">
