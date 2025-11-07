@@ -162,16 +162,16 @@ const ProductInfo = () => {
           </div>
 
           {/* Real Results Section */}
-          <div className="mt-8 space-y-4">
-            <h2 className="text-2xl font-bold mb-4">Real results from real customers</h2>
+          <div className="mt-8 space-y-3">
+            <h2 className="text-xl font-bold mb-3">Real results from real customers</h2>
             
-            {/* Video Testimonials Grid */}
-            <div className="grid grid-cols-4 gap-2 mb-6">
+            {/* Video Testimonials Grid - Optimized for Reels/TikTok */}
+            <div className="grid grid-cols-4 gap-2 mb-4">
               {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="relative aspect-[3/4] bg-muted rounded-xl overflow-hidden">
+                <div key={i} className="relative aspect-[9/16] bg-muted rounded-lg overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-[#C83C2E] flex items-center justify-center">
-                      <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
+                    <div className="w-12 h-12 rounded-full bg-[#C83C2E] flex items-center justify-center">
+                      <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>
                     </div>
                   </div>
                 </div>
@@ -179,23 +179,23 @@ const ProductInfo = () => {
             </div>
 
             {/* Featured Review */}
-            <div className="bg-accent/20 border border-border/40 rounded-lg p-4 space-y-3">
+            <div className="bg-accent/20 border border-border/40 rounded-lg p-3 space-y-2">
               <div className="flex items-start justify-between">
                 <div>
-                  <h3 className="text-xl font-bold mb-1">Christina A.</h3>
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm font-semibold text-[#8B4513]">Verified customer</span>
-                    <div className="w-5 h-5 rounded-full bg-[#8B4513] flex items-center justify-center">
-                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <h3 className="text-base font-bold mb-0.5">Christina A.</h3>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-xs font-semibold text-[#8B4513]">Verified customer</span>
+                    <div className="w-4 h-4 rounded-full bg-[#8B4513] flex items-center justify-center">
+                      <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
                   </div>
                 </div>
-                <span className="text-sm text-muted-foreground">April 4, 2025</span>
+                <span className="text-xs text-muted-foreground">April 4, 2025</span>
               </div>
               
-              <p className="text-base leading-relaxed">
+              <p className="text-sm leading-relaxed">
                 "I love the Solawave Wand so much! It helps with any puffiness and I am seeing a reduction of fine lines."
               </p>
             </div>
