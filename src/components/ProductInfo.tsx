@@ -173,7 +173,7 @@ const ProductInfo = () => {
         </div>
 
         <div className="border border-border rounded-lg p-4">
-          <h3 className="font-bold text-base mb-4">Beneficios clave</h3>
+          <h3 className="font-bold text-base mb-4">Baja tu cortisol y </h3>
           <div className="space-y-3">
             <div className="flex items-start gap-3">
               <div className="text-primary text-xl flex-shrink-0">✦</div>
@@ -301,7 +301,7 @@ const ProductInfo = () => {
           {/* Sección de Stock Limitado */}
           <div className="bg-accent/20 border border-border/60 rounded-lg p-3 space-y-2">
             <h3 className="text-base font-bold">SOLO 1,000 COPIAS A ESTE PRECIO</h3>
-            <p className="text-xs text-muted-foreground">Una vez lleguemos a las 1,000 ventas el precio regresará a $97 dólares.</p>
+            <p className="text-xs text-muted-foreground">Una vez lleguemos a las 1,000 ventas la oferta de lanzamiento terminará y el precio regresará a $99 dólares.</p>
             <div className="space-y-1">
               <Progress value={88} className="h-5" />
               <p className="text-xs font-semibold">87% VENDIDO</p>
