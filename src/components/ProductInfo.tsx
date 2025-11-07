@@ -260,48 +260,27 @@ const ProductInfo = () => {
           </div>
           
           {/* Código de Descuento */}
-          <div className="bg-gradient-to-r from-primary/10 to-accent/20 border-2 border-dashed border-primary/40 rounded-lg p-4">
-            <div className="flex items-center justify-between gap-3">
-              <div className="flex-1">
-                <p className="text-xs font-semibold text-muted-foreground mb-1">
-                  🎉 CÓDIGO DE DESCUENTO EXCLUSIVO
-                </p>
-                <p className="text-sm font-bold text-foreground mb-1">
-                  Obtén 10% OFF adicional
-                </p>
-                <div className="flex items-center gap-2">
-                  <code className="bg-background/80 border border-border px-3 py-1.5 rounded text-base font-bold text-primary tracking-wider">
-                    2026
-                  </code>
-                </div>
-              </div>
-              <Button
-                size="sm"
-                variant={copied ? "outline" : "default"}
-                className="flex-shrink-0"
-                onClick={() => {
-                  navigator.clipboard.writeText("2026");
-                  setCopied(true);
-                  toast({
-                    title: "¡Código copiado!",
-                    description: "Pégalo en el carrito para obtener tu descuento",
-                  });
-                  setTimeout(() => setCopied(false), 2000);
-                }}
-              >
-                {copied ? (
-                  <>
-                    <Check className="w-4 h-4 mr-2" />
-                    Copiado
-                  </>
-                ) : (
-                  <>
-                    <Copy className="w-4 h-4 mr-2" />
-                    Copiar
-                  </>
-                )}
-              </Button>
-            </div>
+          <div className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground py-2">
+            <span>Para 10% extra usa el código</span>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText("2026");
+                setCopied(true);
+                toast({
+                  title: "¡Código copiado!",
+                  description: "Pégalo en el carrito para obtener tu descuento",
+                });
+                setTimeout(() => setCopied(false), 2000);
+              }}
+              className="inline-flex items-center gap-1 font-semibold text-foreground underline decoration-primary/40 underline-offset-2 hover:decoration-primary transition-colors"
+            >
+              2026
+              {copied ? (
+                <Check className="w-3 h-3 text-primary" />
+              ) : (
+                <Copy className="w-3 h-3 opacity-50" />
+              )}
+            </button>
           </div>
           
           <div className="space-y-0">
