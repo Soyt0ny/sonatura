@@ -14,38 +14,73 @@ const ProductInfo = () => {
 
       {/* Columna derecha - Información */}
       <div className="space-y-6">
-        <div className="space-y-1">
-          <div className="flex items-center gap-2">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-              ))}
+        {/* Desktop: mostrar rating, título y precio primero */}
+        <div className="hidden md:block space-y-6">
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />
+                ))}
+              </div>
+              <span className="text-sm text-muted-foreground">Excelente 5.0 | 9903 Reseñas</span>
             </div>
-            <span className="text-sm text-muted-foreground">Excelente 5.0 | 9903 Reseñas</span>
+            <p className="text-xs text-muted-foreground">
+              #1 Best Seller transformación Holística y Wellness
+            </p>
           </div>
-          <p className="text-xs text-muted-foreground">
-            #1 Best Seller transformación Holística y Wellness
-          </p>
-        </div>
 
-        <div>
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">
-            Sérum de Crecimiento de Pestañas
-          </h1>
-        </div>
-
-        <div>
-          <div className="flex items-center gap-3 flex-wrap">
-            <p className="text-2xl text-muted-foreground line-through">$99.99</p>
-            <p className="text-3xl font-bold text-foreground">$49.99</p>
-            <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">50% OFF</span>
+          <div>
+            <h1 className="text-3xl md:text-4xl font-bold mb-2">
+              Sérum de Crecimiento de Pestañas
+            </h1>
           </div>
-          <p className="text-sm text-muted-foreground mt-1"><span className="font-bold">O 6 meses sin intereses de $9 dólares</span></p>
+
+          <div>
+            <div className="flex items-center gap-3 flex-wrap">
+              <p className="text-2xl text-muted-foreground line-through">$99.99</p>
+              <p className="text-3xl font-bold text-foreground">$49.99</p>
+              <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">50% OFF</span>
+            </div>
+            <p className="text-sm text-muted-foreground mt-1"><span className="font-bold">O 6 meses sin intereses de $9 dólares</span></p>
+          </div>
         </div>
 
-        {/* Imágenes en móvil - después del título */}
+        {/* Móvil: mostrar galería primero */}
         <div className="md:hidden">
           <ProductGallery />
+        </div>
+
+        {/* Móvil: mostrar rating, título y precio después de galería */}
+        <div className="md:hidden space-y-6">
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />
+                ))}
+              </div>
+              <span className="text-sm text-muted-foreground">Excelente 5.0 | 9903 Reseñas</span>
+            </div>
+            <p className="text-xs text-muted-foreground">
+              #1 Best Seller transformación Holística y Wellness
+            </p>
+          </div>
+
+          <div>
+            <h1 className="text-3xl md:text-4xl font-bold mb-2">
+              Sérum de Crecimiento de Pestañas
+            </h1>
+          </div>
+
+          <div>
+            <div className="flex items-center gap-3 flex-wrap">
+              <p className="text-2xl text-muted-foreground line-through">$99.99</p>
+              <p className="text-3xl font-bold text-foreground">$49.99</p>
+              <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">50% OFF</span>
+            </div>
+            <p className="text-sm text-muted-foreground mt-1"><span className="font-bold">O 6 meses sin intereses de $9 dólares</span></p>
+          </div>
         </div>
 
         <div>
