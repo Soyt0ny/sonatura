@@ -57,9 +57,7 @@ const ProductInfo = () => {
               </div>
               <span className="text-sm text-foreground font-semibold">Excelente 5.0 | 9903 Reseñas</span>
             </div>
-            <p className="text-xs text-foreground font-semibold">
-              #1 Best Seller transformación Holística y Wellness
-            </p>
+            <p className="text-xs text-foreground font-semibold">#1 Best Seller en transformación Holística y Wellness</p>
           </div>
 
           <div>
