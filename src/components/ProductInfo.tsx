@@ -24,9 +24,20 @@ const ProductInfo = () => {
         </div>
 
         <div>
+          <p className="text-sm font-semibold text-foreground">
+            #1 Best Seller transformación Holística y Wellness
+          </p>
+        </div>
+
+        <div>
           <h1 className="text-3xl md:text-4xl font-bold mb-2">
             Sérum de Crecimiento de Pestañas
           </h1>
+        </div>
+
+        <div>
+          <p className="text-3xl font-bold text-foreground">$49.99</p>
+          <p className="text-sm text-muted-foreground mt-1">O 6 meses sin intereses de $9 dólares</p>
         </div>
 
         {/* Imágenes en móvil - después del título */}
