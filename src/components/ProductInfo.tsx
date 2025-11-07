@@ -96,7 +96,7 @@ const ProductInfo = () => {
       </div>
 
       {/* Columna derecha - Información */}
-      <div className="space-y-6 md:sticky md:top-4 md:self-start md:max-h-screen md:overflow-y-auto">
+      <div className="space-y-6">
         {/* Desktop: mostrar rating, título y precio primero */}
         <div className="hidden md:block space-y-4">
           <div className="space-y-1">
