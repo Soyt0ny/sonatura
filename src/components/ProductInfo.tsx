@@ -373,7 +373,7 @@ const ProductInfo = () => {
           </div>
 
           {/* Product Information Accordion */}
-          <div className="mt-8 pt-6 border-t border-border">
+          <div className="mt-8 pt-4 border-t border-border">
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="good-to-know">
                 <AccordionTrigger className="text-base font-bold">Good To Know</AccordionTrigger>
