@@ -8,6 +8,10 @@ import giftDigitalBook from "@/assets/gift-digital-book.jpg";
 import giftFreeShipping from "@/assets/gift-free-shipping.jpg";
 import giftLashCurler from "@/assets/gift-lash-curler.jpg";
 import giftMascara from "@/assets/gift-mascara.jpg";
+import logoApa from "@/assets/logo-apa.png";
+import logoNonGmo from "@/assets/logo-non-gmo.png";
+import logoCrueltyFree from "@/assets/logo-cruelty-free.png";
+import logoUsdaOrganic from "@/assets/logo-usda-organic.png";
 import { useState, useEffect } from "react";
 import { addDays, format } from "date-fns";
 import { es } from "date-fns/locale";
@@ -488,12 +492,21 @@ const ProductInfo = () => {
           Inspirado en prácticas aprobadas por...
         </p>
         <div className="grid grid-cols-4 gap-4 md:gap-8 items-center justify-items-center">
-          {[1, 2, 3, 4].map((i) => (
+          {[
+            { src: logoApa, alt: "American Psychological Association" },
+            { src: logoNonGmo, alt: "Non GMO Project" },
+            { src: logoCrueltyFree, alt: "Cruelty Free" },
+            { src: logoUsdaOrganic, alt: "USDA Organic" }
+          ].map((logo, i) => (
             <div 
               key={i} 
-              className="w-full aspect-[3/2] bg-muted/30 border border-border rounded-lg flex items-center justify-center"
+              className="w-full h-20 flex items-center justify-center p-3"
             >
-              <span className="text-xs text-muted-foreground">Logo {i}</span>
+              <img 
+                src={logo.src} 
+                alt={logo.alt} 
+                className="w-full h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+              />
             </div>
           ))}
         </div>
