@@ -8,7 +8,7 @@ const Index = () => {
       <Header />
       
       
-      <main className="container mx-auto px-4 py-8 md:py-12">
+      <main className="container mx-auto px-4 pb-8 md:pb-12">
         <div className="max-w-7xl mx-auto">
           <ProductInfo />
         </div>
