@@ -84,7 +84,8 @@ const ProductInfo = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-  return <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+  return <>
+    <div className="grid md:grid-cols-2 gap-8 md:gap-12">
       {/* Columna izquierda - Imágenes (solo en desktop) */}
       <div className="hidden md:block">
         <ProductGallery />
@@ -443,41 +444,42 @@ const ProductInfo = () => {
               </AccordionItem>
             </Accordion>
           </div>
-
-          {/* Infinite Scrolling Messages Bar */}
-          <div className="mt-8 overflow-hidden bg-primary text-primary-foreground py-3">
-            <div className="flex items-center gap-8 animate-scroll-infinite whitespace-nowrap">
-              {/* Primer set de mensajes */}
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold">✨ ENVÍO GRATIS en todos los pedidos</span>
-              </div>
-              <span className="text-primary-foreground/40">•</span>
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold">🎁 4 REGALOS GRATIS con tu primera compra</span>
-              </div>
-              <span className="text-primary-foreground/40">•</span>
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold">⚡ OFERTA LIMITADA - Solo quedan 120 unidades</span>
-              </div>
-              <span className="text-primary-foreground/40">•</span>
-              
-              {/* Segundo set de mensajes (duplicado para efecto infinito) */}
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold">✨ ENVÍO GRATIS en todos los pedidos</span>
-              </div>
-              <span className="text-primary-foreground/40">•</span>
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold">🎁 4 REGALOS GRATIS con tu primera compra</span>
-              </div>
-              <span className="text-primary-foreground/40">•</span>
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold">⚡ OFERTA LIMITADA - Solo quedan 120 unidades</span>
-              </div>
-              <span className="text-primary-foreground/40">•</span>
-            </div>
-          </div>
         </div>
       </div>
-    </div>;
+    </div>
+
+    {/* Infinite Scrolling Messages Bar - Full Width */}
+    <div className="mt-8 overflow-hidden bg-primary text-primary-foreground py-3">
+      <div className="flex items-center gap-8 animate-scroll-infinite whitespace-nowrap">
+        {/* Primer set de mensajes */}
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-semibold">✨ ENVÍO GRATIS en todos los pedidos</span>
+        </div>
+        <span className="text-primary-foreground/40">•</span>
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-semibold">🎁 4 REGALOS GRATIS con tu primera compra</span>
+        </div>
+        <span className="text-primary-foreground/40">•</span>
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-semibold">⚡ OFERTA LIMITADA - Solo quedan 120 unidades</span>
+        </div>
+        <span className="text-primary-foreground/40">•</span>
+        
+        {/* Segundo set de mensajes (duplicado para efecto infinito) */}
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-semibold">✨ ENVÍO GRATIS en todos los pedidos</span>
+        </div>
+        <span className="text-primary-foreground/40">•</span>
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-semibold">🎁 4 REGALOS GRATIS con tu primera compra</span>
+        </div>
+        <span className="text-primary-foreground/40">•</span>
+        <div className="flex items-center gap-2">
+          <span className="text-sm font-semibold">⚡ OFERTA LIMITADA - Solo quedan 120 unidades</span>
+        </div>
+        <span className="text-primary-foreground/40">•</span>
+      </div>
+    </div>
+  </>;
 };
 export default ProductInfo;
