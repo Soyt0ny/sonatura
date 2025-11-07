@@ -33,16 +33,16 @@ const StickyCartBar = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-t border-border shadow-lg animate-slide-in-bottom">
-      <div className="container mx-auto px-4 py-3">
-        <div className="flex items-center justify-between gap-4 max-w-2xl mx-auto">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-t border-border/50 shadow-sm animate-slide-in-bottom">
+      <div className="container mx-auto px-4 py-2.5">
+        <div className="flex items-center justify-between gap-3 max-w-2xl mx-auto">
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-foreground">$169</span>
+            <span className="text-lg font-semibold text-foreground">$169</span>
           </div>
           <Button 
             variant="cta" 
-            size="lg" 
-            className="h-12 px-8 text-sm font-bold uppercase tracking-wide"
+            size="sm" 
+            className="h-9 px-6 text-xs font-semibold uppercase tracking-wide rounded-full"
           >
             Agregar al Carrito
           </Button>
