@@ -4,7 +4,46 @@ import { Progress } from "@/components/ui/progress";
 import ProductGallery from "@/components/ProductGallery";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
 import paymentIcons from "@/assets/payment-icons.png";
+import { useState, useEffect } from "react";
+
+const featuredReviews = [
+  {
+    name: "Christina A.",
+    date: "April 4, 2025",
+    review: "I love the Solawave Wand so much! It helps with any puffiness and I am seeing a reduction of fine lines."
+  },
+  {
+    name: "Sarah M.",
+    date: "March 28, 2025",
+    review: "After just 2 weeks, my skin looks brighter and feels so much smoother. The red light therapy is incredible!"
+  },
+  {
+    name: "Jessica L.",
+    date: "March 15, 2025",
+    review: "This wand has become part of my daily routine. My friends keep asking what I'm doing differently - my skin glows!"
+  },
+  {
+    name: "Amanda K.",
+    date: "February 22, 2025",
+    review: "Best investment for my skin! The combination of technologies really works. I've noticed fewer fine lines around my eyes."
+  },
+  {
+    name: "Rachel T.",
+    date: "February 10, 2025",
+    review: "I was skeptical at first, but wow! My skin feels tighter and looks more radiant. The built-in timer makes it so easy to use."
+  }
+];
+
 const ProductInfo = () => {
+  const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentReviewIndex((prev) => (prev + 1) % featuredReviews.length);
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, []);
   return <div className="grid md:grid-cols-2 gap-8 md:gap-12">
       {/* Columna izquierda - Imágenes (solo en desktop) */}
       <div className="hidden md:block">
@@ -192,26 +231,44 @@ const ProductInfo = () => {
               ))}
             </div>
 
-            {/* Featured Review */}
-            <div className="bg-accent/20 border border-border/40 rounded-lg p-3 space-y-2">
-              <div className="flex items-start justify-between">
-                <div>
-                  <h3 className="text-base font-bold mb-0.5">Christina A.</h3>
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-xs font-semibold text-[#8B4513]">Verified customer</span>
-                    <div className="w-4 h-4 rounded-full bg-[#8B4513] flex items-center justify-center">
-                      <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                      </svg>
+            {/* Featured Reviews Carousel */}
+            <div className="relative">
+              <div className="bg-accent/20 border border-border/40 rounded-lg p-3 space-y-2 animate-fade-in">
+                <div className="flex items-start justify-between">
+                  <div>
+                    <h3 className="text-base font-bold mb-0.5">{featuredReviews[currentReviewIndex].name}</h3>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-xs font-semibold text-[#8B4513]">Verified customer</span>
+                      <div className="w-4 h-4 rounded-full bg-[#8B4513] flex items-center justify-center">
+                        <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
+                  <span className="text-xs text-muted-foreground">{featuredReviews[currentReviewIndex].date}</span>
                 </div>
-                <span className="text-xs text-muted-foreground">April 4, 2025</span>
+                
+                <p className="text-sm leading-relaxed">
+                  "{featuredReviews[currentReviewIndex].review}"
+                </p>
               </div>
               
-              <p className="text-sm leading-relaxed">
-                "I love the Solawave Wand so much! It helps with any puffiness and I am seeing a reduction of fine lines."
-              </p>
+              {/* Carousel Indicators */}
+              <div className="flex justify-center gap-1.5 mt-3">
+                {featuredReviews.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentReviewIndex(idx)}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${
+                      idx === currentReviewIndex 
+                        ? 'w-6 bg-primary' 
+                        : 'w-1.5 bg-border hover:bg-primary/50'
+                    }`}
+                    aria-label={`Go to review ${idx + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
