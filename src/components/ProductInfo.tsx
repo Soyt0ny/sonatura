@@ -173,9 +173,48 @@ const ProductInfo = () => {
         </div>
 
         <div className="space-y-3">
-          <Button size="lg" className="w-full text-lg h-14">
-            Agregar al Carrito
+          <Button size="lg" className="w-full text-base font-bold h-16 rounded-full bg-[#7B3945] hover:bg-[#6B2F3A] text-white uppercase tracking-wide">
+            Agregar al Carrito | $169
           </Button>
+          
+          {/* Warranty Icons Section */}
+          <div className="grid grid-cols-3 gap-4 py-4 border-b border-border">
+            <div className="flex flex-col items-center text-center gap-2">
+              <div className="w-8 h-8 rounded-full border-2 border-[#7B3945] flex items-center justify-center">
+                <svg className="w-5 h-5 text-[#7B3945]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div className="text-xs font-semibold leading-tight">
+                <div>Free 60-Day</div>
+                <div>Returns</div>
+              </div>
+            </div>
+            
+            <div className="flex flex-col items-center text-center gap-2">
+              <div className="w-8 h-8 rounded-full border-2 border-[#7B3945] flex items-center justify-center">
+                <svg className="w-5 h-5 text-[#7B3945]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div className="text-xs font-semibold leading-tight">
+                <div>1-Year</div>
+                <div>Warranty</div>
+              </div>
+            </div>
+            
+            <div className="flex flex-col items-center text-center gap-2">
+              <div className="w-8 h-8 rounded-full border-2 border-[#7B3945] flex items-center justify-center">
+                <svg className="w-5 h-5 text-[#7B3945]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <div className="text-xs font-semibold leading-tight">
+                <div>Free Expedited</div>
+                <div>Shipping</div>
+              </div>
+            </div>
+          </div>
           
           <div className="flex justify-center">
             <img src={paymentIcons} alt="Métodos de pago aceptados" className="h-8" />
