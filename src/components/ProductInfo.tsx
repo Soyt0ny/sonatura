@@ -195,7 +195,7 @@ const ProductInfo = () => {
               <div className="text-primary text-xl flex-shrink-0">⇈</div>
               <span className="text-sm">Elimina fatiga durante el día, insomnio y apariencia de cansancio.</span>
             </div>
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-3 mb-4">
               <div className="text-primary text-xl flex-shrink-0">◎</div>
               <span className="text-sm">Reduce tu estrés de forma natural y acelera tu metabolismo sin depender de productos químicos que dañan tu salud.</span>
             </div>
