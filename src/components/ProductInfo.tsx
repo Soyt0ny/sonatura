@@ -127,7 +127,7 @@ const ProductInfo = () => {
             </div>
             <span className="text-xs text-foreground font-medium">4.7 / 5</span>
             <span className="text-muted-foreground text-xs">●</span>
-            <span className="text-xs text-muted-foreground">Loved by 726,000+ customers</span>
+            <span className="text-xs text-muted-foreground">726,000+ Clientes lo aman</span>
           </div>
 
           <div>
