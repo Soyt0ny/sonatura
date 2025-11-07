@@ -131,9 +131,7 @@ const ProductInfo = () => {
           <Button size="lg" className="w-full text-lg h-14">
             Agregar al Carrito
           </Button>
-          <p className="text-center text-sm text-muted-foreground">
-            3ML = 30 APLICACIONES, SOLO $0.10/APLICACIÓN
-          </p>
+          
           <div className="flex justify-center pt-2">
             <img src={paymentIcons} alt="Métodos de pago aceptados" className="h-8" />
           </div>
