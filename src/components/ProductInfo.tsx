@@ -204,7 +204,7 @@ const ProductInfo = () => {
               <div key={idx} className="flex flex-col items-center">
                 <div className="border border-dashed border-foreground/30 rounded-sm p-2.5 w-full">
                   <div className="text-center mb-2">
-                    <span className="text-[9px] font-bold">GRATIS <span className="line-through decoration-2">{gift.value}</span></span>
+                    <span className="text-[9px] font-bold">GRATIS <span className="line-through decoration-1">{gift.value}</span></span>
                   </div>
                   <div className="aspect-[4/3] bg-[#FFE4E4] rounded-sm flex items-center justify-center overflow-hidden">
                     <img src={gift.image} alt={gift.name} className="w-full h-full object-contain p-1" />
