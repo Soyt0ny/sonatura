@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import product1 from "@/assets/product-1.png";
 import product2 from "@/assets/product-2.png";
 import product3 from "@/assets/product-3.png";
@@ -9,14 +10,39 @@ const ProductGallery = () => {
   const images = [product1, product2, product3, product4, product5];
   const [selectedImage, setSelectedImage] = useState(0);
 
+  const handlePrevious = () => {
+    setSelectedImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setSelectedImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <div className="space-y-4">
-      <div className="relative aspect-square bg-accent rounded-lg overflow-hidden">
+      <div className="relative aspect-square bg-accent rounded-lg overflow-hidden group">
         <img
           src={images[selectedImage]}
           alt="Producto"
           className="w-full h-full object-cover"
         />
+        
+        {/* Navigation Arrows */}
+        <button
+          onClick={handlePrevious}
+          className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/90 hover:bg-white shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          aria-label="Imagen anterior"
+        >
+          <ChevronLeft className="w-5 h-5 text-foreground" />
+        </button>
+        
+        <button
+          onClick={handleNext}
+          className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/90 hover:bg-white shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          aria-label="Imagen siguiente"
+        >
+          <ChevronRight className="w-5 h-5 text-foreground" />
+        </button>
       </div>
       <div className="grid grid-cols-5 gap-2">
         {images.map((img, idx) => (
