@@ -147,7 +147,7 @@ const ProductInfo = () => {
                 <p className="text-xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$99</p>
                 <p className="text-xl font-bold text-foreground">$49.99</p>
               </div>
-              <span className="bg-gradient-to-r from-[#D84A3A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">50% OFF</span>
+              <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">50% OFF</span>
             </div>
             <p className="text-xs text-foreground mt-1">O solo $8.3/mes Shopay<span className="font-semibold underline">$14.08/mo</span> <span className="text-primary font-semibold">affirm</span>
             </p>
