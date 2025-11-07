@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import product1 from "@/assets/product-1.png";
 import product2 from "@/assets/product-2.png";
 import product3 from "@/assets/product-3.png";
@@ -26,6 +27,11 @@ const ProductGallery = () => {
           alt="Producto"
           className="w-full h-full object-cover"
         />
+        
+        {/* Best Seller Badge */}
+        <Badge className="absolute top-3 left-3 bg-primary text-primary-foreground font-semibold shadow-lg">
+          Más Vendido
+        </Badge>
         
         {/* Navigation Arrows */}
         <button
