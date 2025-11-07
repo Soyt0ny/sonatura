@@ -127,13 +127,9 @@ const ProductInfo = () => {
             </div>
           </div>
 
-          <p className="text-base text-foreground leading-relaxed">
-            Visibly softens fine lines, boosts radiance, and refreshes tired skin.
-          </p>
+          
 
-          <p className="text-sm text-foreground leading-relaxed">
-            This 12-minute award-winning Skincare Wand uses 4 advanced technologies. With a rotating head and built-in timer, you're in control of where results appear.
-          </p>
+          
         </div>
 
         {/* Móvil: mostrar galería primero */}
