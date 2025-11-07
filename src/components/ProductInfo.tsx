@@ -449,7 +449,7 @@ const ProductInfo = () => {
     </div>
 
     {/* Infinite Scrolling Messages Bar - Full Width */}
-    <div className="mt-8 overflow-hidden bg-primary text-primary-foreground py-3">
+    <div className="mt-8 overflow-hidden bg-primary text-primary-foreground py-3 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
       <div className="flex items-center gap-8 animate-scroll-infinite whitespace-nowrap">
         {/* Primer set de mensajes */}
         <div className="flex items-center gap-2">
