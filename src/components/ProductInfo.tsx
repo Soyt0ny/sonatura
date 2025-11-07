@@ -488,7 +488,7 @@ const ProductInfo = () => {
     {/* Authority Logos Section */}
     <div className="py-8 bg-background">
       <div className="max-w-6xl mx-auto px-4">
-        <p className="text-center text-sm font-medium text-muted-foreground mb-6">
+        <p className="text-center text-sm font-medium text-muted-foreground mb-4">
           Inspirado en prácticas aprobadas por...
         </p>
         <div className="grid grid-cols-4 gap-4 md:gap-8 items-center justify-items-center">
@@ -500,12 +500,12 @@ const ProductInfo = () => {
           ].map((logo, i) => (
             <div 
               key={i} 
-              className="w-full h-20 flex items-center justify-center p-3"
+              className="w-full h-28 md:h-32 flex items-center justify-center p-2"
             >
               <img 
                 src={logo.src} 
                 alt={logo.alt} 
-                className="w-full h-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
               />
             </div>
           ))}
