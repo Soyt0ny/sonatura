@@ -25,14 +25,14 @@ const ProductInfo = () => {
           </div>
 
           <div>
-            <h1 className="text-3xl font-bold leading-tight">
+            <h1 className="text-2xl font-bold leading-tight">
               4-in-1 Radiant Renewal Skincare Wand with Red Light Therapy
             </h1>
           </div>
 
           <div>
             <div className="flex items-baseline gap-2">
-              <p className="text-4xl font-bold text-foreground">$169</p>
+              <p className="text-3xl font-bold text-foreground">$169</p>
             </div>
             <p className="text-sm text-foreground mt-1">
               or just <span className="font-semibold underline">$14.08/mo</span> <span className="text-primary font-semibold">affirm</span>
@@ -65,16 +65,16 @@ const ProductInfo = () => {
           </div>
 
           <div>
-            <h1 className="text-2xl font-bold leading-tight">
+            <h1 className="text-xl font-bold leading-tight">
               4-in-1 Radiant Renewal Skincare Wand with Red Light Therapy
             </h1>
           </div>
 
           <div>
             <div className="flex items-baseline gap-2">
-              <p className="text-3xl font-bold text-foreground">$169</p>
+              <p className="text-2xl font-bold text-foreground">$169</p>
             </div>
-            <p className="text-sm text-foreground mt-1">
+            <p className="text-xs text-foreground mt-1">
               or just <span className="font-semibold underline">$14.08/mo</span> <span className="text-primary font-semibold">affirm</span>
             </p>
           </div>
