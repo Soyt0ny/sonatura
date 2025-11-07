@@ -71,14 +71,12 @@ const ProductInfo = () => {
   const formattedDate = format(tomorrow, "d 'de' MMMM", {
     locale: es
   });
-  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentReviewIndex(prev => (prev + 1) % featuredReviews.length);
     }, 7000);
     return () => clearInterval(interval);
   }, []);
-
   useEffect(() => {
     const interval = setInterval(() => {
       const randomUsers = Math.floor(Math.random() * (1297 - 1000 + 1)) + 1000;
@@ -144,9 +142,8 @@ const ProductInfo = () => {
           </div>
 
           <div>
-            <h1 className="text-xl font-bold leading-tight">
-              4-in-1 Radiant Renewal Skincare Wand with Red Light Therapy
-            </h1>
+            <h1 className="text-xl font-bold leading-tight">REALIFESTACIÓN LIBRO DIGITAL
+- 50% Off +4 regalos</h1>
           </div>
 
           <div>
@@ -160,9 +157,7 @@ const ProductInfo = () => {
             <p className="text-xs text-foreground mt-1">O solo $8.3/mes Shopay</p>
           </div>
 
-          <p className="text-base text-foreground leading-relaxed">
-            Visibly softens fine lines, boosts radiance, and refreshes tired skin.
-          </p>
+          <p className="text-base text-foreground leading-relaxed">Deshincha tu cuerpo, elimina acné hormonal y vive tu Glow Up sin depender del sistema. </p>
 
           <p className="text-sm text-foreground leading-relaxed">
             This 12-minute award-winning Skincare Wand uses 4 advanced technologies. With a rotating head and built-in timer, you're in control of where results appear.
