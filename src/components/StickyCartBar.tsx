@@ -5,14 +5,29 @@ const StickyCartBar = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Show sticky bar when scrolled down more than 800px
-      const scrollPosition = window.scrollY;
-      setIsVisible(scrollPosition > 800);
-    };
+    // Observar el botón de compra original
+    const originalButton = document.getElementById("original-cart-button");
+    
+    if (!originalButton) return;
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Mostrar el botón sticky cuando el botón original NO está visible
+        setIsVisible(!entry.isIntersecting);
+      },
+      {
+        // El threshold de 0 significa que se activará cuando cualquier parte del elemento entre o salga
+        threshold: 0,
+        // rootMargin negativo para activar un poco antes de que el elemento salga completamente
+        rootMargin: "-50px 0px -50px 0px"
+      }
+    );
+
+    observer.observe(originalButton);
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   if (!isVisible) return null;

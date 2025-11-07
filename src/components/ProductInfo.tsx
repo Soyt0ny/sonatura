@@ -202,7 +202,12 @@ const ProductInfo = () => {
           <CountdownTimer />
           
           <div className="space-y-0">
-            <Button size="lg" className="w-full text-sm font-bold h-12 rounded-full bg-[#4A5A8B] hover:bg-[#3A4A7B] text-white uppercase tracking-wide">
+            <Button 
+              id="original-cart-button"
+              size="lg" 
+              variant="cta"
+              className="w-full text-base font-bold h-14 uppercase tracking-wide"
+            >
               Agregar al Carrito | $169
             </Button>
             
