@@ -41,7 +41,7 @@ const ProductInfo = () => {
             <p className="text-3xl font-bold text-foreground">$49.99</p>
             <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-semibold">50% OFF</span>
           </div>
-          <p className="text-sm text-muted-foreground mt-1">O 6 meses sin intereses de $9 dólares</p>
+          <p className="text-sm text-muted-foreground mt-1"><span className="font-bold">O 6 meses sin intereses de $9 dólares</span></p>
         </div>
 
         {/* Imágenes en móvil - después del título */}
