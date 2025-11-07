@@ -186,8 +186,10 @@ const ProductInfo = () => {
         </div>
 
 
-        <div className="bg-secondary/30 rounded-lg p-4">
-          <h4 className="font-bold mb-4 text-center text-sm">¡VENTA EXCLUSIVA! Regalos GRATIS con tu Primera Orden</h4>
+        <div className="space-y-4">
+          <h4 className="font-bold text-center text-base">
+            <span className="font-extrabold">EXCLUSIVE SALE!</span> FREE Gifts With Your First Order
+          </h4>
           <div className="grid grid-cols-4 gap-3">
             {[
               { value: "$10", name: "Digital Book" },
@@ -195,17 +197,15 @@ const ProductInfo = () => {
               { value: "$19", name: "Lash Curler" },
               { value: "$25", name: "Mascara" }
             ].map((gift, idx) => (
-              <div key={idx} className="flex flex-col items-center">
-                <div className="border border-dashed border-border/60 rounded-md p-2 w-full">
-                  <div className="text-center mb-2">
-                    <span className="text-[10px] font-bold">FREE {gift.value}</span>
-                  </div>
-                  <div className="aspect-square bg-accent/20 rounded flex items-center justify-center mb-2">
-                    <span className="text-2xl">🎁</span>
-                  </div>
-                  <div className="text-center">
-                    <span className="text-[10px] font-medium leading-tight">{gift.name}</span>
-                  </div>
+              <div key={idx} className="border border-dashed border-foreground/30 rounded-sm p-2.5">
+                <div className="text-center mb-2">
+                  <span className="text-[11px] font-bold">FREE {gift.value}</span>
+                </div>
+                <div className="aspect-square bg-[#FFE4E4] rounded-sm mb-2 flex items-center justify-center">
+                  <span className="text-3xl">🎁</span>
+                </div>
+                <div className="text-center">
+                  <span className="text-[11px] font-semibold leading-tight">{gift.name}</span>
                 </div>
               </div>
             ))}
