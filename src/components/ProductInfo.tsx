@@ -94,13 +94,16 @@ const ProductInfo = () => {
       <div className="space-y-6">
         {/* Desktop: mostrar rating, título y precio primero */}
         <div className="hidden md:block space-y-4">
-          <div className="flex items-center gap-2">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
+              </div>
+              <span className="text-xs text-foreground font-medium">4.7 / 5</span>
+              <span className="text-muted-foreground text-xs">●</span>
+              <span className="text-xs text-muted-foreground">Loved by 726,000+ customers</span>
             </div>
-            <span className="text-xs text-foreground font-medium">4.7 / 5</span>
-            <span className="text-muted-foreground text-xs">●</span>
-            <span className="text-xs text-muted-foreground">Loved by 726,000+ customers</span>
+            <p className="text-xs text-muted-foreground">#1 Best Seller en transformación Holística</p>
           </div>
 
           <div>
@@ -132,13 +135,16 @@ const ProductInfo = () => {
 
         {/* Móvil: mostrar rating, título y precio después de galería */}
         <div className="md:hidden space-y-4">
-          <div className="flex items-center gap-2 flex-wrap">
-            <div className="flex">
-              {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
+          <div className="space-y-1">
+            <div className="flex items-center gap-2 flex-wrap">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
+              </div>
+              <span className="text-xs text-foreground font-medium">4.7 / 5</span>
+              <span className="text-muted-foreground text-xs">●</span>
+              <span className="text-xs text-muted-foreground">726,000+ Clientes lo aman</span>
             </div>
-            <span className="text-xs text-foreground font-medium">4.7 / 5</span>
-            <span className="text-muted-foreground text-xs">●</span>
-            <span className="text-xs text-muted-foreground">726,000+ Clientes lo aman</span>
+            <p className="text-xs text-muted-foreground">#1 Best Seller en transformación Holística</p>
           </div>
 
           <div>
