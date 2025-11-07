@@ -163,11 +163,9 @@ const ProductInfo = () => {
             <p className="text-xs text-foreground mt-1">O solo $8.3/mes Shopay</p>
           </div>
 
-          <p className="text-base text-foreground leading-relaxed">Deshincha tu cuerpo, elimina acné hormonal y vive tu Glow Up sin depender del sistema. </p>
+          
 
-          <p className="text-sm text-foreground leading-relaxed">
-            This 12-minute award-winning Skincare Wand uses 4 advanced technologies. With a rotating head and built-in timer, you're in control of where results appear.
-          </p>
+          
         </div>
 
         <div>
@@ -175,7 +173,7 @@ const ProductInfo = () => {
         </div>
 
         <div className="border border-border rounded-lg p-4">
-          <h3 className="font-bold text-base mb-4">4 science-backed technologies:</h3>
+          <h3 className="font-bold text-base mb-4">Beneficios clave</h3>
           <div className="space-y-3">
             <div className="flex items-start gap-3">
               <div className="text-primary text-xl flex-shrink-0">✦</div>
