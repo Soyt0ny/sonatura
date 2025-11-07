@@ -480,6 +480,25 @@ const ProductInfo = () => {
         <span className="text-primary-foreground/40">•</span>
       </div>
     </div>
+
+    {/* Authority Logos Section */}
+    <div className="py-8 bg-background">
+      <div className="max-w-6xl mx-auto px-4">
+        <p className="text-center text-sm font-medium text-muted-foreground mb-6">
+          Inspirado en prácticas aprobadas por...
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 items-center justify-items-center">
+          {[1, 2, 3, 4].map((i) => (
+            <div 
+              key={i} 
+              className="w-full aspect-[3/2] bg-muted/30 border border-border rounded-lg flex items-center justify-center"
+            >
+              <span className="text-xs text-muted-foreground">Logo {i}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   </>;
 };
 export default ProductInfo;
