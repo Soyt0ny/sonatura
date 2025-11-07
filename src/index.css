@@ -119,3 +119,18 @@ All colors MUST be HSL.
     @apply bg-background text-foreground font-sans;
   }
 }
+
+@layer utilities {
+  @keyframes scroll-infinite {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-scroll-infinite {
+    animation: scroll-infinite 30s linear infinite;
+  }
+}
