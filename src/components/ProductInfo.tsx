@@ -1,4 +1,4 @@
-import { Star, Clock, DollarSign, Sparkles, TrendingUp } from "lucide-react";
+import { Star, Clock, DollarSign, Sparkles, TrendingUp, Timer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import ProductGallery from "@/components/ProductGallery";
@@ -7,6 +7,47 @@ import paymentIcons from "@/assets/payment-icons.png";
 import { useState, useEffect } from "react";
 import { addDays, format } from "date-fns";
 import { es } from "date-fns/locale";
+
+const CountdownTimer = () => {
+  const [timeLeft, setTimeLeft] = useState(59 * 60); // 59 minutos en segundos
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 0) {
+          return 59 * 60; // Reinicia a 59 minutos cuando llega a 0
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const minutes = Math.floor(timeLeft / 60);
+  const seconds = timeLeft % 60;
+
+  return (
+    <div className="bg-gradient-to-r from-red-50 to-red-100 dark:from-red-950/20 dark:to-red-900/20 border-2 border-red-200 dark:border-red-800 rounded-lg p-3">
+      <div className="flex items-center justify-center gap-2">
+        <Timer className="w-4 h-4 text-red-600 dark:text-red-400 animate-pulse" />
+        <div className="text-center">
+          <p className="text-xs font-semibold text-red-600 dark:text-red-400 mb-0.5">
+            ⚡ OFERTA TERMINA EN
+          </p>
+          <div className="flex items-center justify-center gap-1">
+            <span className="text-2xl font-bold text-red-700 dark:text-red-300 tabular-nums">
+              {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
+            </span>
+          </div>
+          <p className="text-[10px] font-medium text-red-600/80 dark:text-red-400/80 mt-0.5">
+            50% OFF + Regalos GRATIS
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
 const featuredReviews = [{
   name: "Christina A.",
   date: "April 4, 2025",
@@ -169,6 +210,9 @@ const ProductInfo = () => {
         </div>
 
         <div className="space-y-3">
+          {/* Countdown Timer */}
+          <CountdownTimer />
+          
           <div className="space-y-0">
             <Button size="lg" className="w-full text-sm font-bold h-12 rounded-full bg-[#4A5A8B] hover:bg-[#3A4A7B] text-white uppercase tracking-wide">
               Agregar al Carrito | $169
