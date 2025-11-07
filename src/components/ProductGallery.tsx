@@ -1,10 +1,12 @@
 import { useState } from "react";
-import productMain from "@/assets/product-main.jpg";
-import productResults from "@/assets/product-results.jpg";
-import productApplication from "@/assets/product-application.jpg";
+import product1 from "@/assets/product-1.png";
+import product2 from "@/assets/product-2.png";
+import product3 from "@/assets/product-3.png";
+import product4 from "@/assets/product-4.png";
+import product5 from "@/assets/product-5.png";
 
 const ProductGallery = () => {
-  const images = [productMain, productResults, productApplication, productMain, productResults];
+  const images = [product1, product2, product3, product4, product5];
   const [selectedImage, setSelectedImage] = useState(0);
 
   return (
