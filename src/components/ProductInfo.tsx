@@ -105,9 +105,6 @@ const ProductInfo = () => {
               <p className="text-2xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$99</p>
               <p className="text-2xl font-bold text-foreground">$169</p>
             </div>
-            <p className="text-sm text-foreground mt-1">
-              or just <span className="font-semibold underline">$14.08/mo</span> <span className="text-primary font-semibold">affirm</span>
-            </p>
           </div>
 
           <p className="text-base text-foreground leading-relaxed">
@@ -149,8 +146,7 @@ const ProductInfo = () => {
               </div>
               <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">50% OFF</span>
             </div>
-            <p className="text-xs text-foreground mt-1">O solo $8.3/mes Shopay<span className="font-semibold underline">$14.08/mo</span> <span className="text-primary font-semibold">affirm</span>
-            </p>
+            <p className="text-xs text-foreground mt-1">O solo $8.3/mes Shopay</p>
           </div>
 
           <p className="text-base text-foreground leading-relaxed">
