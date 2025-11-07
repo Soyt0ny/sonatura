@@ -138,29 +138,29 @@ const ProductInfo = () => {
           </div>
 
           {/* Sección de Stock Limitado */}
-          <div className="bg-background border rounded-lg p-4 space-y-2">
-            <h3 className="text-lg font-bold">SE ESTÁ AGOTANDO</h3>
-            <p className="text-sm text-muted-foreground">Debido a la alta demanda, cantidades limitadas disponibles</p>
+          <div className="bg-background border rounded-lg p-3 space-y-2">
+            <h3 className="text-base font-bold">SE ESTÁ AGOTANDO</h3>
+            <p className="text-xs text-muted-foreground">Debido a la alta demanda, cantidades limitadas disponibles</p>
             <div className="space-y-1">
-              <Progress value={88} className="h-6" />
-              <p className="text-sm font-semibold">88% VENDIDO</p>
+              <Progress value={88} className="h-5" />
+              <p className="text-xs font-semibold">88% VENDIDO</p>
             </div>
           </div>
 
           {/* Sección de Garantía */}
-          <div className="bg-accent/30 rounded-lg p-4">
-            <div className="flex gap-4 items-start">
+          <div className="bg-accent/30 rounded-lg p-3">
+            <div className="flex gap-3 items-start">
               <div className="flex-shrink-0">
-                <div className="w-20 h-20 rounded-full border-2 border-primary bg-background flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full border-2 border-primary bg-background flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">60</div>
-                    <div className="text-xs text-muted-foreground">Días</div>
+                    <div className="text-xl font-bold text-primary">60</div>
+                    <div className="text-[10px] text-muted-foreground">Días</div>
                   </div>
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-bold mb-2">Garantía de devolución de dinero de 60 días</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="text-base font-bold mb-1">Garantía de devolución de dinero de 60 días</h3>
+                <p className="text-xs text-muted-foreground">
                   Una piel hermosa toma tiempo. Ama tus resultados o recibe un reembolso completo. 100% sin riesgo.
                 </p>
               </div>
