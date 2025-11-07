@@ -2,7 +2,7 @@ import { Star, Clock, DollarSign, Sparkles, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import ProductGallery from "@/components/ProductGallery";
-import ReviewsCarousel from "@/components/ReviewsCarousel";
+
 import paymentIcons from "@/assets/payment-icons.png";
 import { useState, useEffect } from "react";
 import { addDays, format } from "date-fns";
@@ -156,10 +156,6 @@ const ProductInfo = () => {
           </p>
         </div>
 
-        <div>
-          
-          <ReviewsCarousel />
-        </div>
 
         <div className="bg-secondary rounded-lg p-4">
           <h4 className="font-semibold mb-3 text-center">¡VENTA EXCLUSIVA! Regalos GRATIS con tu Primera Orden</h4>
