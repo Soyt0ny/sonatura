@@ -63,16 +63,26 @@ const featuredReviews = [{
 }];
 const ProductInfo = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+  const [liveUsers, setLiveUsers] = useState(1150);
 
   // Calcular la fecha de mañana
   const tomorrow = addDays(new Date(), 1);
   const formattedDate = format(tomorrow, "d 'de' MMMM", {
     locale: es
   });
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentReviewIndex(prev => (prev + 1) % featuredReviews.length);
     }, 7000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomUsers = Math.floor(Math.random() * (1297 - 1000 + 1)) + 1000;
+      setLiveUsers(randomUsers);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
   return <div className="grid md:grid-cols-2 gap-8 md:gap-12">
@@ -231,6 +241,15 @@ const ProductInfo = () => {
         <div className="space-y-3">
           {/* Countdown Timer */}
           <CountdownTimer />
+          
+          {/* Live Users Counter */}
+          <div className="flex items-center justify-center gap-2 py-2">
+            <div className="flex items-center gap-1.5">
+              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+              <span className="text-sm font-semibold text-foreground">{liveUsers.toLocaleString()}</span>
+            </div>
+            <span className="text-sm text-muted-foreground">personas viendo este producto</span>
+          </div>
           
           <div className="space-y-0">
             <Button id="original-cart-button" size="lg" variant="cta" className="w-full text-base font-bold h-14 uppercase tracking-wide">
