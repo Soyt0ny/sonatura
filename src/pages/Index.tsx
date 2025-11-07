@@ -2,13 +2,11 @@ import CountdownBanner from "@/components/CountdownBanner";
 import Header from "@/components/Header";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductInfo from "@/components/ProductInfo";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <CountdownBanner />
       <Header />
-      <AnnouncementBar />
+      
       
       <main className="container mx-auto px-4 py-8 md:py-12">
         <div className="max-w-7xl mx-auto">
@@ -53,20 +51,16 @@ const Index = () => {
         <section className="mt-16 md:mt-24 bg-secondary/50 rounded-2xl p-8 md:p-12">
           <h2 className="text-3xl font-bold text-center mb-12">Lo Que Dicen Nuestras Clientas</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-background rounded-lg p-6">
+            {[1, 2, 3].map(i => <div key={i} className="bg-background rounded-lg p-6">
                 <div className="flex mb-3">
-                  {[...Array(5)].map((_, idx) => (
-                    <span key={idx} className="text-primary">★</span>
-                  ))}
+                  {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
                 </div>
                 <p className="text-sm mb-4">
                   "¡Resultados increíbles! Mis pestañas son mucho más largas y llenas. ¡Recibo cumplidos todo el tiempo!"
                 </p>
                 <p className="text-sm font-semibold">- Sarah M.</p>
                 <p className="text-xs text-muted-foreground">Compradora Verificada</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </section>
 
@@ -104,8 +98,6 @@ const Index = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
