@@ -115,15 +115,6 @@ const ProductInfo = () => {
           <ReviewsCarousel />
         </div>
 
-        <div className="space-y-3">
-          <Button size="lg" className="w-full text-lg h-14">
-            Agregar al Carrito
-          </Button>
-          <p className="text-center text-sm text-muted-foreground">
-            3ML = 30 APLICACIONES, SOLO $0.10/APLICACIÓN
-          </p>
-        </div>
-
         <div className="bg-secondary rounded-lg p-4">
           <h4 className="font-semibold mb-3 text-center">¡VENTA EXCLUSIVA! Regalos GRATIS con tu Primera Orden</h4>
           <div className="grid grid-cols-4 gap-2">
@@ -133,6 +124,15 @@ const ProductInfo = () => {
                 </div>
               </div>)}
           </div>
+        </div>
+
+        <div className="space-y-3">
+          <Button size="lg" className="w-full text-lg h-14">
+            Agregar al Carrito
+          </Button>
+          <p className="text-center text-sm text-muted-foreground">
+            3ML = 30 APLICACIONES, SOLO $0.10/APLICACIÓN
+          </p>
         </div>
       </div>
     </div>;
