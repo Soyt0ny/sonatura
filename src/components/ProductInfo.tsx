@@ -46,11 +46,11 @@ const ProductInfo = () => {
         <div className="hidden md:block space-y-4">
           <div className="flex items-center gap-2">
             <div className="flex">
-              {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
+              {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
             </div>
-            <span className="text-base text-foreground font-medium">4.7 / 5</span>
-            <span className="text-muted-foreground">●</span>
-            <span className="text-base text-muted-foreground">Loved by 726,000+ customers</span>
+            <span className="text-xs text-foreground font-medium">4.7 / 5</span>
+            <span className="text-muted-foreground text-xs">●</span>
+            <span className="text-xs text-muted-foreground">Loved by 726,000+ customers</span>
           </div>
 
           <div>
@@ -86,11 +86,11 @@ const ProductInfo = () => {
         <div className="md:hidden space-y-4">
           <div className="flex items-center gap-2 flex-wrap">
             <div className="flex">
-              {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
+              {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
             </div>
-            <span className="text-base text-foreground font-medium">4.7 / 5</span>
-            <span className="text-muted-foreground">●</span>
-            <span className="text-base text-muted-foreground">Loved by 726,000+ customers</span>
+            <span className="text-xs text-foreground font-medium">4.7 / 5</span>
+            <span className="text-muted-foreground text-xs">●</span>
+            <span className="text-xs text-muted-foreground">Loved by 726,000+ customers</span>
           </div>
 
           <div>

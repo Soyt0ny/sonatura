@@ -31,6 +31,30 @@ const ReviewsCarousel = () => {
     return () => clearInterval(interval);
   }, []);
   const currentReview = reviews[currentIndex];
-  return;
+  
+  return (
+    <Card className="p-4 space-y-3">
+      <div className="flex items-start justify-between">
+        <div className="flex items-center gap-2">
+          <span className="font-semibold">{currentReview.name}</span>
+          <CheckCircle className="w-4 h-4 text-primary" />
+        </div>
+        <span className="text-xs text-muted-foreground">{currentReview.date}</span>
+      </div>
+      <p className="text-sm text-foreground leading-relaxed">{currentReview.text}</p>
+      
+      <div className="flex justify-center gap-2 pt-2">
+        {reviews.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className={`h-1.5 rounded-full transition-all ${
+              idx === currentIndex ? 'w-6 bg-primary' : 'w-1.5 bg-muted'
+            }`}
+          />
+        ))}
+      </div>
+    </Card>
+  );
 };
 export default ReviewsCarousel;
