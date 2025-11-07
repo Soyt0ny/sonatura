@@ -162,8 +162,8 @@ const ProductInfo = () => {
           </div>
 
           {/* Real Results Section */}
-          <div className="mt-8 space-y-2">
-            <h2 className="text-lg font-bold">Real results from real customers</h2>
+          <div className="mt-8 space-y-1.5">
+            <h2 className="text-base font-bold">Real results from real customers</h2>
             
             {/* Video Testimonials Grid - Optimized for Reels/TikTok */}
             <div className="grid grid-cols-4 gap-2 mb-4">
