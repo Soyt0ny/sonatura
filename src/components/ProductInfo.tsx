@@ -14,17 +14,16 @@ const ProductInfo = () => {
 
       {/* Columna derecha - Información */}
       <div className="space-y-6">
-        <div className="flex items-center gap-2">
-          <div className="flex">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-            ))}
+        <div className="space-y-1">
+          <div className="flex items-center gap-2">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+              ))}
+            </div>
+            <span className="text-sm text-muted-foreground">Excelente 5.0 | 9903 Reseñas</span>
           </div>
-          <span className="text-sm text-muted-foreground">Excelente 5.0 | 9903 Reseñas</span>
-        </div>
-
-        <div>
-          <p className="text-sm font-semibold text-foreground">
+          <p className="text-xs text-muted-foreground">
             #1 Best Seller transformación Holística y Wellness
           </p>
         </div>
