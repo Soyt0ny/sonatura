@@ -131,7 +131,28 @@ const ProductInfo = () => {
             <p className="text-xs text-foreground mt-1">O solo $8.3/mes Shopay</p>
           </div>
 
-          
+          <div className="space-y-2 mt-4">
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">✦</div>
+              <span className="text-sm">Elimina grasa abdominal y Deshincha tu rostro (bajando tu cortisol)</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">≈</div>
+              <span className="text-sm">Elimina acne hormonal (protocolo super calm y protocolo Afrodita)</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">⇈</div>
+              <span className="text-sm">Elimina fatiga durante el día, insomnio y apariencia de cansancio.</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">◎</div>
+              <span className="text-sm">Reduce tu estrés de forma natural y acelera tu metabolismo sin depender de productos químicos que dañan tu salud.</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">✓</div>
+              <span className="text-sm">Todo con recetas y protocolos paso a paso que toman solo 5 minutos.</span>
+            </div>
+          </div>
 
           
         </div>
@@ -170,35 +191,26 @@ const ProductInfo = () => {
             </div>
             <p className="text-xs text-foreground mt-1">O solo $8.3/mes Shopay</p>
           </div>
-        </div>
 
-        
-
-        <div>
-          
-        </div>
-
-        <div className="border border-border rounded-lg p-4">
-          <h3 className="font-bold text-base mb-4">Recupera tu belleza, tu salud y tu energía en 14 días sin productos químicos...</h3>
-          <div className="space-y-3">
-            <div className="flex items-start gap-3">
-              <div className="text-primary text-xl flex-shrink-0">✦</div>
+          <div className="space-y-2 mt-4">
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">✦</div>
               <span className="text-sm">Elimina grasa abdominal y Deshincha tu rostro (bajando tu cortisol)</span>
             </div>
-            <div className="flex items-start gap-3">
-              <div className="text-primary text-xl flex-shrink-0">≈</div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">≈</div>
               <span className="text-sm">Elimina acne hormonal (protocolo super calm y protocolo Afrodita)</span>
             </div>
-            <div className="flex items-start gap-3">
-              <div className="text-primary text-xl flex-shrink-0">⇈</div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">⇈</div>
               <span className="text-sm">Elimina fatiga durante el día, insomnio y apariencia de cansancio.</span>
             </div>
-            <div className="flex items-start gap-3">
-              <div className="text-primary text-xl flex-shrink-0">◎</div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">◎</div>
               <span className="text-sm">Reduce tu estrés de forma natural y acelera tu metabolismo sin depender de productos químicos que dañan tu salud.</span>
             </div>
-            <div className="flex items-start gap-3">
-              <div className="text-primary text-xl flex-shrink-0">✓</div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">✓</div>
               <span className="text-sm">Todo con recetas y protocolos paso a paso que toman solo 5 minutos.</span>
             </div>
           </div>
