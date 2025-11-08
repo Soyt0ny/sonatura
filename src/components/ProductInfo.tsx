@@ -166,11 +166,11 @@ const ProductInfo = () => {
             </div>
             <p className="text-xs text-foreground mt-1">O solo $8.3/mes Shopay</p>
           </div>
-
-          
-
-          
         </div>
+
+        <p className="text-sm text-foreground/90 leading-relaxed">
+          Esta guía holística de 14 días combina protocolos naturales respaldados por la ciencia con remedios ancestrales. Transforma tu salud hormonal, digestiva y energética sin depender de suplementos químicos. Con más de 200 protocolos paso a paso, lograrás resultados visibles desde los primeros días.
+        </p>
 
         <div>
           
@@ -178,11 +178,6 @@ const ProductInfo = () => {
 
         <div className="border border-border rounded-lg p-4">
           <h3 className="font-bold text-base mb-4">Recupera tu belleza, tu salud y tu energía en 14 días sin productos químicos...</h3>
-          
-          <p className="text-sm text-foreground/90 leading-relaxed mb-4">
-            Esta guía holística de 14 días combina protocolos naturales respaldados por la ciencia con remedios ancestrales. Transforma tu salud hormonal, digestiva y energética sin depender de suplementos químicos. Con más de 200 protocolos paso a paso, lograrás resultados visibles desde los primeros días.
-          </p>
-          
           <div className="space-y-3">
             <div className="flex items-start gap-3">
               <div className="text-primary text-xl flex-shrink-0">✦</div>
