@@ -285,19 +285,7 @@ deshincha tu rostro</span>
           </div>
           
           {/* Código de Descuento */}
-          <div className="flex items-center justify-center gap-1.5 text-xs py-2 transition-colors">
-            <span className={copied ? "text-primary font-medium" : "text-muted-foreground"}>
-              {copied ? "✓ ¡Código copiado!" : "Para 10% extra usa el código"}
-            </span>
-            <button onClick={() => {
-                navigator.clipboard.writeText("2026");
-                setCopied(true);
-                setTimeout(() => setCopied(false), 2000);
-              }} className="inline-flex items-center gap-1 font-semibold text-foreground underline decoration-primary/40 underline-offset-2 hover:decoration-primary transition-colors">
-              2026
-              <Copy className="w-3 h-3 opacity-50" />
-            </button>
-          </div>
+          
           
           <div className="space-y-0">
             {/* FREE GIFTS Section - Right above Add to Cart button */}
