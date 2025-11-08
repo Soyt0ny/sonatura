@@ -6,6 +6,7 @@ import StickyCartBar from "@/components/StickyCartBar";
 const Index = () => {
   return <div className="min-h-screen">
       <StickyCartBar />
+      <CountdownBanner />
       <Header />
       
       
