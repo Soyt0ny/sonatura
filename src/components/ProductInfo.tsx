@@ -92,14 +92,14 @@ const ProductInfo = () => {
     return () => clearInterval(interval);
   }, []);
   return <>
-    <div className="w-full grid md:grid-cols-2 gap-8 md:gap-12">
+    <div className="grid md:grid-cols-2 gap-8 md:gap-12">
       {/* Columna izquierda - Imágenes (solo en desktop) - STICKY */}
       <div className="hidden md:block md:sticky md:top-4 md:self-start md:h-fit">
         <ProductGallery />
       </div>
 
       {/* Columna derecha - Información - SCROLLABLE */}
-      <div className="w-full space-y-6">
+      <div className="space-y-6">
         {/* Desktop: mostrar rating, título y precio primero */}
         <div className="hidden md:block space-y-4">
           <div className="space-y-1">
@@ -281,45 +281,44 @@ const ProductInfo = () => {
             </button>
           </div>
           
-          <div className="space-y-0">
-            {/* FREE GIFTS Section - Right above Add to Cart button */}
-            <div className="space-y-4 mb-4">
-              <h4 className="font-bold text-center text-base">
-                <span className="font-extrabold">EXCLUSIVE SALE!</span> FREE Gifts With Your First Order
-              </h4>
-              <div className="grid grid-cols-4 gap-3">
-                {[{
-                  value: "$10",
-                  name: "Digital Book",
-                  image: giftDigitalBook
-                }, {
-                  value: "$6",
-                  name: "Free Shipping",
-                  image: giftFreeShipping
-                }, {
-                  value: "$19",
-                  name: "Lash Curler",
-                  image: giftLashCurler
-                }, {
-                  value: "$25",
-                  name: "Mascara",
-                  image: giftMascara
-                }].map((gift, idx) => <div key={idx} className="flex flex-col items-center">
-                    <div className="border border-dashed border-foreground/30 rounded-sm p-2.5 w-full">
-                      <div className="text-center mb-2">
-                        <span className="text-[9px] font-bold">GRATIS <span className="line-through decoration-1">{gift.value}</span></span>
-                      </div>
-                      <div className="aspect-[4/3] bg-[#FFE4E4] rounded-sm flex items-center justify-center overflow-hidden">
-                        <img src={gift.image} alt={gift.name} className="w-full h-full object-contain p-1" />
-                      </div>
+          <div className="space-y-4 mb-4">
+            <h4 className="font-bold text-center text-base">
+              <span className="font-extrabold">EXCLUSIVE SALE!</span> FREE Gifts With Your First Order
+            </h4>
+            <div className="grid grid-cols-4 gap-3">
+              {[{
+                value: "$10",
+                name: "Digital Book",
+                image: giftDigitalBook
+              }, {
+                value: "$6",
+                name: "Free Shipping",
+                image: giftFreeShipping
+              }, {
+                value: "$19",
+                name: "Lash Curler",
+                image: giftLashCurler
+              }, {
+                value: "$25",
+                name: "Mascara",
+                image: giftMascara
+              }].map((gift, idx) => <div key={idx} className="flex flex-col items-center">
+                  <div className="border border-dashed border-foreground/30 rounded-sm p-2.5 w-full">
+                    <div className="text-center mb-2">
+                      <span className="text-[9px] font-bold">GRATIS <span className="line-through decoration-1">{gift.value}</span></span>
                     </div>
-                    <div className="text-center mt-2">
-                      <span className="text-[11px] font-semibold leading-tight">{gift.name}</span>
+                    <div className="aspect-[4/3] bg-[#FFE4E4] rounded-sm flex items-center justify-center overflow-hidden">
+                      <img src={gift.image} alt={gift.name} className="w-full h-full object-contain p-1" />
                     </div>
-                  </div>)}
-              </div>
+                  </div>
+                  <div className="text-center mt-2">
+                    <span className="text-[11px] font-semibold leading-tight">{gift.name}</span>
+                  </div>
+                </div>)}
             </div>
+          </div>
 
+          <div className="space-y-0">
             <Button id="original-cart-button" size="lg" variant="cta" className="w-full text-base font-bold h-14 uppercase tracking-wide">
               Agregar al Carrito | $169
             </Button>
