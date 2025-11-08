@@ -53,18 +53,20 @@ const ProductGallery = () => {
           <ChevronRight className="w-5 h-5 text-foreground" />
         </button>
       </div>
-      <div className="grid grid-cols-4 gap-2">
-        {images.map((img, idx) => (
-          <button
-            key={idx}
-            onClick={() => setSelectedImage(idx)}
-            className={`aspect-square rounded-lg overflow-hidden border-2 transition-all ${
-              selectedImage === idx ? "border-primary" : "border-transparent"
-            }`}
-          >
-            <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
-          </button>
-        ))}
+      <div className="relative">
+        <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2">
+          {images.map((img, idx) => (
+            <button
+              key={idx}
+              onClick={() => setSelectedImage(idx)}
+              className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
+                selectedImage === idx ? "border-primary" : "border-transparent"
+              }`}
+            >
+              <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
