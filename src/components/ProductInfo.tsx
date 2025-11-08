@@ -222,10 +222,9 @@ const ProductInfo = () => {
                   return () => clearInterval(timer);
                 }, []);
                 const hours = Math.floor(timeLeft / 3600);
-                const minutes = Math.floor((timeLeft % 3600) / 60);
+                const minutes = Math.floor(timeLeft % 3600 / 60);
                 const seconds = timeLeft % 60;
-                return (
-                  <>
+                return <>
                     <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-4 py-3 min-w-[70px] shadow-sm">
                       <span className="text-2xl font-bold text-foreground tabular-nums">
                         {String(hours).padStart(2, '0')}
@@ -246,13 +245,10 @@ const ProductInfo = () => {
                       </span>
                       <span className="text-[10px] font-semibold text-muted-foreground uppercase">Segundos</span>
                     </div>
-                  </>
-                );
+                  </>;
               })()}
             </div>
-            <p className="text-center text-xs font-medium text-foreground/80 pt-1">
-              🎁 Ordena antes del 8 Nov. para Regalos GRATIS
-            </p>
+            <p className="text-center text-xs font-medium text-foreground/80 pt-1">🎁 Ordena antes del 8 Nov. para recibir Regalos</p>
           </div>
         </div>
 
@@ -297,7 +293,7 @@ const ProductInfo = () => {
 
         <div className="space-y-3">
           {/* Countdown Timer */}
-          <CountdownTimer />
+          
           
           {/* Live Users Counter */}
           <div className="flex items-center justify-center gap-2 py-2">
