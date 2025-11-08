@@ -168,7 +168,7 @@ const ProductInfo = () => {
           </div>
         </div>
 
-        <p className="text-sm text-foreground/90 leading-relaxed">El primer libro Wellness del mundo con +200 Protocolos, recetas y remedios naturales paso a paso para skincare, salud hormonal y digestiva, biohacking y más.. Sin depender de pastillas o suplementos con ingredientes químicos que te envenenan silenciosamente.</p>
+        <p className="text-sm text-foreground/90 leading-relaxed">El primer libro enciclopedia Wellness del mundo con +200 Protocolos, recetas y remedios naturales paso a paso para skincare, salud hormonal y digestiva, biohacking y más.. Sin depender de pastillas o suplementos con ingredientes químicos que te envenenan silenciosamente. Tú estás en control de lo que entra a tu cuerpo. </p>
 
         <div>
           
