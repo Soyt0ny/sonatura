@@ -168,7 +168,7 @@ const ProductInfo = () => {
           </div>
         </div>
 
-        <p className="text-sm text-foreground/90 leading-relaxed">El primer libro enciclopedia Wellness del mundo con +200 Protocolos, recetas y remedios naturales paso a paso para skincare, salud hormonal y digestiva, biohacking y más.. Sin depender de pastillas o suplementos con ingredientes químicos que te envenenan silenciosamente. Tú estás en control de lo que entra a tu cuerpo. </p>
+        <p className="text-sm text-foreground/90 leading-relaxed">El primer libro enciclopedia Wellness del mundo con +200 Protocolos, recetas y remedios naturales paso a paso para skincare, salud hormonal y digestiva, biohacking y más.. Sin depender de pastillas o suplementos con ingredientes químicos que te envenenan silenciosamente.  </p>
 
         <div>
           
@@ -253,112 +253,15 @@ const ProductInfo = () => {
 
 
         {/* Order Deadline Banner */}
-        <div className="border-2 border-dashed border-[#E88B9C] rounded-lg p-4 bg-[#FFF5F7]">
-          <div className="flex items-center justify-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-[#E88B9C] flex-shrink-0"></div>
-            <p className="text-sm font-bold text-center">
-              Order by Nov. 9th for guaranteed FREE Gifts
-            </p>
-          </div>
-        </div>
+        
 
         {/* Bundle Selection */}
-        <div className="grid grid-cols-2 gap-3">
-          {/* 4 Bottles - Best Deal */}
-          <div className="relative">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-              <span className="bg-[#E88B9C] text-white text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">
-                BEST DEAL
-              </span>
-            </div>
-            <div className="border-[3px] border-[#E88B9C] rounded-xl p-4 bg-[#FFF5F7] pt-6">
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full border-[3px] border-[#E88B9C] bg-[#E88B9C] flex items-center justify-center flex-shrink-0 mt-1">
-                  <div className="w-2.5 h-2.5 rounded-full bg-white"></div>
-                </div>
-                <div className="flex-1">
-                  <div className="text-xl font-bold mb-0.5">4 Bottles</div>
-                  <div className="text-lg font-semibold">$17.5/each</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 3 Bottles */}
-          <div className="border-[3px] border-[#94A3B8] rounded-xl p-4 bg-white">
-            <div className="flex items-start gap-3">
-              <div className="w-6 h-6 rounded-full border-[3px] border-[#94A3B8] flex-shrink-0 mt-1"></div>
-              <div className="flex-1">
-                <div className="text-xl font-bold mb-0.5">3 Bottles</div>
-                <div className="text-lg font-semibold">$19.6/each</div>
-              </div>
-            </div>
-          </div>
-
-          {/* 2 Bottles */}
-          <div className="border-[3px] border-[#94A3B8] rounded-xl p-4 bg-white">
-            <div className="flex items-start gap-3">
-              <div className="w-6 h-6 rounded-full border-[3px] border-[#94A3B8] flex-shrink-0 mt-1"></div>
-              <div className="flex-1">
-                <div className="text-xl font-bold mb-0.5">2 Bottles</div>
-                <div className="text-lg font-semibold">$21.5/each</div>
-              </div>
-            </div>
-          </div>
-
-          {/* 1 Bottle */}
-          <div className="border-[3px] border-[#94A3B8] rounded-xl p-4 bg-white">
-            <div className="flex items-start gap-3">
-              <div className="w-6 h-6 rounded-full border-[3px] border-[#94A3B8] flex-shrink-0 mt-1"></div>
-              <div className="flex-1">
-                <div className="text-xl font-bold mb-0.5">1 Bottle</div>
-                <div className="text-lg font-semibold">$24/each</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
 
         {/* Free Gifts Section */}
         <div className="space-y-4">
-          <h4 className="font-bold text-center text-base">
-            <span className="font-extrabold">EXCLUSIVE SALE!</span> FREE Gifts With Your First Order
-          </h4>
-          <div className="grid grid-cols-4 gap-3">
-            {[{
-              value: "$10",
-              name: "Digital Book",
-              image: giftDigitalBook
-            }, {
-              value: "$6",
-              name: "Free Shipping",
-              image: giftFreeShipping
-            }, {
-              value: "$19",
-              name: "Lash Curler",
-              image: giftLashCurler
-            }, {
-              value: "$25",
-              name: "Mascara",
-              image: giftMascara
-            }].map((gift, idx) => <div key={idx} className="flex flex-col items-center">
-                <div className="relative">
-                  {/* Badge arriba */}
-                  <div className="bg-[#FFE4E4] px-2 py-0.5 rounded-sm mb-1">
-                    <span className="text-[10px] font-bold">FREE <span className="line-through">{gift.value}</span></span>
-                  </div>
-                  {/* Imagen con borde punteado */}
-                  <div className="border-2 border-dashed border-black rounded-sm p-3 bg-white">
-                    <div className="aspect-square bg-[#FFE4E4] rounded-sm flex items-center justify-center overflow-hidden">
-                      <img src={gift.image} alt={gift.name} className="w-full h-full object-contain p-1" />
-                    </div>
-                  </div>
-                </div>
-                {/* Texto debajo */}
-                <div className="text-center mt-2">
-                  <span className="text-xs font-bold leading-tight">{gift.name}</span>
-                </div>
-              </div>)}
-          </div>
+          
+          
         </div>
 
         <div className="space-y-3">
@@ -375,19 +278,7 @@ const ProductInfo = () => {
           </div>
           
           {/* Código de Descuento */}
-          <div className="flex items-center justify-center gap-1.5 text-xs py-2 transition-colors">
-            <span className={copied ? "text-primary font-medium" : "text-muted-foreground"}>
-              {copied ? "✓ ¡Código copiado!" : "Para 10% extra usa el código"}
-            </span>
-            <button onClick={() => {
-              navigator.clipboard.writeText("2026");
-              setCopied(true);
-              setTimeout(() => setCopied(false), 2000);
-            }} className="inline-flex items-center gap-1 font-semibold text-foreground underline decoration-primary/40 underline-offset-2 hover:decoration-primary transition-colors">
-              2026
-              <Copy className="w-3 h-3 opacity-50" />
-            </button>
-          </div>
+          
           
           <div className="space-y-0">
             <Button id="original-cart-button" size="lg" variant="cta" className="w-full text-base font-bold h-14 uppercase tracking-wide">
