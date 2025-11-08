@@ -99,7 +99,7 @@ const ProductInfo = () => {
       </div>
 
       {/* Columna derecha - Información - SCROLLABLE */}
-      <div className="w-full space-y-6">
+      <div className="w-full md:max-w-2xl space-y-6">
         {/* Desktop: mostrar rating, título y precio primero */}
         <div className="hidden md:block space-y-4">
           <div className="space-y-1">
