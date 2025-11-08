@@ -172,6 +172,12 @@ const ProductInfo = () => {
           </div>
         </div>
 
+        
+
+        <div>
+          
+        </div>
+
         <div className="border border-border rounded-lg p-4">
           <h3 className="font-bold text-base mb-4">Recupera tu belleza, tu salud y tu energía en 14 días sin productos químicos...</h3>
           <div className="space-y-3">
