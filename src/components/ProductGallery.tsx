@@ -6,9 +6,12 @@ import product2 from "@/assets/product-2.png";
 import product3 from "@/assets/product-3.png";
 import product4 from "@/assets/product-4.png";
 import product5 from "@/assets/product-5.png";
+import product6 from "@/assets/product-6.png";
+import product7 from "@/assets/product-7.png";
+import product8 from "@/assets/product-8.png";
 
 const ProductGallery = () => {
-  const images = [product1, product2, product3, product4, product5];
+  const images = [product1, product2, product3, product4, product5, product6, product7, product8];
   const [selectedImage, setSelectedImage] = useState(0);
 
   const handlePrevious = () => {
@@ -50,7 +53,7 @@ const ProductGallery = () => {
           <ChevronRight className="w-5 h-5 text-foreground" />
         </button>
       </div>
-      <div className="grid grid-cols-5 gap-2">
+      <div className="grid grid-cols-4 gap-2">
         {images.map((img, idx) => (
           <button
             key={idx}
