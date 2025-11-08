@@ -439,7 +439,7 @@ const ProductInfo = () => {
 
           {/* Product Information Accordion */}
           <div className="mt-8 pt-4 border-t border-border">
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible defaultValue="good-to-know" className="w-full">
               <AccordionItem value="good-to-know">
                 <AccordionTrigger className="text-base font-bold">Good To Know</AccordionTrigger>
                 <AccordionContent className="text-xs text-muted-foreground space-y-2">
