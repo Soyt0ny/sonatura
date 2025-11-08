@@ -260,8 +260,44 @@ const ProductInfo = () => {
 
         {/* Free Gifts Section */}
         <div className="space-y-4">
-          
-          
+          <h4 className="font-bold text-center text-base">4 Regalos GRATIS con tu primer pedido<span className="font-extrabold">EXCLUSIVE SALE!</span> FREE Gifts With Your First Order
+          </h4>
+          <div className="grid grid-cols-4 gap-3">
+            {[{
+              value: "$10",
+              name: "Digital Book",
+              image: giftDigitalBook
+            }, {
+              value: "$6",
+              name: "Free Shipping",
+              image: giftFreeShipping
+            }, {
+              value: "$19",
+              name: "Lash Curler",
+              image: giftLashCurler
+            }, {
+              value: "$25",
+              name: "Mascara",
+              image: giftMascara
+            }].map((gift, idx) => <div key={idx} className="flex flex-col items-center">
+                <div className="relative">
+                  {/* Badge arriba */}
+                  <div className="bg-[#FFE4E4] px-2 py-0.5 rounded-sm mb-1">
+                    <span className="text-[10px] font-bold">FREE <span className="line-through">{gift.value}</span></span>
+                  </div>
+                  {/* Imagen con borde punteado */}
+                  <div className="border-2 border-dashed border-black rounded-sm p-3 bg-white">
+                    <div className="aspect-square bg-[#FFE4E4] rounded-sm flex items-center justify-center overflow-hidden">
+                      <img src={gift.image} alt={gift.name} className="w-full h-full object-contain p-1" />
+                    </div>
+                  </div>
+                </div>
+                {/* Texto debajo */}
+                <div className="text-center mt-2">
+                  <span className="text-xs font-bold leading-tight">{gift.name}</span>
+                </div>
+              </div>)}
+          </div>
         </div>
 
         <div className="space-y-3">
@@ -278,7 +314,19 @@ const ProductInfo = () => {
           </div>
           
           {/* Código de Descuento */}
-          
+          <div className="flex items-center justify-center gap-1.5 text-xs py-2 transition-colors">
+            <span className={copied ? "text-primary font-medium" : "text-muted-foreground"}>
+              {copied ? "✓ ¡Código copiado!" : "Para 10% extra usa el código"}
+            </span>
+            <button onClick={() => {
+              navigator.clipboard.writeText("2026");
+              setCopied(true);
+              setTimeout(() => setCopied(false), 2000);
+            }} className="inline-flex items-center gap-1 font-semibold text-foreground underline decoration-primary/40 underline-offset-2 hover:decoration-primary transition-colors">
+              2026
+              <Copy className="w-3 h-3 opacity-50" />
+            </button>
+          </div>
           
           <div className="space-y-0">
             <Button id="original-cart-button" size="lg" variant="cta" className="w-full text-base font-bold h-14 uppercase tracking-wide">
