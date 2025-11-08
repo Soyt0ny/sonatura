@@ -116,7 +116,7 @@ const ProductInfo = () => {
 
           <div>
             <h1 className="text-2xl font-bold leading-tight">
-              4-in-1 Radiant Renewal Skincare Wand with Red Light Therapy
+              REALIFESTACIÓN LIBRO DIGITAL - 50% Off +4 regalos
             </h1>
           </div>
 
