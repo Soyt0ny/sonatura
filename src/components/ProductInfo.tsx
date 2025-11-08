@@ -253,8 +253,8 @@ const ProductInfo = () => {
 
 
         <div className="space-y-4">
-          <h4 className="font-bold text-center text-base">
-            <span className="font-extrabold">EXCLUSIVE SALE!</span> FREE Gifts With Your First Order
+          <h4 className="font-bold text-center text-base">4 regalos GRATIS con tu primera compra 
+45 TCAHCADO = GRATIS<span className="font-extrabold">EXCLUSIVE SALE!</span> FREE Gifts With Your First Order
           </h4>
           <div className="grid grid-cols-4 gap-3">
             {[{
