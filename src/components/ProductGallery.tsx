@@ -53,12 +53,12 @@ const ProductGallery = () => {
           <ChevronRight className="w-5 h-5 text-foreground" />
         </button>
       </div>
-      <div className="flex gap-2 overflow-x-auto scrollbar-hide pb-2">
+      <div className="grid grid-cols-4 gap-2">
         {images.map((img, idx) => (
           <button
             key={idx}
             onClick={() => setSelectedImage(idx)}
-            className={`aspect-square w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${
+            className={`aspect-square rounded-lg overflow-hidden border-2 transition-all ${
               selectedImage === idx ? "border-primary" : "border-transparent"
             }`}
           >
