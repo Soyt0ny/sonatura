@@ -92,14 +92,14 @@ const ProductInfo = () => {
     return () => clearInterval(interval);
   }, []);
   return <>
-    <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+    <div className="grid md:grid-cols-2 gap-8 md:gap-12 w-full">
       {/* Columna izquierda - Imágenes (solo en desktop) - STICKY */}
       <div className="hidden md:block md:sticky md:top-4 md:self-start md:h-fit">
         <ProductGallery />
       </div>
 
       {/* Columna derecha - Información - SCROLLABLE */}
-      <div className="space-y-6">
+      <div className="space-y-6 w-full">
         {/* Desktop: mostrar rating, título y precio primero */}
         <div className="hidden md:block space-y-4">
           <div className="space-y-1">
