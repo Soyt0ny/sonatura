@@ -195,10 +195,6 @@ const ProductInfo = () => {
               <div className="text-primary text-xl flex-shrink-0">◎</div>
               <span className="text-sm">Reduce tu estrés de forma natural y acelera tu metabolismo sin depender de productos químicos que dañan tu salud.</span>
             </div>
-            <div className="flex items-start gap-3">
-              <div className="text-primary text-xl flex-shrink-0">✓</div>
-              <span className="text-sm">+200 Protocolos y recetas naturistas que puedes hacer en menos de 5 minutos cada mañana.</span>
-            </div>
           </div>
         </div>
 
