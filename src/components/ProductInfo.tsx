@@ -133,6 +133,7 @@ const ProductInfo = () => {
           </div>
 
           <div className="space-y-2 mt-4">
+            <h3 className="text-base font-bold mb-3">+200 Protocolos de salud, belleza y biohacking para:</h3>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✦</div>
               <span className="text-sm">Elimina grasa abdominal y Deshincha tu rostro (bajando tu cortisol)</span>
@@ -194,6 +195,7 @@ const ProductInfo = () => {
           </div>
 
           <div className="space-y-2 mt-4">
+            <h3 className="text-base font-bold mb-3">+200 Protocolos de salud, belleza y biohacking para:</h3>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✦</div>
               <span className="text-sm">Elimina grasa abdominal y
@@ -406,7 +408,7 @@ deshincha tu rostro</span>
             
             {/* Video Testimonials Grid - Optimized for Reels/TikTok */}
             <div className="grid grid-cols-4 gap-2 mb-4">
-              {[1, 2, 3, 4].map(i => {})}
+              {[1, 2, 3, 4].map(i => <div key={i}></div>)}
             </div>
 
             {/* Featured Reviews Carousel */}
