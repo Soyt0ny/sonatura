@@ -148,4 +148,13 @@ All colors MUST be HSL.
   .animate-slide-in-bottom {
     animation: slide-in-bottom 0.3s ease-out;
   }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
