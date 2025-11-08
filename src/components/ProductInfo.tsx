@@ -250,14 +250,12 @@ const ProductInfo = () => {
                 );
               })()}
             </div>
+            <p className="text-center text-xs font-medium text-foreground/80 pt-1">
+              🎁 Ordena antes del 8 Nov. para Regalos GRATIS
+            </p>
           </div>
         </div>
 
-        <div className="bg-accent/30 border border-dashed border-border rounded-lg p-3 text-center">
-          <p className="text-sm font-semibold">
-            🎁 Ordena antes del {formattedDate} para recibir Regalos GRATIS garantizados
-          </p>
-        </div>
 
 
         <div className="space-y-4">
