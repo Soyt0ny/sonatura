@@ -402,17 +402,11 @@ deshincha tu rostro</span>
 
           {/* Real Results Section */}
           <div className="mt-8 space-y-1.5">
-            <h2 className="text-base font-bold">Real results from real customers</h2>
+            
             
             {/* Video Testimonials Grid - Optimized for Reels/TikTok */}
             <div className="grid grid-cols-4 gap-2 mb-4">
-              {[1, 2, 3, 4].map(i => <div key={i} className="relative aspect-[9/16] bg-muted rounded-lg overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-12 h-12 rounded-full bg-[#C83C2E] flex items-center justify-center">
-                      <div className="w-0 h-0 border-t-[8px] border-t-transparent border-l-[12px] border-l-white border-b-[8px] border-b-transparent ml-1"></div>
-                    </div>
-                  </div>
-                </div>)}
+              {[1, 2, 3, 4].map(i => {})}
             </div>
 
             {/* Featured Reviews Carousel */}
