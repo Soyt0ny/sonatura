@@ -50,7 +50,7 @@ const CountdownTimer = () => {
 const featuredReviews = [{
   name: "Christina A.",
   date: "April 4, 2025",
-  review: "I love the Solawave Wand so much! It helps with any puffiness and I am seeing a reduction of fine lines."
+  review: "Antes me gastaba como $150 usd al mes en suplementos, desde que compre este libro los deje TODOS y fue la mejor decisión, nada como lo natural"
 }, {
   name: "Sarah M.",
   date: "March 28, 2025",
