@@ -23,26 +23,23 @@ const CountdownBanner = () => {
   const formatNumber = (num: number) => String(num).padStart(2, "0");
 
   return (
-    <div className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white py-3 px-4">
+    <div className="sticky top-0 z-50 bg-gradient-to-r from-black via-gray-900 to-black text-white py-2 px-4 border-b border-white/10">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-2 text-center">
-          <span className="font-bold text-sm md:text-base">
-            🎁 Oferta 50% Off +4 regalos pre Black Friday termina en:
+        <div className="flex flex-col md:flex-row items-center justify-center gap-3 text-center">
+          <span className="text-xs md:text-sm font-medium tracking-wide">
+            Oferta 50% Off +4 regalos pre Black Friday termina en:
           </span>
           <div className="flex items-center gap-2">
-            <div className="bg-white/20 rounded px-2 py-1 min-w-[45px]">
-              <span className="font-bold text-lg tabular-nums">{formatNumber(hours)}</span>
-              <span className="text-xs block">hrs</span>
+            <div className="bg-white/10 backdrop-blur-sm rounded px-2 py-0.5 min-w-[35px]">
+              <span className="font-semibold text-sm tabular-nums">{formatNumber(hours)}</span>
             </div>
-            <span className="font-bold text-lg">:</span>
-            <div className="bg-white/20 rounded px-2 py-1 min-w-[45px]">
-              <span className="font-bold text-lg tabular-nums">{formatNumber(minutes)}</span>
-              <span className="text-xs block">min</span>
+            <span className="text-xs text-white/60">:</span>
+            <div className="bg-white/10 backdrop-blur-sm rounded px-2 py-0.5 min-w-[35px]">
+              <span className="font-semibold text-sm tabular-nums">{formatNumber(minutes)}</span>
             </div>
-            <span className="font-bold text-lg">:</span>
-            <div className="bg-white/20 rounded px-2 py-1 min-w-[45px]">
-              <span className="font-bold text-lg tabular-nums">{formatNumber(seconds)}</span>
-              <span className="text-xs block">seg</span>
+            <span className="text-xs text-white/60">:</span>
+            <div className="bg-white/10 backdrop-blur-sm rounded px-2 py-0.5 min-w-[35px]">
+              <span className="font-semibold text-sm tabular-nums">{formatNumber(seconds)}</span>
             </div>
           </div>
         </div>
