@@ -202,6 +202,57 @@ const ProductInfo = () => {
           </div>
         </div>
 
+        {/* Countdown 24 Hours */}
+        <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-primary/5 to-accent/20 border-2 border-primary/30 rounded-xl p-6 shadow-lg">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-50"></div>
+          <div className="relative z-10 space-y-3">
+            <p className="text-center text-sm font-bold uppercase tracking-wide text-foreground">
+              50% OFF + 4 Regalos Termina En:
+            </p>
+            <div className="flex justify-center gap-2">
+              {(() => {
+                const [timeLeft, setTimeLeft] = useState(24 * 60 * 60);
+                useEffect(() => {
+                  const timer = setInterval(() => {
+                    setTimeLeft(prev => {
+                      if (prev <= 0) return 24 * 60 * 60;
+                      return prev - 1;
+                    });
+                  }, 1000);
+                  return () => clearInterval(timer);
+                }, []);
+                const hours = Math.floor(timeLeft / 3600);
+                const minutes = Math.floor((timeLeft % 3600) / 60);
+                const seconds = timeLeft % 60;
+                return (
+                  <>
+                    <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-4 py-3 min-w-[70px] shadow-sm">
+                      <span className="text-2xl font-bold text-foreground tabular-nums">
+                        {String(hours).padStart(2, '0')}
+                      </span>
+                      <span className="text-[10px] font-semibold text-muted-foreground uppercase">Horas</span>
+                    </div>
+                    <div className="flex items-center text-2xl font-bold text-primary">:</div>
+                    <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-4 py-3 min-w-[70px] shadow-sm">
+                      <span className="text-2xl font-bold text-foreground tabular-nums">
+                        {String(minutes).padStart(2, '0')}
+                      </span>
+                      <span className="text-[10px] font-semibold text-muted-foreground uppercase">Minutos</span>
+                    </div>
+                    <div className="flex items-center text-2xl font-bold text-primary">:</div>
+                    <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-4 py-3 min-w-[70px] shadow-sm">
+                      <span className="text-2xl font-bold text-foreground tabular-nums">
+                        {String(seconds).padStart(2, '0')}
+                      </span>
+                      <span className="text-[10px] font-semibold text-muted-foreground uppercase">Segundos</span>
+                    </div>
+                  </>
+                );
+              })()}
+            </div>
+          </div>
+        </div>
+
         <div className="bg-accent/30 border border-dashed border-border rounded-lg p-3 text-center">
           <p className="text-sm font-semibold">
             🎁 Ordena antes del {formattedDate} para recibir Regalos GRATIS garantizados
