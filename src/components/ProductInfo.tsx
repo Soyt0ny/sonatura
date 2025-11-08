@@ -92,14 +92,14 @@ const ProductInfo = () => {
     return () => clearInterval(interval);
   }, []);
   return <>
-    <div className="grid md:grid-cols-2 gap-8 md:gap-12 w-full">
+    <div className="grid md:grid-cols-2 gap-8 md:gap-12">
       {/* Columna izquierda - Imágenes (solo en desktop) - STICKY */}
       <div className="hidden md:block md:sticky md:top-4 md:self-start md:h-fit">
         <ProductGallery />
       </div>
 
       {/* Columna derecha - Información - SCROLLABLE */}
-      <div className="space-y-6 w-full">
+      <div className="space-y-6">
         {/* Desktop: mostrar rating, título y precio primero */}
         <div className="hidden md:block space-y-4">
           <div className="space-y-1">
@@ -168,7 +168,7 @@ const ProductInfo = () => {
           </div>
         </div>
 
-        <p className="text-sm text-foreground/90 leading-relaxed">El primer libro enciclopedia Wellness del mundo con +200 Protocolos, recetas y remedios naturales paso a paso para skincare, salud hormonal y digestiva, biohacking y más.. Sin depender de pastillas o suplementos con ingredientes químicos que te envenenan silenciosamente.  </p>
+        <p className="text-sm text-foreground/90 leading-relaxed">El primer libro enciclopedia Wellness del mundo con +200 Protocolos, recetas y remedios naturales paso a paso para skincare, salud hormonal y digestiva, biohacking y más.. Sin depender de pastillas o suplementos con ingredientes químicos que te envenenan silenciosamente. Tú estás en control de lo que entra a tu cuerpo. </p>
 
         <div>
           
@@ -252,17 +252,6 @@ const ProductInfo = () => {
 
 
 
-        {/* Order Deadline Banner */}
-        
-
-        {/* Bundle Selection */}
-        
-
-        {/* Free Gifts Section */}
-        <div className="space-y-4">
-          
-          
-        </div>
 
         <div className="space-y-3">
           {/* Countdown Timer */}
@@ -278,9 +267,59 @@ const ProductInfo = () => {
           </div>
           
           {/* Código de Descuento */}
-          
+          <div className="flex items-center justify-center gap-1.5 text-xs py-2 transition-colors">
+            <span className={copied ? "text-primary font-medium" : "text-muted-foreground"}>
+              {copied ? "✓ ¡Código copiado!" : "Para 10% extra usa el código"}
+            </span>
+            <button onClick={() => {
+              navigator.clipboard.writeText("2026");
+              setCopied(true);
+              setTimeout(() => setCopied(false), 2000);
+            }} className="inline-flex items-center gap-1 font-semibold text-foreground underline decoration-primary/40 underline-offset-2 hover:decoration-primary transition-colors">
+              2026
+              <Copy className="w-3 h-3 opacity-50" />
+            </button>
+          </div>
           
           <div className="space-y-0">
+            {/* FREE GIFTS Section - Right above Add to Cart button */}
+            <div className="space-y-4 mb-4">
+              <h4 className="font-bold text-center text-base">
+                <span className="font-extrabold">EXCLUSIVE SALE!</span> FREE Gifts With Your First Order
+              </h4>
+              <div className="grid grid-cols-4 gap-3">
+                {[{
+                  value: "$10",
+                  name: "Digital Book",
+                  image: giftDigitalBook
+                }, {
+                  value: "$6",
+                  name: "Free Shipping",
+                  image: giftFreeShipping
+                }, {
+                  value: "$19",
+                  name: "Lash Curler",
+                  image: giftLashCurler
+                }, {
+                  value: "$25",
+                  name: "Mascara",
+                  image: giftMascara
+                }].map((gift, idx) => <div key={idx} className="flex flex-col items-center">
+                    <div className="border border-dashed border-foreground/30 rounded-sm p-2.5 w-full">
+                      <div className="text-center mb-2">
+                        <span className="text-[9px] font-bold">GRATIS <span className="line-through decoration-1">{gift.value}</span></span>
+                      </div>
+                      <div className="aspect-[4/3] bg-[#FFE4E4] rounded-sm flex items-center justify-center overflow-hidden">
+                        <img src={gift.image} alt={gift.name} className="w-full h-full object-contain p-1" />
+                      </div>
+                    </div>
+                    <div className="text-center mt-2">
+                      <span className="text-[11px] font-semibold leading-tight">{gift.name}</span>
+                    </div>
+                  </div>)}
+              </div>
+            </div>
+
             <Button id="original-cart-button" size="lg" variant="cta" className="w-full text-base font-bold h-14 uppercase tracking-wide">
               Agregar al Carrito | $169
             </Button>
