@@ -172,12 +172,6 @@ const ProductInfo = () => {
           </div>
         </div>
 
-        <p className="text-sm text-foreground/90 leading-relaxed">El primer libro enciclopedia Wellness del mundo con +200 Protocolos, recetas y remedios naturales paso a paso para skincare, salud hormonal y digestiva, biohacking y más.. Sin depender de pastillas o suplementos con ingredientes químicos que te envenenan silenciosamente. Tú estás en control de lo que entra a tu cuerpo. </p>
-
-        <div>
-          
-        </div>
-
         <div className="border border-border rounded-lg p-4">
           <h3 className="font-bold text-base mb-4">Recupera tu belleza, tu salud y tu energía en 14 días sin productos químicos...</h3>
           <div className="space-y-3">
