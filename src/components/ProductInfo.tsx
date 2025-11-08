@@ -133,7 +133,6 @@ const ProductInfo = () => {
           </div>
 
           <div className="space-y-2 mt-4">
-            <h3 className="font-bold text-base mb-3">Recupera tu salud, tu belleza y tu energía en 14 días sin depender de productos químicos</h3>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✦</div>
               <span className="text-sm">Elimina grasa abdominal y Deshincha tu rostro (bajando tu cortisol)</span>
@@ -195,7 +194,6 @@ const ProductInfo = () => {
           </div>
 
           <div className="space-y-2 mt-4">
-            <h3 className="font-bold text-base mb-3">Recupera tu salud, tu belleza y tu energía en 14 días</h3>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✦</div>
               <span className="text-sm">Elimina grasa abdominal y
