@@ -191,9 +191,13 @@ const ProductInfo = () => {
               <div className="text-primary text-xl flex-shrink-0">⇈</div>
               <span className="text-sm">Elimina fatiga durante el día, insomnio y apariencia de cansancio.</span>
             </div>
-            <div className="flex items-start gap-3 mb-4">
+            <div className="flex items-start gap-3">
               <div className="text-primary text-xl flex-shrink-0">◎</div>
               <span className="text-sm">Reduce tu estrés de forma natural y acelera tu metabolismo sin depender de productos químicos que dañan tu salud.</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="text-primary text-xl flex-shrink-0">✓</div>
+              <span className="text-sm">+200 Protocolos, recetas y remedios naturales paso a paso para skincare, salud hormonal y digestiva, biohacking y más.. Sin depender de pastillas o suplementos con ingredientes químicos que te envenenan silenciosamente.</span>
             </div>
           </div>
         </div>
