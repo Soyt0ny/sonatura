@@ -168,7 +168,7 @@ const ProductInfo = () => {
           </div>
         </div>
 
-        <p className="text-sm text-foreground/90 leading-relaxed">El primer libro enciclopedia Wellness del mundo con +200 Protocolos, recetas y remedios naturales paso a paso para skincare, salud hormonal y digestiva, biohacking y más.. Sin depender de pastillas o suplementos con ingredientes químicos que te envenenan silenciosamente. Tú estás en control de lo que entra a tu cuerpo. </p>
+        <p className="text-sm text-foreground/90 leading-relaxed">El primer libro enciclopedia Wellness del mundo con +200 Protocolos, recetas y remedios naturales paso a paso para skincare, salud hormonal y digestiva, biohacking y más.. Sin depender de pastillas o suplementos con ingredientes químicos que te envenenan silenciosamente.  </p>
 
         <div>
           
@@ -253,75 +253,14 @@ const ProductInfo = () => {
 
 
         {/* Order Deadline Banner */}
-        <div className="border-2 border-dashed border-[#E88B9C] rounded-lg p-4 bg-[#FFF5F7]">
-          <div className="flex items-center justify-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-[#E88B9C] flex-shrink-0"></div>
-            <p className="text-sm font-bold text-center">
-              Order by Nov. 9th for guaranteed FREE Gifts
-            </p>
-          </div>
-        </div>
+        
 
         {/* Bundle Selection */}
-        <div className="grid grid-cols-2 gap-3">
-          {/* 4 Bottles - Best Deal */}
-          <div className="relative">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-              <span className="bg-[#E88B9C] text-white text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">
-                BEST DEAL
-              </span>
-            </div>
-            <div className="border-[3px] border-[#E88B9C] rounded-xl p-4 bg-[#FFF5F7] pt-6">
-              <div className="flex items-start gap-3">
-                <div className="w-6 h-6 rounded-full border-[3px] border-[#E88B9C] bg-[#E88B9C] flex items-center justify-center flex-shrink-0 mt-1">
-                  <div className="w-2.5 h-2.5 rounded-full bg-white"></div>
-                </div>
-                <div className="flex-1">
-                  <div className="text-xl font-bold mb-0.5">4 Bottles</div>
-                  <div className="text-lg font-semibold">$17.5/each</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 3 Bottles */}
-          <div className="border-[3px] border-[#94A3B8] rounded-xl p-4 bg-white">
-            <div className="flex items-start gap-3">
-              <div className="w-6 h-6 rounded-full border-[3px] border-[#94A3B8] flex-shrink-0 mt-1"></div>
-              <div className="flex-1">
-                <div className="text-xl font-bold mb-0.5">3 Bottles</div>
-                <div className="text-lg font-semibold">$19.6/each</div>
-              </div>
-            </div>
-          </div>
-
-          {/* 2 Bottles */}
-          <div className="border-[3px] border-[#94A3B8] rounded-xl p-4 bg-white">
-            <div className="flex items-start gap-3">
-              <div className="w-6 h-6 rounded-full border-[3px] border-[#94A3B8] flex-shrink-0 mt-1"></div>
-              <div className="flex-1">
-                <div className="text-xl font-bold mb-0.5">2 Bottles</div>
-                <div className="text-lg font-semibold">$21.5/each</div>
-              </div>
-            </div>
-          </div>
-
-          {/* 1 Bottle */}
-          <div className="border-[3px] border-[#94A3B8] rounded-xl p-4 bg-white">
-            <div className="flex items-start gap-3">
-              <div className="w-6 h-6 rounded-full border-[3px] border-[#94A3B8] flex-shrink-0 mt-1"></div>
-              <div className="flex-1">
-                <div className="text-xl font-bold mb-0.5">1 Bottle</div>
-                <div className="text-lg font-semibold">$24/each</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
 
         {/* Free Gifts Section */}
         <div className="space-y-4">
-          <h4 className="font-bold text-center text-base">
-            <span className="font-extrabold">EXCLUSIVE SALE!</span> FREE Gifts With Your First Order
+          <h4 className="font-bold text-center text-base">4 Regalos GRATIS con tu primer pedido<span className="font-extrabold">EXCLUSIVE SALE!</span> FREE Gifts With Your First Order
           </h4>
           <div className="grid grid-cols-4 gap-3">
             {[{
