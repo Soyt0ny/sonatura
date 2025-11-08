@@ -168,9 +168,7 @@ const ProductInfo = () => {
           </div>
         </div>
 
-        <p className="text-sm text-foreground/90 leading-relaxed">
-          Esta guía holística de 14 días combina protocolos naturales respaldados por la ciencia con remedios ancestrales. Transforma tu salud hormonal, digestiva y energética sin depender de suplementos químicos. Con más de 200 protocolos paso a paso, lograrás resultados visibles desde los primeros días.
-        </p>
+        <p className="text-sm text-foreground/90 leading-relaxed">El primer libro Wellness del mundo con +200 Protocolos, recetas y remedios naturales paso a paso para skincare, salud hormonal y digestiva, biohacking y más.. Sin depender de pastillas o suplementos con ingredientes químicos que te envenenan silenciosamente.</p>
 
         <div>
           
@@ -181,7 +179,7 @@ const ProductInfo = () => {
           <div className="space-y-3">
             <div className="flex items-start gap-3">
               <div className="text-primary text-xl flex-shrink-0">✦</div>
-              <span className="text-sm">Deshincha tu abdomen y tu rostro (bajando tu cortisol)</span>
+              <span className="text-sm">Elimina grasa abdominal y Deshincha tu rostro (bajando tu cortisol)</span>
             </div>
             <div className="flex items-start gap-3">
               <div className="text-primary text-xl flex-shrink-0">≈</div>
@@ -197,7 +195,7 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-3">
               <div className="text-primary text-xl flex-shrink-0">✓</div>
-              <span className="text-sm">+200 Protocolos, recetas y remedios naturales paso a paso para skincare, salud hormonal y digestiva, biohacking y más.. Sin depender de pastillas o suplementos con ingredientes químicos que te envenenan silenciosamente.</span>
+              <span className="text-sm">Todo con recetas y protocolos paso a paso que toman solo 5 minutos.</span>
             </div>
           </div>
         </div>
