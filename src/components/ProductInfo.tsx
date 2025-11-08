@@ -195,14 +195,15 @@ const ProductInfo = () => {
           </div>
 
           <div className="space-y-2 mt-4">
-            <h3 className="font-bold text-base mb-3">Recupera tu salud, tu belleza y tu energía en 14 días sin depender de productos químicos</h3>
+            <h3 className="font-bold text-base mb-3">Recupera tu salud, tu belleza y tu energía en 14 días</h3>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✦</div>
-              <span className="text-sm">Elimina grasa abdominal y Deshincha tu rostro (bajando tu cortisol)</span>
+              <span className="text-sm">Elimina grasa abdominal y
+deshincha tu rostro</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">≈</div>
-              <span className="text-sm">Elimina acne hormonal (protocolo super calm y protocolo Afrodita)</span>
+              <span className="text-sm">Elimina acne hormonal</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">⇈</div>
@@ -214,7 +215,7 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✓</div>
-              <span className="text-sm">Todo con recetas y protocolos paso a paso que toman solo 5 minutos.</span>
+              <span className="text-sm">Todo con recetas y protocolos naturales paso a paso que toman solo 5 minutos.</span>
             </div>
           </div>
         </div>
@@ -228,20 +229,20 @@ const ProductInfo = () => {
             </p>
             <div className="flex justify-center gap-2">
               {(() => {
-                const [timeLeft, setTimeLeft] = useState(24 * 60 * 60);
-                useEffect(() => {
-                  const timer = setInterval(() => {
-                    setTimeLeft(prev => {
-                      if (prev <= 0) return 24 * 60 * 60;
-                      return prev - 1;
-                    });
-                  }, 1000);
-                  return () => clearInterval(timer);
-                }, []);
-                const hours = Math.floor(timeLeft / 3600);
-                const minutes = Math.floor(timeLeft % 3600 / 60);
-                const seconds = timeLeft % 60;
-                return <>
+                  const [timeLeft, setTimeLeft] = useState(24 * 60 * 60);
+                  useEffect(() => {
+                    const timer = setInterval(() => {
+                      setTimeLeft(prev => {
+                        if (prev <= 0) return 24 * 60 * 60;
+                        return prev - 1;
+                      });
+                    }, 1000);
+                    return () => clearInterval(timer);
+                  }, []);
+                  const hours = Math.floor(timeLeft / 3600);
+                  const minutes = Math.floor(timeLeft % 3600 / 60);
+                  const seconds = timeLeft % 60;
+                  return <>
                     <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-4 py-3 min-w-[70px] shadow-sm">
                       <span className="text-2xl font-bold text-foreground tabular-nums">
                         {String(hours).padStart(2, '0')}
@@ -263,7 +264,7 @@ const ProductInfo = () => {
                       <span className="text-[10px] font-semibold text-muted-foreground uppercase">Segundos</span>
                     </div>
                   </>;
-              })()}
+                })()}
             </div>
             <p className="text-center text-xs font-medium text-foreground/80 pt-1">🎁 Ordena antes del 8 Nov. para recibir Regalos</p>
           </div>
@@ -291,10 +292,10 @@ const ProductInfo = () => {
               {copied ? "✓ ¡Código copiado!" : "Para 10% extra usa el código"}
             </span>
             <button onClick={() => {
-              navigator.clipboard.writeText("2026");
-              setCopied(true);
-              setTimeout(() => setCopied(false), 2000);
-            }} className="inline-flex items-center gap-1 font-semibold text-foreground underline decoration-primary/40 underline-offset-2 hover:decoration-primary transition-colors">
+                navigator.clipboard.writeText("2026");
+                setCopied(true);
+                setTimeout(() => setCopied(false), 2000);
+              }} className="inline-flex items-center gap-1 font-semibold text-foreground underline decoration-primary/40 underline-offset-2 hover:decoration-primary transition-colors">
               2026
               <Copy className="w-3 h-3 opacity-50" />
             </button>
@@ -308,22 +309,22 @@ const ProductInfo = () => {
               </h4>
               <div className="grid grid-cols-4 gap-3">
                 {[{
-                  value: "$10",
-                  name: "Digital Book",
-                  image: giftDigitalBook
-                }, {
-                  value: "$6",
-                  name: "Free Shipping",
-                  image: giftFreeShipping
-                }, {
-                  value: "$19",
-                  name: "Lash Curler",
-                  image: giftLashCurler
-                }, {
-                  value: "$25",
-                  name: "Mascara",
-                  image: giftMascara
-                }].map((gift, idx) => <div key={idx} className="flex flex-col items-center">
+                    value: "$10",
+                    name: "Digital Book",
+                    image: giftDigitalBook
+                  }, {
+                    value: "$6",
+                    name: "Free Shipping",
+                    image: giftFreeShipping
+                  }, {
+                    value: "$19",
+                    name: "Lash Curler",
+                    image: giftLashCurler
+                  }, {
+                    value: "$25",
+                    name: "Mascara",
+                    image: giftMascara
+                  }].map((gift, idx) => <div key={idx} className="flex flex-col items-center">
                     <div className="border border-dashed border-foreground/30 rounded-sm p-2.5 w-full">
                       <div className="text-center mb-2">
                         <span className="text-[9px] font-bold">GRATIS <span className="line-through decoration-1">{gift.value}</span></span>
@@ -575,18 +576,18 @@ const ProductInfo = () => {
         </p>
         <div className="grid grid-cols-4 gap-4 md:gap-8 items-center justify-items-center">
           {[{
-            src: logoApa,
-            alt: "American Psychological Association"
-          }, {
-            src: logoNonGmo,
-            alt: "Non GMO Project"
-          }, {
-            src: logoCrueltyFree,
-            alt: "Cruelty Free"
-          }, {
-            src: logoUsdaOrganic,
-            alt: "USDA Organic"
-          }].map((logo, i) => <div key={i} className="w-full h-28 md:h-32 flex items-center justify-center p-2">
+              src: logoApa,
+              alt: "American Psychological Association"
+            }, {
+              src: logoNonGmo,
+              alt: "Non GMO Project"
+            }, {
+              src: logoCrueltyFree,
+              alt: "Cruelty Free"
+            }, {
+              src: logoUsdaOrganic,
+              alt: "USDA Organic"
+            }].map((logo, i) => <div key={i} className="w-full h-28 md:h-32 flex items-center justify-center p-2">
               <img src={logo.src} alt={logo.alt} className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-300" />
             </div>)}
         </div>
