@@ -341,16 +341,21 @@ const ProductInfo = () => {
               name: "Mascara",
               image: giftMascara
             }].map((gift, idx) => <div key={idx} className="flex flex-col items-center">
-                <div className="border border-dashed border-foreground/30 rounded-sm p-2.5 w-full">
-                  <div className="text-center mb-2">
-                    <span className="text-[9px] font-bold">GRATIS <span className="line-through decoration-1">{gift.value}</span></span>
+                <div className="relative">
+                  {/* Badge arriba */}
+                  <div className="bg-[#FFE4E4] px-2 py-0.5 rounded-sm mb-1">
+                    <span className="text-[10px] font-bold">FREE <span className="line-through">{gift.value}</span></span>
                   </div>
-                  <div className="aspect-[4/3] bg-[#FFE4E4] rounded-sm flex items-center justify-center overflow-hidden">
-                    <img src={gift.image} alt={gift.name} className="w-full h-full object-contain p-1" />
+                  {/* Imagen con borde punteado */}
+                  <div className="border-2 border-dashed border-black rounded-sm p-3 bg-white">
+                    <div className="aspect-square bg-[#FFE4E4] rounded-sm flex items-center justify-center overflow-hidden">
+                      <img src={gift.image} alt={gift.name} className="w-full h-full object-contain p-1" />
+                    </div>
                   </div>
                 </div>
+                {/* Texto debajo */}
                 <div className="text-center mt-2">
-                  <span className="text-[11px] font-semibold leading-tight">{gift.name}</span>
+                  <span className="text-xs font-bold leading-tight">{gift.name}</span>
                 </div>
               </div>)}
           </div>
