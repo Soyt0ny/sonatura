@@ -221,13 +221,13 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
         </div>
 
         {/* Countdown 24 Hours */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-primary/5 to-accent/20 border-2 border-primary/30 rounded-xl p-6 shadow-lg">
+        <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-primary/5 to-accent/20 border-2 border-primary/30 rounded-lg p-3 shadow-lg">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-50"></div>
-          <div className="relative z-10 space-y-3">
-            <p className="text-center text-sm font-bold uppercase tracking-wide text-foreground">
+          <div className="relative z-10 space-y-2">
+            <p className="text-center text-xs font-bold uppercase tracking-wide text-foreground">
               50% OFF + 4 Regalos Termina En:
             </p>
-            <div className="flex justify-center gap-2">
+            <div className="flex justify-center gap-1.5">
               {(() => {
                   const [timeLeft, setTimeLeft] = useState(24 * 60 * 60);
                   useEffect(() => {
@@ -243,30 +243,30 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
                   const minutes = Math.floor(timeLeft % 3600 / 60);
                   const seconds = timeLeft % 60;
                   return <>
-                    <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-4 py-3 min-w-[70px] shadow-sm">
-                      <span className="text-2xl font-bold text-foreground tabular-nums">
+                    <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-2.5 py-1.5 min-w-[55px] shadow-sm">
+                      <span className="text-lg font-bold text-foreground tabular-nums">
                         {String(hours).padStart(2, '0')}
                       </span>
-                      <span className="text-[10px] font-semibold text-muted-foreground uppercase">Horas</span>
+                      <span className="text-[9px] font-semibold text-muted-foreground uppercase">Horas</span>
                     </div>
-                    <div className="flex items-center text-2xl font-bold text-primary">:</div>
-                    <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-4 py-3 min-w-[70px] shadow-sm">
-                      <span className="text-2xl font-bold text-foreground tabular-nums">
+                    <div className="flex items-center text-lg font-bold text-primary">:</div>
+                    <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-2.5 py-1.5 min-w-[55px] shadow-sm">
+                      <span className="text-lg font-bold text-foreground tabular-nums">
                         {String(minutes).padStart(2, '0')}
                       </span>
-                      <span className="text-[10px] font-semibold text-muted-foreground uppercase">Minutos</span>
+                      <span className="text-[9px] font-semibold text-muted-foreground uppercase">Minutos</span>
                     </div>
-                    <div className="flex items-center text-2xl font-bold text-primary">:</div>
-                    <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-4 py-3 min-w-[70px] shadow-sm">
-                      <span className="text-2xl font-bold text-foreground tabular-nums">
+                    <div className="flex items-center text-lg font-bold text-primary">:</div>
+                    <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-2.5 py-1.5 min-w-[55px] shadow-sm">
+                      <span className="text-lg font-bold text-foreground tabular-nums">
                         {String(seconds).padStart(2, '0')}
                       </span>
-                      <span className="text-[10px] font-semibold text-muted-foreground uppercase">Segundos</span>
+                      <span className="text-[9px] font-semibold text-muted-foreground uppercase">Segundos</span>
                     </div>
                   </>;
                 })()}
             </div>
-            <p className="text-center text-xs font-medium text-foreground/80 pt-1">🎁 Ordena antes del 8 Nov. para recibir Regalos</p>
+            <p className="text-center text-[10px] font-medium text-foreground/80 pt-0.5">🎁 Ordena antes del 8 Nov. para recibir Regalos</p>
           </div>
         </div>
 
