@@ -3,6 +3,11 @@ import Header from "@/components/Header";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductInfo from "@/components/ProductInfo";
 import StickyCartBar from "@/components/StickyCartBar";
+import logoVogue from "@/assets/logo-vogue.png";
+import logoElle from "@/assets/logo-elle.png";
+import logoGoop from "@/assets/logo-goop.png";
+import logoWomensHealth from "@/assets/logo-womenshealth.png";
+import logoMindbodygreen from "@/assets/logo-mindbodygreen.png";
 const Index = () => {
   return <div className="min-h-screen">
       <StickyCartBar />
@@ -14,6 +19,18 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <ProductInfo />
         </div>
+
+        {/* As Seen In Section */}
+        <section className="mt-12 md:mt-16 mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Como lo viste en...</h2>
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 px-4">
+            <img src={logoVogue} alt="Vogue" className="h-8 md:h-10 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-70 hover:opacity-100 transition-opacity" />
+            <img src={logoElle} alt="Elle" className="h-8 md:h-10 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-70 hover:opacity-100 transition-opacity" />
+            <img src={logoGoop} alt="Goop" className="h-8 md:h-10 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-70 hover:opacity-100 transition-opacity" />
+            <img src={logoWomensHealth} alt="Women's Health" className="h-8 md:h-10 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-70 hover:opacity-100 transition-opacity" />
+            <img src={logoMindbodygreen} alt="Mindbodygreen" className="h-8 md:h-10 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-70 hover:opacity-100 transition-opacity" />
+          </div>
+        </section>
 
         {/* How It Works Section */}
         <section className="mt-16 md:mt-24">
