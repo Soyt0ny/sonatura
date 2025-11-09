@@ -22,12 +22,6 @@ export default {
         gold: {
           DEFAULT: "hsl(var(--gold-accent))",
         },
-        ivory: {
-          DEFAULT: "hsl(var(--ivory))",
-        },
-        aurora: {
-          DEFAULT: "hsl(var(--aurora))",
-        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -89,7 +89,8 @@ const ExclusiveGiftsSection = () => {
 
   return (
     <section 
-      className="w-full py-6 px-5 md:px-0 bg-background/50"
+      className="w-full py-6 px-5 md:px-0"
+      style={{ backgroundColor: "#F7F5F1" }}
     >
       <div className="max-w-[1200px] mx-auto">
         {/* Gifts Grid */}
@@ -98,25 +99,37 @@ const ExclusiveGiftsSection = () => {
             <div key={index} className="flex flex-col items-center">
               {/* Gift Card */}
               <div 
-                className="relative w-full aspect-[1/1] rounded-[6px] p-2 flex items-center justify-center transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_15px_rgba(46,61,255,0.2)] bg-muted/30 border-[1.5px] border-dashed border-border"
+                className="relative w-full aspect-[1/1] rounded-[6px] p-2 flex items-center justify-center transition-transform hover:scale-[1.03]"
+                style={{
+                  backgroundColor: "#F7F5F1",
+                  border: "1.5px dashed #B8B8B8",
+                  boxShadow: "0 3px 10px rgba(27, 27, 27, 0.04)",
+                }}
               >
                 {/* FREE Badge */}
                 <div 
-                  className="absolute -top-[10px] left-1.5 rounded-[6px] px-2 py-1 flex flex-col items-center justify-center bg-primary shadow-[0_2px_8px_rgba(213,195,165,0.4)] border border-gold/20"
+                  className="absolute -top-[10px] left-1.5 rounded-[6px] px-2 py-1 flex flex-col items-center justify-center"
                   style={{
+                    backgroundColor: "#D9C6A5",
                     minWidth: "50px",
                     minHeight: "24px",
                   }}
                 >
                   <span 
-                    className="text-[9px] font-bold uppercase leading-none text-primary-foreground"
+                    className="text-[9px] font-bold uppercase leading-none"
+                    style={{ 
+                      fontFamily: "Inter, sans-serif",
+                      color: "#1B1B1B"
+                    }}
                   >
                     FREE
                   </span>
                   <span 
-                    className="text-[8px] line-through mt-0.5 font-semibold text-gold"
+                    className="text-[8px] line-through mt-0.5 font-semibold"
                     style={{ 
-                      textDecorationColor: "hsl(var(--gold-accent))",
+                      fontFamily: "Inter, sans-serif",
+                      color: "#8B4513",
+                      textDecorationColor: "#8B4513",
                       textDecorationThickness: "1.5px"
                     }}
                   >
@@ -135,7 +148,11 @@ const ExclusiveGiftsSection = () => {
               {/* Title & Subtitle */}
               <div className="mt-2 text-center space-y-0">
                 <h3 
-                  className="text-[10px] md:text-[11px] font-semibold leading-tight text-foreground"
+                  className="text-[10px] md:text-[11px] font-semibold leading-tight"
+                  style={{ 
+                    fontFamily: "Inter, sans-serif",
+                    color: "#1B1B1B"
+                  }}
                 >
                   {gift.title}
                 </h3>
@@ -150,13 +167,21 @@ const ExclusiveGiftsSection = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
             <div className="flex items-center gap-2">
               <span 
-                className="text-[11px] text-muted-foreground"
+                className="text-[11px]"
+                style={{ 
+                  fontFamily: "Inter, sans-serif",
+                  color: "#1B1B1B"
+                }}
               >
                 Quedan:
               </span>
               <div className="flex items-center gap-1">
                 <span 
-                  className="text-[14px] font-bold tabular-nums text-primary"
+                  className="text-[14px] font-bold tabular-nums"
+                  style={{ 
+                    fontFamily: "Inter, sans-serif",
+                    color: "#1B1B1B"
+                  }}
                 >
                   {String(hours).padStart(2, "0")}h {String(minutes).padStart(2, "0")}m{" "}
                   {String(seconds).padStart(2, "0")}s
@@ -164,13 +189,18 @@ const ExclusiveGiftsSection = () => {
               </div>
             </div>
             <span 
-              className="hidden md:inline text-[11px] text-border"
+              className="hidden md:inline text-[11px]"
+              style={{ color: "#B8B8B8" }}
             >
               •
             </span>
             <div>
               <span 
-                className="text-[11px] font-medium text-foreground"
+                className="text-[11px] font-medium"
+                style={{ 
+                  fontFamily: "Inter, sans-serif",
+                  color: "#1B1B1B"
+                }}
               >
                 Quedan {kitsAvailable} kits disponibles
               </span>
@@ -179,7 +209,11 @@ const ExclusiveGiftsSection = () => {
 
           {/* Urgency Text */}
           <p 
-            className="text-[11px] max-w-[500px] mx-auto text-muted-foreground"
+            className="text-[11px] max-w-[500px] mx-auto"
+            style={{ 
+              fontFamily: "Inter, sans-serif",
+              color: "#1B1B1B"
+            }}
           >
             Solo hoy: estos regalos se entregan con pedidos confirmados antes del contador. Si
             vuelves mañana, la oferta podrá no estar disponible.
