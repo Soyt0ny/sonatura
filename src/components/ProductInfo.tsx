@@ -8,6 +8,7 @@ import giftDigitalBook from "@/assets/gift-digital-book.jpg";
 import giftFreeShipping from "@/assets/gift-free-shipping.jpg";
 import giftLashCurler from "@/assets/gift-lash-curler.jpg";
 import giftMascara from "@/assets/gift-mascara.jpg";
+import exclusiveGiftsBanner from "@/assets/exclusive-gifts-banner.jpg";
 import logoApa from "@/assets/logo-apa.png";
 import logoNonGmo from "@/assets/logo-non-gmo.png";
 import logoCrueltyFree from "@/assets/logo-cruelty-free.png";
@@ -156,6 +157,14 @@ const ProductInfo = () => {
             </div>
           </div>
 
+          {/* Exclusive Gifts Banner */}
+          <div className="mt-6">
+            <img 
+              src={exclusiveGiftsBanner} 
+              alt="Exclusive Sale - Free Gifts With Your First Order" 
+              className="w-full rounded-lg shadow-sm"
+            />
+          </div>
           
         </div>
 
@@ -217,6 +226,15 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
               <div className="text-primary text-lg flex-shrink-0">✓</div>
               <span className="text-sm">Todo con recetas y protocolos naturales paso a paso que toman solo 5 minutos.</span>
             </div>
+          </div>
+
+          {/* Exclusive Gifts Banner - Mobile */}
+          <div className="mt-4">
+            <img 
+              src={exclusiveGiftsBanner} 
+              alt="Exclusive Sale - Free Gifts With Your First Order" 
+              className="w-full rounded-lg shadow-sm"
+            />
           </div>
         </div>
 
