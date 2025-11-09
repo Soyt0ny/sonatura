@@ -21,14 +21,16 @@ const Index = () => {
         </div>
 
         {/* As Seen In Section */}
-        <section className="mt-12 md:mt-16 mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Como lo viste en...</h2>
-          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 px-4">
-            <img src={logoVogue} alt="Vogue" className="h-8 md:h-10 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-70 hover:opacity-100 transition-opacity" />
-            <img src={logoElle} alt="Elle" className="h-8 md:h-10 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-70 hover:opacity-100 transition-opacity" />
-            <img src={logoGoop} alt="Goop" className="h-8 md:h-10 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-70 hover:opacity-100 transition-opacity" />
-            <img src={logoWomensHealth} alt="Women's Health" className="h-8 md:h-10 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-70 hover:opacity-100 transition-opacity" />
-            <img src={logoMindbodygreen} alt="Mindbodygreen" className="h-8 md:h-10 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-70 hover:opacity-100 transition-opacity" />
+        <section className="mt-12 md:mt-16 mb-8 md:mb-12 border-y border-border/20 py-12">
+          <h2 className="text-sm md:text-base font-medium text-center mb-10 tracking-wider uppercase text-muted-foreground">Como lo viste en</h2>
+          <div className="overflow-x-auto">
+            <div className="flex items-center justify-center gap-12 md:gap-16 lg:gap-20 px-4 min-w-max mx-auto">
+              <img src={logoVogue} alt="Vogue" className="h-10 md:h-14 lg:h-16 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-60 hover:opacity-100 transition-all duration-300 grayscale hover:grayscale-0" />
+              <img src={logoElle} alt="Elle" className="h-10 md:h-14 lg:h-16 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-60 hover:opacity-100 transition-all duration-300 grayscale hover:grayscale-0" />
+              <img src={logoGoop} alt="Goop" className="h-10 md:h-14 lg:h-16 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-60 hover:opacity-100 transition-all duration-300 grayscale hover:grayscale-0" />
+              <img src={logoWomensHealth} alt="Women's Health" className="h-10 md:h-14 lg:h-16 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-60 hover:opacity-100 transition-all duration-300 grayscale hover:grayscale-0" />
+              <img src={logoMindbodygreen} alt="Mindbodygreen" className="h-10 md:h-14 lg:h-16 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert opacity-60 hover:opacity-100 transition-all duration-300 grayscale hover:grayscale-0" />
+            </div>
           </div>
         </section>
 
