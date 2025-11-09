@@ -124,12 +124,12 @@ const ProductInfo = () => {
           <div>
             <div className="flex items-center gap-2">
               <div className="flex items-baseline gap-2">
-                <p className="text-2xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$99</p>
-                <p className="text-2xl font-bold text-foreground">$49.99</p>
+                <p className="text-2xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$135</p>
+                <p className="text-2xl font-bold text-foreground">$67</p>
               </div>
               <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">50% OFF</span>
             </div>
-            <p className="text-xs text-foreground mt-1">O solo $8.3/mes Shopay</p>
+            <p className="text-xs text-foreground mt-1">O solo $11.17/mes Shopay</p>
           </div>
 
           <div className="space-y-2 mt-4">
@@ -186,12 +186,12 @@ const ProductInfo = () => {
           <div>
             <div className="flex items-center gap-2">
               <div className="flex items-baseline gap-2">
-                <p className="text-xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$99</p>
-                <p className="text-xl font-bold text-foreground">$49.99</p>
+                <p className="text-xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$135</p>
+                <p className="text-xl font-bold text-foreground">$67</p>
               </div>
               <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">50% OFF</span>
             </div>
-            <p className="text-xs text-foreground mt-1">O solo $8.3/mes Shopay</p>
+            <p className="text-xs text-foreground mt-1">O solo $11.17/mes Shopay</p>
           </div>
 
           <div className="space-y-2 mt-4">
