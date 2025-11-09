@@ -277,15 +277,6 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
           {/* Countdown Timer */}
           
           
-          {/* Live Users Counter */}
-          <div className="flex items-center justify-center gap-2 py-2">
-            <div className="flex items-center gap-1.5">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-              <span className="text-sm font-semibold text-foreground">{liveUsers.toLocaleString()}</span>
-            </div>
-            <span className="text-sm text-muted-foreground">personas viendo este producto</span>
-          </div>
-          
           {/* Código de Descuento */}
           
           
@@ -328,8 +319,17 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
               </div>
             </div>
 
+            {/* Live Users Counter - Above Add to Cart */}
+            <div className="flex items-center justify-center gap-2 py-3 mt-4">
+              <div className="flex items-center gap-1.5">
+                <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                <span className="text-sm font-semibold text-foreground">{liveUsers.toLocaleString()}</span>
+              </div>
+              <span className="text-sm text-muted-foreground">personas viendo este producto</span>
+            </div>
+
             <Button id="original-cart-button" size="lg" variant="cta" className="w-full text-base font-bold h-14 uppercase tracking-wide">
-              Agregar al Carrito | $169
+              Agregar al Carrito | $67
             </Button>
             
             {/* Warranty Icons Section */}
