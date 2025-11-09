@@ -95,11 +95,11 @@ const ExclusiveGiftsSection = () => {
         <p className="text-center text-[13px] md:text-[14px] font-semibold mb-4" style={{
         fontFamily: "Inter, sans-serif",
         color: "#1B1B1B"
-      }}>Compra antes del 10 de noviembre y llévate estos 4 regalos GRATIS{getTomorrowDate()} y llévate estos 4 regalos
+      }}>Compra antes del {getTomorrowDate()} y llévate estos 4 regalos
         </p>
 
         {/* Gifts Grid */}
-        <div className="grid grid-cols-4 gap-2 md:gap-3 mb-6 max-w-[600px] mx-auto">
+        <div className="grid grid-cols-4 gap-2 md:gap-3 mb-6 max-w-[400px] mx-auto">
           {gifts.map((gift, index) => <div key={index} className="flex flex-col items-center">
               {/* Gift Card */}
               <div className="relative w-full aspect-[1/1] rounded-[6px] p-1.5 md:p-2 flex items-center justify-center transition-transform hover:scale-[1.03]" style={{
