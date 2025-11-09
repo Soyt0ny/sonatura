@@ -7,7 +7,6 @@ import logoVogue from "@/assets/logo-vogue.png";
 import logoElle from "@/assets/logo-elle.png";
 import logoGoop from "@/assets/logo-goop.png";
 import logoWomensHealth from "@/assets/logo-womenshealth.png";
-import logoMindbodygreen from "@/assets/logo-mindbodygreen.png";
 const Index = () => {
   return <div className="min-h-screen">
       <StickyCartBar />
@@ -23,14 +22,11 @@ const Index = () => {
         {/* As Seen In Section */}
         <section className="mt-12 md:mt-16 mb-8 md:mb-12 border-y border-border/20 py-12">
           <h2 className="text-sm md:text-base font-medium text-center mb-10 tracking-wider uppercase text-foreground">Como lo viste en</h2>
-          <div className="overflow-x-auto">
-            <div className="flex items-center justify-center gap-12 md:gap-16 lg:gap-20 px-4 min-w-max mx-auto">
-              <img src={logoVogue} alt="Vogue" className="w-32 md:w-40 lg:w-44 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
-              <img src={logoElle} alt="Elle" className="w-32 md:w-40 lg:w-44 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
-              <img src={logoGoop} alt="Goop" className="w-32 md:w-40 lg:w-44 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
-              <img src={logoWomensHealth} alt="Women's Health" className="w-32 md:w-40 lg:w-44 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
-              <img src={logoMindbodygreen} alt="Mindbodygreen" className="w-32 md:w-40 lg:w-44 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
-            </div>
+          <div className="flex items-center justify-center gap-12 md:gap-16 lg:gap-20 px-4">
+            <img src={logoVogue} alt="Vogue" className="w-32 md:w-40 lg:w-44 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
+            <img src={logoElle} alt="Elle" className="w-32 md:w-40 lg:w-44 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
+            <img src={logoGoop} alt="Goop" className="w-32 md:w-40 lg:w-44 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
+            <img src={logoWomensHealth} alt="Women's Health" className="w-32 md:w-40 lg:w-44 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
           </div>
         </section>
 
