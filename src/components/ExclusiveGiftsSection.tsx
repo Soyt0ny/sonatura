@@ -47,6 +47,19 @@ const ExclusiveGiftsSection = () => {
     return saved ? parseInt(saved) : 127;
   });
 
+  // Get tomorrow's date
+  const getTomorrowDate = () => {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const day = tomorrow.getDate();
+    const months = [
+      "enero", "febrero", "marzo", "abril", "mayo", "junio",
+      "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"
+    ];
+    const month = months[tomorrow.getMonth()];
+    return `${day} de ${month}`;
+  };
+
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
@@ -93,13 +106,24 @@ const ExclusiveGiftsSection = () => {
       style={{ backgroundColor: "#F7F5F1" }}
     >
       <div className="max-w-[1200px] mx-auto">
+        {/* Message Above Gifts */}
+        <p 
+          className="text-center text-[13px] md:text-[14px] font-semibold mb-4"
+          style={{ 
+            fontFamily: "Inter, sans-serif",
+            color: "#1B1B1B"
+          }}
+        >
+          Compra antes del {getTomorrowDate()} y llévate estos 4 regalos
+        </p>
+
         {/* Gifts Grid */}
-        <div className="grid grid-cols-4 gap-3 md:gap-4 mb-6">
+        <div className="grid grid-cols-4 gap-2 md:gap-3 mb-6 max-w-[600px] mx-auto">
           {gifts.map((gift, index) => (
             <div key={index} className="flex flex-col items-center">
               {/* Gift Card */}
               <div 
-                className="relative w-full aspect-[1/1] rounded-[6px] p-2 flex items-center justify-center transition-transform hover:scale-[1.03]"
+                className="relative w-full aspect-[1/1] rounded-[6px] p-1.5 md:p-2 flex items-center justify-center transition-transform hover:scale-[1.03]"
                 style={{
                   backgroundColor: "#F7F5F1",
                   border: "1.5px dashed #B8B8B8",
@@ -108,15 +132,15 @@ const ExclusiveGiftsSection = () => {
               >
                 {/* FREE Badge */}
                 <div 
-                  className="absolute -top-[10px] left-1.5 rounded-[6px] px-2 py-1 flex flex-col items-center justify-center"
+                  className="absolute -top-[8px] left-1 rounded-[4px] px-1.5 py-0.5 flex flex-col items-center justify-center"
                   style={{
                     backgroundColor: "#D9C6A5",
-                    minWidth: "50px",
-                    minHeight: "24px",
+                    minWidth: "40px",
+                    minHeight: "20px",
                   }}
                 >
                   <span 
-                    className="text-[9px] font-bold uppercase leading-none"
+                    className="text-[8px] font-bold uppercase leading-none"
                     style={{ 
                       fontFamily: "Inter, sans-serif",
                       color: "#1B1B1B"
@@ -125,7 +149,7 @@ const ExclusiveGiftsSection = () => {
                     FREE
                   </span>
                   <span 
-                    className="text-[8px] line-through mt-0.5 font-semibold"
+                    className="text-[7px] line-through mt-0.5 font-semibold"
                     style={{ 
                       fontFamily: "Inter, sans-serif",
                       color: "#8B4513",
@@ -146,9 +170,9 @@ const ExclusiveGiftsSection = () => {
               </div>
 
               {/* Title & Subtitle */}
-              <div className="mt-2 text-center space-y-0">
+              <div className="mt-1.5 text-center space-y-0">
                 <h3 
-                  className="text-[10px] md:text-[11px] font-semibold leading-tight"
+                  className="text-[9px] md:text-[10px] font-semibold leading-tight"
                   style={{ 
                     fontFamily: "Inter, sans-serif",
                     color: "#1B1B1B"
