@@ -221,8 +221,8 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
         </div>
 
         {/* Countdown 24 Hours */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-primary/10 via-primary/5 to-accent/20 border-2 border-primary/30 rounded-lg p-3 shadow-lg">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-50"></div>
+        <div className="relative overflow-hidden bg-white border-2 border-primary/20 rounded-lg p-3 shadow-lg">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
           <div className="relative z-10 space-y-2">
             <p className="text-center text-xs font-bold uppercase tracking-wide text-foreground">
               50% OFF + 4 Regalos Termina En:
@@ -247,21 +247,21 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
                       <span className="text-lg font-bold text-foreground tabular-nums">
                         {String(hours).padStart(2, '0')}
                       </span>
-                      <span className="text-[9px] font-semibold text-muted-foreground uppercase">Horas</span>
+                      <span className="text-[9px] font-semibold text-foreground/70 uppercase">Horas</span>
                     </div>
-                    <div className="flex items-center text-lg font-bold text-primary">:</div>
+                    <div className="flex items-center text-lg font-bold text-foreground">:</div>
                     <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-2.5 py-1.5 min-w-[55px] shadow-sm">
                       <span className="text-lg font-bold text-foreground tabular-nums">
                         {String(minutes).padStart(2, '0')}
                       </span>
-                      <span className="text-[9px] font-semibold text-muted-foreground uppercase">Minutos</span>
+                      <span className="text-[9px] font-semibold text-foreground/70 uppercase">Minutos</span>
                     </div>
-                    <div className="flex items-center text-lg font-bold text-primary">:</div>
+                    <div className="flex items-center text-lg font-bold text-foreground">:</div>
                     <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-2.5 py-1.5 min-w-[55px] shadow-sm">
                       <span className="text-lg font-bold text-foreground tabular-nums">
                         {String(seconds).padStart(2, '0')}
                       </span>
-                      <span className="text-[9px] font-semibold text-muted-foreground uppercase">Segundos</span>
+                      <span className="text-[9px] font-semibold text-foreground/70 uppercase">Segundos</span>
                     </div>
                   </>;
                 })()}
@@ -375,29 +375,29 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
           </div>
 
           {/* Sección de Stock Limitado */}
-          <div className="bg-accent/20 border border-border/60 rounded-lg p-3 space-y-2">
-            <h3 className="text-base font-bold">SOLO 1,000 COPIAS A ESTE PRECIO</h3>
-            <p className="text-xs text-muted-foreground">Una vez lleguemos a las 1,000 ventas la oferta de lanzamiento terminará y el precio regresará a $99 dólares.</p>
+          <div className="bg-white border-2 border-foreground/10 rounded-lg p-4 space-y-2 shadow-sm">
+            <h3 className="text-base font-bold text-foreground">SOLO 1,000 COPIAS A ESTE PRECIO</h3>
+            <p className="text-xs text-foreground/70">Una vez lleguemos a las 1,000 ventas la oferta de lanzamiento terminará y el precio regresará a $99 dólares.</p>
             <div className="space-y-1">
               <Progress value={88} className="h-5" />
-              <p className="text-xs font-semibold">87% VENDIDO</p>
+              <p className="text-xs font-semibold text-foreground">87% VENDIDO</p>
             </div>
           </div>
 
           {/* Sección de Garantía */}
-          <div className="bg-accent/20 border border-border/60 rounded-lg p-3">
+          <div className="bg-white border-2 border-foreground/10 rounded-lg p-4 shadow-sm">
             <div className="flex gap-3 items-start">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 rounded-full border border-border bg-background flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full border-2 border-primary bg-background flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-xl font-bold text-primary">60</div>
-                    <div className="text-[10px] text-muted-foreground">Días</div>
+                    <div className="text-xl font-bold text-foreground">60</div>
+                    <div className="text-[10px] text-foreground/60">Días</div>
                   </div>
                 </div>
               </div>
               <div className="flex-1">
-                <h3 className="text-base font-bold mb-1">Garantía de devolución de dinero de 60 días</h3>
-                <p className="text-xs text-muted-foreground">Una piel hermosa y un cambio físico toman tiempo. Ama tus resultados o recibe un reembolso completo. 100% sin riesgo.</p>
+                <h3 className="text-base font-bold mb-1 text-foreground">Garantía de devolución de dinero de 60 días</h3>
+                <p className="text-xs text-foreground/70">Una piel hermosa y un cambio físico toman tiempo. Ama tus resultados o recibe un reembolso completo. 100% sin riesgo.</p>
               </div>
             </div>
           </div>
@@ -413,23 +413,23 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
 
             {/* Featured Reviews Carousel */}
             <div className="relative">
-              <div className="bg-accent/20 border border-border/40 rounded-lg p-3 space-y-2 animate-fade-in">
+              <div className="bg-white border-2 border-foreground/10 rounded-lg p-4 space-y-2 animate-fade-in shadow-sm">
                 <div className="flex items-start justify-between">
                   <div>
-                    <h3 className="text-base font-bold mb-0.5">{featuredReviews[currentReviewIndex].name}</h3>
+                    <h3 className="text-base font-bold mb-0.5 text-foreground">{featuredReviews[currentReviewIndex].name}</h3>
                     <div className="flex items-center gap-1.5">
-                      <span className="text-xs font-semibold text-[#8B4513]">Verified customer</span>
-                      <div className="w-4 h-4 rounded-full bg-[#8B4513] flex items-center justify-center">
+                      <span className="text-xs font-semibold text-gold">Verified customer</span>
+                      <div className="w-4 h-4 rounded-full bg-gold flex items-center justify-center">
                         <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
                     </div>
                   </div>
-                  <span className="text-xs text-muted-foreground">{featuredReviews[currentReviewIndex].date}</span>
+                  <span className="text-xs text-foreground/60">{featuredReviews[currentReviewIndex].date}</span>
                 </div>
                 
-                <p className="text-sm leading-relaxed">
+                <p className="text-sm leading-relaxed text-foreground/80">
                   "{featuredReviews[currentReviewIndex].review}"
                 </p>
               </div>

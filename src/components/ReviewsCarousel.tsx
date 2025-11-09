@@ -33,17 +33,17 @@ const ReviewsCarousel = () => {
   const currentReview = reviews[currentIndex];
   
   return (
-    <Card className="p-4 space-y-3">
+    <Card className="p-4 space-y-3 bg-white border-2 border-foreground/10 shadow-sm">
       <div className="flex items-start justify-between">
         <div className="flex items-center gap-2">
-          <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+          <CheckCircle className="w-5 h-5 text-gold flex-shrink-0" />
           <div>
-            <h3 className="font-semibold text-sm">{currentReview.name}</h3>
-            <p className="text-xs text-muted-foreground">{currentReview.date}</p>
+            <h3 className="font-semibold text-sm text-foreground">{currentReview.name}</h3>
+            <p className="text-xs text-foreground/60">{currentReview.date}</p>
           </div>
         </div>
       </div>
-      <p className="text-sm text-foreground leading-relaxed">{currentReview.text}</p>
+      <p className="text-sm text-foreground/80 leading-relaxed">{currentReview.text}</p>
       
       {/* Carousel Indicators */}
       <div className="flex justify-center gap-1.5 pt-2">
