@@ -8,119 +8,130 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Marfil cálido / Hueso - Fondo principal */
-    --background: 40 29% 96%;
-    /* Negro carbón suave - Textos principales */
-    --foreground: 0 0% 11%;
+    /* REAL AUTHORITY LUXE PALETTE */
+    
+    /* Azul noche imperial - Fondo principal oscuro dominante */
+    --background: 213 45% 9%;
+    /* Marfil neutro frío - Textos sobre fondos oscuros */
+    --foreground: 40 18% 95%;
 
-    --card: 40 29% 96%;
-    --card-foreground: 0 0% 11%;
+    --card: 213 45% 9%;
+    --card-foreground: 40 18% 95%;
 
-    --popover: 40 29% 96%;
-    --popover-foreground: 0 0% 11%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 40 18% 95%;
 
-    /* Champagne / Beige dorado - CTAs y botones primarios */
-    --primary: 38 41% 74%;
-    --primary-foreground: 0 0% 11%;
+    /* Champagne metálico frío - CTAs y botones primarios */
+    --primary: 37 36% 74%;
+    --primary-foreground: 0 0% 7%;
 
-    /* Gris piedra claro - Fondos secundarios */
-    --secondary: 0 0% 92%;
-    --secondary-foreground: 0 0% 11%;
+    /* Negro carbón profundo - Fondos alternos */
+    --secondary: 0 0% 7%;
+    --secondary-foreground: 40 18% 95%;
 
-    /* Gris piedra / Ceniza - Tipografía secundaria */
-    --muted: 0 0% 88%;
-    --muted-foreground: 0 0% 72%;
+    /* Gris acero perlado - Elementos secundarios */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 71%;
 
-    /* Azul noche profundo - Hero y bloques transformacionales */
-    --accent: 207 47% 10%;
-    --accent-foreground: 40 29% 96%;
+    /* Azul aurora brillante - Acentos dinámicos y hover */
+    --accent: 235 100% 59%;
+    --accent-foreground: 40 18% 95%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 40 29% 96%;
+    --destructive-foreground: 40 18% 95%;
 
-    /* Gris piedra muy claro - Bordes sutiles */
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 38 41% 74%;
+    /* Gris acero perlado - Bordes sutiles */
+    --border: 0 0% 71%;
+    --input: 0 0% 20%;
+    --ring: 37 36% 74%;
 
     --radius: 0.5rem;
 
-    --sale-banner: 0 0% 11%;
-    --sale-banner-foreground: 40 29% 96%;
+    --sale-banner: 0 0% 7%;
+    --sale-banner-foreground: 40 18% 95%;
     
-    --badge-best: 0 0% 11%;
-    --badge-best-foreground: 40 29% 96%;
+    --badge-best: 37 36% 74%;
+    --badge-best-foreground: 0 0% 7%;
 
-    --sidebar-background: 40 29% 96%;
-    --sidebar-foreground: 0 0% 11%;
-    --sidebar-primary: 38 41% 74%;
-    --sidebar-primary-foreground: 0 0% 11%;
-    --sidebar-accent: 0 0% 92%;
-    --sidebar-accent-foreground: 0 0% 11%;
-    --sidebar-border: 0 0% 90%;
-    --sidebar-ring: 38 41% 74%;
+    --sidebar-background: 213 45% 9%;
+    --sidebar-foreground: 40 18% 95%;
+    --sidebar-primary: 37 36% 74%;
+    --sidebar-primary-foreground: 0 0% 7%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 40 18% 95%;
+    --sidebar-border: 0 0% 71%;
+    --sidebar-ring: 37 36% 74%;
     
-    /* Dorado pálido metálico - Detalles decorativos */
-    --gold-accent: 37 45% 60%;
+    /* Dorado pálido reflectante - Detalles de lujo */
+    --gold-accent: 40 50% 59%;
     
-    --star: 37 45% 60%;
+    --star: 40 50% 59%;
     
-    /* CTA principal con el champagne dorado */
-    --cta: 38 41% 74%;
-    --cta-foreground: 0 0% 11%;
+    /* CTA principal con champagne metálico */
+    --cta: 37 36% 74%;
+    --cta-foreground: 0 0% 7%;
+    
+    /* Marfil neutro frío - Fondos secundarios limpios */
+    --ivory: 40 18% 95%;
+    
+    /* Azul aurora - Hover y efectos dinámicos */
+    --aurora: 235 100% 59%;
   }
 
   .dark {
-    /* Azul noche profundo - Fondo modo oscuro */
-    --background: 207 47% 10%;
-    --foreground: 40 29% 96%;
+    /* En dark mode mantenemos la misma paleta (ya es oscura por defecto) */
+    --background: 213 45% 9%;
+    --foreground: 40 18% 95%;
 
-    --card: 207 47% 10%;
-    --card-foreground: 40 29% 96%;
+    --card: 213 45% 9%;
+    --card-foreground: 40 18% 95%;
 
-    --popover: 207 47% 10%;
-    --popover-foreground: 40 29% 96%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 40 18% 95%;
 
-    --primary: 38 41% 74%;
-    --primary-foreground: 0 0% 11%;
+    --primary: 37 36% 74%;
+    --primary-foreground: 0 0% 7%;
 
-    --secondary: 207 40% 15%;
-    --secondary-foreground: 40 29% 96%;
+    --secondary: 0 0% 7%;
+    --secondary-foreground: 40 18% 95%;
 
-    --muted: 207 40% 15%;
-    --muted-foreground: 0 0% 72%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 71%;
 
-    --accent: 38 41% 74%;
-    --accent-foreground: 0 0% 11%;
+    --accent: 235 100% 59%;
+    --accent-foreground: 40 18% 95%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 40 29% 96%;
+    --destructive-foreground: 40 18% 95%;
 
-    --border: 207 30% 20%;
-    --input: 207 30% 20%;
-    --ring: 38 41% 74%;
+    --border: 0 0% 71%;
+    --input: 0 0% 20%;
+    --ring: 37 36% 74%;
     
-    --sale-banner: 40 29% 96%;
-    --sale-banner-foreground: 0 0% 11%;
+    --sale-banner: 0 0% 7%;
+    --sale-banner-foreground: 40 18% 95%;
     
-    --badge-best: 40 29% 96%;
-    --badge-best-foreground: 0 0% 11%;
+    --badge-best: 37 36% 74%;
+    --badge-best-foreground: 0 0% 7%;
 
-    --sidebar-background: 207 47% 10%;
-    --sidebar-foreground: 40 29% 96%;
-    --sidebar-primary: 38 41% 74%;
-    --sidebar-primary-foreground: 0 0% 11%;
-    --sidebar-accent: 207 40% 15%;
-    --sidebar-accent-foreground: 40 29% 96%;
-    --sidebar-border: 207 30% 20%;
-    --sidebar-ring: 38 41% 74%;
+    --sidebar-background: 213 45% 9%;
+    --sidebar-foreground: 40 18% 95%;
+    --sidebar-primary: 37 36% 74%;
+    --sidebar-primary-foreground: 0 0% 7%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 40 18% 95%;
+    --sidebar-border: 0 0% 71%;
+    --sidebar-ring: 37 36% 74%;
     
-    --gold-accent: 37 45% 60%;
+    --gold-accent: 40 50% 59%;
     
-    --star: 37 45% 60%;
+    --star: 40 50% 59%;
     
-    --cta: 38 41% 74%;
-    --cta-foreground: 0 0% 11%;
+    --cta: 37 36% 74%;
+    --cta-foreground: 0 0% 7%;
+    
+    --ivory: 40 18% 95%;
+    --aurora: 235 100% 59%;
   }
 }
 
