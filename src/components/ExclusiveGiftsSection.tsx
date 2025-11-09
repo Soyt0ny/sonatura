@@ -89,56 +89,34 @@ const ExclusiveGiftsSection = () => {
 
   return (
     <section 
-      className="w-full py-12 px-5 md:px-0"
+      className="w-full py-6 px-5 md:px-0"
       style={{ backgroundColor: "#F7F5F1" }}
     >
       <div className="max-w-[1200px] mx-auto">
-        {/* Header */}
-        <div className="text-center mb-8 space-y-2">
-          <h2 
-            className="text-[26px] md:text-[28px] font-bold"
-            style={{ 
-              fontFamily: "Playfair Display, serif",
-              color: "#1B1B1B"
-            }}
-          >
-            OFERTA EXCLUSIVA — Regalos gratis con tu primer pedido
-          </h2>
-          <p 
-            className="text-[14px]"
-            style={{ 
-              fontFamily: "Inter, sans-serif",
-              color: "#1B1B1B"
-            }}
-          >
-            Compra HOY y llévate estos 4 regalos. Oferta válida solo por tiempo limitado.
-          </p>
-        </div>
-
         {/* Gifts Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-[18px] md:gap-[28px] mb-8">
+        <div className="grid grid-cols-4 gap-3 md:gap-4 mb-6">
           {gifts.map((gift, index) => (
             <div key={index} className="flex flex-col items-center">
               {/* Gift Card */}
               <div 
-                className="relative w-full aspect-[220/160] rounded-[12px] p-4 flex items-center justify-center transition-transform hover:scale-[1.03]"
+                className="relative w-full aspect-[1/1] rounded-[6px] p-2 flex items-center justify-center transition-transform hover:scale-[1.03]"
                 style={{
                   backgroundColor: "#F7F5F1",
-                  border: "2px dashed #B8B8B8",
-                  boxShadow: "0 6px 18px rgba(27, 27, 27, 0.06)",
+                  border: "1.5px dashed #B8B8B8",
+                  boxShadow: "0 3px 10px rgba(27, 27, 27, 0.04)",
                 }}
               >
                 {/* FREE Badge */}
                 <div 
-                  className="absolute -top-[14px] left-3 rounded-[8px] px-3 py-1.5 flex flex-col items-center justify-center"
+                  className="absolute -top-[10px] left-1.5 rounded-[6px] px-2 py-1 flex flex-col items-center justify-center"
                   style={{
                     backgroundColor: "#D9C6A5",
-                    minWidth: "90px",
-                    minHeight: "34px",
+                    minWidth: "50px",
+                    minHeight: "24px",
                   }}
                 >
                   <span 
-                    className="text-[12px] md:text-[14px] font-bold uppercase leading-tight"
+                    className="text-[9px] font-bold uppercase leading-none"
                     style={{ 
                       fontFamily: "Inter, sans-serif",
                       color: "#1B1B1B"
@@ -147,10 +125,12 @@ const ExclusiveGiftsSection = () => {
                     FREE
                   </span>
                   <span 
-                    className="text-[10px] md:text-[12px] line-through"
+                    className="text-[8px] line-through mt-0.5 font-semibold"
                     style={{ 
                       fontFamily: "Inter, sans-serif",
-                      color: "#B8B8B8"
+                      color: "#8B4513",
+                      textDecorationColor: "#8B4513",
+                      textDecorationThickness: "1.5px"
                     }}
                   >
                     {gift.originalPrice}
@@ -161,14 +141,14 @@ const ExclusiveGiftsSection = () => {
                 <img
                   src={gift.image}
                   alt={gift.title}
-                  className="max-h-[60%] w-auto object-contain"
+                  className="max-h-[55%] w-auto object-contain"
                 />
               </div>
 
               {/* Title & Subtitle */}
-              <div className="mt-[14px] text-center space-y-0.5">
+              <div className="mt-2 text-center space-y-0">
                 <h3 
-                  className="text-[14px] md:text-[16px] font-semibold"
+                  className="text-[10px] md:text-[11px] font-semibold leading-tight"
                   style={{ 
                     fontFamily: "Inter, sans-serif",
                     color: "#1B1B1B"
@@ -176,27 +156,18 @@ const ExclusiveGiftsSection = () => {
                 >
                   {gift.title}
                 </h3>
-                <p 
-                  className="text-[11px] md:text-[12px]"
-                  style={{ 
-                    fontFamily: "Inter, sans-serif",
-                    color: "#B8B8B8"
-                  }}
-                >
-                  {gift.subtitle}
-                </p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Urgency Section */}
-        <div className="text-center space-y-4 mb-6">
+        <div className="text-center space-y-3">
           {/* Countdown & Kits */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
             <div className="flex items-center gap-2">
               <span 
-                className="text-[13px]"
+                className="text-[11px]"
                 style={{ 
                   fontFamily: "Inter, sans-serif",
                   color: "#1B1B1B"
@@ -206,7 +177,7 @@ const ExclusiveGiftsSection = () => {
               </span>
               <div className="flex items-center gap-1">
                 <span 
-                  className="text-[18px] font-bold tabular-nums"
+                  className="text-[14px] font-bold tabular-nums"
                   style={{ 
                     fontFamily: "Inter, sans-serif",
                     color: "#1B1B1B"
@@ -218,14 +189,14 @@ const ExclusiveGiftsSection = () => {
               </div>
             </div>
             <span 
-              className="hidden md:inline text-[13px]"
+              className="hidden md:inline text-[11px]"
               style={{ color: "#B8B8B8" }}
             >
               •
             </span>
             <div>
               <span 
-                className="text-[13px] font-medium"
+                className="text-[11px] font-medium"
                 style={{ 
                   fontFamily: "Inter, sans-serif",
                   color: "#1B1B1B"
@@ -238,7 +209,7 @@ const ExclusiveGiftsSection = () => {
 
           {/* Urgency Text */}
           <p 
-            className="text-[13px] max-w-[600px] mx-auto"
+            className="text-[11px] max-w-[500px] mx-auto"
             style={{ 
               fontFamily: "Inter, sans-serif",
               color: "#1B1B1B"
@@ -247,23 +218,6 @@ const ExclusiveGiftsSection = () => {
             Solo hoy: estos regalos se entregan con pedidos confirmados antes del contador. Si
             vuelves mañana, la oferta podrá no estar disponible.
           </p>
-        </div>
-
-        {/* CTA Button */}
-        <div className="flex justify-center">
-          <Button
-            onClick={handleAddToCart}
-            className="rounded-[8px] px-9 py-4 text-[15px] md:text-[16px] font-semibold transition-colors hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2"
-            style={{
-              backgroundColor: "#D9C6A5",
-              color: "#1B1B1B",
-              fontFamily: "Playfair Display, serif",
-              boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
-            }}
-            aria-label="Recibir regalos gratis con compra"
-          >
-            Sí, quiero los regalos — Comprar ahora
-          </Button>
         </div>
       </div>
     </section>
