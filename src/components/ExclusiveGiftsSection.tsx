@@ -92,7 +92,7 @@ const ExclusiveGiftsSection = () => {
   }}>
       <div className="max-w-[1200px] mx-auto">
         {/* Message Above Gifts */}
-        <p className="text-center text-[13px] md:text-[14px] font-semibold mb-4" style={{
+        <p className="text-center text-[13px] md:text-[14px] font-semibold mb-4 max-w-[400px] mx-auto" style={{
         fontFamily: "Inter, sans-serif",
         color: "#1B1B1B"
       }}>Compra antes del {getTomorrowDate()} y llévate estos 4 regalos
@@ -182,7 +182,7 @@ const ExclusiveGiftsSection = () => {
           </div>
 
           {/* Urgency Text */}
-          <p className="text-[11px] max-w-[500px] mx-auto" style={{
+          <p className="text-[11px] max-w-[400px] mx-auto" style={{
           fontFamily: "Inter, sans-serif",
           color: "#1B1B1B"
         }}>
