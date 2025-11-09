@@ -17,6 +17,7 @@ import { addDays, format } from "date-fns";
 import { es } from "date-fns/locale";
 import { toast } from "@/hooks/use-toast";
 import { Copy, Check } from "lucide-react";
+import ExclusiveGiftsSection from "@/components/ExclusiveGiftsSection";
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(59 * 60); // 59 minutos en segundos
 
@@ -155,8 +156,14 @@ const ProductInfo = () => {
               <span className="text-sm">Todo con recetas y protocolos paso a paso que toman solo 5 minutos.</span>
             </div>
           </div>
+        </div>
 
-          
+        {/* Exclusive Gifts Section - Desktop */}
+        <div className="hidden md:block -mx-8 lg:-mx-16">
+          <ExclusiveGiftsSection />
+        </div>
+
+        <div className="hidden md:block">
         </div>
 
         {/* Móvil: mostrar galería primero */}
@@ -220,6 +227,11 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
           </div>
         </div>
 
+        {/* Exclusive Gifts Section - Mobile */}
+        <div className="md:hidden -mx-4">
+          <ExclusiveGiftsSection />
+        </div>
+
         {/* Countdown 24 Hours */}
         <div className="relative overflow-hidden bg-white border-2 border-primary/20 rounded-lg p-3 shadow-lg">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
@@ -281,44 +293,6 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
           
           
           <div className="space-y-0">
-            {/* FREE GIFTS Section - Right above Add to Cart button */}
-            <div className="space-y-4 mb-4">
-              <h4 className="font-bold text-center text-base">
-                <span className="font-extrabold">EXCLUSIVE SALE!</span> FREE Gifts With Your First Order
-              </h4>
-              <div className="grid grid-cols-4 gap-3">
-                {[{
-                    value: "$10",
-                    name: "Digital Book",
-                    image: giftDigitalBook
-                  }, {
-                    value: "$6",
-                    name: "Free Shipping",
-                    image: giftFreeShipping
-                  }, {
-                    value: "$19",
-                    name: "Lash Curler",
-                    image: giftLashCurler
-                  }, {
-                    value: "$25",
-                    name: "Mascara",
-                    image: giftMascara
-                  }].map((gift, idx) => <div key={idx} className="flex flex-col items-center">
-                    <div className="border border-dashed border-foreground/30 rounded-sm p-2.5 w-full">
-                      <div className="text-center mb-2">
-                        <span className="text-[9px] font-bold">GRATIS <span className="line-through decoration-1">{gift.value}</span></span>
-                      </div>
-                      <div className="aspect-[4/3] bg-[#FFE4E4] rounded-sm flex items-center justify-center overflow-hidden">
-                        <img src={gift.image} alt={gift.name} className="w-full h-full object-contain p-1" />
-                      </div>
-                    </div>
-                    <div className="text-center mt-2">
-                      <span className="text-[11px] font-semibold leading-tight">{gift.name}</span>
-                    </div>
-                  </div>)}
-              </div>
-            </div>
-
             {/* Live Users Counter - Above Add to Cart */}
             <div className="flex items-center justify-center gap-2 py-3 mt-4">
               <div className="flex items-center gap-1.5">
