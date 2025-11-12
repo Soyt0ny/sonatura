@@ -500,17 +500,17 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
         </div>
         <span className="text-primary-foreground/40">•</span>
         <div className="flex items-center gap-2">
-          <span className="text-sm font-semibold">🎁 4 REGALOS GRATIS con tu primera compra</span>
+          <span className="text-sm font-semibold">#1 best seller en wellness</span>
         </div>
         <span className="text-primary-foreground/40">•</span>
         <div className="flex items-center gap-2">
-          <span className="text-sm font-semibold">⚡ OFERTA LIMITADA - Solo quedan 120 unidades</span>
+          <span className="text-sm font-semibold">PATENTED & INNOVATIVE CONTENT</span>
         </div>
         <span className="text-primary-foreground/40">•</span>
         
         {/* Segundo set de mensajes (duplicado para efecto infinito) */}
         <div className="flex items-center gap-2">
-          <span className="text-sm font-semibold">✨ ENVÍO GRATIS en todos los pedidos</span>
+          <span className="text-sm font-semibold">SCIENCE-BACKED & NON-INVASIVE</span>
         </div>
         <span className="text-primary-foreground/40">•</span>
         <div className="flex items-center gap-2">
@@ -525,30 +525,7 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
     </div>
 
     {/* Authority Logos Section */}
-    <div className="py-8 bg-background">
-      <div className="max-w-6xl mx-auto px-4">
-        <p className="text-center text-sm font-medium text-muted-foreground mb-4">
-          Inspirado en prácticas aprobadas por...
-        </p>
-        <div className="grid grid-cols-4 gap-4 md:gap-8 items-center justify-items-center">
-          {[{
-              src: logoApa,
-              alt: "American Psychological Association"
-            }, {
-              src: logoNonGmo,
-              alt: "Non GMO Project"
-            }, {
-              src: logoCrueltyFree,
-              alt: "Cruelty Free"
-            }, {
-              src: logoUsdaOrganic,
-              alt: "USDA Organic"
-            }].map((logo, i) => <div key={i} className="w-full h-28 md:h-32 flex items-center justify-center p-2">
-              <img src={logo.src} alt={logo.alt} className="w-full h-full object-contain opacity-90 hover:opacity-100 transition-opacity duration-300" />
-            </div>)}
-        </div>
-      </div>
-    </div>
+    
     </div>
   </>;
 };
