@@ -20,7 +20,7 @@ const Index = () => {
         </div>
 
         {/* As Seen In Section */}
-        <section className="mt-12 md:mt-16 mb-8 md:mb-12 border-y border-border/20 py-12">
+        <section className="mb-8 md:mb-12 border-y border-border/20 py-12">
           <h2 className="text-sm md:text-base font-medium text-center mb-10 tracking-wider uppercase text-foreground">Como lo viste en</h2>
           <div className="flex items-center justify-center gap-12 md:gap-16 lg:gap-20 px-4">
             <img src={logoVogue} alt="Vogue" className="w-32 md:w-40 lg:w-44 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
