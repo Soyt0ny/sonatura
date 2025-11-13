@@ -486,7 +486,7 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
         <span className="text-primary-foreground/40 px-1">•</span>
         
         {/* Segundo set duplicado exacto para scroll infinito sin cortes */}
-        <span className="text-sm font-semibold">#1 best seller en wellness</span>
+        <span className="text-sm font-semibold">#1 BEST SELLER EN WELLNESS            </span>
         <span className="text-primary-foreground/40 px-1">•</span>
         <span className="text-sm font-semibold">CONTENIDO PATENTADO E INNOVADOR</span>
         <span className="text-primary-foreground/40 px-1">•</span>
