@@ -476,8 +476,6 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
     <div className="mt-8 overflow-hidden bg-primary text-primary-foreground py-3 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
       <div className="flex items-center gap-2 animate-scroll-infinite whitespace-nowrap">
         {/* Primer set de mensajes */}
-        <span className="text-sm font-semibold">✨ ENVÍO GRATIS en todos los pedidos</span>
-        <span className="text-primary-foreground/40">•</span>
         <span className="text-sm font-semibold">#1 best seller en wellness</span>
         <span className="text-primary-foreground/40">•</span>
         <span className="text-sm font-semibold">CONTENIDO PATENTADO E INNOVADOR</span>
@@ -488,8 +486,6 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
         <span className="text-primary-foreground/40">•</span>
         
         {/* Segundo set duplicado para scroll infinito fluido */}
-        <span className="text-sm font-semibold">✨ ENVÍO GRATIS en todos los pedidos</span>
-        <span className="text-primary-foreground/40">•</span>
         <span className="text-sm font-semibold">#1 best seller en wellness</span>
         <span className="text-primary-foreground/40">•</span>
         <span className="text-sm font-semibold">CONTENIDO PATENTADO E INNOVADOR</span>
