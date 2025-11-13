@@ -232,55 +232,6 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
           <ExclusiveGiftsSection />
         </div>
 
-        {/* Countdown 24 Hours */}
-        <div className="relative overflow-hidden bg-white border-2 border-primary/20 rounded-lg p-3 shadow-lg">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
-          <div className="relative z-10 space-y-2">
-            <p className="text-center text-xs font-bold uppercase tracking-wide text-foreground">
-              50% OFF + 4 Regalos Termina En:
-            </p>
-            <div className="flex justify-center gap-1.5">
-              {(() => {
-                  const [timeLeft, setTimeLeft] = useState(24 * 60 * 60);
-                  useEffect(() => {
-                    const timer = setInterval(() => {
-                      setTimeLeft(prev => {
-                        if (prev <= 0) return 24 * 60 * 60;
-                        return prev - 1;
-                      });
-                    }, 1000);
-                    return () => clearInterval(timer);
-                  }, []);
-                  const hours = Math.floor(timeLeft / 3600);
-                  const minutes = Math.floor(timeLeft % 3600 / 60);
-                  const seconds = timeLeft % 60;
-                  return <>
-                    <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-2.5 py-1.5 min-w-[55px] shadow-sm">
-                      <span className="text-lg font-bold text-foreground tabular-nums">
-                        {String(hours).padStart(2, '0')}
-                      </span>
-                      <span className="text-[9px] font-semibold text-foreground/70 uppercase">Horas</span>
-                    </div>
-                    <div className="flex items-center text-lg font-bold text-foreground">:</div>
-                    <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-2.5 py-1.5 min-w-[55px] shadow-sm">
-                      <span className="text-lg font-bold text-foreground tabular-nums">
-                        {String(minutes).padStart(2, '0')}
-                      </span>
-                      <span className="text-[9px] font-semibold text-foreground/70 uppercase">Minutos</span>
-                    </div>
-                    <div className="flex items-center text-lg font-bold text-foreground">:</div>
-                    <div className="flex flex-col items-center justify-center bg-background border border-border/50 rounded-lg px-2.5 py-1.5 min-w-[55px] shadow-sm">
-                      <span className="text-lg font-bold text-foreground tabular-nums">
-                        {String(seconds).padStart(2, '0')}
-                      </span>
-                      <span className="text-[9px] font-semibold text-foreground/70 uppercase">Segundos</span>
-                    </div>
-                  </>;
-                })()}
-            </div>
-            <p className="text-center text-[10px] font-medium text-foreground/80 pt-0.5">🎁 Ordena antes del 8 Nov. para recibir Regalos</p>
-          </div>
-        </div>
 
 
 
