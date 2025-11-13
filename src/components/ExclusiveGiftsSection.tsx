@@ -136,9 +136,8 @@ const ExclusiveGiftsSection = () => {
 
                 {/* Title & Subtitle */}
                 <div className="mt-1.5 text-center space-y-0">
-                  <h3 className="text-[9px] md:text-[10px] font-semibold leading-tight" style={{
-                fontFamily: "Inter, sans-serif",
-                color: "#1B1B1B"
+                  <h3 className="text-[9px] md:text-[10px] font-semibold leading-tight text-white/80" style={{
+                fontFamily: "Inter, sans-serif"
               }}>
                     {gift.title}
                   </h3>
