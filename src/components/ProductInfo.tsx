@@ -159,7 +159,7 @@ const ProductInfo = () => {
         </div>
 
         {/* Exclusive Gifts Section - Desktop */}
-        <div className="hidden md:block -mx-8 lg:-mx-16 -mt-2">
+        <div className="hidden md:block -mx-8 lg:-mx-16 -mt-8">
           <ExclusiveGiftsSection />
         </div>
 
@@ -225,14 +225,14 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
         </div>
 
         {/* Exclusive Gifts Section - Mobile */}
-        <div className="md:hidden -mx-4 -mt-2">
+        <div className="md:hidden -mx-4 -mt-8">
           <ExclusiveGiftsSection />
         </div>
 
         <div className="space-y-3">
           <div className="space-y-0">
             {/* Live Users Counter - Above Add to Cart */}
-            <div className="flex items-center justify-center gap-2 py-1 -mt-2">
+            <div className="flex items-center justify-center gap-2 -mt-8">
               <div className="flex items-center gap-1.5">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                 <span className="text-sm font-semibold text-foreground">{liveUsers.toLocaleString()}</span>
