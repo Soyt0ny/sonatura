@@ -135,7 +135,7 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  @keyframes scroll-infinite {
+  @keyframes scroll-seamless {
     0% {
       transform: translateX(0);
     }
@@ -155,8 +155,9 @@ All colors MUST be HSL.
     }
   }
   
-  .animate-scroll-infinite {
-    animation: scroll-infinite 30s linear infinite;
+  .animate-scroll-seamless {
+    animation: scroll-seamless 25s linear infinite;
+    will-change: transform;
   }
   
   .animate-slide-in-bottom {
