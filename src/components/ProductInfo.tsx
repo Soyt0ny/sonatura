@@ -128,7 +128,7 @@ const ProductInfo = () => {
                 <p className="text-2xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$135</p>
                 <p className="text-2xl font-bold text-foreground">$67</p>
               </div>
-              <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">50% OFF</span>
+              <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">50% OFF TERMINA HOY</span>
             </div>
             <p className="text-xs text-foreground mt-1">O solo $11.17/mes Shopay</p>
           </div>
@@ -193,7 +193,7 @@ const ProductInfo = () => {
                 <p className="text-xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$135</p>
                 <p className="text-xl font-bold text-foreground">$67</p>
               </div>
-              <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">50% OFF</span>
+              <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">50% OFF TERMINA HOY</span>
             </div>
             <p className="text-xs text-foreground mt-1">O solo $11.17/mes Shopay</p>
           </div>
