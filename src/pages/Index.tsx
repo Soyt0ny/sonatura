@@ -1,4 +1,3 @@
-import CountdownBanner from "@/components/CountdownBanner";
 import Header from "@/components/Header";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductInfo from "@/components/ProductInfo";
@@ -10,7 +9,6 @@ import logoWomensHealth from "@/assets/logo-womenshealth.png";
 const Index = () => {
   return <div className="min-h-screen">
       <StickyCartBar />
-      <CountdownBanner />
       <Header />
       
       
