@@ -96,7 +96,7 @@ const ExclusiveGiftsSection = () => {
           {/* Message Above Gifts */}
           <p className="text-center text-[13px] md:text-[14px] font-semibold mb-4 max-w-[400px] mx-auto text-white" style={{
             fontFamily: "Inter, sans-serif"
-          }}>Compra antes del {getTomorrowDate()} y llévate estos 4 regalos
+          }}>Compra antes del {getTomorrowDate()} para obtener garantizado: 50% off + 4 Regalos GRATIS
           </p>
 
           {/* Gifts Grid */}
