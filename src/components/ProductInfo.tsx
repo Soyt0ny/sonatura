@@ -485,17 +485,17 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
         </div>
         <span className="text-primary-foreground/40">•</span>
         <div className="flex items-center gap-2">
-          <span className="text-sm font-semibold">CONTENIDO PATENTADO E INNOVADOR                                             </span>
+          <span className="text-sm font-semibold">CONTENIDO PATENTADO E INNOVADOR                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </span>
         </div>
         <span className="text-primary-foreground/40">•</span>
         
         {/* Segundo set de mensajes (duplicado para efecto infinito) */}
         <div className="flex items-center gap-2">
-          <span className="text-sm font-semibold">BASADO EN CIENCIA Y NO INVASIVO                    </span>
+          <span className="text-sm font-semibold">BASADO EN CIENCIA Y NO INVASIVO                         </span>
         </div>
         <span className="text-primary-foreground/40">•</span>
         <div className="flex items-center gap-2">
-          <span className="text-sm font-semibold">#1 BEST SELLER EN LIBROS WELLNESS                                                                       </span>
+          <span className="text-sm font-semibold">#1 BEST SELLER EN LIBROS WELLNESS                                                                                                                                                                                           </span>
         </div>
         <span className="text-primary-foreground/40">•</span>
         <div className="flex items-center gap-2">
