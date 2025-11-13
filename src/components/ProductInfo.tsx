@@ -183,8 +183,7 @@ const ProductInfo = () => {
           </div>
 
           <div>
-            <h1 className="text-xl font-bold leading-tight">REALIFESTACIÓN LIBRO DIGITAL
-- 50% Off +4 regalos</h1>
+            <h1 className="text-xl font-bold leading-tight">REALIFESTACIÓN LIBRO DIGITAL - último día 50% Off +4 regalos</h1>
           </div>
 
           <div>
