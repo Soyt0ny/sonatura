@@ -348,13 +348,32 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
             <img src={paymentIcons} alt="Métodos de pago aceptados" className="h-8" />
           </div>
 
-          {/* Sección de Stock Limitado */}
-          <div className="bg-white border-2 border-foreground/10 rounded-lg p-4 space-y-2 shadow-sm">
-            <h3 className="text-base font-bold text-foreground">SOLO 1,000 COPIAS A ESTE PRECIO</h3>
-            <p className="text-xs text-foreground/70">Una vez lleguemos a las 1,000 ventas la oferta de lanzamiento terminará y el precio regresará a $99 dólares.</p>
-            <div className="space-y-1">
-              <Progress value={88} className="h-5" />
-              <p className="text-xs font-semibold text-foreground">87% VENDIDO</p>
+          {/* Featured Reviews Carousel */}
+          <div className="relative">
+            <div className="bg-white border-2 border-foreground/10 rounded-lg p-4 space-y-2 animate-fade-in shadow-sm">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="text-base font-bold mb-0.5 text-foreground">{featuredReviews[currentReviewIndex].name}</h3>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-xs font-semibold text-gold">Verified customer</span>
+                    <div className="w-4 h-4 rounded-full bg-gold flex items-center justify-center">
+                      <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs text-foreground/60">{featuredReviews[currentReviewIndex].date}</span>
+              </div>
+              
+              <p className="text-sm leading-relaxed text-foreground/80">
+                "{featuredReviews[currentReviewIndex].review}"
+              </p>
+            </div>
+            
+            {/* Carousel Indicators */}
+            <div className="flex justify-center gap-1.5 mt-3">
+              {featuredReviews.map((_, idx) => <button key={idx} onClick={() => setCurrentReviewIndex(idx)} className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentReviewIndex ? 'w-6 bg-primary' : 'w-1.5 bg-border hover:bg-primary/50'}`} aria-label={`Go to review ${idx + 1}`} />)}
             </div>
           </div>
 
@@ -376,44 +395,6 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
             </div>
           </div>
 
-          {/* Real Results Section */}
-          <div className="mt-8 space-y-1.5">
-            
-            
-            {/* Video Testimonials Grid - Optimized for Reels/TikTok */}
-            <div className="grid grid-cols-4 gap-2 mb-4">
-              {[1, 2, 3, 4].map(i => <div key={i}></div>)}
-            </div>
-
-            {/* Featured Reviews Carousel */}
-            <div className="relative">
-              <div className="bg-white border-2 border-foreground/10 rounded-lg p-4 space-y-2 animate-fade-in shadow-sm">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="text-base font-bold mb-0.5 text-foreground">{featuredReviews[currentReviewIndex].name}</h3>
-                    <div className="flex items-center gap-1.5">
-                      <span className="text-xs font-semibold text-gold">Verified customer</span>
-                      <div className="w-4 h-4 rounded-full bg-gold flex items-center justify-center">
-                        <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <span className="text-xs text-foreground/60">{featuredReviews[currentReviewIndex].date}</span>
-                </div>
-                
-                <p className="text-sm leading-relaxed text-foreground/80">
-                  "{featuredReviews[currentReviewIndex].review}"
-                </p>
-              </div>
-              
-              {/* Carousel Indicators */}
-              <div className="flex justify-center gap-1.5 mt-3">
-                {featuredReviews.map((_, idx) => <button key={idx} onClick={() => setCurrentReviewIndex(idx)} className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentReviewIndex ? 'w-6 bg-primary' : 'w-1.5 bg-border hover:bg-primary/50'}`} aria-label={`Go to review ${idx + 1}`} />)}
-              </div>
-            </div>
-          </div>
 
           {/* Product Information Accordion */}
           <div className="mt-8 pt-4 border-t border-border">
