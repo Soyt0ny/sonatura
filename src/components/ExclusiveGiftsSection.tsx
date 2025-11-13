@@ -91,104 +91,93 @@ const ExclusiveGiftsSection = () => {
     backgroundColor: "#F7F5F1"
   }}>
       <div className="max-w-[1200px] mx-auto">
-        {/* Message Above Gifts */}
-        <p className="text-center text-[13px] md:text-[14px] font-semibold mb-4 max-w-[400px] mx-auto" style={{
-        fontFamily: "Inter, sans-serif",
-        color: "#1B1B1B"
-      }}>Compra antes del {getTomorrowDate()} y llévate estos 4 regalos
-        </p>
+        {/* Recuadro con fondo oscuro */}
+        <div className="bg-gradient-to-r from-black via-gray-900 to-black rounded-lg p-6 border border-white/10">
+          {/* Message Above Gifts */}
+          <p className="text-center text-[13px] md:text-[14px] font-semibold mb-4 max-w-[400px] mx-auto text-white" style={{
+            fontFamily: "Inter, sans-serif"
+          }}>Compra antes del {getTomorrowDate()} y llévate estos 4 regalos
+          </p>
 
-        {/* Gifts Grid */}
-        <div className="grid grid-cols-4 gap-2 md:gap-3 mb-6 max-w-[400px] mx-auto">
-          {gifts.map((gift, index) => <div key={index} className="flex flex-col items-center">
-              {/* Gift Card */}
-              <div className="relative w-full aspect-[1/1] rounded-[6px] p-1.5 md:p-2 flex items-center justify-center transition-transform hover:scale-[1.03]" style={{
-            backgroundColor: "#F7F5F1",
-            border: "1.5px dashed #B8B8B8",
-            boxShadow: "0 3px 10px rgba(27, 27, 27, 0.04)"
-          }}>
-                {/* FREE Badge */}
-                <div className="absolute -top-[8px] left-1 rounded-[4px] px-1.5 py-0.5 flex flex-col items-center justify-center" style={{
-              backgroundColor: "#D9C6A5",
-              minWidth: "40px",
-              minHeight: "20px"
+          {/* Gifts Grid */}
+          <div className="grid grid-cols-4 gap-2 md:gap-3 mb-6 max-w-[400px] mx-auto">
+            {gifts.map((gift, index) => <div key={index} className="flex flex-col items-center">
+                {/* Gift Card */}
+                <div className="relative w-full aspect-[1/1] rounded-[6px] p-1.5 md:p-2 flex items-center justify-center transition-transform hover:scale-[1.03]" style={{
+              backgroundColor: "#F7F5F1",
+              border: "1.5px dashed #B8B8B8",
+              boxShadow: "0 3px 10px rgba(27, 27, 27, 0.04)"
             }}>
-                  <span className="text-[8px] font-bold uppercase leading-none" style={{
-                fontFamily: "Inter, sans-serif",
-                color: "#1B1B1B"
+                  {/* FREE Badge */}
+                  <div className="absolute -top-[8px] left-1 rounded-[4px] px-1.5 py-0.5 flex flex-col items-center justify-center" style={{
+                backgroundColor: "#D9C6A5",
+                minWidth: "40px",
+                minHeight: "20px"
               }}>
-                    FREE
-                  </span>
-                  <span className="text-[7px] line-through mt-0.5 font-semibold" style={{
-                fontFamily: "Inter, sans-serif",
-                color: "#8B4513",
-                textDecorationColor: "#8B4513",
-                textDecorationThickness: "1.5px"
-              }}>
-                    {gift.originalPrice}
-                  </span>
+                    <span className="text-[8px] font-bold uppercase leading-none" style={{
+                  fontFamily: "Inter, sans-serif",
+                  color: "#1B1B1B"
+                }}>
+                      FREE
+                    </span>
+                    <span className="text-[7px] line-through mt-0.5 font-semibold" style={{
+                  fontFamily: "Inter, sans-serif",
+                  color: "#8B4513",
+                  textDecorationColor: "#8B4513",
+                  textDecorationThickness: "1.5px"
+                }}>
+                      {gift.originalPrice}
+                    </span>
+                  </div>
+
+                  {/* Product Image */}
+                  <img src={gift.image} alt={gift.title} className="max-h-[55%] w-auto object-contain" />
                 </div>
 
-                {/* Product Image */}
-                <img src={gift.image} alt={gift.title} className="max-h-[55%] w-auto object-contain" />
-              </div>
-
-              {/* Title & Subtitle */}
-              <div className="mt-1.5 text-center space-y-0">
-                <h3 className="text-[9px] md:text-[10px] font-semibold leading-tight" style={{
-              fontFamily: "Inter, sans-serif",
-              color: "#1B1B1B"
-            }}>
-                  {gift.title}
-                </h3>
-              </div>
-            </div>)}
-        </div>
-
-        {/* Urgency Section */}
-        <div className="text-center space-y-3">
-          {/* Countdown & Kits */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4">
-            <div className="flex items-center gap-2">
-              <span className="text-[11px]" style={{
-              fontFamily: "Inter, sans-serif",
-              color: "#1B1B1B"
-            }}>
-                Quedan:
-              </span>
-              <div className="flex items-center gap-1">
-                <span className="text-[14px] font-bold tabular-nums" style={{
+                {/* Title & Subtitle */}
+                <div className="mt-1.5 text-center space-y-0">
+                  <h3 className="text-[9px] md:text-[10px] font-semibold leading-tight" style={{
                 fontFamily: "Inter, sans-serif",
                 color: "#1B1B1B"
               }}>
-                  {String(hours).padStart(2, "0")}h {String(minutes).padStart(2, "0")}m{" "}
-                  {String(seconds).padStart(2, "0")}s
-                </span>
-              </div>
-            </div>
-            <span className="hidden md:inline text-[11px]" style={{
-            color: "#B8B8B8"
-          }}>
-              •
-            </span>
-            <div>
-              <span className="text-[11px] font-medium" style={{
-              fontFamily: "Inter, sans-serif",
-              color: "#1B1B1B"
-            }}>
-                Quedan {kitsAvailable} kits disponibles
-              </span>
-            </div>
+                    {gift.title}
+                  </h3>
+                </div>
+              </div>)}
           </div>
 
-          {/* Urgency Text */}
-          <p className="text-[11px] max-w-[400px] mx-auto" style={{
-          fontFamily: "Inter, sans-serif",
-          color: "#1B1B1B"
-        }}>
-            Solo hoy: estos regalos se entregan con pedidos confirmados antes del contador. Si
-            vuelves mañana, la oferta podrá no estar disponible.
-          </p>
+          {/* Urgency Section */}
+          <div className="text-center space-y-3">
+            {/* Countdown */}
+            <div className="flex items-center justify-center gap-2">
+              <span className="text-[11px] text-white/80" style={{
+                fontFamily: "Inter, sans-serif"
+              }}>
+                Quedan:
+              </span>
+              <div className="flex items-center gap-2">
+                <div className="bg-white/10 backdrop-blur-sm rounded px-2 py-0.5 min-w-[35px]">
+                  <span className="font-semibold text-sm tabular-nums text-white">{String(hours).padStart(2, "0")}</span>
+                </div>
+                <span className="text-xs text-white/60">:</span>
+                <div className="bg-white/10 backdrop-blur-sm rounded px-2 py-0.5 min-w-[35px]">
+                  <span className="font-semibold text-sm tabular-nums text-white">{String(minutes).padStart(2, "0")}</span>
+                </div>
+                <span className="text-xs text-white/60">:</span>
+                <div className="bg-white/10 backdrop-blur-sm rounded px-2 py-0.5 min-w-[35px]">
+                  <span className="font-semibold text-sm tabular-nums text-white">{String(seconds).padStart(2, "0")}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Urgency Text */}
+            <p className="text-[11px] max-w-[400px] mx-auto text-white/80" style={{
+              fontFamily: "Inter, sans-serif"
+            }}>
+              Solo hoy: estos regalos se entregan con pedidos confirmados antes del contador. Si
+              vuelves mañana, la oferta podrá no estar disponible.
+            </p>
+          </div>
         </div>
       </div>
     </section>;
