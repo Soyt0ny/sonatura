@@ -474,7 +474,7 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
 
     {/* Infinite Scrolling Messages Bar - Full Width */}
     <div className="mt-8 overflow-hidden bg-primary text-primary-foreground py-3 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-      <div className="flex items-center gap-8 animate-scroll-infinite whitespace-nowrap">
+      <div className="flex items-center gap-3 animate-scroll-infinite whitespace-nowrap">
         {/* Primer set de mensajes */}
         <div className="flex items-center gap-2">
           <span className="text-sm font-semibold">✨ ENVÍO GRATIS en todos los pedidos</span>
