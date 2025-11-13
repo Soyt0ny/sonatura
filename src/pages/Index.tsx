@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductInfo from "@/components/ProductInfo";
 import StickyCartBar from "@/components/StickyCartBar";
-import StatsSection from "@/components/StatsSection";
 import logoVogue from "@/assets/logo-vogue.png";
 import logoElle from "@/assets/logo-elle.png";
 import logoGoop from "@/assets/logo-goop.png";
@@ -30,9 +29,6 @@ const Index = () => {
             <img src={logoWomensHealth} alt="Women's Health" className="w-32 md:w-40 lg:w-44 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
           </div>
         </section>
-
-        {/* Stats Section */}
-        <StatsSection />
 
         {/* How It Works Section */}
         <section className="mt-16 md:mt-24">
