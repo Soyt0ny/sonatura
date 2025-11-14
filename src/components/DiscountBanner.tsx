@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Copy, Check } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 
 const DiscountBanner = () => {
@@ -29,24 +28,26 @@ const DiscountBanner = () => {
   };
 
   return (
-    <div className="inline-flex items-center gap-1.5 mt-3">
-      <span className="text-[10px] font-medium text-muted-foreground">
-        -15% Extra:
-      </span>
-      <Badge
-        onClick={handleCopy}
-        className="cursor-pointer gap-1.5 px-2 py-0.5 text-[10px] font-semibold bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white border-0 hover:opacity-90 transition-opacity"
-      >
-        <span className="tracking-wide">{discountCode}</span>
-        {copied ? (
-          <>
-            <Check className="w-2.5 h-2.5" />
-            <span className="text-[9px]">Copiado, Activo 24h</span>
-          </>
-        ) : (
-          <Copy className="w-2.5 h-2.5" />
-        )}
-      </Badge>
+    <div className="border border-border/40 rounded-lg p-3 mt-4 bg-accent/20">
+      <div className="flex items-center justify-between gap-3">
+        <span className="text-xs font-semibold text-foreground">
+          -15% Extra con código:
+        </span>
+        <button
+          onClick={handleCopy}
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-xs font-bold hover:opacity-90 transition-opacity cursor-pointer"
+        >
+          <span className="tracking-wider">{discountCode}</span>
+          {copied ? (
+            <>
+              <Check className="w-3 h-3" />
+              <span className="text-[10px]">Copiado, Activo 24h</span>
+            </>
+          ) : (
+            <Copy className="w-3 h-3" />
+          )}
+        </button>
+      </div>
     </div>
   );
 };
