@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import AnnouncementBar from "@/components/AnnouncementBar";
+import DiscountBanner from "@/components/DiscountBanner";
 import ProductInfo from "@/components/ProductInfo";
 import StickyCartBar from "@/components/StickyCartBar";
 import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
@@ -11,7 +12,7 @@ const Index = () => {
   return <div className="min-h-screen">
       <StickyCartBar />
       <Header />
-      
+      <DiscountBanner />
       
       <main className="container mx-auto px-4 pb-8 md:pb-12">
         <div className="max-w-7xl mx-auto">
