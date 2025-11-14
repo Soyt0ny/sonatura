@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Copy, Check } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
 
 const DiscountBanner = () => {
   const [copied, setCopied] = useState(false);
@@ -10,20 +9,12 @@ const DiscountBanner = () => {
     try {
       await navigator.clipboard.writeText(discountCode);
       setCopied(true);
-      toast({
-        title: "Código copiado",
-        description: "El código de descuento ha sido copiado al portapapeles",
-      });
       
       setTimeout(() => {
         setCopied(false);
-      }, 24000); // 24 seconds to show the message
+      }, 24000);
     } catch (err) {
-      toast({
-        title: "Error",
-        description: "No se pudo copiar el código",
-        variant: "destructive",
-      });
+      console.error("No se pudo copiar el código");
     }
   };
 
