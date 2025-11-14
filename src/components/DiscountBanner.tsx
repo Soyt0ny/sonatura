@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Copy, Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 
 const DiscountBanner = () => {
@@ -29,29 +29,24 @@ const DiscountBanner = () => {
   };
 
   return (
-    <div className="bg-accent text-accent-foreground py-4 border-b border-border/10">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-center gap-3 flex-wrap">
-          <p className="text-sm md:text-base font-light tracking-wide">
-            Para <span className="font-semibold">-15% Extra</span> usa el código
-          </p>
-          <Button
-            onClick={handleCopy}
-            variant="outline"
-            className="gap-2 font-medium border-accent-foreground/20 bg-accent-foreground/5 hover:bg-accent-foreground/10 text-accent-foreground transition-all duration-300"
-          >
-            <span className="font-semibold tracking-wider">{discountCode}</span>
-            {copied ? (
-              <>
-                <Check className="w-4 h-4" />
-                <span className="text-xs">Copiado, Activo por 24h</span>
-              </>
-            ) : (
-              <Copy className="w-4 h-4" />
-            )}
-          </Button>
-        </div>
-      </div>
+    <div className="inline-flex items-center gap-1.5 mt-3">
+      <span className="text-[10px] font-medium text-muted-foreground">
+        -15% Extra:
+      </span>
+      <Badge
+        onClick={handleCopy}
+        className="cursor-pointer gap-1.5 px-2 py-0.5 text-[10px] font-semibold bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white border-0 hover:opacity-90 transition-opacity"
+      >
+        <span className="tracking-wide">{discountCode}</span>
+        {copied ? (
+          <>
+            <Check className="w-2.5 h-2.5" />
+            <span className="text-[9px]">Copiado, Activo 24h</span>
+          </>
+        ) : (
+          <Copy className="w-2.5 h-2.5" />
+        )}
+      </Badge>
     </div>
   );
 };
