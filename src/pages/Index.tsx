@@ -3,12 +3,14 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductInfo from "@/components/ProductInfo";
 import StickyCartBar from "@/components/StickyCartBar";
 import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
+import DailyOrdersNotification from "@/components/DailyOrdersNotification";
 import logoVogue from "@/assets/logo-vogue.png";
 import logoElle from "@/assets/logo-elle.png";
 import logoGoop from "@/assets/logo-goop.png";
 import logoWomensHealth from "@/assets/logo-womenshealth.png";
 const Index = () => {
   return <div className="min-h-screen">
+      <DailyOrdersNotification />
       <StickyCartBar />
       <Header />
       
