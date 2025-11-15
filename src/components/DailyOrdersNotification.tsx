@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { X } from "lucide-react";
+import { X, CheckCircle2 } from "lucide-react";
 
 const DailyOrdersNotification = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,28 +29,39 @@ const DailyOrdersNotification = () => {
   const orderCount = getDailyOrderCount();
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const showTimer = setTimeout(() => {
       setIsVisible(true);
     }, 15000);
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(showTimer);
   }, []);
+
+  useEffect(() => {
+    if (isVisible) {
+      const hideTimer = setTimeout(() => {
+        setIsVisible(false);
+      }, 8000);
+
+      return () => clearTimeout(hideTimer);
+    }
+  }, [isVisible]);
 
   if (!isVisible) return null;
 
   return (
     <div className="fixed top-20 right-4 z-[100] animate-in slide-in-from-right-5 duration-500">
-      <div className="bg-background/95 backdrop-blur-sm border border-border/40 rounded-lg px-4 py-3 shadow-sm hover:shadow-md transition-shadow max-w-xs">
+      <div className="bg-background border border-border/40 rounded-lg px-4 py-3 shadow-lg max-w-xs">
         <button
           onClick={() => setIsVisible(false)}
-          className="absolute top-1.5 right-1.5 text-muted-foreground hover:text-foreground transition-colors opacity-60 hover:opacity-100"
+          className="absolute top-2 right-2 text-muted-foreground hover:text-foreground transition-colors"
           aria-label="Cerrar"
         >
-          <X className="w-3.5 h-3.5" />
+          <X className="w-4 h-4" />
         </button>
-        <div className="pr-5">
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            <span className="font-bold text-foreground text-sm">{orderCount.toLocaleString('es-ES')}</span> Personas compraron este producto en las últimas 24 horas
+        <div className="flex items-start gap-2 pr-6">
+          <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+          <p className="text-xs text-foreground leading-relaxed">
+            <span className="font-bold text-sm">{orderCount.toLocaleString('es-ES')}</span> Personas compraron este producto en las últimas 24 horas
           </p>
         </div>
       </div>
