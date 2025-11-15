@@ -39,23 +39,19 @@ const DailyOrdersNotification = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-md animate-in slide-in-from-bottom-5 duration-500">
-      <div className="bg-background border border-border/40 rounded-lg p-4 shadow-lg">
+    <div className="fixed top-4 right-4 z-50 animate-in slide-in-from-right-5 duration-500">
+      <div className="bg-background/95 backdrop-blur-sm border border-border/40 rounded-lg px-4 py-3 shadow-sm hover:shadow-md transition-shadow max-w-xs">
         <button
           onClick={() => setIsVisible(false)}
-          className="absolute top-2 right-2 text-muted-foreground hover:text-foreground transition-colors"
+          className="absolute top-1.5 right-1.5 text-muted-foreground hover:text-foreground transition-colors opacity-60 hover:opacity-100"
           aria-label="Cerrar"
         >
-          <X className="w-4 h-4" />
+          <X className="w-3.5 h-3.5" />
         </button>
-        <div className="flex items-start gap-3 pr-6">
-          <span className="text-2xl flex-shrink-0">🔥</span>
-          <div>
-            <h3 className="font-semibold text-foreground mb-1">Producto Popular</h3>
-            <p className="text-sm text-muted-foreground">
-              <span className="font-bold text-foreground">{orderCount.toLocaleString('es-ES')}</span> personas realizaron un pedido en las últimas 24 horas
-            </p>
-          </div>
+        <div className="pr-5">
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            <span className="font-bold text-foreground text-sm">{orderCount.toLocaleString('es-ES')}</span> Personas compraron este producto en las últimas 24 horas
+          </p>
         </div>
       </div>
     </div>
