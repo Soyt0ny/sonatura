@@ -39,7 +39,7 @@ const DailyOrdersNotification = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-4 right-4 z-50 animate-in slide-in-from-right-5 duration-500">
+    <div className="fixed top-20 right-4 z-[100] animate-in slide-in-from-right-5 duration-500">
       <div className="bg-background/95 backdrop-blur-sm border border-border/40 rounded-lg px-4 py-3 shadow-sm hover:shadow-md transition-shadow max-w-xs">
         <button
           onClick={() => setIsVisible(false)}
