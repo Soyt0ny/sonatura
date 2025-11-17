@@ -4,6 +4,12 @@ import ProductInfo from "@/components/ProductInfo";
 import StickyCartBar from "@/components/StickyCartBar";
 import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
 import DailyOrdersNotification from "@/components/DailyOrdersNotification";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import logoVogue from "@/assets/logo-vogue.png";
 import logoElle from "@/assets/logo-elle.png";
 import logoGoop from "@/assets/logo-goop.png";
@@ -87,26 +93,97 @@ const Index = () => {
         {/* FAQ */}
         <section className="mt-16 md:mt-24 max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Preguntas Frecuentes</h2>
-          <div className="space-y-4">
-            <div className="bg-accent/20 border border-border/40 rounded-lg p-6">
-              <h3 className="font-semibold mb-2">¿Cuánto tiempo hasta ver resultados?</h3>
-              <p className="text-sm text-muted-foreground">
-                La mayoría de usuarias ven resultados visibles en 2-4 semanas de uso diario constante.
-              </p>
-            </div>
-            <div className="bg-accent/20 border border-border/40 rounded-lg p-6">
-              <h3 className="font-semibold mb-2">¿Es seguro de usar?</h3>
-              <p className="text-sm text-muted-foreground">
-                ¡Sí! Nuestra fórmula está probada dermatológicamente y es segura para uso diario.
-              </p>
-            </div>
-            <div className="bg-accent/20 border border-border/40 rounded-lg p-6">
-              <h3 className="font-semibold mb-2">¿Cómo lo aplico?</h3>
-              <p className="text-sm text-muted-foreground">
-                Aplica en pestañas limpias y secas en la base, similar al delineador, una vez al día antes de dormir.
-              </p>
-            </div>
-          </div>
+          <Accordion type="multiple" defaultValue={["item-1", "item-2", "item-3"]} className="space-y-4">
+            <AccordionItem value="item-1" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+              <AccordionTrigger className="hover:no-underline">
+                ¿Cuánto tiempo hasta ver resultados?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                La mayoría de usuarias ven resultados visibles en 2-4 semanas de uso diario constante. Para resultados óptimos, recomendamos usar el sérum consistentemente durante al menos 8 semanas.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+              <AccordionTrigger className="hover:no-underline">
+                ¿Es seguro de usar?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                ¡Sí! Nuestra fórmula está probada dermatológicamente y es segura para uso diario. Está libre de parabenos, sulfatos y fragancias artificiales. Ha sido probada oftalmológicamente y es apta para ojos sensibles.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+              <AccordionTrigger className="hover:no-underline">
+                ¿Cómo lo aplico?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                Aplica en pestañas limpias y secas en la base, similar al delineador, una vez al día antes de dormir. Deja secar completamente antes de aplicar otros productos.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+              <AccordionTrigger className="hover:no-underline">
+                ¿Puedo usarlo con extensiones de pestañas?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                Sí, el sérum es compatible con extensiones de pestañas. De hecho, puede ayudar a fortalecer tus pestañas naturales debajo de las extensiones.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+              <AccordionTrigger className="hover:no-underline">
+                ¿Cuánto dura un frasco?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                Un frasco de 5ml dura aproximadamente 3-4 meses con uso diario, lo que lo convierte en una inversión muy rentable para el cuidado de tus pestañas.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-6" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+              <AccordionTrigger className="hover:no-underline">
+                ¿Tiene efectos secundarios?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                Nuestro sérum está formulado para minimizar efectos secundarios. En casos raros, algunas usuarias pueden experimentar leve irritación. Si esto ocurre, discontinúa el uso y consulta con tu médico.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-7" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+              <AccordionTrigger className="hover:no-underline">
+                ¿Funciona en cejas también?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                ¡Sí! Muchas clientas lo usan también en sus cejas con excelentes resultados. Aplica de la misma manera que en las pestañas, siguiendo la línea de las cejas.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-8" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+              <AccordionTrigger className="hover:no-underline">
+                ¿Qué pasa si dejo de usarlo?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                Tus pestañas gradualmente volverán a su estado original durante varios meses. Para mantener los resultados, recomendamos uso continuo o aplicación 2-3 veces por semana como mantenimiento.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-9" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+              <AccordionTrigger className="hover:no-underline">
+                ¿Puedo usar máscara después de aplicarlo?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                Recomendamos aplicar el sérum por la noche para mejores resultados. Por la mañana, puedes usar máscara y otros productos de maquillaje normalmente sin problema.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-10" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+              <AccordionTrigger className="hover:no-underline">
+                ¿Ofrecen garantía de devolución de dinero?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                Sí, ofrecemos una garantía de 60 días. Si no estás completamente satisfecha con los resultados, te devolvemos tu dinero sin preguntas. Tu satisfacción es nuestra prioridad.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </section>
       </main>
 
