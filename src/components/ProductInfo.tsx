@@ -131,7 +131,9 @@ const ProductInfo = () => {
               </div>
               <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">50% OFF TERMINA HOY</span>
             </div>
-            <p className="text-xs text-foreground mt-1">O solo $11.17/mes Shopay</p>
+            <p className="text-xs text-foreground mt-1">
+              O solo <span className="font-bold underline">$11.17/mes</span> a 6 meses sin intereses
+            </p>
           </div>
 
           <div className="space-y-2 mt-4">
