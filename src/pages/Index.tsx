@@ -4,6 +4,7 @@ import ProductInfo from "@/components/ProductInfo";
 import StickyCartBar from "@/components/StickyCartBar";
 import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
 import DailyOrdersNotification from "@/components/DailyOrdersNotification";
+import ReviewsSection from "@/components/ReviewsSection";
 import {
   Accordion,
   AccordionContent,
@@ -185,6 +186,9 @@ const Index = () => {
             </AccordionItem>
           </Accordion>
         </section>
+
+        {/* Reviews Section */}
+        <ReviewsSection />
       </main>
 
       {/* Footer */}
