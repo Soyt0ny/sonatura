@@ -119,20 +119,20 @@ const ProductInfo = () => {
 
           <div>
             <h1 className="text-2xl font-bold leading-tight">
-              REALIFESTACIÓN LIBRO DIGITAL - 50% Off +4 regalos
+              REALIFESTACIÓN LIBRO DIGITAL - 70% Off +4 regalos
             </h1>
           </div>
 
           <div>
             <div className="flex items-center gap-2">
               <div className="flex items-baseline gap-2">
-                <p className="text-2xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$135</p>
-                <p className="text-2xl font-bold text-foreground">$67</p>
+                <p className="text-2xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$123</p>
+                <p className="text-2xl font-bold text-foreground">$37</p>
               </div>
-              <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">50% OFF TERMINA HOY</span>
+              <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">70% OFF TERMINA HOY</span>
             </div>
             <p className="text-xs text-foreground mt-1">
-              O solo <span className="font-bold underline">$11.17/mes</span> a 6 meses sin intereses
+              O solo <span className="font-bold underline">$6.17/mes</span> a 6 meses sin intereses
             </p>
           </div>
 
@@ -187,19 +187,19 @@ const ProductInfo = () => {
           </div>
 
           <div>
-            <h1 className="text-xl font-bold leading-tight">REALIFESTACIÓN LIBRO DIGITAL - último día 50% Off +4 regalos</h1>
+            <h1 className="text-xl font-bold leading-tight">REALIFESTACIÓN LIBRO DIGITAL - último día 70% Off +4 regalos</h1>
           </div>
 
           <div>
             <div className="flex items-center gap-2">
               <div className="flex items-baseline gap-2">
-                <p className="text-xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$135</p>
-                <p className="text-xl font-bold text-foreground">$67</p>
+                <p className="text-xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$123</p>
+                <p className="text-xl font-bold text-foreground">$37</p>
               </div>
-              <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">50% OFF TERMINA HOY</span>
+              <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">70% OFF TERMINA HOY</span>
             </div>
             <p className="text-xs text-foreground mt-1">
-              O solo <span className="font-bold underline">$11.17/mes</span> a 6 meses sin intereses
+              O solo <span className="font-bold underline">$6.17/mes</span> a 6 meses sin intereses
             </p>
           </div>
 

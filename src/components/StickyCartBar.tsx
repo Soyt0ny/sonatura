@@ -37,7 +37,7 @@ const StickyCartBar = () => {
       <div className="container mx-auto px-4 py-2.5">
         <div className="flex items-center justify-between gap-3 max-w-2xl mx-auto">
           <div className="flex items-center gap-2">
-            <span className="text-lg font-semibold text-foreground">$67</span>
+            <span className="text-lg font-semibold text-foreground">$37</span>
           </div>
           <Button 
             variant="cta" 
