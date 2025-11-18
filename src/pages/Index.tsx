@@ -26,10 +26,8 @@ const Index = () => {
           <ProductInfo />
         </div>
 
-        {/* Centered Sections Container - More white space on sides */}
-        <div className="max-w-5xl mx-auto px-4 md:px-8 lg:px-12">
-          {/* As Seen In Section */}
-          <section className="mb-8 md:mb-12 border-y border-border/20 py-12">
+        {/* As Seen In Section */}
+        <section className="mb-8 md:mb-12 border-y border-border/20 py-12">
           <h2 className="text-sm md:text-base font-medium text-center mb-10 tracking-wider uppercase text-foreground">Como lo viste en</h2>
           <div className="flex items-center justify-center gap-3 md:gap-12 lg:gap-16 px-2 md:px-4 overflow-x-auto">
             <img src={logoVogue} alt="Vogue" className="w-20 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
@@ -191,15 +189,16 @@ const Index = () => {
 
         {/* Reviews Section */}
         <ReviewsSection />
-
-          {/* Footer */}
-          <footer className="mt-16 md:mt-24 text-center text-sm text-muted-foreground py-8 border-t border-border/20">
-            <p>© 2024 FORCHICS. Todos los derechos reservados.</p>
-          </footer>
-        </div>
       </main>
 
-      {/* Footer moved inside centered container */}
+      {/* Footer */}
+      <footer className="border-t border-border/30 mt-16 md:mt-24 py-8">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-sm text-muted-foreground">
+            © 2024 FORCHICS. Todos los derechos reservados.
+          </p>
+        </div>
+      </footer>
     </div>;
 };
 export default Index;
