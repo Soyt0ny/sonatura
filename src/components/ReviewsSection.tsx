@@ -16,6 +16,7 @@ import { Label } from "@/components/ui/label";
 const ReviewsSection = () => {
   const [rating, setRating] = useState(0);
   const [hoveredRating, setHoveredRating] = useState(0);
+  const [visibleReviews, setVisibleReviews] = useState(5);
 
   // Mock review images
   const reviewImages = [
@@ -92,6 +93,96 @@ const ReviewsSection = () => {
       ageRange: "55-64",
       skinType: "Seca",
       skinConcerns: "Líneas finas y arrugas, Pérdida de firmeza",
+      frequency: "Diario"
+    },
+    {
+      id: 4,
+      name: "María G.",
+      initials: "MG",
+      verified: true,
+      rating: 5,
+      title: "Excelente inversión",
+      text: "Llevo 6 semanas usando el producto y los resultados son increíbles. Mi piel luce más radiante y las manchas han disminuido notablemente.",
+      date: "Hace 3 semanas",
+      helpful: 8,
+      notHelpful: 0,
+      product: "Kit de Varita de Luz Roja 4 en 1 y Suero Activador",
+      productImage: "/placeholder.svg",
+      ageRange: "28-37",
+      skinType: "Mixta",
+      skinConcerns: "Manchas, Textura irregular",
+      frequency: "Diario"
+    },
+    {
+      id: 5,
+      name: "Carmen R.",
+      initials: "CR",
+      verified: true,
+      rating: 5,
+      title: "Recomendado 100%",
+      text: "Sinceramente no esperaba estos resultados. Mi piel se ve más joven y firme. Lo mejor que he probado en años.",
+      date: "Hace 1 mes",
+      helpful: 12,
+      notHelpful: 1,
+      product: "Varita de Renovación Radiante 4 en 1 con Terapia de Luz Roja",
+      productImage: "/placeholder.svg",
+      ageRange: "48-57",
+      skinType: "Seca",
+      skinConcerns: "Pérdida de firmeza, Aspecto fatigado",
+      frequency: "5-6 veces por semana"
+    },
+    {
+      id: 6,
+      name: "Patricia L.",
+      initials: "PL",
+      verified: true,
+      rating: 4,
+      title: "Muy bueno",
+      text: "He visto mejoras en mi piel después de 4 semanas. Es fácil de usar y se siente muy profesional.",
+      date: "Hace 2 semanas",
+      helpful: 3,
+      notHelpful: 0,
+      product: "Kit de Varita de Luz Roja 4 en 1 y Suero Activador",
+      productImage: "/placeholder.svg",
+      ageRange: "38-47",
+      skinType: "Normal",
+      skinConcerns: "Líneas finas y arrugas",
+      frequency: "3-4 veces por semana"
+    },
+    {
+      id: 7,
+      name: "Isabel M.",
+      initials: "IM",
+      verified: true,
+      rating: 5,
+      title: "Cambió mi rutina de cuidado",
+      text: "Desde que uso este producto mi piel está mucho mejor. Las arrugas se han suavizado y mi rostro se ve más luminoso.",
+      date: "Hace 5 días",
+      helpful: 6,
+      notHelpful: 0,
+      product: "Varita de Renovación Radiante 4 en 1 con Terapia de Luz Roja",
+      productImage: "/placeholder.svg",
+      ageRange: "55-64",
+      skinType: "Seca",
+      skinConcerns: "Líneas finas y arrugas, Pérdida de firmeza",
+      frequency: "Diario"
+    },
+    {
+      id: 8,
+      name: "Ana S.",
+      initials: "AS",
+      verified: true,
+      rating: 5,
+      title: "Resultados rápidos",
+      text: "En solo 2 semanas ya vi diferencia. Mi piel está más suave y uniforme. Totalmente satisfecha con mi compra.",
+      date: "Hace 10 días",
+      helpful: 4,
+      notHelpful: 0,
+      product: "Kit de Varita de Luz Roja 4 en 1 y Suero Activador",
+      productImage: "/placeholder.svg",
+      ageRange: "28-37",
+      skinType: "Mixta",
+      skinConcerns: "Textura irregular, Poros dilatados",
       frequency: "Diario"
     }
   ];
@@ -201,7 +292,7 @@ const ReviewsSection = () => {
 
       {/* Individual Reviews */}
       <div className="space-y-6 mb-8">
-        {mockReviews.map((review) => (
+        {mockReviews.slice(0, visibleReviews).map((review) => (
           <div
             key={review.id}
             className="grid md:grid-cols-[300px_1fr] gap-6 pb-6 border-b border-border/20 last:border-b-0"
@@ -416,9 +507,18 @@ const ReviewsSection = () => {
         </Dialog>
       </div>
 
-      {/* Reviews List Placeholder */}
-      <div className="text-center py-8 text-muted-foreground">
-        <p className="text-sm">1,855 reseñas verificadas</p>
+      {/* Reviews Count and Load More Button */}
+      <div className="text-center py-8">
+        <p className="text-sm text-muted-foreground mb-4">1,855 reseñas verificadas</p>
+        {visibleReviews < mockReviews.length && (
+          <Button
+            onClick={() => setVisibleReviews(prev => Math.min(prev + 3, mockReviews.length))}
+            variant="outline"
+            className="bg-[#8B2E2E] text-white hover:bg-[#741E1E] border-none"
+          >
+            Ver más reseñas
+          </Button>
+        )}
       </div>
     </section>
   );
