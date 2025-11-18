@@ -47,7 +47,7 @@ const ReviewsSection = () => {
           {reviewImages.map((img, idx) => (
             <div
               key={idx}
-              className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 rounded-lg overflow-hidden bg-accent/20 border border-border/40"
+              className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden bg-accent/20 border border-border/40"
             >
               <img
                 src={img}
