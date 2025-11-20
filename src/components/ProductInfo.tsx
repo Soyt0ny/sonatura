@@ -119,7 +119,7 @@ const ProductInfo = () => {
 
           <div>
             <h1 className="text-2xl font-bold leading-tight">
-              REALIFESTACIÓN LIBRO DIGITAL - 70% Off +4 regalos
+              REALIFESTACIÓN LIBRO DIGITAL - Black Friday 70% Off +4 regalos
             </h1>
           </div>
 

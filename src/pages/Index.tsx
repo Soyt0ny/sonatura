@@ -43,9 +43,16 @@ const Index = () => {
               <div className="w-16 h-16 bg-accent/30 border border-border/50 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-foreground">1</span>
               </div>
-              <h3 className="font-semibold mb-2">I            </h3>
+              <h3 className="font-semibold mb-2">Identifica un prob                                                                                                                                                                                                     </h3>
               <p className="text-sm text-muted-foreground">
-                Aplica el sérum en las pestañas limpias cada noche antes de dormir
+                Por ejemplo:
+Cortisol Elevado.   
+
+
+
+
+
+   
               </p>
             </div>
             <div className="text-center">
