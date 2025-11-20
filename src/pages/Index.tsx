@@ -5,12 +5,7 @@ import StickyCartBar from "@/components/StickyCartBar";
 import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
 import DailyOrdersNotification from "@/components/DailyOrdersNotification";
 import ReviewsSection from "@/components/ReviewsSection";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import logoVogue from "@/assets/logo-vogue.png";
 import logoElle from "@/assets/logo-elle.png";
 import logoGoop from "@/assets/logo-goop.png";
@@ -48,7 +43,7 @@ const Index = () => {
               <div className="w-16 h-16 bg-accent/30 border border-border/50 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-foreground">1</span>
               </div>
-              <h3 className="font-semibold mb-2">Aplica Diariamente</h3>
+              <h3 className="font-semibold mb-2">I            </h3>
               <p className="text-sm text-muted-foreground">
                 Aplica el sérum en las pestañas limpias cada noche antes de dormir
               </p>
@@ -57,18 +52,60 @@ const Index = () => {
               <div className="w-16 h-16 bg-accent/30 border border-border/50 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-foreground">2</span>
               </div>
-              <h3 className="font-semibold mb-2">Ve los Resultados</h3>
+              <h3 className="font-semibold mb-2">Sigues protocolos correspondientes 7-14 dias...    </h3>
               <p className="text-sm text-muted-foreground">
-                Nota pestañas más largas y llenas en 2-4 semanas
+                
+
+
+
+Ahora que identificaste el cortisol elevado solo sigue el protocolo supercalm, y si quieres resultados mas rápidos y efectivos puedes seguir a la vez el Detox de dopamina, 
+Nuestros protocolos son un sistema paso a paso fáciles de seguir para cualquiera, usando ingredientes que todos pueden conseguir.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                      
               </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent/30 border border-border/50 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-foreground">3</span>
               </div>
-              <h3 className="font-semibold mb-2">Mantén la Belleza</h3>
+              <h3 className="font-semibold mb-2">Obtienes resultados     </h3>
               <p className="text-sm text-muted-foreground">
-                Continúa el uso para pestañas hermosas duraderas
+                
+
+
+
+
+
+Sin pastillas químicas, sin suplementos con ingredientes que no reconoce tu cuerpo, sin productos caros con disrruptores hormonales. Todo es natural, controlado por ti y con ingredientes que tu cuerpo reconoce.
+
+
+Además usa nuestras plantillas de apoyo en Notion para mantenerte constante con los protocolos fácilmente y poder seguir varios a la vez sin perderte, 
+De igual forma puedes dejar tus preguntas en nuestra comunidad             
+
+ 
+
+  
+
+
+
+                                                                                                             
               </p>
             </div>
           </div>
