@@ -204,27 +204,26 @@ const ProductInfo = () => {
           </div>
 
           <div className="space-y-2 mt-4">
-            <h3 className="text-base font-bold mb-3">+200 Protocolos de salud, belleza y biohacking para:</h3>
+            <h3 className="text-base font-bold mb-3">+200 Protocolos de salud, belleza y Wellness para:</h3>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✦</div>
               <span className="text-sm">Eliminar grasa abdominal y deshinchar tu rostro</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">≈</div>
-              <span className="text-sm">Eliminar acné equilibrando tus hormonas con shots naturales y comidas delisiosas.</span>
+              <span className="text-sm">Eliminar acné hormona</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">⇈</div>
-              <span className="text-sm">Darle un Glow natural y sin esfuerzo a tu cabello, tu piel con los 42 alimentos más saludables del mundo y el protocolo Afrodita.
-además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.</span>
+              <span className="text-sm">      Un Glow natural a tu cabello, tu piel y tu energía con el protocolo Afrodita.                                                                                                                                                                                                                          </span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
-              <span className="text-sm">Reducir tu cortisol de forma natural y acelera tu metabolismo sin depender de suplementos con ingredientes químicos que dañan tu salud.</span>
+              <span className="text-sm">Dejar de gastar $10K al año en suplementos y productos químicos que tu cuerpo no reconoce                                                                                                                                          </span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✓</div>
-              <span className="text-sm">Todo con recetas y protocolos naturales paso a paso que toman solo 5 minutos.</span>
+              <span className="text-sm">Todo con recetas y remedios naturales paso a paso que toman solo 5 minutos.                    </span>
             </div>
             <DiscountBanner />
           </div>
