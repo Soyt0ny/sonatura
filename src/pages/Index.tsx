@@ -5,6 +5,7 @@ import StickyCartBar from "@/components/StickyCartBar";
 import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
 import DailyOrdersNotification from "@/components/DailyOrdersNotification";
 import ReviewsSection from "@/components/ReviewsSection";
+import ClinicalResultsSection from "@/components/ClinicalResultsSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import logoVogue from "@/assets/logo-vogue.png";
 import logoElle from "@/assets/logo-elle.png";
@@ -117,6 +118,9 @@ De igual forma puedes dejar tus preguntas en nuestra comunidad         
             </div>
           </div>
         </section>
+
+        {/* Clinical Results Section */}
+        <ClinicalResultsSection />
 
         {/* Testimonials */}
         <section className="mt-16 md:mt-24 bg-accent/20 rounded-xl p-8 md:p-12">
