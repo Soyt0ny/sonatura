@@ -1,4 +1,4 @@
-import radiantSkin from "@/assets/radiant-skin.jpg";
+import clinicalResults from "@/assets/clinical-results.png";
 
 const CircularProgress = ({ percentage }: { percentage: number }) => {
   const radius = 50;
@@ -15,8 +15,8 @@ const CircularProgress = ({ percentage }: { percentage: number }) => {
           r={radius}
           fill="none"
           stroke="hsl(var(--border))"
-          strokeWidth="8"
-          opacity="0.2"
+          strokeWidth="3"
+          opacity="0.15"
         />
         {/* Progress circle */}
         <circle
@@ -25,7 +25,7 @@ const CircularProgress = ({ percentage }: { percentage: number }) => {
           r={radius}
           fill="none"
           stroke="#C7A867"
-          strokeWidth="8"
+          strokeWidth="3"
           strokeDasharray={circumference}
           strokeDashoffset={strokeDashoffset}
           strokeLinecap="round"
@@ -48,11 +48,11 @@ const ClinicalResultsSection = () => {
       
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
         {/* Left Card */}
-        <div className="bg-background border-2 border-border/40 rounded-3xl overflow-hidden shadow-sm">
+        <div className="bg-background border-2 border-[#C7A867] rounded-3xl overflow-hidden shadow-sm">
           <div className="aspect-square w-full overflow-hidden">
             <img 
-              src={radiantSkin} 
-              alt="Piel radiante y luminosa" 
+              src={clinicalResults} 
+              alt="Resultados clínicos - Piel radiante" 
               className="w-full h-full object-cover"
             />
           </div>
@@ -94,17 +94,17 @@ const ClinicalResultsSection = () => {
               dijeron que vieron una reducción visible de líneas finas y arrugas
             </p>
           </div>
-        </div>
-      </div>
 
-      {/* Footer */}
-      <div className="mt-10 pt-8 border-t border-border/30">
-        <h4 className="text-sm font-semibold mb-3 text-foreground">
-          Estudio de Percepción Clínica y del Consumidor
-        </h4>
-        <p className="text-xs text-muted-foreground leading-relaxed">
-          †Los datos están basados en un estudio independiente de percepción del consumidor, así como en una evaluación experta realizada por un dermatólogo en un estudio clínico independiente de 33 personas después de usar nuestro producto 5 veces por semana dentro de un período de tiempo de 8 semanas.
-        </p>
+          {/* Study Info */}
+          <div className="mt-8 pt-6 border-t border-border/30">
+            <h4 className="text-sm font-semibold mb-3 text-foreground">
+              Estudio de Percepción Clínica y del Consumidor
+            </h4>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              †Los datos están basados en un estudio independiente de percepción del consumidor, así como en una evaluación experta realizada por un dermatólogo en un estudio clínico independiente de 33 personas después de usar nuestro producto 5 veces por semana dentro de un período de tiempo de 8 semanas.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
