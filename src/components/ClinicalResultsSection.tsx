@@ -1,3 +1,44 @@
+import radiantSkin from "@/assets/radiant-skin.jpg";
+
+const CircularProgress = ({ percentage }: { percentage: number }) => {
+  const radius = 50;
+  const circumference = 2 * Math.PI * radius;
+  const strokeDashoffset = circumference - (percentage / 100) * circumference;
+
+  return (
+    <div className="relative w-24 h-24 md:w-28 md:h-28 flex-shrink-0">
+      <svg className="w-full h-full -rotate-90" viewBox="0 0 120 120">
+        {/* Background circle */}
+        <circle
+          cx="60"
+          cy="60"
+          r={radius}
+          fill="none"
+          stroke="hsl(var(--border))"
+          strokeWidth="8"
+          opacity="0.2"
+        />
+        {/* Progress circle */}
+        <circle
+          cx="60"
+          cy="60"
+          r={radius}
+          fill="none"
+          stroke="#C7A867"
+          strokeWidth="8"
+          strokeDasharray={circumference}
+          strokeDashoffset={strokeDashoffset}
+          strokeLinecap="round"
+          className="transition-all duration-1000 ease-out"
+        />
+      </svg>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="text-3xl md:text-4xl font-bold text-foreground">{percentage}%</span>
+      </div>
+    </div>
+  );
+};
+
 const ClinicalResultsSection = () => {
   return (
     <section className="mt-16 md:mt-24 max-w-6xl mx-auto px-4">
@@ -7,25 +48,32 @@ const ClinicalResultsSection = () => {
       
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
         {/* Left Card */}
-        <div className="bg-background border-2 border-border/40 rounded-3xl p-8 md:p-10 shadow-sm">
-          <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-3">
-            MEJORA VISIBLE
-          </p>
-          <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
-            Piel Radiante y Más Suave
-          </h3>
-          <p className="text-sm md:text-base text-muted-foreground italic">
-            "Mi piel está brillante y mis líneas de expresión se ven más suaves"
-          </p>
+        <div className="bg-background border-2 border-border/40 rounded-3xl overflow-hidden shadow-sm">
+          <div className="aspect-square w-full overflow-hidden">
+            <img 
+              src={radiantSkin} 
+              alt="Piel radiante y luminosa" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="p-8 md:p-10">
+            <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-3">
+              MEJORA VISIBLE
+            </p>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
+              Piel Radiante y Más Suave
+            </h3>
+            <p className="text-sm md:text-base text-muted-foreground italic">
+              "Mi piel está brillante y mis líneas de expresión se ven más suaves"
+            </p>
+          </div>
         </div>
 
         {/* Right Side - Stats */}
         <div className="space-y-6">
           {/* Stat 1 */}
           <div className="flex items-center gap-6">
-            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-3 border-[#C7A867] flex items-center justify-center flex-shrink-0">
-              <span className="text-3xl md:text-4xl font-bold text-foreground">97%</span>
-            </div>
+            <CircularProgress percentage={97} />
             <p className="text-sm md:text-base text-foreground">
               dijeron que su piel se ve más radiante y luminosa
             </p>
@@ -33,9 +81,7 @@ const ClinicalResultsSection = () => {
 
           {/* Stat 2 */}
           <div className="flex items-center gap-6">
-            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-3 border-[#C7A867] flex items-center justify-center flex-shrink-0">
-              <span className="text-3xl md:text-4xl font-bold text-foreground">91%</span>
-            </div>
+            <CircularProgress percentage={91} />
             <p className="text-sm md:text-base text-foreground">
               dijeron que su piel se ve más joven
             </p>
@@ -43,9 +89,7 @@ const ClinicalResultsSection = () => {
 
           {/* Stat 3 */}
           <div className="flex items-center gap-6">
-            <div className="w-24 h-24 md:w-28 md:h-28 rounded-full border-3 border-[#C7A867] flex items-center justify-center flex-shrink-0">
-              <span className="text-3xl md:text-4xl font-bold text-foreground">88%</span>
-            </div>
+            <CircularProgress percentage={88} />
             <p className="text-sm md:text-base text-foreground">
               dijeron que vieron una reducción visible de líneas finas y arrugas
             </p>
