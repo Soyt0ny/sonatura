@@ -8,6 +8,7 @@ import ReviewsSection from "@/components/ReviewsSection";
 import ClinicalResultsSection from "@/components/ClinicalResultsSection";
 import UGCCarousel from "@/components/UGCCarousel";
 import BookExplanationSection from "@/components/BookExplanationSection";
+import BookStructureSection from "@/components/BookStructureSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import logoVogue from "@/assets/logo-vogue.png";
 import logoElle from "@/assets/logo-elle.png";
@@ -40,6 +41,9 @@ const Index = () => {
 
         {/* Book Explanation Section */}
         <BookExplanationSection />
+
+        {/* Book Structure Section */}
+        <BookStructureSection />
 
         {/* Before After Carousel */}
         <BeforeAfterCarousel />
