@@ -10,6 +10,7 @@ import UGCCarousel from "@/components/UGCCarousel";
 import BookExplanationSection from "@/components/BookExplanationSection";
 import BookStructureSection from "@/components/BookStructureSection";
 import BookUniqueFeatures from "@/components/BookUniqueFeatures";
+import ComparisonSection from "@/components/ComparisonSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import logoVogue from "@/assets/logo-vogue.png";
 import logoElle from "@/assets/logo-elle.png";
@@ -134,6 +135,9 @@ De igual forma puedes dejar tus preguntas en nuestra comunidad         
 
         {/* Book Unique Features Section */}
         <BookUniqueFeatures />
+
+        {/* Comparison Section */}
+        <ComparisonSection />
 
         {/* Clinical Results Section */}
         <ClinicalResultsSection />
