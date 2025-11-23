@@ -12,21 +12,21 @@ const CertificationBadges = () => {
   ];
 
   return (
-    <section className="py-16 px-4 max-w-6xl mx-auto">
-      <h2 className="text-2xl md:text-3xl font-serif text-center mb-12 text-foreground">
+    <section className="py-16 px-4 max-w-5xl mx-auto">
+      <h2 className="text-2xl md:text-3xl font-serif text-center mb-16 text-foreground">
         Inspirado en prácticas aprobadas por.
       </h2>
       
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+      <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
         {badges.map((badge) => (
           <div 
             key={badge.id}
-            className="flex items-center justify-center p-4"
+            className="flex items-center justify-center"
           >
             <img 
               src={badge.src} 
               alt={badge.alt}
-              className="max-h-24 w-auto object-contain transition-all duration-300"
+              className="h-28 md:h-32 w-auto object-contain transition-all duration-300"
               style={{ mixBlendMode: 'multiply' }}
             />
           </div>
