@@ -12,6 +12,7 @@ import BookStructureSection from "@/components/BookStructureSection";
 import BookUniqueFeatures from "@/components/BookUniqueFeatures";
 import ComparisonSection from "@/components/ComparisonSection";
 import ProfessionalEndorsements from "@/components/ProfessionalEndorsements";
+import CertificationBadges from "@/components/CertificationBadges";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import logoVogue from "@/assets/logo-vogue.png";
 import logoElle from "@/assets/logo-elle.png";
@@ -140,8 +141,11 @@ De igual forma puedes dejar tus preguntas en nuestra comunidad         
         {/* Comparison Section */}
         <ComparisonSection />
 
-        {/* Professional Endorsements */}
-        <ProfessionalEndorsements />
+      {/* Professional Endorsements */}
+      <ProfessionalEndorsements />
+
+      {/* Certification Badges */}
+      <CertificationBadges />
 
         {/* Clinical Results Section */}
         <ClinicalResultsSection />
