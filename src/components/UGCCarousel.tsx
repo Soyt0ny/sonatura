@@ -1,13 +1,17 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import ugc1 from "@/assets/ugc-1.jpg";
+import ugc2 from "@/assets/ugc-2.png";
+import ugc3 from "@/assets/ugc-3.png";
+import ugc4 from "@/assets/ugc-4.png";
+import ugc5 from "@/assets/ugc-5.png";
 
 const UGCCarousel = () => {
-  // Placeholder images - usuario agregará sus propias imágenes UGC
   const ugcImages = [
-    { id: 1, src: "/placeholder.svg", alt: "Cliente UGC 1" },
-    { id: 2, src: "/placeholder.svg", alt: "Cliente UGC 2" },
-    { id: 3, src: "/placeholder.svg", alt: "Cliente UGC 3" },
-    { id: 4, src: "/placeholder.svg", alt: "Cliente UGC 4" },
-    { id: 5, src: "/placeholder.svg", alt: "Cliente UGC 5" },
+    { id: 1, src: ugc1, alt: "Cliente usando Realifestacion - Día 7 del protocolo Afrodita" },
+    { id: 2, src: ugc2, alt: "Cliente con máscara LED leyendo Realifestacion" },
+    { id: 3, src: ugc3, alt: "Cliente leyendo Realifestacion en avión" },
+    { id: 4, src: ugc4, alt: "Cliente con Realifestacion en spa" },
+    { id: 5, src: ugc5, alt: "Cliente haciendo yoga con Realifestacion" },
     { id: 6, src: "/placeholder.svg", alt: "Cliente UGC 6" },
   ];
 
