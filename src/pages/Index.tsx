@@ -7,6 +7,7 @@ import DailyOrdersNotification from "@/components/DailyOrdersNotification";
 import ReviewsSection from "@/components/ReviewsSection";
 import ClinicalResultsSection from "@/components/ClinicalResultsSection";
 import UGCCarousel from "@/components/UGCCarousel";
+import BookExplanationSection from "@/components/BookExplanationSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import logoVogue from "@/assets/logo-vogue.png";
 import logoElle from "@/assets/logo-elle.png";
@@ -36,6 +37,9 @@ const Index = () => {
 
         {/* UGC Carousel */}
         <UGCCarousel />
+
+        {/* Book Explanation Section */}
+        <BookExplanationSection />
 
         {/* Before After Carousel */}
         <BeforeAfterCarousel />
