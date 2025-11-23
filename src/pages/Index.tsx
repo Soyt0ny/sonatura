@@ -6,6 +6,7 @@ import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
 import DailyOrdersNotification from "@/components/DailyOrdersNotification";
 import ReviewsSection from "@/components/ReviewsSection";
 import ClinicalResultsSection from "@/components/ClinicalResultsSection";
+import UGCCarousel from "@/components/UGCCarousel";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import logoVogue from "@/assets/logo-vogue.png";
 import logoElle from "@/assets/logo-elle.png";
@@ -32,6 +33,9 @@ const Index = () => {
             <img src={logoWomensHealth} alt="Women's Health" className="w-20 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
           </div>
         </section>
+
+        {/* UGC Carousel */}
+        <UGCCarousel />
 
         {/* Before After Carousel */}
         <BeforeAfterCarousel />
