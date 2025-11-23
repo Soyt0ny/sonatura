@@ -26,7 +26,8 @@ const CertificationBadges = () => {
             <img 
               src={badge.src} 
               alt={badge.alt}
-              className="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+              className="max-h-24 w-auto object-contain transition-all duration-300"
+              style={{ mixBlendMode: 'multiply' }}
             />
           </div>
         ))}
