@@ -32,11 +32,11 @@ const Index = () => {
         {/* As Seen In Section */}
         <section className="mb-8 md:mb-12 border-y border-border/20 py-12">
           <h2 className="text-sm md:text-base font-medium text-center mb-10 tracking-wider uppercase text-foreground">Como lo viste en</h2>
-          <div className="flex items-center justify-center gap-3 md:gap-12 lg:gap-16 px-2 md:px-4 overflow-x-auto">
-            <img src={logoVogue} alt="Vogue" className="w-20 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
-            <img src={logoElle} alt="Elle" className="w-20 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
-            <img src={logoGoop} alt="Goop" className="w-20 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
-            <img src={logoWomensHealth} alt="Women's Health" className="w-20 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
+          <div className="flex items-center justify-center gap-2 md:gap-12 lg:gap-16 px-2 md:px-4 overflow-x-auto">
+            <img src={logoVogue} alt="Vogue" className="w-24 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
+            <img src={logoElle} alt="Elle" className="w-24 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
+            <img src={logoGoop} alt="Goop" className="w-24 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
+            <img src={logoWomensHealth} alt="Women's Health" className="w-24 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
           </div>
         </section>
 
