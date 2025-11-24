@@ -27,7 +27,7 @@ const CertificationBadges = () => {
               src={badge.src} 
               alt={badge.alt}
               className={`w-auto object-contain transition-all duration-300 ${
-                badge.id === 3 ? 'h-24 md:h-28' : 'h-28 md:h-32'
+                badge.id === 3 ? 'h-20 md:h-24' : 'h-28 md:h-32'
               }`}
               style={{ mixBlendMode: 'multiply' }}
             />
