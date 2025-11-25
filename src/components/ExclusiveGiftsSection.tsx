@@ -87,7 +87,7 @@ const ExclusiveGiftsSection = () => {
       cartButton.click();
     }
   };
-  return <section className="w-full py-6 px-5 md:px-0" style={{
+  return <section className="w-full py-3 px-5 md:px-0" style={{
     backgroundColor: "#F7F5F1"
   }}>
       <div className="max-w-[1200px] mx-auto">
