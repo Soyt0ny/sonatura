@@ -36,8 +36,8 @@ const StickyCartBar = () => {
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-t border-border/50 shadow-lg animate-slide-in-bottom">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between gap-4 max-w-7xl mx-auto">
-          {/* Left side - Product info */}
-          <div className="flex flex-col gap-1 min-w-0 flex-1">
+          {/* Left side - Product info (hidden on mobile) */}
+          <div className="hidden md:flex flex-col gap-1 min-w-0 flex-1">
             <h3 className="text-sm md:text-base font-semibold text-foreground truncate">
               Libro Realifestación®
             </h3>
@@ -57,7 +57,7 @@ const StickyCartBar = () => {
               <span className="text-sm text-muted-foreground line-through">$124</span>
               <span className="text-xl md:text-2xl font-bold text-foreground">$37</span>
             </div>
-            <span className="text-xs text-muted-foreground">
+            <span className="hidden md:block text-xs text-muted-foreground">
               O 6 pagos de <span className="font-semibold">$11.17/mes</span>
             </span>
           </div>
