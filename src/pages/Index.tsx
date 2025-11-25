@@ -14,6 +14,7 @@ import BookUniqueFeatures from "@/components/BookUniqueFeatures";
 import ComparisonSection from "@/components/ComparisonSection";
 import ProfessionalEndorsements from "@/components/ProfessionalEndorsements";
 import CertificationBadges from "@/components/CertificationBadges";
+import NewsletterSection from "@/components/NewsletterSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import logoVogue from "@/assets/logo-vogue.png";
 import logoElle from "@/assets/logo-elle.png";
@@ -266,6 +267,9 @@ De igual forma puedes dejar tus preguntas en nuestra comunidad         
 
         {/* Reviews Section */}
         <ReviewsSection />
+
+        {/* Newsletter Section */}
+        <NewsletterSection />
       </main>
 
       {/* Footer */}
