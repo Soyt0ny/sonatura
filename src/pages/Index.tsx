@@ -4,6 +4,7 @@ import ProductInfo from "@/components/ProductInfo";
 import StickyCartBar from "@/components/StickyCartBar";
 import BeforeAfterCarousel from "@/components/BeforeAfterCarousel";
 import DailyOrdersNotification from "@/components/DailyOrdersNotification";
+import Footer from "@/components/Footer";
 import ReviewsSection from "@/components/ReviewsSection";
 import ClinicalResultsSection from "@/components/ClinicalResultsSection";
 import UGCCarousel from "@/components/UGCCarousel";
@@ -268,13 +269,7 @@ De igual forma puedes dejar tus preguntas en nuestra comunidad         
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border/30 mt-16 md:mt-24 py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm text-muted-foreground">
-            © 2024 FORCHICS. Todos los derechos reservados.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>;
 };
 export default Index;
