@@ -25,10 +25,10 @@ const ComparisonSection = () => {
       {/* Price Comparison */}
       <div className="bg-background/50 border border-border/30 rounded-2xl p-6 md:p-8">
         <h2 className="text-xl md:text-2xl font-semibold text-center mb-2">
-          Invierte <span className="text-primary">$67</span> una vez
+          Invierte <span className="text-primary">$67</span> una vez. Para siempre
         </h2>
         <p className="text-center text-sm text-muted-foreground mb-6">
-          vs. $5,000+ USD/año en productos con químicos cuestionables
+          Y corta la dependencia de $11,900 al año en productos con ingredientes cuestionables
         </p>
 
         <div className="grid grid-cols-3 gap-2 md:gap-3 mb-6">
