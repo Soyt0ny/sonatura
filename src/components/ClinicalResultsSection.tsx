@@ -43,7 +43,7 @@ const ClinicalResultsSection = () => {
   return (
     <section className="mt-16 md:mt-24 max-w-6xl mx-auto px-4">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
-        Transforma Tu Piel Después de 8 Semanas
+        Resultados Comprobados por Miles de Clientas
       </h2>
       
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
@@ -52,19 +52,19 @@ const ClinicalResultsSection = () => {
           <div className="aspect-square w-full overflow-hidden">
             <img 
               src={clinicalResults} 
-              alt="Resultados clínicos - Piel radiante" 
+              alt="Resultados clínicos - Transformación visible" 
               className="w-full h-full object-cover"
             />
           </div>
           <div className="p-8 md:p-10">
             <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-3">
-              MEJORA VISIBLE
+              TRANSFORMACIÓN REAL
             </p>
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
-              Piel Radiante y Más Suave
+              Resultados Visibles en 14 Días
             </h3>
             <p className="text-sm md:text-base text-muted-foreground italic">
-              "Mi piel está brillante y mis líneas de expresión se ven más suaves"
+              "Bajé la grasa abdominal que no podía eliminar, mi rostro se deshinchó completamente y el acné que tenía por años desapareció. ¡No puedo creer la transformación!"
             </p>
           </div>
         </div>
@@ -73,35 +73,43 @@ const ClinicalResultsSection = () => {
         <div className="space-y-6">
           {/* Stat 1 */}
           <div className="flex items-center gap-6">
-            <CircularProgress percentage={97} />
+            <CircularProgress percentage={98} />
             <p className="text-sm md:text-base text-foreground">
-              dijeron que su piel se ve más radiante y luminosa
+              afirman ahorrar +$3,000 dólares al año en promedio
             </p>
           </div>
 
           {/* Stat 2 */}
           <div className="flex items-center gap-6">
-            <CircularProgress percentage={91} />
+            <CircularProgress percentage={97} />
             <p className="text-sm md:text-base text-foreground">
-              dijeron que su piel se ve más joven
+              afirman tener mejores resultados que con otros productos
             </p>
           </div>
 
           {/* Stat 3 */}
           <div className="flex items-center gap-6">
-            <CircularProgress percentage={88} />
+            <CircularProgress percentage={96} />
             <p className="text-sm md:text-base text-foreground">
-              dijeron que vieron una reducción visible de líneas finas y arrugas
+              afirman notar reducción visible de grasa y acné hormonal en los primeros 14 días
+            </p>
+          </div>
+
+          {/* Stat 4 */}
+          <div className="flex items-center gap-6">
+            <CircularProgress percentage={91.3} />
+            <p className="text-sm md:text-base text-foreground">
+              catalogaron su compra como una de las 10 mejores de su año
             </p>
           </div>
 
           {/* Study Info */}
           <div className="mt-8 pt-6 border-t border-border/30">
             <h4 className="text-sm font-semibold mb-3 text-foreground">
-              Estudio de Percepción Clínica y del Consumidor
+              Encuesta de Satisfacción del Cliente
             </h4>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              †Los datos están basados en un estudio independiente de percepción del consumidor, así como en una evaluación experta realizada por un dermatólogo en un estudio clínico independiente de 33 personas después de usar nuestro producto 5 veces por semana dentro de un período de tiempo de 8 semanas.
+              †Los datos están basados en una encuesta independiente realizada a más de 2,500 clientas verificadas después de implementar los protocolos del libro durante un período mínimo de 30 días.
             </p>
           </div>
         </div>
