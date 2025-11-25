@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import giftDigitalBook from "@/assets/gift-digital-book.jpg";
 import giftFreeShipping from "@/assets/gift-free-shipping.jpg";
 import giftLashCurler from "@/assets/gift-lash-curler.jpg";
@@ -87,11 +86,9 @@ const ExclusiveGiftsSection = () => {
       cartButton.click();
     }
   };
-  return <section className="w-full py-3 px-5 md:px-0" style={{
-    backgroundColor: "#F7F5F1"
-  }}>
-      <div className="max-w-[1200px] mx-auto">
-        {/* Recuadro con fondo oscuro */}
+  return <section className="w-full py-3">
+      <div className="w-full">
+        {/* Recuadro con fondo claro */}
         <div className="bg-gradient-to-br from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB] rounded-lg p-6 border border-[#D5C3A5]/30 shadow-lg">
           {/* Black Friday Title */}
           <h3 className="text-center text-[15px] md:text-[17px] font-bold tracking-wide mb-2 text-[#1B1B1B]" style={{
