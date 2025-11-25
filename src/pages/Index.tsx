@@ -24,6 +24,7 @@ import logoGoop from "@/assets/logo-goop.png";
 import logoWomensHealth from "@/assets/logo-womenshealth.png";
 const Index = () => {
   return <div className="min-h-screen">
+      <AnnouncementBar />
       <DailyOrdersNotification />
       <StickyCartBar />
       <Header />
