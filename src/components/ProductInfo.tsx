@@ -94,8 +94,8 @@ const ProductInfo = () => {
     return () => clearInterval(interval);
   }, []);
   return <>
-    <div className="w-full md:max-w-6xl md:mx-auto md:px-12 lg:px-20">
-    <div className="w-full grid md:grid-cols-2 gap-8 md:gap-16">
+    <div className="w-full md:max-w-7xl md:mx-auto md:px-8 lg:px-16">
+    <div className="w-full grid md:grid-cols-2 gap-8 md:gap-12">
       {/* Columna izquierda - Imágenes (solo en desktop) - STICKY */}
       <div className="hidden md:block md:sticky md:top-4 md:self-start md:h-fit">
         <ProductGallery />
