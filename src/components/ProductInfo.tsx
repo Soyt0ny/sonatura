@@ -18,7 +18,7 @@ import { es } from "date-fns/locale";
 import { toast } from "@/hooks/use-toast";
 import { Copy, Check } from "lucide-react";
 import ExclusiveGiftsSection from "@/components/ExclusiveGiftsSection";
-import DiscountBanner from "@/components/DiscountBanner";
+
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(59 * 60); // 59 minutos en segundos
 
@@ -158,7 +158,6 @@ const ProductInfo = () => {
               <div className="text-primary text-lg flex-shrink-0">✓</div>
               <span className="text-sm">Todo con recetas y protocolos paso a paso que toman solo 5 minutos.</span>
             </div>
-            <DiscountBanner />
           </div>
         </div>
 
@@ -226,7 +225,7 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
               <div className="text-primary text-lg flex-shrink-0">✓</div>
               <span className="text-sm">Todo con recetas y protocolos naturales paso a paso que toman solo 5 minutos.</span>
             </div>
-            <DiscountBanner />
+            
           </div>
         </div>
 
