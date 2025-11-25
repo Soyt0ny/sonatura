@@ -50,7 +50,7 @@ const BookExplanationSection = () => {
         </div>
         
         <div className="relative flex justify-center">
-          <div className="relative aspect-square w-full max-w-[320px] overflow-hidden rounded-2xl shadow-xl border border-border/30">
+          <div className="relative aspect-[3/4] w-full max-w-[320px] overflow-hidden rounded-2xl shadow-xl border border-border/30">
             <img
               src={bookLifestyle1}
               alt="Mujer leyendo el libro Realifestacion en la bañera"
@@ -63,7 +63,7 @@ const BookExplanationSection = () => {
       {/* Segunda sección */}
       <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-start">
         <div className="relative order-2 md:order-1 flex justify-center">
-          <div className="relative aspect-square w-full max-w-[320px] overflow-hidden rounded-2xl shadow-xl border border-border/30">
+          <div className="relative aspect-[3/4] w-full max-w-[320px] overflow-hidden rounded-2xl shadow-xl border border-border/30">
             <img
               src={bookLifestyle2}
               alt="Libro Realifestacion en mesa de noche con matcha"
