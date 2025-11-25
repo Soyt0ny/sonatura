@@ -1,5 +1,5 @@
-import productApplication from "@/assets/product-application.jpg";
-import productResults from "@/assets/product-results.jpg";
+import bookLifestyle1 from "@/assets/book-lifestyle-1.png";
+import bookLifestyle2 from "@/assets/book-lifestyle-2.png";
 
 const BookExplanationSection = () => {
   return (
@@ -52,8 +52,8 @@ const BookExplanationSection = () => {
         <div className="relative flex justify-center">
           <div className="relative aspect-square w-full max-w-[320px] overflow-hidden rounded-2xl shadow-xl border border-border/30">
             <img
-              src={productApplication}
-              alt="Aplicación del protocolo"
+              src={bookLifestyle1}
+              alt="Mujer leyendo el libro Realifestacion en la bañera"
               className="w-full h-full object-cover"
             />
           </div>
@@ -65,8 +65,8 @@ const BookExplanationSection = () => {
         <div className="relative order-2 md:order-1 flex justify-center">
           <div className="relative aspect-square w-full max-w-[320px] overflow-hidden rounded-2xl shadow-xl border border-border/30">
             <img
-              src={productResults}
-              alt="Resultados del protocolo"
+              src={bookLifestyle2}
+              alt="Libro Realifestacion en mesa de noche con matcha"
               className="w-full h-full object-cover"
             />
           </div>
