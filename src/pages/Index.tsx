@@ -16,6 +16,7 @@ import ProfessionalEndorsements from "@/components/ProfessionalEndorsements";
 import CertificationBadges from "@/components/CertificationBadges";
 import NewsletterSection from "@/components/NewsletterSection";
 import BookInsideSection from "@/components/BookInsideSection";
+import GuaranteeSection from "@/components/GuaranteeSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import logoVogue from "@/assets/logo-vogue.png";
 import logoElle from "@/assets/logo-elle.png";
@@ -268,6 +269,9 @@ De igual forma puedes dejar tus preguntas en nuestra comunidad         
             </AccordionItem>
           </Accordion>
         </section>
+
+        {/* Guarantee Section */}
+        <GuaranteeSection />
 
         {/* Reviews Section */}
         <ReviewsSection />
