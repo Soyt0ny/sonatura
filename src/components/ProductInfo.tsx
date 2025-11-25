@@ -158,7 +158,7 @@ const ProductInfo = () => {
         </div>
 
         {/* Exclusive Gifts Section - Desktop */}
-        <div className="hidden md:block">
+        <div className="hidden md:block -mt-2 mb-6">
           <ExclusiveGiftsSection />
         </div>
 
@@ -221,7 +221,7 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
         </div>
 
         {/* Exclusive Gifts Section - Mobile */}
-        <div className="md:hidden">
+        <div className="md:hidden -mt-2 mb-6">
           <ExclusiveGiftsSection />
         </div>
 
