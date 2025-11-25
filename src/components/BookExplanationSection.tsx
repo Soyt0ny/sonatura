@@ -5,7 +5,7 @@ const BookExplanationSection = () => {
   return (
     <section className="mb-16 md:mb-20 max-w-5xl mx-auto px-4">
       {/* Primera sección */}
-      <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center mb-12 md:mb-16">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-start mb-12 md:mb-16">
         <div className="space-y-5">
           <div className="flex items-center gap-1 mb-2">
             {[...Array(5)].map((_, i) => (
@@ -61,7 +61,7 @@ const BookExplanationSection = () => {
       </div>
 
       {/* Segunda sección */}
-      <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-start">
         <div className="relative order-2 md:order-1 flex justify-center">
           <div className="relative aspect-square w-full max-w-[320px] overflow-hidden rounded-2xl shadow-xl border border-border/30">
             <img
