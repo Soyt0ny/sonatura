@@ -1,4 +1,4 @@
-import { Star, Clock, DollarSign, Sparkles, TrendingUp, Timer, Mail } from "lucide-react";
+import { Star, Clock, DollarSign, Sparkles, TrendingUp, Timer, Mail, Info, FileText, Zap, Hand, Package, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -344,70 +344,102 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
           <div className="mt-8 pt-4 border-t border-border">
             <Accordion type="single" collapsible defaultValue="good-to-know" className="w-full">
               <AccordionItem value="good-to-know">
-                <AccordionTrigger className="text-base font-bold">Good To Know</AccordionTrigger>
+                <AccordionTrigger className="text-base font-bold">
+                  <div className="flex items-center gap-2">
+                    <Info className="w-4 h-4 text-primary" />
+                    <span>Bueno Saber</span>
+                  </div>
+                </AccordionTrigger>
                 <AccordionContent className="text-xs text-muted-foreground space-y-2">
-                  <p>The 4-in-1 Radiant Renewal Skincare Wand combines red light therapy, therapeutic warmth, galvanic current, and facial massage to deliver professional-grade skincare results at home.</p>
-                  <p>Clinically proven to reduce fine lines and wrinkles while boosting collagen production for firmer, more youthful-looking skin.</p>
+                  <p>Realifestación es un libro digital con +200 protocolos de salud, belleza y biohacking que te ayudarán a transformar tu vida usando ingredientes naturales que tu cuerpo reconoce.</p>
+                  <p>Aprenderás a eliminar la dependencia de productos químicos costosos y dañinos, mientras ahorras más de $10,000 al año en suplementos, skincare y tratamientos innecesarios.</p>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="description">
-                <AccordionTrigger className="text-base font-bold">Description</AccordionTrigger>
+                <AccordionTrigger className="text-base font-bold">
+                  <div className="flex items-center gap-2">
+                    <FileText className="w-4 h-4 text-primary" />
+                    <span>Descripción</span>
+                  </div>
+                </AccordionTrigger>
                 <AccordionContent className="text-xs text-muted-foreground space-y-2">
-                  <p>This award-winning skincare wand uses 4 science-backed technologies to transform your skin in just 12 minutes a day. With its rotating head and built-in timer, you have complete control over targeting specific areas of concern.</p>
-                  <p>Perfect for all skin types, this device helps reduce puffiness, smooth fine lines, boost radiance, and refresh tired skin for a naturally glowing complexion.</p>
+                  <p>Este libro revolucionario combina protocolos respaldados por ciencia para abordar problemas desde la raíz: acné hormonal, grasa abdominal por cortisol elevado, fatiga crónica, insomnio y más.</p>
+                  <p>Perfecto para quienes buscan independencia del sistema farmacéutico y quieren lograr un glow-up natural sin productos químicos que dañan tus hormonas y tu salud a largo plazo.</p>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="technology">
-                <AccordionTrigger className="text-base font-bold">Technology</AccordionTrigger>
+                <AccordionTrigger className="text-base font-bold">
+                  <div className="flex items-center gap-2">
+                    <Zap className="w-4 h-4 text-primary" />
+                    <span>Protocolos Incluidos</span>
+                  </div>
+                </AccordionTrigger>
                 <AccordionContent className="text-xs text-muted-foreground space-y-2">
-                  <p><strong>Red Light Therapy (630nm):</strong> Stimulates collagen production and reduces the appearance of fine lines and wrinkles.</p>
-                  <p><strong>Therapeutic Warmth:</strong> Relaxes facial muscles and soothes skin for enhanced product absorption.</p>
-                  <p><strong>Galvanic Current:</strong> Activates serums and deeply hydrates skin for maximum effectiveness.</p>
-                  <p><strong>Facial Massage:</strong> Reduces puffiness and promotes lymphatic drainage for a sculpted, refreshed appearance.</p>
+                  <p><strong>Protocolo SuperCalm:</strong> Reduce el cortisol naturalmente para eliminar grasa abdominal y deshinchar el rostro (adiós moon face).</p>
+                  <p><strong>Protocolo Afrodita:</strong> Equilibra tus hormonas para eliminar acné y lograr piel radiante desde adentro.</p>
+                  <p><strong>Dieta Afrodita:</strong> Los 42 alimentos más saludables del mundo para un glow natural en piel, cabello y energía.</p>
+                  <p><strong>Shots Anti Acné y Anti Cortisol:</strong> Recetas rápidas de 5 minutos con ingredientes naturales para resultados visibles.</p>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="how-to-use">
-                <AccordionTrigger className="text-base font-bold">How to Use</AccordionTrigger>
+                <AccordionTrigger className="text-base font-bold">
+                  <div className="flex items-center gap-2">
+                    <Hand className="w-4 h-4 text-primary" />
+                    <span>Cómo Usar</span>
+                  </div>
+                </AccordionTrigger>
                 <AccordionContent className="text-xs text-muted-foreground space-y-2">
-                  <p>1. Cleanse your face and apply your favorite serum or moisturizer</p>
-                  <p>2. Turn on the device and select your desired mode</p>
-                  <p>3. Gently glide the wand across your face in upward motions</p>
-                  <p>4. Use for 3 minutes per area (forehead, cheeks, jawline, neck)</p>
-                  <p>5. The built-in timer will alert you when each section is complete</p>
-                  <p>Use daily for best results. Clean the device after each use.</p>
+                  <p>1. Descarga el libro digital instantáneamente después de tu compra (entrega inmediata por email)</p>
+                  <p>2. Explora los +200 protocolos organizados por categorías: piel, cabello, energía, hormonas, bienestar</p>
+                  <p>3. Elige los protocolos que se alinean con tus objetivos personales</p>
+                  <p>4. Sigue las instrucciones paso a paso con ingredientes, dosis y notas detalladas</p>
+                  <p>5. Implementa los protocolos en tu rutina (la mayoría toman solo 5 minutos)</p>
+                  <p>Los resultados son acumulativos: consistencia es clave para transformaciones duraderas.</p>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="specs">
-                <AccordionTrigger className="text-base font-bold">Specs & What's Included</AccordionTrigger>
+                <AccordionTrigger className="text-base font-bold">
+                  <div className="flex items-center gap-2">
+                    <Package className="w-4 h-4 text-primary" />
+                    <span>Qué Incluye</span>
+                  </div>
+                </AccordionTrigger>
                 <AccordionContent className="text-xs text-muted-foreground space-y-2">
-                  <p><strong>What's Included:</strong></p>
+                  <p><strong>Incluye:</strong></p>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li>1x Radiant Renewal Skincare Wand</li>
-                    <li>1x USB Charging Cable</li>
-                    <li>1x User Manual</li>
-                    <li>FREE Digital Beauty Guide ($10 value)</li>
-                    <li>FREE Lash Curler ($19 value)</li>
-                    <li>FREE Premium Mascara ($25 value)</li>
+                    <li>Libro Digital Realifestación (PDF de alta calidad)</li>
+                    <li>+200 Protocolos de Salud, Belleza y Biohacking</li>
+                    <li>Protocolo SuperCalm (reduce cortisol y grasa abdominal)</li>
+                    <li>Protocolo Afrodita (elimina acné hormonal)</li>
+                    <li>Dieta Afrodita (42 alimentos más saludables del mundo)</li>
+                    <li>Shots Anti Acné y Anti Cortisol (recetas de 5 minutos)</li>
+                    <li>Imágenes ilustrativas para cada protocolo</li>
+                    <li>Instrucciones, dosis y notas detalladas</li>
                   </ul>
-                  <p className="mt-3"><strong>Specifications:</strong></p>
+                  <p className="mt-3"><strong>Especificaciones:</strong></p>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li>Red Light Wavelength: 630nm</li>
-                    <li>Battery Life: Up to 2 weeks per charge</li>
-                    <li>Treatment Time: 12 minutes (3 min per zone)</li>
-                    <li>Weight: 4.2 oz</li>
+                    <li>Formato: PDF digital descargable</li>
+                    <li>Entrega: Inmediata por email</li>
+                    <li>Acceso: De por vida (sin suscripciones)</li>
+                    <li>Compatibilidad: Cualquier dispositivo (móvil, tablet, PC)</li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
 
               <AccordionItem value="sustainability">
-                <AccordionTrigger className="text-base font-bold">Sustainability</AccordionTrigger>
+                <AccordionTrigger className="text-base font-bold">
+                  <div className="flex items-center gap-2">
+                    <Leaf className="w-4 h-4 text-primary" />
+                    <span>Compromiso Natural</span>
+                  </div>
+                </AccordionTrigger>
                 <AccordionContent className="text-xs text-muted-foreground space-y-2">
-                  <p>We're committed to sustainable beauty practices. Our device is built to last for years, reducing the need for disposable beauty products.</p>
-                  <p>Packaging is made from 100% recyclable materials, and we partner with carbon-neutral shipping providers to minimize our environmental impact.</p>
+                  <p>Estamos comprometidos con un enfoque 100% natural y sostenible. Todos los protocolos utilizan ingredientes que tu cuerpo reconoce, sin químicos sintéticos ni dependencia de big pharma.</p>
+                  <p>Al ser digital, eliminamos el impacto ambiental del envío físico. Nuestro objetivo es empoderarte con conocimiento para que cuides tu salud de forma natural, económica y sostenible a largo plazo.</p>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
