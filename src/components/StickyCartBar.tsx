@@ -3,33 +3,22 @@ import { Button } from "@/components/ui/button";
 
 const StickyCartBar = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
-  const [isButtonHidden, setIsButtonHidden] = useState(false);
 
-  // Detectar si estamos en desktop
   useEffect(() => {
-    const checkIsDesktop = () => {
-      setIsDesktop(window.innerWidth >= 768);
-    };
-    
-    checkIsDesktop();
-    window.addEventListener('resize', checkIsDesktop);
-    
-    return () => window.removeEventListener('resize', checkIsDesktop);
-  }, []);
-
-  // Observar el botón original con IntersectionObserver
-  useEffect(() => {
+    // Observar el botón de compra original
     const originalButton = document.getElementById("original-cart-button");
     
     if (!originalButton) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsButtonHidden(!entry.isIntersecting);
+        // Mostrar el botón sticky cuando el botón original NO está visible
+        setIsVisible(!entry.isIntersecting);
       },
       {
+        // El threshold de 0 significa que se activará cuando cualquier parte del elemento entre o salga
         threshold: 0,
+        // rootMargin negativo para activar un poco antes de que el elemento salga completamente
         rootMargin: "-50px 0px -50px 0px"
       }
     );
@@ -40,28 +29,6 @@ const StickyCartBar = () => {
       observer.disconnect();
     };
   }, []);
-
-  // Manejar scroll para mobile
-  useEffect(() => {
-    if (isDesktop) return;
-
-    const handleScroll = () => {
-      setIsVisible(window.scrollY > 300);
-    };
-    
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-    
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isDesktop]);
-
-  // Determinar visibilidad final
-  useEffect(() => {
-    if (isDesktop) {
-      // En desktop: solo visible cuando el botón original no se ve
-      setIsVisible(isButtonHidden);
-    }
-  }, [isDesktop, isButtonHidden]);
 
   if (!isVisible) return null;
 
