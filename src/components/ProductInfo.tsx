@@ -154,10 +154,6 @@ const ProductInfo = () => {
               <div className="text-primary text-lg flex-shrink-0">◎</div>
               <span className="text-sm">Reduce tu estrés de forma natural y acelera tu metabolismo sin depender de productos químicos que dañan tu salud.</span>
             </div>
-            <div className="flex items-start gap-2">
-              <div className="text-primary text-lg flex-shrink-0">✓</div>
-              <span className="text-sm">Todo con recetas y protocolos paso a paso que toman solo 5 minutos.</span>
-            </div>
           </div>
         </div>
 
@@ -221,11 +217,6 @@ además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.<
               <div className="text-primary text-lg flex-shrink-0">◎</div>
               <span className="text-sm">Reducir tu cortisol de forma natural y acelera tu metabolismo sin depender de suplementos con ingredientes químicos que dañan tu salud.</span>
             </div>
-            <div className="flex items-start gap-2">
-              <div className="text-primary text-lg flex-shrink-0">✓</div>
-              <span className="text-sm">Todo con recetas y protocolos naturales paso a paso que toman solo 5 minutos.</span>
-            </div>
-            
           </div>
         </div>
 
