@@ -92,9 +92,9 @@ const ExclusiveGiftsSection = () => {
   }}>
       <div className="max-w-[1200px] mx-auto">
         {/* Recuadro con fondo oscuro */}
-        <div className="bg-gradient-to-r from-black via-gray-900 to-black rounded-lg p-6 border border-white/10">
+        <div className="bg-gradient-to-br from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB] rounded-lg p-6 border border-[#D5C3A5]/30 shadow-lg">
           {/* Message Above Gifts */}
-          <p className="text-center text-[13px] md:text-[14px] font-semibold mb-4 max-w-[400px] mx-auto text-white" style={{
+          <p className="text-center text-[13px] md:text-[14px] font-semibold mb-4 max-w-[400px] mx-auto text-[#1B1B1B]" style={{
             fontFamily: "Inter, sans-serif"
           }}>Compra antes del {getTomorrowDate()} para obtener garantizado: 50% off + 4 Regalos GRATIS
           </p>
@@ -136,7 +136,7 @@ const ExclusiveGiftsSection = () => {
 
                 {/* Title & Subtitle */}
                 <div className="mt-1.5 text-center space-y-0">
-                  <h3 className="text-[9px] md:text-[10px] font-semibold leading-tight text-white/80" style={{
+                  <h3 className="text-[9px] md:text-[10px] font-semibold leading-tight text-[#1B1B1B]/80" style={{
                 fontFamily: "Inter, sans-serif"
               }}>
                     {gift.title}
@@ -149,28 +149,28 @@ const ExclusiveGiftsSection = () => {
           <div className="text-center space-y-3">
             {/* Countdown */}
             <div className="flex items-center justify-center gap-2">
-              <span className="text-[11px] text-white/80" style={{
+              <span className="text-[11px] text-[#1B1B1B]/70" style={{
                 fontFamily: "Inter, sans-serif"
               }}>
                 Quedan:
               </span>
               <div className="flex items-center gap-2">
-                <div className="bg-white/10 backdrop-blur-sm rounded px-2 py-0.5 min-w-[35px]">
-                  <span className="font-semibold text-sm tabular-nums text-white">{String(hours).padStart(2, "0")}</span>
+                <div className="bg-[#1B1B1B]/10 backdrop-blur-sm rounded px-2 py-0.5 min-w-[35px]">
+                  <span className="font-semibold text-sm tabular-nums text-[#1B1B1B]">{String(hours).padStart(2, "0")}</span>
                 </div>
-                <span className="text-xs text-white/60">:</span>
-                <div className="bg-white/10 backdrop-blur-sm rounded px-2 py-0.5 min-w-[35px]">
-                  <span className="font-semibold text-sm tabular-nums text-white">{String(minutes).padStart(2, "0")}</span>
+                <span className="text-xs text-[#1B1B1B]/50">:</span>
+                <div className="bg-[#1B1B1B]/10 backdrop-blur-sm rounded px-2 py-0.5 min-w-[35px]">
+                  <span className="font-semibold text-sm tabular-nums text-[#1B1B1B]">{String(minutes).padStart(2, "0")}</span>
                 </div>
-                <span className="text-xs text-white/60">:</span>
-                <div className="bg-white/10 backdrop-blur-sm rounded px-2 py-0.5 min-w-[35px]">
-                  <span className="font-semibold text-sm tabular-nums text-white">{String(seconds).padStart(2, "0")}</span>
+                <span className="text-xs text-[#1B1B1B]/50">:</span>
+                <div className="bg-[#1B1B1B]/10 backdrop-blur-sm rounded px-2 py-0.5 min-w-[35px]">
+                  <span className="font-semibold text-sm tabular-nums text-[#1B1B1B]">{String(seconds).padStart(2, "0")}</span>
                 </div>
               </div>
             </div>
 
             {/* Urgency Text */}
-            <p className="text-[11px] max-w-[400px] mx-auto text-white/80" style={{
+            <p className="text-[11px] max-w-[400px] mx-auto text-[#1B1B1B]/70" style={{
               fontFamily: "Inter, sans-serif"
             }}>
               Solo hoy: estos regalos se entregan con pedidos confirmados antes del contador. Si
