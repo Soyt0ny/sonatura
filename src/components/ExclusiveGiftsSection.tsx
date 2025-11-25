@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Flame } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import giftDigitalBook from "@/assets/gift-digital-book.jpg";
 import giftFreeShipping from "@/assets/gift-free-shipping.jpg";
@@ -156,26 +155,23 @@ const ExclusiveGiftsSection = () => {
           {/* Urgency Section */}
           <div className="text-center space-y-2">
             {/* Countdown */}
-            <div className="flex items-center justify-center gap-2">
-              <div className="flex items-center gap-1.5 bg-gradient-to-r from-[#DC2626] to-[#EA580C] px-3 py-1.5 rounded-full shadow-lg animate-pulse">
-                <Flame className="w-4 h-4 text-white" />
-                <span className="text-[11px] text-white font-bold uppercase tracking-wide" style={{
-                  fontFamily: "Inter, sans-serif"
-                }}>
-                  Termina en:
-                </span>
-                <div className="flex items-center gap-1">
-                  <div className="bg-white/20 backdrop-blur-sm rounded px-2 py-0.5 min-w-[32px]">
-                    <span className="font-black text-base tabular-nums text-white drop-shadow-sm">{String(hours).padStart(2, "0")}</span>
-                  </div>
-                  <span className="text-base font-black text-white/80">:</span>
-                  <div className="bg-white/20 backdrop-blur-sm rounded px-2 py-0.5 min-w-[32px]">
-                    <span className="font-black text-base tabular-nums text-white drop-shadow-sm">{String(minutes).padStart(2, "0")}</span>
-                  </div>
-                  <span className="text-base font-black text-white/80">:</span>
-                  <div className="bg-white/20 backdrop-blur-sm rounded px-2 py-0.5 min-w-[32px]">
-                    <span className="font-black text-base tabular-nums text-white drop-shadow-sm">{String(seconds).padStart(2, "0")}</span>
-                  </div>
+            <div className="flex items-center justify-center gap-3">
+              <span className="text-[11px] text-[#1B1B1B]/60 font-medium uppercase tracking-wide" style={{
+                fontFamily: "Inter, sans-serif"
+              }}>
+                Termina en
+              </span>
+              <div className="flex items-center gap-1.5">
+                <div className="bg-[#1B1B1B] rounded-md px-3 py-1.5 min-w-[42px] shadow-md">
+                  <span className="font-bold text-base tabular-nums text-[#F5F3EE]">{String(hours).padStart(2, "0")}</span>
+                </div>
+                <span className="text-base font-semibold text-[#1B1B1B]/30">:</span>
+                <div className="bg-[#1B1B1B] rounded-md px-3 py-1.5 min-w-[42px] shadow-md">
+                  <span className="font-bold text-base tabular-nums text-[#F5F3EE]">{String(minutes).padStart(2, "0")}</span>
+                </div>
+                <span className="text-base font-semibold text-[#1B1B1B]/30">:</span>
+                <div className="bg-[#1B1B1B] rounded-md px-3 py-1.5 min-w-[42px] shadow-md">
+                  <span className="font-bold text-base tabular-nums text-[#F5F3EE]">{String(seconds).padStart(2, "0")}</span>
                 </div>
               </div>
             </div>
