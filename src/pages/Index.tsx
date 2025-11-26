@@ -48,11 +48,11 @@ const Index = () => {
         {/* UGC Carousel */}
         <UGCCarousel />
 
-        {/* Before After Carousel */}
-        <BeforeAfterCarousel />
-
         {/* Book Explanation Section */}
         <BookExplanationSection />
+
+        {/* Before After Carousel */}
+        <BeforeAfterCarousel />
 
         {/* Book Structure Section */}
         <BookStructureSection />
