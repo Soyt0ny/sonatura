@@ -140,17 +140,17 @@ De igual forma puedes dejar tus preguntas en nuestra comunidad         
           </div>
         </section>
 
-        {/* Book Unique Features Section */}
-        <BookUniqueFeatures />
-
-        {/* Comparison Section */}
-        <ComparisonSection />
-
       {/* Professional Endorsements */}
       <ProfessionalEndorsements />
 
       {/* Certification Badges */}
       <CertificationBadges />
+
+        {/* Book Unique Features Section */}
+        <BookUniqueFeatures />
+
+        {/* Comparison Section */}
+        <ComparisonSection />
 
       {/* Book Inside Section */}
       <BookInsideSection />
