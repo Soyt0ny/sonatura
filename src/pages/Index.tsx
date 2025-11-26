@@ -152,11 +152,11 @@ De igual forma puedes dejar tus preguntas en nuestra comunidad         
         {/* Comparison Section */}
         <ComparisonSection />
 
-      {/* Book Inside Section */}
-      <BookInsideSection />
-
         {/* Clinical Results Section */}
         <ClinicalResultsSection />
+
+      {/* Book Inside Section */}
+      <BookInsideSection />
 
         {/* Testimonials */}
         <section className="mt-16 md:mt-24 bg-accent/20 rounded-xl p-8 md:p-12">
