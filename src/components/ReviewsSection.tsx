@@ -498,7 +498,7 @@ const ReviewsSection = () => {
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white hover:opacity-90"
+                className="w-full bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520]"
               >
                 Enviar Reseña
               </Button>
