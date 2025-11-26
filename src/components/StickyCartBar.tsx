@@ -64,7 +64,7 @@ const StickyCartBar = () => {
 
           {/* Right side - CTA Button */}
           <Button 
-            className="h-11 px-6 md:px-8 text-sm font-semibold uppercase tracking-wide bg-gradient-to-r from-[#8B4513] to-[#A0522D] hover:from-[#A0522D] hover:to-[#8B4513] text-white shadow-lg rounded-lg whitespace-nowrap"
+            className="h-11 px-6 md:px-8 text-sm font-semibold uppercase tracking-wide bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520] shadow-lg rounded-lg whitespace-nowrap"
           >
             Agregar al Carrito
           </Button>

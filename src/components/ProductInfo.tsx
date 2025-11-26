@@ -129,7 +129,7 @@ const ProductInfo = () => {
                 <p className="text-2xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$123</p>
                 <p className="text-2xl font-bold text-foreground">$37</p>
               </div>
-              <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">70% OFF TERMINA HOY</span>
+              <span className="bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] text-[#0C1520] text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">70% OFF TERMINA HOY</span>
             </div>
             <p className="text-xs text-foreground mt-1">
               O solo <span className="font-bold underline">$6.17/mes</span> a 6 meses sin intereses
@@ -191,7 +191,7 @@ const ProductInfo = () => {
                 <p className="text-xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$123</p>
                 <p className="text-xl font-bold text-foreground">$37</p>
               </div>
-              <span className="bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">70% OFF    </span>
+              <span className="bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] text-[#0C1520] text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">70% OFF</span>
             </div>
             <p className="text-xs text-foreground mt-1">
               O solo <span className="font-bold underline">$6.17/mes</span> a 6 meses sin intereses

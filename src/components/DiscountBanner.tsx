@@ -26,7 +26,7 @@ const DiscountBanner = () => {
         </span>
         <button
           onClick={handleCopy}
-          className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-gradient-to-r from-[#FF6B4A] to-[#C83C2E] text-white text-xs font-bold hover:opacity-90 transition-opacity cursor-pointer"
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520] text-xs font-bold transition-all cursor-pointer"
         >
           <span className="tracking-wider">{discountCode}</span>
           {copied ? (
