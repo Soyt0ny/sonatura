@@ -10,7 +10,7 @@ const reviews = [{
   id: 2,
   name: "Laura Martínez",
   date: "10 Oct 2024",
-  text: "Excelente sérum, muy fácil de aplicar y los resultados son notables. Mis pestañas lucen más saludables y llenas."
+  text: "$67 me parece poco a comparación de lo que viene en el libro, es una BARBARIDAD lo que hay dentro y sobre todo que funciona, 10/10 sin duda."
 }, {
   id: 3,
   name: "Ana Rodríguez",
