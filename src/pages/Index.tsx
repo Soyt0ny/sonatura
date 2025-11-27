@@ -15,7 +15,7 @@ import ComparisonSection from "@/components/ComparisonSection";
 import ProfessionalEndorsements from "@/components/ProfessionalEndorsements";
 import CertificationBadges from "@/components/CertificationBadges";
 import NewsletterSection from "@/components/NewsletterSection";
-import BookInsideSection from "@/components/BookInsideSection";
+
 import GuaranteeSection from "@/components/GuaranteeSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import logoVogue from "@/assets/logo-vogue.png";
@@ -155,8 +155,6 @@ De igual forma puedes dejar tus preguntas en nuestra comunidad         
         {/* Clinical Results Section */}
         <ClinicalResultsSection />
 
-      {/* Book Inside Section */}
-      <BookInsideSection />
 
         {/* Testimonials */}
         <section className="mt-16 md:mt-24 bg-accent/20 rounded-xl p-8 md:p-12">
