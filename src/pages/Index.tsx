@@ -160,16 +160,39 @@ De igual forma puedes dejar tus preguntas en nuestra comunidad         
         <section className="mt-16 md:mt-24 bg-accent/20 rounded-xl p-8 md:p-12">
           <h2 className="text-3xl font-bold text-center mb-12">Lo Que Dicen Nuestras Clientas</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {[1, 2, 3].map(i => <div key={i} className="bg-background border border-border/40 rounded-lg p-6">
-                <div className="flex mb-3">
-                  {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
-                </div>
-                <p className="text-sm mb-4">
-                  "¡Resultados increíbles! Mis pestañas son mucho más largas y llenas. ¡Recibo cumplidos todo el tiempo!"
-                </p>
-                <p className="text-sm font-semibold">- Sarah M.</p>
-                <p className="text-xs text-muted-foreground">Compradora Verificada</p>
-              </div>)}
+            {/* Review 1 */}
+            <div className="bg-background border border-border/40 rounded-lg p-6">
+              <div className="flex mb-3">
+                {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
+              </div>
+              <p className="text-sm mb-4">
+                "¡Resultados increíbles! En solo 2 semanas noté cambios reales en mi piel y mi energía. ¡Lo recomiendo totalmente!"
+              </p>
+              <p className="text-sm font-semibold">- María L.</p>
+              <p className="text-xs text-muted-foreground">Compradora Verificada · Hace 3 días</p>
+            </div>
+            {/* Review 2 */}
+            <div className="bg-background border border-border/40 rounded-lg p-6">
+              <div className="flex mb-3">
+                {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
+              </div>
+              <p className="text-sm mb-4">
+                "$67 me parece poco a comparación de lo que viene en el libro, es una BARBARIDAD lo que hay dentro y sobre todo que funciona, 10/10 sin duda."
+              </p>
+              <p className="text-sm font-semibold">- Sarah M.</p>
+              <p className="text-xs text-muted-foreground">Compradora Verificada · Hace 1 semana</p>
+            </div>
+            {/* Review 3 */}
+            <div className="bg-background border border-border/40 rounded-lg p-6">
+              <div className="flex mb-3">
+                {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
+              </div>
+              <p className="text-sm mb-4">
+                "Pensé que era otra estafa más, pero los protocolos funcionan de verdad. Mi acné hormonal prácticamente desapareció."
+              </p>
+              <p className="text-sm font-semibold">- Ana R.</p>
+              <p className="text-xs text-muted-foreground">Compradora Verificada · Hace 12 días</p>
+            </div>
           </div>
         </section>
 
