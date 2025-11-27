@@ -209,11 +209,11 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">⇈</div>
-              <span className="text-sm">Un Glow natural  tu cabello, tu piel y tu energía. </span>
+              <span className="text-sm">Un Glow natural tu cabello, tu piel y tu energía. </span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
-              <span className="text-sm">Reducir el cortisol y acelerad el metabolismo sin productos químicos costosos.</span>
+              <span className="text-sm">Reducir cortisol, acelerar metabolismo y desintoxicar el intestino sin productos químicos costosos (sin disruptures hormonales).</span>
             </div>
           </div>
         </div>
