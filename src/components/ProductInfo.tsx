@@ -198,7 +198,7 @@ const ProductInfo = () => {
           </div>
 
           <div className="space-y-2 mt-4">
-            <h3 className="text-base font-bold mb-3">+200 Protocolos de salud, belleza y biohacking para:</h3>
+            <h3 className="text-base font-bold mb-3">+200 Protocolos de salud, belleza y Wellness para:</h3>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✦</div>
               <span className="text-sm">Eliminar grasa abdominal y deshinchar tu rostro</span>
