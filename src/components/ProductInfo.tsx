@@ -205,16 +205,15 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">≈</div>
-              <span className="text-sm">Eliminar acné equilibrando tus hormonas con shots naturales y comidas delisiosas.</span>
+              <span className="text-sm">Eliminar acné desde la raíz</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">⇈</div>
-              <span className="text-sm">Darle un Glow natural y sin esfuerzo a tu cabello, tu piel con los 42 alimentos más saludables del mundo y el protocolo Afrodita.
-además de Eliminar fatiga durante el día, insomnio y apariencia de cansancio.</span>
+              <span className="text-sm">Un Glow natural  tu cabello, tu piel y tu energía. </span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
-              <span className="text-sm">Reducir tu cortisol de forma natural y acelera tu metabolismo sin depender de suplementos con ingredientes químicos que dañan tu salud.</span>
+              <span className="text-sm">Reducir el cortisol y acelerad el metabolismo sin productos químicos costosos.</span>
             </div>
           </div>
         </div>
