@@ -221,7 +221,7 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✧</div>
-              <span className="text-sm">Balancear tus hormonas naturalmente y mejorar tu fertilidad sin tratamientos costosos</span>
+              <span className="text-sm">Recetas y protocolos naturales paso a paso que toman solo 5 minutos</span>
             </div>
           </div>
         </div>
