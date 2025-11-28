@@ -213,7 +213,7 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">⇈</div>
-              <span className="text-sm">Ahorrar $10k usd al año en productos que no necesitas</span>
+              <span className="text-sm">Ahorrar $10k al año en productos de Skincare y suplementos que no necesitas y que tienen ingredientes que danan tu salud</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
