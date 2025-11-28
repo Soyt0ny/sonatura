@@ -201,15 +201,15 @@ const ProductInfo = () => {
             <h3 className="text-base font-bold mb-3">+200 Protocolos de salud, belleza y Wellness para:</h3>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✦</div>
-              <span className="text-sm">Eliminar grasa abdominal y deshinchar tu rostro</span>
+              <span className="text-sm">Dejar productos químicos que dañan tu salud y cuidar tu cuerpo de forma real</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">≈</div>
-              <span className="text-sm">Eliminar acné desde la raíz</span>
+              <span className="text-sm">Dejar de gastar $300 dólares al mes en suplementos, pastillas y tratamientos</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">⇈</div>
-              <span className="text-sm">Un Glow natural tu cabello, tu piel y tu energía. </span>
+              <span className="text-sm">​Dejar de depender de productos y tratamientos costosos para cuidar tu salud y belleza.                   </span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
