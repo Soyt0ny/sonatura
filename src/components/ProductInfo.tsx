@@ -209,11 +209,11 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">≈</div>
-              <span className="text-sm">Eliminar acné hormonal y darle brillo natural a tu piel</span>
+              <span className="text-sm">Eliminar grasa abdominal, limpiar acné y deshinchar tu rostro en 14 días</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">⇈</div>
-              <span className="text-sm">Conseguir un Glow natural y un cambio físico sin usar productos químicos que dañan tu salud</span>
+              <span className="text-sm">Ahorrar $10k usd al año en productos que no necesitas</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
