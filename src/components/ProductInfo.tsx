@@ -205,7 +205,7 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">≈</div>
-              <span className="text-sm">Bajar tu cortisol, acelerar metabolismo, desintoxicar tu intestino y con ello: eliminar grasa abdominal, acné, darle glow natural a tu cabello, piel y tener</span>
+              <span className="text-sm">  Eliminar problemas hormonales como: grasa abdominal, cara hinchada, acné. </span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">⇈</div>
@@ -213,7 +213,7 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
-              <span className="text-sm">Reducir cortisol, acelerar metabolismo y desintoxicar el intestino sin productos químicos costosos (sin disruptures hormonales).</span>
+              <span className="text-sm">Crear un estilo de vida Wellness.</span>
             </div>
           </div>
         </div>
