@@ -153,10 +153,6 @@ const ProductInfo = () => {
               <div className="text-primary text-lg flex-shrink-0">◎</div>
               <span className="text-sm">Reduce tu estrés de forma natural y acelera tu metabolismo sin depender de productos químicos que dañan tu salud.</span>
             </div>
-            <div className="flex items-start gap-2">
-              <div className="text-primary text-lg flex-shrink-0">✧</div>
-              <span className="text-sm">Balancea tus hormonas naturalmente y mejora tu fertilidad sin necesidad de tratamientos costosos.</span>
-            </div>
           </div>
         </div>
 
@@ -218,10 +214,6 @@ const ProductInfo = () => {
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
               <span className="text-sm">Tener independencia total del sistema, cero dependencia a productos y no efectos secundarios. Solo soluciones naturales que tu cuerpo reconoce.</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <div className="text-primary text-lg flex-shrink-0">✧</div>
-              <span className="text-sm">Todo con un sistema de protocolos naturales que regulan tus hormonas y tu metabolismo.</span>
             </div>
           </div>
         </div>
