@@ -1,4 +1,4 @@
-import { Star, Clock, DollarSign, Sparkles, TrendingUp, Timer, Mail, Info, FileText, Zap, Hand, Package, Leaf, Scale, Wallet } from "lucide-react";
+import { Star, Clock, DollarSign, Sparkles, TrendingUp, Timer, Mail, Info, FileText, Zap, Hand, Package, Leaf } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -135,50 +135,27 @@ const ProductInfo = () => {
             </p>
           </div>
 
-          <div className="space-y-6 mt-4">
-            <div className="space-y-2">
-              <div className="flex items-start gap-2">
-                <Scale className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <div className="flex-1">
-                  <div className="flex items-start gap-1.5">
-                    <span className="text-green-600 text-base flex-shrink-0">✅</span>
-                    <span className="text-sm font-semibold">Elimina 4-6kg de grasa abdominal + acné hormonal en 14 días</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground mt-1.5 ml-6">
-                    Sin dietas restrictivas ni tratamientos caros - solo reseteando cortisol y metabolismo con comida real
-                  </p>
-                </div>
-              </div>
+          <div className="space-y-2 mt-4">
+            <h3 className="text-base font-bold mb-3">+200 Protocolos de salud, belleza y wellness para:</h3>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">✦</div>
+              <span className="text-sm">Elimina grasa abdominal y Deshincha tu rostro (bajando tu cortisol)</span>
             </div>
-
-            <div className="space-y-2">
-              <div className="flex items-start gap-2">
-                <Wallet className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <div className="flex-1">
-                  <div className="flex items-start gap-1.5">
-                    <span className="text-green-600 text-base flex-shrink-0">✅</span>
-                    <span className="text-sm font-semibold">Ahorra $24,000/año dejando de comprar suplementos y productos</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground mt-1.5 ml-6">
-                    200 protocolos exactos con ingredientes de $15 de tu despensa = independencia total de la industria wellness
-                  </p>
-                </div>
-              </div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">≈</div>
+              <span className="text-sm">Elimina acne hormonal (protocolo super calm y protocolo Afrodita)</span>
             </div>
-
-            <div className="space-y-2">
-              <div className="flex items-start gap-2">
-                <Zap className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <div className="flex-1">
-                  <div className="flex items-start gap-1.5">
-                    <span className="text-green-600 text-base flex-shrink-0">✅</span>
-                    <span className="text-sm font-semibold">Energía ilimitada + sueño profundo + piel radiante + cero antojos</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground mt-1.5 ml-6">
-                    Cuando sincronizas tus 3 ejes hormonales, TODO mejora automáticamente - no es fuerza de voluntad, es biología
-                  </p>
-                </div>
-              </div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">⇈</div>
+              <span className="text-sm">Elimina fatiga durante el día, insomnio y apariencia de cansancio.</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">◎</div>
+              <span className="text-sm">Reduce tu estrés de forma natural y acelera tu metabolismo sin depender de productos químicos que dañan tu salud.</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">✧</div>
+              <span className="text-sm">Balancea tus hormonas naturalmente y mejora tu fertilidad sin necesidad de tratamientos costosos.</span>
             </div>
           </div>
         </div>
@@ -224,52 +201,27 @@ const ProductInfo = () => {
             </p>
           </div>
 
-          <div className="space-y-5 mt-4">
-            <div className="space-y-1.5">
-              <div className="flex items-start gap-2">
-                <Scale className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <div className="flex-1">
-                  <div className="flex items-start gap-1.5">
-                    <span className="text-green-600 text-sm flex-shrink-0">✅</span>
-                    <span className="text-sm font-semibold">Elimina 4-6kg de grasa abdominal + acné hormonal en 14 días</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground mt-1 ml-5">
-                    Sin dietas restrictivas ni tratamientos caros - solo reseteando cortisol y metabolismo con comida real
-                  </p>
-                </div>
-              </div>
+          <div className="space-y-2 mt-4">
+            <h3 className="text-base font-bold mb-3">+200 Protocolos de salud, belleza y Wellness para:</h3>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">✦</div>
+              <span className="text-sm">Conseguir un Glow natural y un cambio físico sin usar productos químicos que dañan tu salud</span>
             </div>
-
-            <div className="space-y-1.5">
-              <div className="flex items-start gap-2">
-                <Wallet className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <div className="flex-1">
-                  <div className="flex items-start gap-1.5">
-                    <span className="text-green-600 text-sm flex-shrink-0">
-                      </span>
-                    <span className="text-sm font-semibold">Ahorra $24,000/año dejando de comprar suplementos y productos</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground mt-1 ml-5">
-                    200 protocolos exactos con ingredientes de $15 de tu despensa = independencia total de la industria wellness
-                  </p>
-                </div>
-              </div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">≈</div>
+              <span className="text-sm">Eliminar acné hormonal y darle brillo natural a tu piel</span>
             </div>
-
-            <div className="space-y-1.5">
-              <div className="flex items-start gap-2">
-                <Zap className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                <div className="flex-1">
-                  <div className="flex items-start gap-1.5">
-                    <span className="">
-                      </span>
-                    <span className="text-sm font-semibold">Energía ilimitada + sueño profundo + piel radiante + cero antojos</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground mt-1 ml-5">
-                    Cuando sincronizas tus 3 ejes hormonales, TODO mejora automáticamente - no es fuerza de voluntad, es biología
-                  </p>
-                </div>
-              </div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">⇈</div>
+              <span className="text-sm">Conseguir un Glow natural y un cambio físico sin usar productos químicos que dañan tu salud</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">◎</div>
+              <span className="text-sm">Dejar de gastar $10k al año en productos agresivos, skin care con químicos que dañan tus hormonas y suplementos con ingredientes cuestionables</span>
+            </div>
+            <div className="flex items-start gap-2">
+              <div className="text-primary text-lg flex-shrink-0">✧</div>
+              <span className="text-sm">Todo con un sistema de protocolos naturales que regulan tus hormonas y tu metabolismo.</span>
             </div>
           </div>
         </div>
