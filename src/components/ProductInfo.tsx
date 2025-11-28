@@ -201,7 +201,7 @@ const ProductInfo = () => {
             <h3 className="text-base font-bold mb-3">+200 Protocolos de salud, belleza y Wellness para:</h3>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✦</div>
-              <span className="text-sm">Dejar productos químicos que dañan tu salud y cuidar tu cuerpo de forma real</span>
+              <span className="text-sm">Sustituir pastillas y productos de skin care con químicos que dañan tu salud y cuidar tu cuerpo de forma real.</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">≈</div>
@@ -209,7 +209,7 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">⇈</div>
-              <span className="text-sm">​Dejar de depender de productos y tratamientos costosos para cuidar tu salud y belleza.                   </span>
+              <span className="text-sm">​Cuidar de tu piel y tu cuerpo sin depender de productos y tratamientos costosos.</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
