@@ -153,10 +153,6 @@ const ProductInfo = () => {
               <div className="text-primary text-lg flex-shrink-0">◎</div>
               <span className="text-sm">Reduce tu estrés de forma natural y acelera tu metabolismo sin depender de productos químicos que dañan tu salud.</span>
             </div>
-            <div className="flex items-start gap-2">
-              <div className="text-primary text-lg flex-shrink-0">✧</div>
-              <span className="text-sm">Balancea tus hormonas naturalmente y mejora tu fertilidad sin necesidad de tratamientos costosos.</span>
-            </div>
           </div>
         </div>
 
@@ -218,10 +214,6 @@ const ProductInfo = () => {
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
               <span className="text-sm">Dejar de gastar $10k al año en productos agresivos, skin care con químicos que dañan tus hormonas y suplementos con ingredientes cuestionables</span>
-            </div>
-            <div className="flex items-start gap-2">
-              <div className="text-primary text-lg flex-shrink-0">✧</div>
-              <span className="text-sm">Todo con un sistema de protocolos naturales que regulan tus hormonas y tu metabolismo.</span>
             </div>
           </div>
         </div>
