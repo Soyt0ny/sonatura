@@ -205,7 +205,7 @@ const ProductInfo = () => {
             <h3 className="text-base font-bold mb-3">+200 Protocolos de salud, belleza y Wellness para:</h3>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✦</div>
-              <span className="text-sm">Eliminar grasa abdominal y deshincar el rostro</span>
+              <span className="text-sm">Conseguir un Glow natural y un cambio físico sin usar productos químicos que dañan tu salud</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">≈</div>
@@ -217,11 +217,11 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
-              <span className="text-sm">Dejar de gastar $10k al año en productos agresivos, skin care con químicos que dañan tus hormonas y suplementos con ingredientes que tu cuerpo no reconoce</span>
+              <span className="text-sm">Dejar de gastar $10k al año en productos agresivos, skin care con químicos que dañan tus hormonas y suplementos con ingredientes cuestionables</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✧</div>
-              <span className="text-sm">Recetas y protocolos naturales paso a paso que toman solo 5 minutos</span>
+              <span className="text-sm">Todo con recetas y protocolos naturales paso a paso que toman solo 5 minutos. Y que atacan el problema de raíz: Tus hormonas, metabolismo, salud intestinal y actividad física.</span>
             </div>
           </div>
         </div>
