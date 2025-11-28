@@ -221,7 +221,7 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✧</div>
-              <span className="text-sm">Todo con recetas y protocolos naturales paso a paso que toman solo 5 minutos. Y que atacan el problema de raíz: Tus hormonas, metabolismo y salud intestinal.</span>
+              <span className="text-sm">Todo con un sistema de protocolos naturales paso a paso que regula tus hormonas y tu metabolismo y hacen un detox intestinal.</span>
             </div>
           </div>
         </div>
