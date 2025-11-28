@@ -221,7 +221,7 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✧</div>
-              <span className="text-sm">Todo con un sistema de protocolos naturales paso a paso que regula tus hormonas y tu metabolismo y desintoxicar tu intestino.</span>
+              <span className="text-sm">Todo con un sistema de protocolos naturales que regulan tus hormonas y tu metabolismo.</span>
             </div>
           </div>
         </div>
