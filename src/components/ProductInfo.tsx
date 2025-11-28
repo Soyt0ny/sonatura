@@ -213,11 +213,11 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">⇈</div>
-              <span className="text-sm">Ahorrar $10k al año en productos de Skincare y suplementos que no necesitas y que tienen ingredientes que danan tu salud</span>
+              <span className="text-sm">Ahorrar $10k al año en productos de Skincare y suplementos que no necesitas y que tienen ingredientes químicos e invasivos que dañan tu salud</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
-              <span className="text-sm">Dejar de gastar $10k al año en productos agresivos, skin care con químicos que dañan tus hormonas y suplementos con ingredientes cuestionables</span>
+              <span className="text-sm">Tener independencia total del sistema, cero dependencia a productos y no efectos secundarios. Solo soluciones naturales que tu cuerpo reconoce.</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✧</div>
