@@ -245,7 +245,8 @@ const ProductInfo = () => {
                 <Wallet className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-start gap-1.5">
-                    <span className="text-green-600 text-sm flex-shrink-0">✅</span>
+                    <span className="text-green-600 text-sm flex-shrink-0">
+                      </span>
                     <span className="text-sm font-semibold">Ahorra $24,000/año dejando de comprar suplementos y productos</span>
                   </div>
                   <p className="text-xs text-muted-foreground mt-1 ml-5">
@@ -260,7 +261,8 @@ const ProductInfo = () => {
                 <Zap className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
                 <div className="flex-1">
                   <div className="flex items-start gap-1.5">
-                    <span className="text-green-600 text-sm flex-shrink-0">✅</span>
+                    <span className="">
+                      </span>
                     <span className="text-sm font-semibold">Energía ilimitada + sueño profundo + piel radiante + cero antojos</span>
                   </div>
                   <p className="text-xs text-muted-foreground mt-1 ml-5">
