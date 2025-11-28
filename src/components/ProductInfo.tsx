@@ -205,7 +205,7 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">≈</div>
-              <span className="text-sm">Dejar de gastar $300 dólares al mes en suplementos, pastillas y tratamientos</span>
+              <span className="text-sm">Bajar tu cortisol, acelerar metabolismo, desintoxicar tu intestino y con ello: eliminar grasa abdominal, acné, darle glow natural a tu cabello, piel y tener</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">⇈</div>
