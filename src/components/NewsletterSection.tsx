@@ -26,10 +26,10 @@ const NewsletterSection = () => {
         <div className="bg-background border-2 border-border/40 rounded-2xl p-8 md:p-12 shadow-sm">
           <div className="text-center max-w-xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4 tracking-tight">
-              Únete a Nuestra Comunidad
+              Suscríbete y Obtén 15% de Descuento
             </h3>
             <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-8">
-              Recibe acceso exclusivo a protocolos de bienestar y{" "}
+              Recibe{" "}
               <span className="text-foreground font-medium">15% de descuento</span> en tu primera compra
             </p>
 
