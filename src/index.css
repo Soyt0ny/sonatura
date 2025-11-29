@@ -29,7 +29,7 @@ All colors MUST be HSL.
 
     /* Gris piedra / Ceniza - Tipografía secundaria */
     --muted: 0 0% 88%;
-    --muted-foreground: 0 0% 72%;
+    --muted-foreground: 0 0% 45%;
 
     /* Azul noche profundo - Hero y bloques transformacionales */
     --accent: 207 47% 10%;
@@ -88,7 +88,7 @@ All colors MUST be HSL.
     --secondary-foreground: 40 29% 96%;
 
     --muted: 207 40% 15%;
-    --muted-foreground: 0 0% 72%;
+    --muted-foreground: 0 0% 75%;
 
     --accent: 38 41% 74%;
     --accent-foreground: 0 0% 11%;
