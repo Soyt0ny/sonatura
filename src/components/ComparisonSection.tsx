@@ -31,14 +31,14 @@ const ComparisonSection = () => {
           Y corta la dependencia de $11,900 al año en productos con ingredientes cuestionables
         </p>
 
-        <div className="grid grid-cols-3 gap-2 md:gap-3 mb-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 mb-6">
           {traditionalCosts.map((item, idx) => (
             <div
               key={idx}
-              className="text-center p-3 bg-accent/5 border border-border/20 rounded-lg"
+              className="text-center p-2 md:p-3 bg-accent/5 border border-border/20 rounded-lg min-h-[60px] md:min-h-[70px] flex flex-col justify-center"
             >
-              <span className="block text-xs text-muted-foreground mb-1">{item.item}</span>
-              <span className="text-sm font-semibold text-foreground">{item.cost}</span>
+              <span className="block text-xs text-muted-foreground mb-1 truncate">{item.item}</span>
+              <span className="text-sm md:text-base font-semibold text-foreground">{item.cost}</span>
             </div>
           ))}
         </div>
@@ -67,7 +67,7 @@ const ComparisonSection = () => {
         </h3>
 
         <div className="max-w-md mx-auto space-y-2">
-          <div className="grid grid-cols-[1fr,60px,60px] gap-2 text-xs font-medium text-muted-foreground pb-2 border-b border-border/20">
+          <div className="grid grid-cols-[1fr,60px,60px] md:grid-cols-[1fr,80px,80px] gap-2 md:gap-4 text-xs font-medium text-muted-foreground pb-2 border-b border-border/20">
             <span></span>
             <span className="text-center text-primary">Libro</span>
             <span className="text-center">Otros</span>
@@ -76,14 +76,14 @@ const ComparisonSection = () => {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="grid grid-cols-[1fr,60px,60px] gap-2 items-center py-2"
+              className="grid grid-cols-[1fr,60px,60px] md:grid-cols-[1fr,80px,80px] gap-2 md:gap-4 items-center py-2 md:py-3"
             >
-              <span className="text-sm text-foreground">{feature}</span>
+              <span className="text-xs md:text-sm text-foreground leading-tight">{feature}</span>
               <div className="flex justify-center">
-                <Check className="w-4 h-4 text-green-600" strokeWidth={2.5} />
+                <Check className="w-4 h-4 md:w-5 md:h-5 text-green-600" strokeWidth={2.5} />
               </div>
               <div className="flex justify-center">
-                <X className="w-4 h-4 text-red-500/70" strokeWidth={2.5} />
+                <X className="w-4 h-4 md:w-5 md:h-5 text-red-500/70" strokeWidth={2.5} />
               </div>
             </div>
           ))}
