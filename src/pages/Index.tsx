@@ -116,91 +116,100 @@ const Index = () => {
           <Accordion type="multiple" defaultValue={["item-1", "item-2", "item-3"]} className="space-y-4">
             <AccordionItem value="item-1" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Cuánto tiempo hasta ver resultados?
+                ¿Cuánto me gastaría en materiales para los protocolos del libro?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
-                La mayoría de usuarias ven resultados visibles en 2-4 semanas de uso diario constante. Para resultados óptimos, recomendamos usar el sérum consistentemente durante al menos 8 semanas.
+                Los protocolos están diseñados con ingredientes accesibles y económicos. En promedio, gastarías entre $15-30 USD al mes en materiales, dependiendo del protocolo que sigas. Todos los ingredientes son naturales y se encuentran fácilmente en supermercados o tiendas naturistas.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-2" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Es seguro de usar?
+                ¿Cómo recibo el libro y los regalos?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
-                ¡Sí! Nuestra fórmula está probada dermatológicamente y es segura para uso diario. Está libre de parabenos, sulfatos y fragancias artificiales. Ha sido probada oftalmológicamente y es apta para ojos sensibles.
+                Recibirás el libro en formato digital (PDF) inmediatamente por correo electrónico después de tu compra. Los regalos exclusivos también son digitales y los recibirás en el mismo email. Puedes acceder a todo desde cualquier dispositivo y empezar de inmediato.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-3" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Cómo lo aplico?
+                ¿Funcionará para mí?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
-                Aplica en pestañas limpias y secas en la base, similar al delineador, una vez al día antes de dormir. Deja secar completamente antes de aplicar otros productos.
+                ¡Absolutamente! Los protocolos funcionan independientemente de tu edad, género, país o condición actual. Los métodos naturales son universales y se adaptan a cualquier persona. Miles de clientas de diferentes países y perfiles han obtenido resultados exitosos.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-4" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Puedo usarlo con extensiones de pestañas?
+                ¿Cuánto tiempo tardaré en ver resultados?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
-                Sí, el sérum es compatible con extensiones de pestañas. De hecho, puede ayudar a fortalecer tus pestañas naturales debajo de las extensiones.
+                La mayoría de nuestras clientas reportan cambios notables en los primeros 14 días siguiendo los protocolos de forma constante. Para resultados óptimos y duraderos, recomendamos seguir los protocolos durante 8-12 semanas.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-5" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Cuánto dura un frasco?
+                ¿Puedo cancelar mi orden?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
-                Un frasco de 5ml dura aproximadamente 3-4 meses con uso diario, lo que lo convierte en una inversión muy rentable para el cuidado de tus pestañas.
+                Como es un producto digital, no es posible cancelar después de recibirlo. Sin embargo, ofrecemos una garantía de satisfacción de 60 días. Si no estás satisfecha con el contenido, te devolvemos tu dinero sin hacer preguntas.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-6" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Tiene efectos secundarios?
+                ¿Qué métodos de pago aceptan?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
-                Nuestro sérum está formulado para minimizar efectos secundarios. En casos raros, algunas usuarias pueden experimentar leve irritación. Si esto ocurre, discontinúa el uso y consulta con tu médico.
+                Aceptamos todas las tarjetas de crédito y débito principales (Visa, Mastercard, American Express), así como PayPal y pagos a meses sin intereses. Todos los pagos son procesados de forma segura con encriptación SSL.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-7" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Funciona en cejas también?
+                ¿Si mi tarjeta de crédito es rechazada?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
-                ¡Sí! Muchas clientas lo usan también en sus cejas con excelentes resultados. Aplica de la misma manera que en las pestañas, siguiendo la línea de las cejas.
+                Si tu tarjeta es rechazada, verifica que los datos estén correctos y que tengas fondos suficientes. También puedes intentar con otra tarjeta o usar PayPal. Si el problema persiste, contacta a tu banco o escríbenos a soporte@sonatura.com para ayudarte.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-8" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Qué pasa si dejo de usarlo?
+                ¿Cómo puedo contactarlos?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
-                Tus pestañas gradualmente volverán a su estado original durante varios meses. Para mantener los resultados, recomendamos uso continuo o aplicación 2-3 veces por semana como mantenimiento.
+                Puedes escribirnos a soporte@sonatura.com y nuestro equipo responderá en menos de 24 horas. También puedes contactarnos a través de nuestras redes sociales. Estamos aquí para ayudarte con cualquier pregunta o inquietud.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-9" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Puedo usar máscara después de aplicarlo?
+                ¿Venden en todo el mundo?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
-                Recomendamos aplicar el sérum por la noche para mejores resultados. Por la mañana, puedes usar máscara y otros productos de maquillaje normalmente sin problema.
+                ¡Sí! Como es un producto digital, está disponible en cualquier país del mundo. Una vez completada tu compra, recibirás acceso instantáneo sin importar dónde te encuentres. Aceptamos pagos en múltiples monedas.
               </AccordionContent>
             </AccordionItem>
 
             <AccordionItem value="item-10" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Ofrecen garantía de devolución de dinero?
+                ¿Cómo funciona?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
-                Sí, ofrecemos una garantía de 60 días. Si no estás completamente satisfecha con los resultados, te devolvemos tu dinero sin preguntas. Tu satisfacción es nuestra prioridad.
+                El libro contiene protocolos paso a paso que identifican la raíz de tus problemas hormonales y te guían con métodos naturales específicos. Sigues el protocolo correspondiente a tu situación durante 7-14 días y observas los cambios. Es simple, natural y efectivo.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-11" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+              <AccordionTrigger className="hover:no-underline">
+                ¿Es seguro de usar?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                ¡Totalmente! Todos los protocolos utilizan ingredientes 100% naturales que tu cuerpo reconoce. No contienen químicos dañinos, disruptores hormonales ni ingredientes artificiales. Es seguro para cualquier persona y sin efectos secundarios adversos.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
