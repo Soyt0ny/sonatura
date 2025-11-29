@@ -54,9 +54,6 @@ const Index = () => {
         {/* Before After Carousel */}
         <BeforeAfterCarousel />
 
-        {/* Book Structure Section */}
-        <BookStructureSection />
-
         {/* How It Works Section */}
         <section className="mt-16 md:mt-24">
           <h2 className="text-3xl font-bold text-center mb-12">Cómo Funciona</h2>
