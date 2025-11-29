@@ -221,8 +221,6 @@ const Index = () => {
         {/* Reviews Section */}
         <ReviewsSection />
 
-        {/* Newsletter Section */}
-        <NewsletterSection />
       </main>
 
       {/* Footer */}
