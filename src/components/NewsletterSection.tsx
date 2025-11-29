@@ -23,7 +23,7 @@ const NewsletterSection = () => {
     <section className="mt-24 mb-16">
       <div className="max-w-4xl mx-auto">
         {/* Content */}
-        <div className="bg-background border-2 border-border/40 rounded-2xl p-8 md:p-12 shadow-sm">
+        <div className="bg-accent/30 border-2 border-border rounded-2xl p-8 md:p-12 shadow-lg">
           <div className="text-center max-w-xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4 tracking-tight">
               Suscríbete y Obtén 15% de Descuento
