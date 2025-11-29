@@ -29,7 +29,7 @@ const Index = () => {
       <StickyCartBar />
       <Header />
       
-      <main className="container mx-auto px-4 pt-6 md:pt-8 pb-8 md:pb-12">
+      <main className="container mx-auto px-4 pt-0 md:pt-8 pb-8 md:pb-12">
         <div className="max-w-7xl mx-auto">
           <ProductInfo />
         </div>
