@@ -48,16 +48,15 @@ const ReviewsSection = () => {
       verified: true,
       rating: 5,
       title: "¡Cómpralo!",
-      text: "¡Me encanta! Compré uno para mi hija para ayudar con el acné.",
+      text: "¡Me encanta! Compré uno para mi hija para ayudarla con el acné hormonal y los resultados han sido increíbles.",
       date: "Hace 1 día",
       helpful: 0,
       notHelpful: 0,
-      product: "Kit de Varita de Luz Roja 4 en 1 y Suero Activador",
+      product: "Libro Realifestacion",
       productImage: "/placeholder.svg",
-      ageRange: "48-57",
-      skinType: "Normal",
-      skinConcerns: "Líneas finas y arrugas, Aspecto fatigado",
-      frequency: "2-3 veces por semana"
+      concern: "Acné hormonal",
+      goal: "Equilibrio hormonal natural",
+      timeUsing: "2-3 semanas"
     },
     {
       id: 2,
@@ -65,17 +64,16 @@ const ReviewsSection = () => {
       initials: "GK",
       verified: true,
       rating: 5,
-      title: "Mi piel se siente mucho más suave",
-      text: "He disfrutado usando esta herramienta todos los días durante aproximadamente un mes. Mi piel se siente cada vez más suave y también más tersa. ¡Estoy muy agradecida por esta maravillosa invención! Con mucha gratitud, Kat (esposa de Goldalee) en NYC",
+      title: "Mi piel y energía mejoraron notablemente",
+      text: "He seguido los protocolos del libro durante aproximadamente un mes. Mi piel se ve más clara y mi energía ha aumentado significativamente. ¡Estoy muy agradecida por este conocimiento! Con mucha gratitud, Kat (esposa de Goldalee) en NYC",
       date: "Hace 4 días",
       helpful: 2,
       notHelpful: 1,
-      product: "Varita de Renovación Radiante 4 en 1 con Terapia de Luz Roja",
+      product: "Libro Realifestacion",
       productImage: "/placeholder.svg",
-      ageRange: "38-47",
-      skinType: "Normal",
-      skinConcerns: "Líneas finas y arrugas, Aspecto fatigado",
-      frequency: "Diario"
+      concern: "Fatiga crónica y problemas de piel",
+      goal: "Más energía y piel radiante",
+      timeUsing: "1 mes"
     },
     {
       id: 3,
@@ -83,17 +81,16 @@ const ReviewsSection = () => {
       initials: "SF",
       verified: true,
       rating: 5,
-      title: "Resultados visibles",
-      text: "Después de 3 semanas de uso consistente, he notado una mejora significativa en la textura de mi piel. Las líneas alrededor de mis ojos se ven menos pronunciadas.",
+      title: "Resultados visibles en cortisol elevado",
+      text: "Después de 3 semanas siguiendo el protocolo SuperCalm, he notado una reducción significativa en mi grasa abdominal y mi piel ya no está tan oleosa.",
       date: "Hace 6 días",
       helpful: 5,
       notHelpful: 0,
-      product: "Kit de Varita de Luz Roja 4 en 1 y Suero Activador",
+      product: "Libro Realifestacion",
       productImage: "/placeholder.svg",
-      ageRange: "55-64",
-      skinType: "Seca",
-      skinConcerns: "Líneas finas y arrugas, Pérdida de firmeza",
-      frequency: "Diario"
+      concern: "Cortisol elevado",
+      goal: "Reducir grasa abdominal",
+      timeUsing: "3 semanas"
     },
     {
       id: 4,
@@ -101,17 +98,16 @@ const ReviewsSection = () => {
       initials: "MG",
       verified: true,
       rating: 5,
-      title: "Excelente inversión",
-      text: "Llevo 6 semanas usando el producto y los resultados son increíbles. Mi piel luce más radiante y las manchas han disminuido notablemente.",
+      title: "Excelente inversión, mejor que suplementos",
+      text: "Llevo 6 semanas siguiendo los protocolos y los resultados superan cualquier suplemento que haya tomado. Mi acné casi desapareció y me siento con más control de mi salud.",
       date: "Hace 8 días",
       helpful: 8,
       notHelpful: 0,
-      product: "Kit de Varita de Luz Roja 4 en 1 y Suero Activador",
+      product: "Libro Realifestacion",
       productImage: "/placeholder.svg",
-      ageRange: "28-37",
-      skinType: "Mixta",
-      skinConcerns: "Manchas, Textura irregular",
-      frequency: "Diario"
+      concern: "Acné hormonal persistente",
+      goal: "Piel clara sin químicos",
+      timeUsing: "6 semanas"
     },
     {
       id: 5,
@@ -120,16 +116,15 @@ const ReviewsSection = () => {
       verified: true,
       rating: 5,
       title: "Recomendado 100%",
-      text: "Sinceramente no esperaba estos resultados. Mi piel se ve más joven y firme. Lo mejor que he probado en años.",
+      text: "Sinceramente no esperaba estos resultados naturales. Mi equilibrio hormonal mejoró, duermo mejor y mi piel luce increíble. Lo mejor en lo que he invertido en años.",
       date: "Hace 10 días",
       helpful: 12,
       notHelpful: 1,
-      product: "Varita de Renovación Radiante 4 en 1 con Terapia de Luz Roja",
+      product: "Libro Realifestacion",
       productImage: "/placeholder.svg",
-      ageRange: "48-57",
-      skinType: "Seca",
-      skinConcerns: "Pérdida de firmeza, Aspecto fatigado",
-      frequency: "5-6 veces por semana"
+      concern: "Desbalance hormonal general",
+      goal: "Bienestar integral natural",
+      timeUsing: "2 meses"
     },
     {
       id: 6,
@@ -137,17 +132,16 @@ const ReviewsSection = () => {
       initials: "PL",
       verified: true,
       rating: 4,
-      title: "Muy bueno",
-      text: "He visto mejoras en mi piel después de 4 semanas. Es fácil de usar y se siente muy profesional.",
+      title: "Muy completo y práctico",
+      text: "He visto mejoras en mi energía y digestión después de 4 semanas. Los protocolos son fáciles de seguir y muy bien explicados.",
       date: "Hace 12 días",
       helpful: 3,
       notHelpful: 0,
-      product: "Kit de Varita de Luz Roja 4 en 1 y Suero Activador",
+      product: "Libro Realifestacion",
       productImage: "/placeholder.svg",
-      ageRange: "38-47",
-      skinType: "Normal",
-      skinConcerns: "Líneas finas y arrugas",
-      frequency: "3-4 veces por semana"
+      concern: "Problemas digestivos",
+      goal: "Mejor digestión y energía",
+      timeUsing: "4 semanas"
     },
     {
       id: 7,
@@ -155,17 +149,16 @@ const ReviewsSection = () => {
       initials: "IM",
       verified: true,
       rating: 5,
-      title: "Cambió mi rutina de cuidado",
-      text: "Desde que uso este producto mi piel está mucho mejor. Las arrugas se han suavizado y mi rostro se ve más luminoso.",
+      title: "Cambió mi enfoque de bienestar",
+      text: "Desde que aplico estos protocolos mi salud hormonal está mucho mejor. El acné se redujo notablemente y me siento más equilibrada emocionalmente.",
       date: "Hace 2 días",
       helpful: 6,
       notHelpful: 0,
-      product: "Varita de Renovación Radiante 4 en 1 con Terapia de Luz Roja",
+      product: "Libro Realifestacion",
       productImage: "/placeholder.svg",
-      ageRange: "55-64",
-      skinType: "Seca",
-      skinConcerns: "Líneas finas y arrugas, Pérdida de firmeza",
-      frequency: "Diario"
+      concern: "Acné y cambios de humor",
+      goal: "Equilibrio hormonal completo",
+      timeUsing: "5 semanas"
     },
     {
       id: 8,
@@ -173,17 +166,16 @@ const ReviewsSection = () => {
       initials: "AS",
       verified: true,
       rating: 5,
-      title: "Resultados rápidos",
-      text: "En solo 2 semanas ya vi diferencia. Mi piel está más suave y uniforme. Totalmente satisfecha con mi compra.",
+      title: "Resultados rápidos y naturales",
+      text: "En solo 2 semanas ya vi diferencia en mi piel y nivel de energía. Totalmente satisfecha con esta inversión en mi salud.",
       date: "Hace 2 semanas",
       helpful: 4,
       notHelpful: 0,
-      product: "Kit de Varita de Luz Roja 4 en 1 y Suero Activador",
+      product: "Libro Realifestacion",
       productImage: "/placeholder.svg",
-      ageRange: "28-37",
-      skinType: "Mixta",
-      skinConcerns: "Textura irregular, Poros dilatados",
-      frequency: "Diario"
+      concern: "Piel opaca y baja energía",
+      goal: "Vitalidad y piel radiante",
+      timeUsing: "2 semanas"
     }
   ];
 
@@ -241,7 +233,7 @@ const ReviewsSection = () => {
                   <Star className="w-4 h-4 fill-current text-foreground" />
                   <div className="flex-1 h-2 bg-accent/30 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-[#8B2E2E] rounded-full"
+                      className="h-full bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] rounded-full"
                       style={{ width: `${item.percentage}%` }}
                     />
                   </div>
@@ -258,7 +250,7 @@ const ReviewsSection = () => {
             <div className="text-center md:text-left">
               <div className="text-5xl font-bold mb-2">94%</div>
               <p className="text-sm text-muted-foreground">
-                recomendarían estos productos
+                recomendarían este libro
               </p>
             </div>
           </div>
@@ -305,8 +297,8 @@ const ReviewsSection = () => {
                 </div>
                 <div className="flex-1">
                   <p className="font-semibold text-sm">{review.name}</p>
-                  {review.verified && (
-                    <div className="flex items-center gap-1 text-xs text-[#8B2E2E] mt-1">
+                   {review.verified && (
+                    <div className="flex items-center gap-1 text-xs text-foreground mt-1">
                       <CheckCircle2 className="w-3 h-3" />
                       <span>Verified Buyer</span>
                     </div>
@@ -326,28 +318,24 @@ const ReviewsSection = () => {
               </div>
 
               {/* Recommendation Badge */}
-              <div className="flex items-center gap-2 text-xs text-[#8B2E2E]">
+              <div className="flex items-center gap-2 text-xs text-foreground">
                 <CheckCircle2 className="w-4 h-4" />
                 <span>I recommend this product</span>
               </div>
 
-              {/* User Demographics */}
+              {/* User Info */}
               <div className="space-y-2 text-xs pt-2">
                 <div className="flex justify-between">
-                  <span className="font-medium">Age Range</span>
-                  <span className="text-muted-foreground">{review.ageRange}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="font-medium">What's your skin type?</span>
-                  <span className="text-muted-foreground">{review.skinType}</span>
+                  <span className="font-medium">Preocupación Principal</span>
+                  <span className="text-muted-foreground">{review.concern}</span>
                 </div>
                 <div className="flex flex-col gap-1">
-                  <span className="font-medium">What were your skin concerns before using this?</span>
-                  <span className="text-muted-foreground">{review.skinConcerns}</span>
+                  <span className="font-medium">Objetivo al comprar</span>
+                  <span className="text-muted-foreground">{review.goal}</span>
                 </div>
                 <div className="flex flex-col gap-1">
-                  <span className="font-medium">How frequently are you using this product?</span>
-                  <span className="text-muted-foreground">{review.frequency}</span>
+                  <span className="font-medium">Tiempo usando los protocolos</span>
+                  <span className="text-muted-foreground">{review.timeUsing}</span>
                 </div>
               </div>
             </div>
@@ -393,7 +381,7 @@ const ReviewsSection = () => {
       <div className="flex justify-between items-center mb-8">
         <Button
           variant="outline"
-          className="bg-[#8B2E2E] text-white hover:bg-[#741E1E] border-none"
+          className="bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520] border-none"
         >
           <SlidersHorizontal className="w-4 h-4 mr-2" />
           Filtros
@@ -403,7 +391,7 @@ const ReviewsSection = () => {
           <DialogTrigger asChild>
             <Button
               variant="outline"
-              className="bg-[#8B2E2E] text-white hover:bg-[#741E1E] border-none"
+              className="bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520] border-none"
             >
               <PenLine className="w-4 h-4 mr-2" />
               Escribir Reseña
@@ -413,7 +401,7 @@ const ReviewsSection = () => {
             <DialogHeader>
               <DialogTitle>Escribe tu Reseña</DialogTitle>
               <DialogDescription>
-                Comparte tu experiencia con nuestro producto
+                Comparte tu experiencia con el libro Realifestacion
               </DialogDescription>
             </DialogHeader>
             <form className="space-y-6 mt-4">
@@ -476,7 +464,7 @@ const ReviewsSection = () => {
                 <Label htmlFor="review">Tu Reseña *</Label>
                 <Textarea
                   id="review"
-                  placeholder="Cuéntanos sobre tu experiencia con el producto..."
+                  placeholder="Cuéntanos sobre tu experiencia con el libro y los protocolos..."
                   required
                   className="mt-2 min-h-[150px]"
                 />
@@ -514,7 +502,7 @@ const ReviewsSection = () => {
           <Button
             onClick={() => setVisibleReviews(prev => Math.min(prev + 3, mockReviews.length))}
             variant="outline"
-            className="bg-[#8B2E2E] text-white hover:bg-[#741E1E] border-none"
+            className="bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520] border-none"
           >
             Ver más reseñas
           </Button>
