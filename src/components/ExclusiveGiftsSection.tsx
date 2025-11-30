@@ -1,26 +1,26 @@
 import { useState, useEffect } from "react";
-import giftDigitalBook from "@/assets/gift-digital-book.jpg";
-import giftFreeShipping from "@/assets/gift-free-shipping.jpg";
-import giftLashCurler from "@/assets/gift-lash-curler.jpg";
+import giftRutinaAfrodita from "@/assets/gift-rutina-afrodita.png";
+import giftDietaAfrodita from "@/assets/gift-dieta-afrodita.png";
+import giftHabitos8020 from "@/assets/gift-habitos-80-20.png";
 import giftMascara from "@/assets/gift-mascara.jpg";
 const gifts = [{
   badge: "FREE $10",
   originalPrice: "$10",
-  title: "E-book digital",
+  title: "Rutina Afrodita",
   subtitle: "Guía completa",
-  image: giftDigitalBook
+  image: giftRutinaAfrodita
 }, {
   badge: "FREE $6",
   originalPrice: "$6",
-  title: "Envío gratis",
-  subtitle: "A todo el país",
-  image: giftFreeShipping
+  title: "Dieta Afrodita",
+  subtitle: "Plan nutricional",
+  image: giftDietaAfrodita
 }, {
   badge: "FREE $19",
   originalPrice: "$19",
-  title: "Lash Curler",
-  subtitle: "Premium quality",
-  image: giftLashCurler
+  title: "Hábitos 80/20",
+  subtitle: "Plantilla diaria",
+  image: giftHabitos8020
 }, {
   badge: "FREE $25",
   originalPrice: "$25",
