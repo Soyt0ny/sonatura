@@ -106,34 +106,34 @@ const ExclusiveGiftsSection = () => {
           {/* Gifts Grid */}
           <div className="grid grid-cols-4 gap-2 md:gap-3 mb-6 max-w-[400px] mx-auto">
             {gifts.map((gift, index) => <div key={index} className="flex flex-col items-center">
+                {/* FREE Badge - Above the card */}
+                <div className="rounded-[4px] px-1.5 py-0.5 mb-1 flex flex-col items-center justify-center" style={{
+              backgroundColor: "#D9C6A5",
+              minWidth: "40px",
+              minHeight: "20px"
+            }}>
+                  <span className="text-[8px] font-bold uppercase leading-none" style={{
+                fontFamily: "Inter, sans-serif",
+                color: "#1B1B1B"
+              }}>
+                    FREE
+                  </span>
+                  <span className="text-[7px] line-through mt-0.5 font-semibold" style={{
+                fontFamily: "Inter, sans-serif",
+                color: "#8B4513",
+                textDecorationColor: "#8B4513",
+                textDecorationThickness: "1.5px"
+              }}>
+                    {gift.originalPrice}
+                  </span>
+                </div>
+
                 {/* Gift Card */}
                 <div className="relative w-full aspect-[1/1] rounded-[6px] overflow-hidden transition-transform hover:scale-[1.03]" style={{
               backgroundColor: "#F7F5F1",
               border: "1.5px dashed #B8B8B8",
               boxShadow: "0 3px 10px rgba(27, 27, 27, 0.04)"
             }}>
-                  {/* FREE Badge */}
-                  <div className="absolute top-2 left-2 z-10 rounded-[4px] px-1.5 py-0.5 flex flex-col items-center justify-center" style={{
-                backgroundColor: "#D9C6A5",
-                minWidth: "40px",
-                minHeight: "20px"
-              }}>
-                    <span className="text-[8px] font-bold uppercase leading-none" style={{
-                  fontFamily: "Inter, sans-serif",
-                  color: "#1B1B1B"
-                }}>
-                      FREE
-                    </span>
-                    <span className="text-[7px] line-through mt-0.5 font-semibold" style={{
-                  fontFamily: "Inter, sans-serif",
-                  color: "#8B4513",
-                  textDecorationColor: "#8B4513",
-                  textDecorationThickness: "1.5px"
-                }}>
-                      {gift.originalPrice}
-                    </span>
-                  </div>
-
                   {/* Product Image */}
                   <img src={gift.image} alt={gift.title} className="w-full h-full object-cover" />
                 </div>
