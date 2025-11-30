@@ -104,7 +104,7 @@ const ExclusiveGiftsSection = () => {
           </p>
 
           {/* Gifts Grid */}
-          <div className="grid grid-cols-4 gap-2 md:gap-3 mb-6 max-w-[400px] mx-auto">
+          <div className="grid grid-cols-4 gap-3 md:gap-4 mb-6 max-w-[550px] mx-auto">
             {gifts.map((gift, index) => <div key={index} className="flex flex-col items-center">
                 {/* FREE Badge - Above the card */}
                 <div className="rounded-[4px] px-1.5 py-0.5 mb-1 flex flex-col items-center justify-center" style={{
