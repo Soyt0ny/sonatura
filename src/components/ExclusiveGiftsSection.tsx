@@ -3,6 +3,7 @@ import giftRutinaAfrodita from "@/assets/gift-rutina-afrodita.png";
 import giftDietaAfrodita from "@/assets/gift-dieta-afrodita.png";
 import giftHabitos8020 from "@/assets/gift-habitos-80-20.png";
 import giftMascara from "@/assets/gift-mascara.jpg";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 const gifts = [{
   badge: "FREE $10",
   originalPrice: "$10",
@@ -37,6 +38,7 @@ const ExclusiveGiftsSection = () => {
     const saved = localStorage.getItem("kitsAvailable");
     return saved ? parseInt(saved) : 127;
   });
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   // Get tomorrow's date
   const getTomorrowDate = () => {
@@ -129,11 +131,15 @@ const ExclusiveGiftsSection = () => {
                 </div>
 
                 {/* Gift Card */}
-                <div className="relative w-full aspect-[1/1] rounded-[6px] overflow-hidden transition-transform hover:scale-[1.03]" style={{
-              backgroundColor: "#F7F5F1",
-              border: "1.5px dashed #B8B8B8",
-              boxShadow: "0 3px 10px rgba(27, 27, 27, 0.04)"
-            }}>
+                <div 
+                  className="relative w-full aspect-[1/1] rounded-[6px] overflow-hidden transition-transform hover:scale-[1.03] cursor-pointer" 
+                  style={{
+                    backgroundColor: "#F7F5F1",
+                    border: "1.5px dashed #B8B8B8",
+                    boxShadow: "0 3px 10px rgba(27, 27, 27, 0.04)"
+                  }}
+                  onClick={() => setSelectedImage(gift.image)}
+                >
                   {/* Product Image */}
                   <img src={gift.image} alt={gift.title} className="w-full h-full object-cover" />
                 </div>
@@ -187,6 +193,19 @@ const ExclusiveGiftsSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Image Lightbox Dialog */}
+      <Dialog open={selectedImage !== null} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-[90vw] md:max-w-[800px] p-0 bg-transparent border-none">
+          {selectedImage && (
+            <img 
+              src={selectedImage} 
+              alt="Regalo ampliado" 
+              className="w-full h-auto rounded-lg"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </section>;
 };
 export default ExclusiveGiftsSection;
