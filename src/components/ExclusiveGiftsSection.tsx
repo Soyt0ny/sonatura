@@ -196,7 +196,7 @@ const ExclusiveGiftsSection = () => {
 
       {/* Image Lightbox Dialog */}
       <Dialog open={selectedImage !== null} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent className="max-w-[90vw] md:max-w-[800px] p-0 bg-transparent border-none">
+        <DialogContent className="max-w-[85vw] md:max-w-[500px] p-0 bg-transparent border-none">
           {selectedImage && (
             <img 
               src={selectedImage} 
