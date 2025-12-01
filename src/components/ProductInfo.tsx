@@ -49,25 +49,25 @@ const CountdownTimer = () => {
     </div>;
 };
 const featuredReviews = [{
-  name: "Christina A.",
-  date: "April 4, 2025",
-  review: "Antes me gastaba como $150 usd al mes en suplementos, desde que compre este libro los deje TODOS y fue la mejor decisión, nada como lo natural"
+  name: "María González",
+  date: "15 Oct 2024",
+  review: "Honestamente no esperaba ver cambios tan rápido. En 10 días mi cara ya no está tan hinchada y el acné que tenía en la frente casi desapareció. He probado cremas de $80 dólares que no hicieron nada, esto es completamente diferente porque atacas desde lo que comes y no solo la piel por fuera."
 }, {
-  name: "Sarah M.",
-  date: "March 28, 2025",
-  review: "After just 2 weeks, my skin looks brighter and feels so much smoother. The red light therapy is incredible!"
+  name: "Laura Martínez",
+  date: "10 Oct 2024",
+  review: "Antes gastaba como $200 al mes en suplementos y productos para la piel, literal ya llevaba años así. Con el libro dejé todo eso y en 3 semanas vi más resultados que con cualquier cosa que haya comprado. Además está en mi celular, lo leo en el gym o donde sea. Lo voy a comprar físico también porque me encantó."
 }, {
-  name: "Jessica L.",
-  date: "March 15, 2025",
-  review: "This wand has become part of my daily routine. My friends keep asking what I'm doing differently - my skin glows!"
+  name: "Ana Rodríguez",
+  date: "5 Oct 2024",
+  review: "Por fin algo que funciona de verdad. Ya había probado de todo y nada me duraba, siempre volvía lo mismo. Aquí aprendes a balancear tus hormonas de forma natural y eso hace que los cambios sean permanentes. En 2 semanas bajé grasa del abdomen que llevaba meses estancada."
 }, {
-  name: "Amanda K.",
-  date: "February 22, 2025",
-  review: "Best investment for my skin! The combination of technologies really works. I've noticed fewer fine lines around my eyes."
+  name: "Carmen López",
+  date: "1 Oct 2024",
+  review: "Al principio dudé porque es digital, pero es súper práctico. Lo tengo en mi tablet, en el celular y en la computadora. Lo consulto cuando cocino y así no se me olvida nada. Lo mejor es que gasté $67 una sola vez y ya no tengo que estar comprando cosas cada mes. Mucho más económico y efectivo."
 }, {
-  name: "Rachel T.",
-  date: "February 10, 2025",
-  review: "I was skeptical at first, but wow! My skin feels tighter and looks more radiant. The built-in timer makes it so easy to use."
+  name: "Patricia Silva",
+  date: "28 Sep 2024",
+  review: "Llevaba años con acné hormonal y gastando fácil $150 mensuales en dermatólogo y tratamientos. Nada funcionaba más de 2 semanas. Con este libro entendí que el problema era interno, no externo. En 12 días mi piel cambió completamente, es increíble como algo tan natural puede ser tan potente."
 }];
 const ProductInfo = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
