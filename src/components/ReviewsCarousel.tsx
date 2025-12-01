@@ -3,27 +3,27 @@ import { CheckCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 const reviews = [{
   id: 1,
-  name: "María González",
+  name: "Sofia V.",
   date: "hace 1 día",
   text: "Honestamente no esperaba ver cambios tan rápido. En 10 días mi cara ya no está tan hinchada y el acné que tenía en la frente casi desapareció. He probado cremas de $80 dólares que no hicieron nada, esto es completamente diferente porque atacas desde lo que comes y no solo la piel por fuera."
 }, {
   id: 2,
-  name: "Laura Martínez",
+  name: "Isabella M.",
   date: "hace 3 días",
   text: "Antes gastaba como $200 al mes en suplementos y productos para la piel, literal ya llevaba años así. Con el libro dejé todo eso y en 3 semanas vi más resultados que con cualquier cosa que haya comprado. Además está en mi celular, lo leo en el gym o donde sea. Lo voy a comprar físico también porque me encantó."
 }, {
   id: 3,
-  name: "Ana Rodríguez",
+  name: "Camila R.",
   date: "hace 6 días",
   text: "Por fin algo que funciona de verdad. Ya había probado de todo y nada me duraba, siempre volvía lo mismo. Aquí aprendes a balancear tus hormonas de forma natural y eso hace que los cambios sean permanentes. En 2 semanas bajé grasa del abdomen que llevaba meses estancada."
 }, {
   id: 4,
-  name: "Carmen López",
+  name: "Luna S.",
   date: "20 Nov 2025",
   text: "Al principio dudé porque es digital, pero es súper práctico. Lo tengo en mi tablet, en el celular y en la computadora. Lo consulto cuando cocino y así no se me olvida nada. Lo mejor es que gasté $67 una sola vez y ya no tengo que estar comprando cosas cada mes. Mucho más económico y efectivo."
 }, {
   id: 5,
-  name: "Patricia Silva",
+  name: "Valentina L.",
   date: "15 Nov 2025",
   text: "Llevaba años con acné hormonal y gastando fácil $150 mensuales en dermatólogo y tratamientos. Nada funcionaba más de 2 semanas. Con este libro entendí que el problema era interno, no externo. En 12 días mi piel cambió completamente, es increíble como algo tan natural puede ser tan potente."
 }];
