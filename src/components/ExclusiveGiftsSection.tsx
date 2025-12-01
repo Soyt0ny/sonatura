@@ -8,7 +8,7 @@ const gifts = [{
   badge: "FREE $10",
   originalPrice: "$10",
   title: "Rutina Afrodita",
-  subtitle: "Guía completa",
+  subtitle: "Rutina para figura de reloj de arena, control hormonal y energia femenina.",
   image: giftRutinaAfrodita
 }, {
   badge: "FREE $6",
