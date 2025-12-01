@@ -16,7 +16,7 @@ const gifts = [{
   originalPrice: "$10",
   title: "Rutina Afrodita",
   subtitle: "Guía completa",
-  description: "Rutina completa paso a paso para lograr figura de reloj de arena, controlar hormonas y aumentar energía femenina de forma natural.",
+  description: "Los ejercicios exactos que pocas conocen para lograr figura de reloj de arena. Optimizada para tus hormonas y energía femenina—literalmente tu ventaja secreta sobre el resto.",
   image: giftRutinaAfrodita
 }, {
   badge: "FREE $6",
