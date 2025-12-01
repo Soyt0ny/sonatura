@@ -25,7 +25,7 @@ const NewsletterSection = () => {
         {/* Content */}
         <div className="bg-accent/30 border-2 border-border rounded-2xl p-8 md:p-12 shadow-lg">
           <div className="text-center max-w-xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-serif font-semibold text-foreground mb-4 tracking-tight">
+            <h3 className="text-2xl md:text-3xl font-sans font-semibold text-foreground mb-4 tracking-tight">
               Suscríbete y Obtén 15% de Descuento
             </h3>
             <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-8">
