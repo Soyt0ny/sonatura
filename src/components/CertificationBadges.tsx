@@ -13,7 +13,7 @@ const CertificationBadges = () => {
 
   return (
     <section className="py-16 px-4 max-w-5xl mx-auto">
-      <h2 className="text-2xl md:text-3xl font-serif text-center mb-16 text-foreground">
+      <h2 className="text-2xl md:text-3xl font-sans text-center mb-16 text-foreground">
         Inspirado en prácticas aprobadas por.
       </h2>
       

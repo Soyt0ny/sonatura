@@ -6,7 +6,7 @@ const AboutUsSection = () => {
       <div className="container mx-auto max-w-6xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif font-semibold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-sans font-semibold text-foreground mb-4">
             Sobre Nosotros
           </h2>
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
@@ -18,7 +18,7 @@ const AboutUsSection = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {/* Quiénes Somos */}
           <div className="bg-card border-2 border-border/40 rounded-3xl p-8">
-            <h3 className="text-2xl font-serif font-semibold text-foreground mb-4">
+            <h3 className="text-2xl font-sans font-semibold text-foreground mb-4">
               ¿Quiénes Somos?
             </h3>
             <p className="text-muted-foreground leading-relaxed">
@@ -31,7 +31,7 @@ const AboutUsSection = () => {
 
           {/* Por Qué Lo Hacemos */}
           <div className="bg-card border-2 border-border/40 rounded-3xl p-8">
-            <h3 className="text-2xl font-serif font-semibold text-foreground mb-4">
+            <h3 className="text-2xl font-sans font-semibold text-foreground mb-4">
               ¿Por Qué Lo Hacemos?
             </h3>
             <p className="text-muted-foreground leading-relaxed">
@@ -50,7 +50,7 @@ const AboutUsSection = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#C7A867]/20 mb-4">
               <Target className="w-8 h-8 text-[#C7A867]" />
             </div>
-            <h4 className="text-xl font-serif font-semibold text-[#0C1520] mb-3">
+            <h4 className="text-xl font-sans font-semibold text-[#0C1520] mb-3">
               Nuestra Misión
             </h4>
             <p className="text-[#0C1520]/70 text-sm leading-relaxed">
@@ -65,7 +65,7 @@ const AboutUsSection = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#C7A867]/20 mb-4">
               <Sparkles className="w-8 h-8 text-[#C7A867]" />
             </div>
-            <h4 className="text-xl font-serif font-semibold text-[#0C1520] mb-3">
+            <h4 className="text-xl font-sans font-semibold text-[#0C1520] mb-3">
               Nuestra Visión
             </h4>
             <p className="text-[#0C1520]/70 text-sm leading-relaxed">
@@ -80,7 +80,7 @@ const AboutUsSection = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#C7A867]/20 mb-4">
               <Heart className="w-8 h-8 text-[#C7A867]" />
             </div>
-            <h4 className="text-xl font-serif font-semibold text-[#0C1520] mb-3">
+            <h4 className="text-xl font-sans font-semibold text-[#0C1520] mb-3">
               Nuestros Valores
             </h4>
             <ul className="text-[#0C1520]/70 text-sm leading-relaxed text-left space-y-2">
