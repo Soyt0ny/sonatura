@@ -155,19 +155,14 @@ const ExclusiveGiftsSection = () => {
                   <img src={gift.image} alt={gift.title} className="w-full h-full object-cover" />
                 </div>
 
-                {/* Title & Subtitle */}
-                <div className="mt-1.5 text-center space-y-0.5">
-                  <h3 className="text-[9px] md:text-[10px] font-semibold leading-tight text-[#1B1B1B]/80" style={{
-                fontFamily: "Inter, sans-serif"
-              }}>
-                    {gift.title}
-                  </h3>
+                {/* Title & Info Icon */}
+                <div className="mt-1.5 text-center">
                   <div className="flex items-center justify-center gap-1">
-                    <p className="text-[8px] md:text-[9px] font-medium leading-tight text-[#1B1B1B]/60" style={{
+                    <h3 className="text-[9px] md:text-[10px] font-semibold leading-tight text-[#1B1B1B]/80" style={{
                   fontFamily: "Inter, sans-serif"
                 }}>
-                      {gift.subtitle}
-                    </p>
+                      {gift.title}
+                    </h3>
                     <TooltipProvider>
                       <Tooltip delayDuration={200}>
                         <TooltipTrigger asChild>
