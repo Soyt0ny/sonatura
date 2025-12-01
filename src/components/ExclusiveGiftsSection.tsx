@@ -16,7 +16,7 @@ const gifts = [{
   originalPrice: "$10",
   title: "Rutina Afrodita",
   subtitle: "Guía completa",
-  description: "Los ejercicios exactos que pocas conocen para lograr figura de reloj de arena. Optimizada para tus hormonas y energía femenina—literalmente tu ventaja secreta sobre el resto.",
+  description: "Plantilla de Notion con plan de ejercicios semanal con foco en músculos \"atractivos\": glúteos, cintura, clavículas, glúteo medio, etc. Para crear una postura elegante que proyecte energía femenina, piel firme y glúteos redondos. Usando sesiones cortas de ejercicios (45-60 min Max) de fuerza, movilidad y estética.",
   image: giftRutinaAfrodita
 }, {
   badge: "FREE $6",
