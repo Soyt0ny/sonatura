@@ -4,29 +4,40 @@ import giftDietaAfrodita from "@/assets/gift-dieta-afrodita.png";
 import giftHabitos8020 from "@/assets/gift-habitos-80-20.png";
 import giftMascara from "@/assets/gift-mascara.jpg";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Info } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 const gifts = [{
   badge: "FREE $10",
   originalPrice: "$10",
   title: "Rutina Afrodita",
   subtitle: "Guía completa",
+  description: "Rutina completa paso a paso para lograr figura de reloj de arena, controlar hormonas y aumentar energía femenina de forma natural.",
   image: giftRutinaAfrodita
 }, {
   badge: "FREE $6",
   originalPrice: "$6",
   title: "Dieta Afrodita",
   subtitle: "Plan nutricional",
+  description: "Plan de alimentación diseñado para balancear hormonas, reducir inflamación y potenciar tu feminidad desde la nutrición.",
   image: giftDietaAfrodita
 }, {
   badge: "FREE $19",
   originalPrice: "$19",
   title: "Hábitos 80/20",
   subtitle: "Plantilla diaria",
+  description: "Plantilla práctica con los hábitos esenciales del 20% que generan el 80% de resultados en tu transformación hormonal y física.",
   image: giftHabitos8020
 }, {
   badge: "FREE $25",
   originalPrice: "$25",
   title: "Mascara travel",
   subtitle: "Tamaño viaje",
+  description: "Máscara premium tamaño viaje perfecta para llevar contigo. Potencia tu look natural mientras cuidas tus pestañas.",
   image: giftMascara
 }];
 const ExclusiveGiftsSection = () => {
@@ -151,11 +162,26 @@ const ExclusiveGiftsSection = () => {
               }}>
                     {gift.title}
                   </h3>
-                  <p className="text-[8px] md:text-[9px] font-medium leading-tight text-[#1B1B1B]/60" style={{
-                fontFamily: "Inter, sans-serif"
-              }}>
-                    {gift.subtitle}
-                  </p>
+                  <div className="flex items-center justify-center gap-1">
+                    <p className="text-[8px] md:text-[9px] font-medium leading-tight text-[#1B1B1B]/60" style={{
+                  fontFamily: "Inter, sans-serif"
+                }}>
+                      {gift.subtitle}
+                    </p>
+                    <TooltipProvider>
+                      <Tooltip delayDuration={200}>
+                        <TooltipTrigger asChild>
+                          <Info className="w-2.5 h-2.5 text-[#1B1B1B]/40 cursor-help hover:text-[#1B1B1B]/70 transition-colors" />
+                        </TooltipTrigger>
+                        <TooltipContent 
+                          side="top" 
+                          className="max-w-[200px] text-[10px] bg-[#1B1B1B] text-[#F4F3EF] border-[#D5C3A5]/30"
+                        >
+                          <p>{gift.description}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </div>
                 </div>
               </div>)}
           </div>
