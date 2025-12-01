@@ -23,12 +23,10 @@ const ComparisonSection = () => {
   return <section className="mt-12 md:mt-16 max-w-4xl mx-auto px-4 space-y-10">
       {/* Price Comparison */}
       <div className="bg-background/50 border border-border/30 rounded-2xl p-6 md:p-8">
-        <h2 className="text-xl md:text-2xl font-semibold leading-tight tracking-tight text-center mb-2">
-          Invierte <span className="text-primary">$67 una vez</span>. Para siempre
+        <h2 className="text-xl md:text-2xl font-semibold text-center mb-2">
+          Invierte <span className="text-primary">$67</span> una vez. Para siempre
         </h2>
-        <p className="text-center text-sm text-muted-foreground leading-relaxed mb-6">
-          Y corta la dependencia de <span className="font-medium text-foreground">+$10,000 al año</span> en productos con ingredientes químicos agresivos que no arreglan el problema de raíz
-        </p>
+        <p className="text-center text-sm text-muted-foreground mb-6">Y corta la dependencia de +$10,000 al año en productos con ingredientes químicos agresivos que no arreglan el problema de r</p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 mb-6">
           {traditionalCosts.map((item, idx) => <div key={idx} className="text-center p-2 md:p-3 bg-accent/5 border border-border/20 rounded-lg min-h-[60px] md:min-h-[70px] flex flex-col justify-center">
@@ -56,8 +54,8 @@ const ComparisonSection = () => {
 
       {/* Feature Comparison */}
       <div className="bg-background/50 border border-border/30 rounded-2xl p-6 md:p-8">
-        <h3 className="text-lg md:text-xl font-semibold leading-tight tracking-tight text-center mb-6">
-          La Diferencia es <span className="text-primary">Clara</span>
+        <h3 className="text-lg md:text-xl font-semibold text-center mb-6">
+          La Diferencia es Clara
         </h3>
 
         <div className="max-w-md mx-auto space-y-2">

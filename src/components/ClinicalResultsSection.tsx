@@ -21,8 +21,8 @@ const CircularProgress = ({
 };
 const ClinicalResultsSection = () => {
   return <section className="mt-16 md:mt-24 max-w-6xl mx-auto px-4">
-      <h2 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight text-center mb-12">
-        Resultados Comprobados por <span className="text-primary">Miles de Clientas</span>
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
+        Resultados Comprobados por Miles de Clientas
       </h2>
       
       <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
@@ -35,10 +35,10 @@ const ClinicalResultsSection = () => {
             <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-3">
               TRANSFORMACIÓN REAL
             </p>
-            <h3 className="text-xl md:text-2xl font-semibold leading-tight tracking-tight mb-4">
-              Resultados <span className="text-primary">Visibles en 14 Días</span>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
+              Resultados Visibles en 14 Días
             </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed italic">
+            <p className="text-sm md:text-base text-muted-foreground italic">
               "Bajé la grasa abdominal que no podía eliminar, mi rostro se deshinchó completamente y el acné que tenía por años desapareció. ¡No puedo creer la transformación!"
             </p>
           </div>
@@ -49,28 +49,28 @@ const ClinicalResultsSection = () => {
           {/* Stat 1 */}
           <div className="flex items-center gap-6">
             <CircularProgress percentage={98} />
-            <p className="text-sm text-muted-foreground leading-relaxed">afirman <span className="font-medium text-foreground">ahorrar +$7,000 dólares</span> al año en promedio</p>
+            <p className="text-sm md:text-base text-foreground">afirman ahorrar +$7,000 dólares al año en promedio</p>
           </div>
 
           {/* Stat 2 */}
           <div className="flex items-center gap-6">
             <CircularProgress percentage={97} />
-            <p className="text-sm text-muted-foreground leading-relaxed">afirman tener <span className="font-medium text-foreground">mejores resultados</span> que con otros productos</p>
+            <p className="text-sm md:text-base text-foreground">afirman tener mejores resultados que con otros productos</p>
           </div>
 
           {/* Stat 3 */}
           <div className="flex items-center gap-6">
             <CircularProgress percentage={96} />
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              afirman notar <span className="font-medium text-foreground">reducción visible de grasa y acné hormonal</span> en los primeros 14 días
+            <p className="text-sm md:text-base text-foreground">
+              afirman notar reducción visible de grasa y acné hormonal en los primeros 14 días
             </p>
           </div>
 
           {/* Stat 4 */}
           <div className="flex items-center gap-6">
             <CircularProgress percentage={91.3} />
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              catalogaron su compra como una de las <span className="font-medium text-foreground">10 mejores de su año</span>
+            <p className="text-sm md:text-base text-foreground">
+              catalogaron su compra como una de las 10 mejores de su año
             </p>
           </div>
 

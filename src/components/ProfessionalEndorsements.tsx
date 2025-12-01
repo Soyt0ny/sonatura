@@ -90,19 +90,19 @@ const ProfessionalEndorsements = () => {
 
           {/* Right: Content */}
           <div className="order-1 md:order-2 space-y-6">
-            <h3 className="text-xl md:text-2xl font-semibold leading-tight tracking-tight">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
               {activeEndorsement.title}
             </h3>
             
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-muted-foreground leading-relaxed">
               {activeEndorsement.content}
             </p>
 
             <div className="pt-4 border-t border-border/40">
-              <p className="font-semibold text-base md:text-lg text-foreground mb-1">
+              <p className="font-semibold text-lg text-foreground mb-1">
                 {activeEndorsement.name}
               </p>
-              <p className="text-xs md:text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground">
                 {activeEndorsement.profession}
               </p>
             </div>

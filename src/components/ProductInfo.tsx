@@ -117,8 +117,8 @@ const ProductInfo = () => {
           </div>
 
           <div>
-            <h1 className="text-xl md:text-2xl font-semibold leading-tight tracking-tight">
-              REALIFESTACIÓN LIBRO DIGITAL - <span className="text-primary">Black Friday 70% Off</span> +4 regalos
+            <h1 className="text-2xl font-bold leading-tight">
+              REALIFESTACIÓN LIBRO DIGITAL - Black Friday 70% Off +4 regalos
             </h1>
           </div>
 
@@ -136,24 +136,22 @@ const ProductInfo = () => {
           </div>
 
           <div className="space-y-2 mt-4">
-            <h3 className="text-base font-semibold mb-3">
-              +200 Protocolos de <span className="text-primary">salud, belleza y wellness</span> para:
-            </h3>
+            <h3 className="text-base font-bold mb-3">+200 Protocolos de salud, belleza y wellness para:</h3>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✦</div>
-              <span className="text-sm text-muted-foreground">Elimina grasa abdominal y Deshincha tu rostro (bajando tu cortisol)</span>
+              <span className="text-sm">Elimina grasa abdominal y Deshincha tu rostro (bajando tu cortisol)</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">≈</div>
-              <span className="text-sm text-muted-foreground">Elimina acne hormonal (protocolo super calm y protocolo Afrodita)</span>
+              <span className="text-sm">Elimina acne hormonal (protocolo super calm y protocolo Afrodita)</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">⇈</div>
-              <span className="text-sm text-muted-foreground">Elimina fatiga durante el día, insomnio y apariencia de cansancio.</span>
+              <span className="text-sm">Elimina fatiga durante el día, insomnio y apariencia de cansancio.</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
-              <span className="text-sm text-muted-foreground">Reduce tu estrés de forma natural y acelera tu metabolismo sin depender de productos químicos que dañan tu salud.</span>
+              <span className="text-sm">Reduce tu estrés de forma natural y acelera tu metabolismo sin depender de productos químicos que dañan tu salud.</span>
             </div>
           </div>
         </div>
@@ -183,9 +181,7 @@ const ProductInfo = () => {
           </div>
 
           <div>
-            <h1 className="text-lg md:text-xl font-semibold leading-tight tracking-tight">
-              REALIFESTACIÓN LIBRO DIGITAL - <span className="text-primary">Black Friday 70% Off</span> +4 regalos
-            </h1>
+            <h1 className="text-xl font-bold leading-tight">REALIFESTACIÓN LIBRO DIGITAL - Black Friday 70% Off +4 regalos</h1>
           </div>
 
           <div>
@@ -202,24 +198,22 @@ const ProductInfo = () => {
           </div>
 
           <div className="space-y-2 mt-4">
-            <h3 className="text-base font-semibold mb-3">
-              +200 Protocolos de <span className="text-primary">salud, belleza y Wellness</span> para:
-            </h3>
+            <h3 className="text-base font-bold mb-3">+200 Protocolos de salud, belleza y Wellness para:</h3>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✦</div>
-              <span className="text-sm text-muted-foreground">Conseguir un Glow natural y un cambio físico sin usar productos químicos que dañan tu salud</span>
+              <span className="text-sm">Conseguir un Glow natural y un cambio físico sin usar productos químicos que dañan tu salud</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">≈</div>
-              <span className="text-sm text-muted-foreground">Eliminar grasa abdominal, limpiar acné y deshinchar tu rostro en 14 días</span>
+              <span className="text-sm">Eliminar grasa abdominal, limpiar acné y deshinchar tu rostro en 14 días</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">⇈</div>
-              <span className="text-sm text-muted-foreground">Ahorrar $10k al año en productos de Skincare y suplementos que no necesitas y que tienen ingredientes químicos e invasivos que dañan tu salud</span>
+              <span className="text-sm">Ahorrar $10k al año en productos de Skincare y suplementos que no necesitas y que tienen ingredientes químicos e invasivos que dañan tu salud</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
-              <span className="text-sm text-muted-foreground">Tener independencia total del sistema, cero dependencia a productos y no efectos secundarios. Solo soluciones naturales que tu cuerpo reconoce.</span>
+              <span className="text-sm">Tener independencia total del sistema, cero dependencia a productos y no efectos secundarios. Solo soluciones naturales que tu cuerpo reconoce.</span>
             </div>
           </div>
         </div>
