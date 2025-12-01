@@ -18,10 +18,10 @@ const UGCCarousel = () => {
   return (
     <section className="mb-16 md:mb-20 max-w-7xl mx-auto px-4">
       <div className="text-center mb-10">
-        <h2 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
-          Lo Que Dicen Nuestras Clientas
+        <h2 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight mb-3">
+          Lo Que Dicen <span className="text-primary">Nuestras Clientas</span>
         </h2>
-        <p className="text-sm text-muted-foreground">
+        <p className="text-xs md:text-sm text-muted-foreground">
           Calificación 4.9/5 por más de 72,500+ Clientes Satisfechas
         </p>
       </div>
