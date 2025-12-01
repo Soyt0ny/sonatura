@@ -5,27 +5,27 @@ const reviews = [{
   id: 1,
   name: "Sofia V.",
   date: "hace 1 día",
-  text: "Honestamente no esperaba ver cambios tan rápido. En 10 días mi cara ya no está tan hinchada y el acné que tenía en la frente casi desapareció. He probado cremas de $80 dólares que no hicieron nada, esto es completamente diferente porque atacas desde lo que comes y no solo la piel por fuera."
+  text: "No les miento, en 10 días ya se notaba el cambio. Mi cara estaba súper desinflada y el acné de la frente? Casi nada. He probado cremas de $80 que literally no hacían nada, pero esto es diferente porque trabajas desde adentro, no solo ponerte cosas encima. Total game changer para mi skin care routine ✨"
 }, {
   id: 2,
   name: "Isabella M.",
   date: "hace 3 días",
-  text: "Antes gastaba como $200 al mes en suplementos y productos para la piel, literal ya llevaba años así. Con el libro dejé todo eso y en 3 semanas vi más resultados que con cualquier cosa que haya comprado. Además está en mi celular, lo leo en el gym o donde sea. Lo voy a comprar físico también porque me encantó."
+  text: "Antes gastaba como $200 al mes en suplementos y skincare, literal llevaba AÑOS así. Con el libro dejé todo eso y en 3 semanas vi más resultados que con cualquier producto que haya probado. Lo mejor? Lo tengo en mi cel, lo leo en el gym, mientras cocino... y ya lo quiero en físico porque es mi nueva biblia de wellness 📖"
 }, {
   id: 3,
   name: "Camila R.",
   date: "hace 6 días",
-  text: "Por fin algo que funciona de verdad. Ya había probado de todo y nada me duraba, siempre volvía lo mismo. Aquí aprendes a balancear tus hormonas de forma natural y eso hace que los cambios sean permanentes. En 2 semanas bajé grasa del abdomen que llevaba meses estancada."
+  text: "Finally algo que funciona de verdad y que DURA. Ya había intentado de todo y siempre volvía lo mismo. Aquí entiendes cómo balancear tus hormonas de forma natural y eso hace que los cambios se queden. En 2 semanas bajé la pancita que llevaba meses estancada, estoy obsessed 🙌"
 }, {
   id: 4,
   name: "Luna S.",
   date: "20 Nov 2025",
-  text: "Al principio dudé porque es digital, pero es súper práctico. Lo tengo en mi tablet, en el celular y en la computadora. Lo consulto cuando cocino y así no se me olvida nada. Lo mejor es que gasté $67 una sola vez y ya no tengo que estar comprando cosas cada mes. Mucho más económico y efectivo."
+  text: "Al principio dudé porque era digital, pero honestly es súper práctico. Lo tengo en mi tablet, en el cel, en la compu... lo consulto cuando estoy en la cocina preparando mis meals. Lo mejor es que fueron $67 una sola vez y ya no tengo que estar comprando productos cada mes. Best investment que he hecho en mi wellness journey 💫"
 }, {
   id: 5,
   name: "Valentina L.",
   date: "15 Nov 2025",
-  text: "Llevaba años con acné hormonal y gastando fácil $150 mensuales en dermatólogo y tratamientos. Nada funcionaba más de 2 semanas. Con este libro entendí que el problema era interno, no externo. En 12 días mi piel cambió completamente, es increíble como algo tan natural puede ser tan potente."
+  text: "Llevaba años luchando con acné hormonal y gastando fácil $150 al mes en derma y tratamientos. Nada me funcionaba más de 2 semanas. Con este libro entendí que el problema era interno, no lo que me ponía en la cara. En 12 días mi piel hizo un glow up increíble. Es wild cómo algo tan natural puede ser tan potente 🌿"
 }];
 const ReviewsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
