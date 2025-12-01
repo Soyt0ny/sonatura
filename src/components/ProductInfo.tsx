@@ -82,7 +82,7 @@ const ProductInfo = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentReviewIndex(prev => (prev + 1) % featuredReviews.length);
-    }, 13000);
+    }, 20000);
     return () => clearInterval(interval);
   }, []);
   useEffect(() => {
