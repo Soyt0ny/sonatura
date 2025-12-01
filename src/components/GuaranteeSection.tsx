@@ -12,8 +12,12 @@ const GuaranteeSection = () => {
             </div>
           </div>
           <div className="flex-1">
-            <h3 className="text-lg font-bold mb-1 text-foreground">Garantía de devolución de dinero de 60 días</h3>
-            <p className="text-sm text-foreground/70">Una piel hermosa y un cambio físico toman tiempo. Ama tus resultados o recibe un reembolso completo. 100% sin riesgo.</p>
+            <h3 className="text-lg md:text-xl font-semibold leading-tight mb-1 text-foreground">
+              Garantía de devolución de dinero de <span className="text-primary">60 días</span>
+            </h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Una piel hermosa y un cambio físico toman tiempo. Ama tus resultados o recibe un <span className="font-medium text-foreground">reembolso completo</span>. 100% sin riesgo.
+            </p>
           </div>
         </div>
       </div>

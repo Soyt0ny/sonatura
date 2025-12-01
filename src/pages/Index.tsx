@@ -73,17 +73,19 @@ const Index = () => {
 
         {/* Testimonials */}
         <section className="mt-16 md:mt-24 bg-accent/20 rounded-xl p-8 md:p-12">
-          <h2 className="text-3xl font-bold text-center mb-12">Lo Que Dicen Nuestras Clientas</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight text-center mb-12">
+            Lo Que Dicen <span className="text-primary">Nuestras Clientas</span>
+          </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Review 1 */}
             <div className="bg-background border border-border/40 rounded-lg p-6">
               <div className="flex mb-3">
                 {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
               </div>
-              <p className="text-sm mb-4">
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 "¡Resultados increíbles! En solo 2 semanas noté cambios reales en mi piel y mi energía. ¡Lo recomiendo totalmente!"
               </p>
-              <p className="text-sm font-semibold">- María L.</p>
+              <p className="text-sm font-semibold text-foreground">- María L.</p>
               <p className="text-xs text-muted-foreground">Compradora Verificada · Hace 3 días</p>
             </div>
             {/* Review 2 */}
@@ -91,10 +93,10 @@ const Index = () => {
               <div className="flex mb-3">
                 {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
               </div>
-              <p className="text-sm mb-4">
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 "$67 me parece poco a comparación de lo que viene en el libro, es una BARBARIDAD lo que hay dentro y sobre todo que funciona, 10/10 sin duda."
               </p>
-              <p className="text-sm font-semibold">- Sarah M.</p>
+              <p className="text-sm font-semibold text-foreground">- Sarah M.</p>
               <p className="text-xs text-muted-foreground">Compradora Verificada · Hace 1 semana</p>
             </div>
             {/* Review 3 */}
@@ -102,10 +104,10 @@ const Index = () => {
               <div className="flex mb-3">
                 {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
               </div>
-              <p className="text-sm mb-4">
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
                 "Pensé que era otra estafa más, pero los protocolos funcionan de verdad. Mi acné hormonal prácticamente desapareció."
               </p>
-              <p className="text-sm font-semibold">- Ana R.</p>
+              <p className="text-sm font-semibold text-foreground">- Ana R.</p>
               <p className="text-xs text-muted-foreground">Compradora Verificada · Hace 12 días</p>
             </div>
           </div>
@@ -113,7 +115,9 @@ const Index = () => {
 
         {/* FAQ */}
         <section className="mt-16 md:mt-24 max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Preguntas Frecuentes</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight text-center mb-12">
+            <span className="text-primary">Preguntas</span> Frecuentes
+          </h2>
           <Accordion type="multiple" defaultValue={["item-1", "item-2", "item-3"]} className="space-y-4">
             <AccordionItem value="item-1" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">

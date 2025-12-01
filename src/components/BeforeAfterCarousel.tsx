@@ -37,10 +37,10 @@ const BeforeAfterCarousel = () => {
   return (
     <section className="mb-8 md:mb-12 py-12 bg-accent/10">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Resultados Reales, Cambios Visibles
+        <h2 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight text-center mb-4">
+          Resultados Reales, <span className="text-primary">Cambios Visibles</span>
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-sm text-muted-foreground leading-relaxed text-center mb-12 max-w-2xl mx-auto">
           Miles de clientas satisfechas han transformado su piel con nuestros productos
         </p>
 
