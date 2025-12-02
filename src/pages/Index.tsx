@@ -15,7 +15,6 @@ import ComparisonSection from "@/components/ComparisonSection";
 import ProfessionalEndorsements from "@/components/ProfessionalEndorsements";
 import CertificationBadges from "@/components/CertificationBadges";
 import NewsletterSection from "@/components/NewsletterSection";
-import AboutUsSection from "@/components/AboutUsSection";
 
 import GuaranteeSection from "@/components/GuaranteeSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -221,9 +220,6 @@ const Index = () => {
 
         {/* Reviews Section */}
         <ReviewsSection />
-
-        {/* About Us Section */}
-        <AboutUsSection />
 
       </main>
 
