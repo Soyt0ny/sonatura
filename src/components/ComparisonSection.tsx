@@ -26,7 +26,7 @@ const ComparisonSection = () => {
         <h2 className="text-xl md:text-2xl font-semibold text-center mb-2">
           Invierte <span className="text-primary">$67</span> una vez. Para siempre
         </h2>
-        <p className="text-center text-sm text-muted-foreground mb-6">Y corta la dependencia de +$10,000 al año en productos con ingredientes químicos agresivos que no arreglan el problema de r</p>
+        <p className="text-center text-sm text-muted-foreground mb-6">Y corta la dependencia de +$10,000 al año en productos con ingredientes químicos agresivos que no arreglan el problema de raíz</p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 mb-6">
           {traditionalCosts.map((item, idx) => <div key={idx} className="text-center p-2 md:p-3 bg-accent/5 border border-border/20 rounded-lg min-h-[60px] md:min-h-[70px] flex flex-col justify-center">
