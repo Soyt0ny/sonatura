@@ -43,8 +43,8 @@ const UGCCarousel = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 {/* Hover overlay with review */}
-                <div className="absolute inset-0 bg-background/80 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-                  <p className="text-foreground text-sm md:text-base font-medium text-center leading-relaxed">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] backdrop-blur-sm opacity-0 group-hover:opacity-95 transition-opacity duration-300 flex items-center justify-center p-4 py-6">
+                  <p className="text-[#0C1520] text-sm md:text-base font-medium text-center leading-relaxed">
                     {image.review}
                   </p>
                 </div>
