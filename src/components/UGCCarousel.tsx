@@ -4,6 +4,7 @@ import ugc2 from "@/assets/ugc-2.png";
 import ugc3 from "@/assets/ugc-3.png";
 import ugc4 from "@/assets/ugc-4.png";
 import ugc5 from "@/assets/ugc-5.png";
+import ugc6 from "@/assets/ugc-6.png";
 
 const UGCCarousel = () => {
   const ugcImages = [
@@ -12,7 +13,7 @@ const UGCCarousel = () => {
     { id: 3, src: ugc3, alt: "Cliente leyendo Realifestacion en avión", review: "Me encanta, lo llevo a todos lados 🤍" },
     { id: 4, src: ugc4, alt: "Cliente con Realifestacion en spa", review: "Game changer para mi wellness routine 🌸" },
     { id: 5, src: ugc5, alt: "Cliente haciendo yoga con Realifestacion", review: "Obsessed con mis resultados 💕" },
-    { id: 6, src: "/placeholder.svg", alt: "Cliente UGC 6", review: "Finally algo que funciona de verdad ⭐" },
+    { id: 6, src: ugc6, alt: "Cliente estirando en gym con Realifestacion", review: "Mi post-workout essential 🏋️‍♀️" },
   ];
 
   return (
