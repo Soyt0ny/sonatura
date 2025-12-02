@@ -7,12 +7,12 @@ import ugc5 from "@/assets/ugc-5.png";
 
 const UGCCarousel = () => {
   const ugcImages = [
-    { id: 1, src: ugc1, alt: "Cliente usando Realifestacion - Día 7 del protocolo Afrodita" },
-    { id: 2, src: ugc2, alt: "Cliente con máscara LED leyendo Realifestacion" },
-    { id: 3, src: ugc3, alt: "Cliente leyendo Realifestacion en avión" },
-    { id: 4, src: ugc4, alt: "Cliente con Realifestacion en spa" },
-    { id: 5, src: ugc5, alt: "Cliente haciendo yoga con Realifestacion" },
-    { id: 6, src: "/placeholder.svg", alt: "Cliente UGC 6" },
+    { id: 1, src: ugc1, alt: "Cliente usando Realifestacion - Día 7 del protocolo Afrodita", review: "Literalmente mi mejor decisión del año 💫" },
+    { id: 2, src: ugc2, alt: "Cliente con máscara LED leyendo Realifestacion", review: "Lo amé, mi nueva obsesión ✨" },
+    { id: 3, src: ugc3, alt: "Cliente leyendo Realifestacion en avión", review: "Me encanta, lo llevo a todos lados 🤍" },
+    { id: 4, src: ugc4, alt: "Cliente con Realifestacion en spa", review: "Game changer para mi wellness routine 🌸" },
+    { id: 5, src: ugc5, alt: "Cliente haciendo yoga con Realifestacion", review: "Obsessed con mis resultados 💕" },
+    { id: 6, src: "/placeholder.svg", alt: "Cliente UGC 6", review: "Finally algo que funciona de verdad ⭐" },
   ];
 
   return (
@@ -36,12 +36,18 @@ const UGCCarousel = () => {
         <CarouselContent className="-ml-2 md:-ml-4">
           {ugcImages.map((image) => (
             <CarouselItem key={image.id} className="pl-2 md:pl-4 basis-[45%] sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl bg-muted border border-border/40 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="relative group aspect-[3/4] overflow-hidden rounded-2xl bg-muted border border-border/40 shadow-sm hover:shadow-md transition-shadow duration-300">
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                {/* Hover overlay with review */}
+                <div className="absolute inset-0 bg-background/80 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                  <p className="text-foreground text-sm md:text-base font-medium text-center leading-relaxed">
+                    {image.review}
+                  </p>
+                </div>
               </div>
             </CarouselItem>
           ))}
