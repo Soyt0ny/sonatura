@@ -54,11 +54,11 @@ const StickyCartBar = () => {
           {/* Middle - Pricing */}
           <div className="flex flex-col items-end gap-0.5">
             <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground line-through">$124</span>
+              <span className="text-sm text-muted-foreground line-through">$123</span>
               <span className="text-xl md:text-2xl font-bold text-foreground">$37</span>
             </div>
             <span className="hidden md:block text-xs text-muted-foreground">
-              O 6 pagos de <span className="font-semibold">$11.17/mes</span>
+              O 6 pagos de <span className="font-semibold">$6.17/mes</span>
             </span>
           </div>
 

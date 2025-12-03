@@ -91,7 +91,7 @@ const Index = () => {
                 {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
               </div>
               <p className="text-sm mb-4">
-                "$67 me parece poco a comparación de lo que viene en el libro, es una BARBARIDAD lo que hay dentro y sobre todo que funciona, 10/10 sin duda."
+                "$37 me parece poco a comparación de lo que viene en el libro, es una BARBARIDAD lo que hay dentro y sobre todo que funciona, 10/10 sin duda."
               </p>
               <p className="text-sm font-semibold">- Sarah M.</p>
               <p className="text-xs text-muted-foreground">Compradora Verificada · Hace 1 semana</p>

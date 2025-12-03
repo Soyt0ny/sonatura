@@ -24,7 +24,7 @@ const ComparisonSection = () => {
       {/* Price Comparison */}
       <div className="bg-background/50 border border-border/30 rounded-2xl p-6 md:p-8">
         <h2 className="text-xl md:text-2xl font-semibold text-center mb-2">
-          Invierte <span className="text-primary">$67</span> una vez. Para siempre
+          Invierte <span className="text-primary">$37</span> una vez. Para siempre
         </h2>
         <p className="text-center text-sm text-muted-foreground mb-6">Y corta la dependencia de +$10,000 al año en productos con ingredientes químicos agresivos que no arreglan el problema de raíz</p>
 
@@ -43,7 +43,7 @@ const ComparisonSection = () => {
           <span className="text-muted-foreground">→</span>
           <div className="text-center">
             <span className="text-xs text-muted-foreground block">Inversión única</span>
-            <span className="text-2xl font-bold text-primary">$67</span>
+            <span className="text-2xl font-bold text-primary">$37</span>
           </div>
         </div>
 

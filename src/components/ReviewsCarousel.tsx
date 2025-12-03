@@ -20,7 +20,7 @@ const reviews = [{
   id: 4,
   name: "Luna S.",
   date: "20 Nov 2025",
-  text: "Al principio dudé porque era digital, pero honestly es súper práctico. Lo tengo en mi tablet, en el cel, en la compu... lo consulto cuando estoy en la cocina preparando mis meals. Lo mejor es que fueron $67 una sola vez y ya no tengo que estar comprando productos cada mes. Best investment que he hecho en mi wellness journey 💫"
+  text: "Al principio dudé porque era digital, pero honestly es súper práctico. Lo tengo en mi tablet, en el cel, en la compu... lo consulto cuando estoy en la cocina preparando mis meals. Lo mejor es que fueron $37 una sola vez y ya no tengo que estar comprando productos cada mes. Best investment que he hecho en mi wellness journey 💫"
 }, {
   id: 5,
   name: "Valentina L.",
