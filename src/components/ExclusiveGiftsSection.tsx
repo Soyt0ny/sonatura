@@ -191,16 +191,25 @@ const ExclusiveGiftsSection = () => {
                 Termina en
               </span>
               <div className="flex items-center gap-1.5">
-                <div className="bg-[#1B1B1B] rounded-md px-3 py-1.5 min-w-[42px] shadow-md">
-                  <span className="font-bold text-base tabular-nums text-[#F5F3EE]">{String(hours).padStart(2, "0")}</span>
+                <div className="flex flex-col items-center">
+                  <div className="bg-[#1B1B1B] rounded-md px-3 py-1.5 min-w-[42px] shadow-md">
+                    <span className="font-bold text-base tabular-nums text-[#F5F3EE]">{String(hours).padStart(2, "0")}</span>
+                  </div>
+                  <span className="text-[8px] text-[#1B1B1B]/50 mt-0.5 uppercase tracking-wide">horas</span>
                 </div>
-                <span className="text-base font-semibold text-[#1B1B1B]/30">:</span>
-                <div className="bg-[#1B1B1B] rounded-md px-3 py-1.5 min-w-[42px] shadow-md">
-                  <span className="font-bold text-base tabular-nums text-[#F5F3EE]">{String(minutes).padStart(2, "0")}</span>
+                <span className="text-base font-semibold text-[#1B1B1B]/30 mb-3">:</span>
+                <div className="flex flex-col items-center">
+                  <div className="bg-[#1B1B1B] rounded-md px-3 py-1.5 min-w-[42px] shadow-md">
+                    <span className="font-bold text-base tabular-nums text-[#F5F3EE]">{String(minutes).padStart(2, "0")}</span>
+                  </div>
+                  <span className="text-[8px] text-[#1B1B1B]/50 mt-0.5 uppercase tracking-wide">minutos</span>
                 </div>
-                <span className="text-base font-semibold text-[#1B1B1B]/30">:</span>
-                <div className="bg-[#1B1B1B] rounded-md px-3 py-1.5 min-w-[42px] shadow-md">
-                  <span className="font-bold text-base tabular-nums text-[#F5F3EE]">{String(seconds).padStart(2, "0")}</span>
+                <span className="text-base font-semibold text-[#1B1B1B]/30 mb-3">:</span>
+                <div className="flex flex-col items-center">
+                  <div className="bg-[#1B1B1B] rounded-md px-3 py-1.5 min-w-[42px] shadow-md">
+                    <span className="font-bold text-base tabular-nums text-[#F5F3EE]">{String(seconds).padStart(2, "0")}</span>
+                  </div>
+                  <span className="text-[8px] text-[#1B1B1B]/50 mt-0.5 uppercase tracking-wide">segundos</span>
                 </div>
               </div>
             </div>
