@@ -17,7 +17,8 @@ const UGCCarousel = () => {
   ];
 
   return (
-    <section className="mb-16 md:mb-20 max-w-7xl mx-auto px-4">
+    <section className="mb-16 md:mb-20 py-12 bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB]">
+      <div className="max-w-7xl mx-auto px-4">
       <div className="text-center mb-10">
         <h2 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
           Lo Que Dicen Nuestras Clientas
@@ -56,6 +57,7 @@ const UGCCarousel = () => {
         <CarouselPrevious className="-left-2 md:-left-4 lg:-left-6 h-7 w-7 md:h-8 md:w-8" />
         <CarouselNext className="-right-2 md:-right-4 lg:-right-6 h-7 w-7 md:h-8 md:w-8" />
       </Carousel>
+      </div>
     </section>
   );
 };

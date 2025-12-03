@@ -41,7 +41,7 @@ const BookUniqueFeatures = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center bg-accent/10 rounded-3xl p-8 md:p-12 border border-border/30">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB] rounded-3xl p-8 md:p-12 border border-border/30">
         {/* Book Image - Left Side */}
         <div className="flex items-center justify-center">
           <div className="relative group">
