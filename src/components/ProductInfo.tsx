@@ -63,7 +63,7 @@ const featuredReviews = [{
 }, {
   name: "Luna S.",
   date: "20 Nov 2025",
-  review: "Al principio dudé porque es digital, pero es súper práctico. Lo tengo en mi tablet, en el celular y en la computadora. Lo consulto cuando cocino y así no se me olvida nada. Lo mejor es que gasté $67 una sola vez y ya no tengo que estar comprando cosas cada mes. Mucho más económico y efectivo."
+  review: "Al principio dudé porque es digital, pero es súper práctico. Lo tengo en mi tablet, en el celular y en la computadora. Lo consulto cuando cocino y así no se me olvida nada. Lo mejor es que gasté $37 una sola vez y ya no tengo que estar comprando cosas cada mes. Mucho más económico y efectivo."
 }, {
   name: "Valentina L.",
   date: "15 Nov 2025",
@@ -235,7 +235,7 @@ const ProductInfo = () => {
             </div>
 
             <Button id="original-cart-button" size="lg" variant="cta" className="w-full text-base font-bold h-14 uppercase tracking-wide">
-              Agregar al Carrito | $67
+              Agregar al Carrito | $37
             </Button>
             
             {/* Warranty Icons Section */}
