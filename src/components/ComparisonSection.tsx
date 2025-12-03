@@ -29,7 +29,7 @@ const ComparisonSection = () => {
         <p className="text-center text-sm text-muted-foreground mb-6">Y corta la dependencia de +$10,000 al año en productos con ingredientes químicos agresivos que no arreglan el problema de raíz</p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3 mb-6">
-          {traditionalCosts.map((item, idx) => <div key={idx} className="text-center p-2 md:p-3 bg-accent/5 border border-border/20 rounded-lg min-h-[60px] md:min-h-[70px] flex flex-col justify-center">
+          {traditionalCosts.map((item, idx) => <div key={idx} className="text-center p-2 md:p-3 bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB] border border-border/20 rounded-lg min-h-[60px] md:min-h-[70px] flex flex-col justify-center">
               <span className="block text-xs text-muted-foreground mb-1 truncate">{item.item}</span>
               <span className="text-sm md:text-base font-semibold text-foreground">{item.cost}</span>
             </div>)}
