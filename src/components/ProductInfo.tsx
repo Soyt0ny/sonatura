@@ -19,7 +19,7 @@ import { toast } from "@/hooks/use-toast";
 import { Copy, Check } from "lucide-react";
 import ExclusiveGiftsSection from "@/components/ExclusiveGiftsSection";
 import { useCart } from "@/contexts/CartContext";
-import productMain from "@/assets/product-main.jpg";
+import cartProduct from "@/assets/cart-product.png";
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(59 * 60); // 59 minutos en segundos
 
@@ -83,7 +83,7 @@ const ProductInfo = () => {
       name: "Libro Realifestación® Digital",
       price: 37,
       originalPrice: 123,
-      image: productMain,
+      image: cartProduct,
     });
   };
 
