@@ -49,7 +49,7 @@ const ClinicalResultsSection = () => {
           {/* Stat 1 */}
           <div className="flex items-center gap-6">
             <CircularProgress percentage={98} />
-            <p className="text-sm md:text-base text-foreground">afirman ahorrar +$7,000 dólares al año en promedio</p>
+            <p className="text-sm md:text-base text-foreground">afirman ahorrar +$4,000 dólares al año en promedio</p>
           </div>
 
           {/* Stat 2 */}
