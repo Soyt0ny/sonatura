@@ -1,4 +1,4 @@
-import bookImage from "@/assets/realifestacion-book.png";
+import bookImage from "@/assets/book-lifestyle-bath.png";
 import { Sparkles, Shield, DollarSign, Stars } from "lucide-react";
 
 const BookUniqueFeatures = () => {
