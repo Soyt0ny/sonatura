@@ -18,6 +18,8 @@ import { es } from "date-fns/locale";
 import { toast } from "@/hooks/use-toast";
 import { Copy, Check } from "lucide-react";
 import ExclusiveGiftsSection from "@/components/ExclusiveGiftsSection";
+import { useCart } from "@/contexts/CartContext";
+import productMain from "@/assets/product-main.jpg";
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(59 * 60); // 59 minutos en segundos
 
@@ -73,6 +75,17 @@ const ProductInfo = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const [liveUsers, setLiveUsers] = useState(1150);
   const [copied, setCopied] = useState(false);
+  const { addItem } = useCart();
+
+  const handleAddToCart = () => {
+    addItem({
+      id: "realifestacion-libro",
+      name: "Libro Realifestación® Digital",
+      price: 37,
+      originalPrice: 123,
+      image: productMain,
+    });
+  };
 
   // Calcular la fecha de mañana
   const tomorrow = addDays(new Date(), 1);
@@ -234,7 +247,13 @@ const ProductInfo = () => {
               <span className="text-sm text-muted-foreground">personas viendo este producto</span>
             </div>
 
-            <Button id="original-cart-button" size="lg" variant="cta" className="w-full text-base font-bold h-14 uppercase tracking-wide">
+            <Button 
+              id="original-cart-button" 
+              size="lg" 
+              variant="cta" 
+              className="w-full text-base font-bold h-14 uppercase tracking-wide"
+              onClick={handleAddToCart}
+            >
               Agregar al Carrito | $37
             </Button>
             
