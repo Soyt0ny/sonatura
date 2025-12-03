@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/contexts/CartContext";
-import productMain from "@/assets/product-main.jpg";
+import cartProduct from "@/assets/cart-product.png";
 
 const StickyCartBar = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,7 +13,7 @@ const StickyCartBar = () => {
       name: "Libro Realifestación® Digital",
       price: 37,
       originalPrice: 123,
-      image: productMain,
+      image: cartProduct,
     });
   };
 
