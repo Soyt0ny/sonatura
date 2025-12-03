@@ -53,27 +53,42 @@ const ComparisonSection = () => {
       </div>
 
       {/* Feature Comparison */}
-      <div className="bg-background/50 border border-border/30 rounded-2xl p-6 md:p-8">
-        <h3 className="text-lg md:text-xl font-semibold text-center mb-6">
-          La Diferencia es Clara
-        </h3>
+      <div className="space-y-4">
+        <div className="text-center">
+          <h3 className="text-xl md:text-2xl font-semibold mb-2">
+            Cómo Nos Comparamos
+          </h3>
+          <p className="text-sm text-muted-foreground max-w-xl mx-auto">
+            Una solución más segura, consciente, inteligente financieramente, y que te da el poder a ti y no a suscripciones eternas a productos.
+          </p>
+        </div>
 
-        <div className="max-w-md mx-auto space-y-2">
-          <div className="grid grid-cols-[1fr,60px,60px] md:grid-cols-[1fr,80px,80px] gap-2 md:gap-4 text-xs font-medium text-muted-foreground pb-2 border-b border-border/20">
-            <span></span>
-            <span className="text-center text-primary">Libro</span>
-            <span className="text-center">Otros</span>
+        <div className="overflow-hidden rounded-2xl shadow-lg">
+          {/* Header Row */}
+          <div className="grid grid-cols-[1.5fr,1fr,1fr] md:grid-cols-[2fr,1fr,1fr]">
+            <div className="bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB]"></div>
+            <div className="bg-white p-3 md:p-4 text-center border-b border-border/10">
+              <span className="text-xs md:text-sm font-semibold text-primary">Realifestación</span>
+            </div>
+            <div className="bg-white p-3 md:p-4 text-center border-b border-border/10">
+              <span className="text-xs md:text-sm font-semibold text-muted-foreground">Otros Productos</span>
+            </div>
           </div>
           
-          {features.map((feature, idx) => <div key={idx} className="grid grid-cols-[1fr,60px,60px] md:grid-cols-[1fr,80px,80px] gap-2 md:gap-4 items-center py-2 md:py-3">
-              <span className="text-xs md:text-sm text-foreground leading-tight">{feature}</span>
-              <div className="flex justify-center">
-                <Check className="w-4 h-4 md:w-5 md:h-5 text-green-600" strokeWidth={2.5} />
+          {/* Feature Rows */}
+          {features.map((feature, idx) => (
+            <div key={idx} className="grid grid-cols-[1.5fr,1fr,1fr] md:grid-cols-[2fr,1fr,1fr]">
+              <div className="bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB] p-3 md:p-4 flex items-center border-b border-white/50">
+                <span className="text-xs md:text-sm text-foreground font-medium">{feature}</span>
               </div>
-              <div className="flex justify-center">
-                <X className="w-4 h-4 md:w-5 md:h-5 text-red-500/70" strokeWidth={2.5} />
+              <div className="bg-white p-3 md:p-4 flex items-center justify-center border-b border-border/10">
+                <Check className="w-5 h-5 md:w-6 md:h-6 text-green-600" strokeWidth={2.5} />
               </div>
-            </div>)}
+              <div className="bg-white p-3 md:p-4 flex items-center justify-center border-b border-border/10">
+                <X className="w-5 h-5 md:w-6 md:h-6 text-muted-foreground/60" strokeWidth={2.5} />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>;
