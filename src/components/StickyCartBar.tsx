@@ -1,8 +1,21 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { useCart } from "@/contexts/CartContext";
+import productMain from "@/assets/product-main.jpg";
 
 const StickyCartBar = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { addItem } = useCart();
+
+  const handleAddToCart = () => {
+    addItem({
+      id: "realifestacion-libro",
+      name: "Libro Realifestación® Digital",
+      price: 37,
+      originalPrice: 123,
+      image: productMain,
+    });
+  };
 
   useEffect(() => {
     // Observar el botón de compra original
@@ -65,6 +78,7 @@ const StickyCartBar = () => {
           {/* Right side - CTA Button */}
           <Button 
             className="h-11 px-6 md:px-8 text-sm font-semibold uppercase tracking-wide bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520] shadow-lg rounded-lg whitespace-nowrap"
+            onClick={handleAddToCart}
           >
             Agregar al Carrito
           </Button>
