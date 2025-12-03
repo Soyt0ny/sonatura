@@ -93,11 +93,11 @@ const ComparisonSection = () => {
       </div>
 
       {/* Reflection Text */}
-      <div className="text-center max-w-2xl mx-auto">
-        <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+      <div className="text-center max-w-xl mx-auto">
+        <p className="text-sm text-muted-foreground">
           Podrías no elegir el libro, seguir comprando suplementos, pastillas y productos como normalmente y aún así seguirás necesitando darle a tu cuerpo lo que REALMENTE necesita...
         </p>
-        <p className="text-sm md:text-base text-muted-foreground leading-relaxed mt-3">
+        <p className="text-sm text-muted-foreground mt-2">
           No solo en tu alimentación, en los productos de belleza e higiene, en tu sueño, en tus hábitos, en los productos que usas a diario....
         </p>
       </div>
