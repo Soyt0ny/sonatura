@@ -35,7 +35,7 @@ const testimonials = [
 
 const BeforeAfterCarousel = () => {
   return (
-    <section className="mb-8 md:mb-12 py-12 bg-accent/10">
+    <section className="mb-8 md:mb-12 py-12 bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB]">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
           Transformaciones Reales con Realifestacion
