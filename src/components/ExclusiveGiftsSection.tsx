@@ -120,22 +120,22 @@ const ExclusiveGiftsSection = () => {
           <div className="grid grid-cols-4 gap-4 md:gap-6 mb-6 max-w-[900px] mx-auto">
             {gifts.map((gift, index) => <div key={index} className="flex flex-col items-center">
                 {/* FREE Badge - Above the card */}
-                <div className="rounded-[4px] px-1.5 py-0.5 mb-1 flex flex-col items-center justify-center" style={{
+                <div className="rounded-[4px] px-2 py-1 mb-1 flex flex-col items-center justify-center" style={{
               backgroundColor: "#D9C6A5",
-              minWidth: "40px",
-              minHeight: "20px"
+              minWidth: "50px",
+              minHeight: "28px"
             }}>
-                  <span className="text-[8px] font-bold uppercase leading-none" style={{
+                  <span className="text-[9px] font-bold uppercase leading-none" style={{
                 fontFamily: "Inter, sans-serif",
                 color: "#1B1B1B"
               }}>
-                    FREE
+                    GRATIS
                   </span>
-                  <span className="text-[7px] line-through mt-0.5 font-semibold" style={{
+                  <span className="text-[10px] line-through mt-0.5 font-bold" style={{
                 fontFamily: "Inter, sans-serif",
                 color: "#8B4513",
                 textDecorationColor: "#8B4513",
-                textDecorationThickness: "1.5px"
+                textDecorationThickness: "2px"
               }}>
                     {gift.originalPrice}
                   </span>
