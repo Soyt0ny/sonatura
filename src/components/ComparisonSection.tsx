@@ -66,7 +66,7 @@ const ComparisonSection = () => {
         <div className="overflow-hidden rounded-2xl shadow-lg">
           {/* Header Row */}
           <div className="grid grid-cols-[1.5fr,1fr,1fr] md:grid-cols-[2fr,1fr,1fr]">
-            <div className="bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB]"></div>
+            <div className="bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB] p-3 md:p-4 border-b border-white/50"></div>
             <div className="bg-white p-3 md:p-4 text-center border-b border-border/10">
               <span className="text-xs md:text-sm font-semibold text-primary">Realifestación</span>
             </div>
