@@ -146,7 +146,7 @@ const ExclusiveGiftsSection = () => {
                   className="relative w-full aspect-[1/1] rounded-[6px] overflow-hidden transition-transform hover:scale-[1.03] cursor-pointer" 
                   style={{
                     backgroundColor: "#F7F5F1",
-                    border: "1.5px dashed #B8B8B8",
+                    border: "2px solid #C7A867",
                     boxShadow: "0 3px 10px rgba(27, 27, 27, 0.04)"
                   }}
                   onClick={() => setSelectedImage(gift.image)}
