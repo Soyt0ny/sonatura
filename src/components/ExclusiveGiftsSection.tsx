@@ -12,15 +12,15 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 const gifts = [{
-  badge: "FREE $19",
-  originalPrice: "$19",
+  badge: "FREE $29",
+  originalPrice: "$29",
   title: "Rutina Afrodita",
   subtitle: "Guía completa",
   description: "Plan de ejercicios semanal con foco en músculos \"atractivos\": glúteos, cintura, clavículas, glúteo medio, etc. Para crear una postura elegante que proyecte energía femenina, piel firme y glúteos redondos. Usando sesiones cortas de ejercicios (45-60 min Max) de fuerza, movilidad y estética. *Plantilla de Notion*",
   image: giftRutinaAfrodita
 }, {
-  badge: "FREE $15",
-  originalPrice: "$15",
+  badge: "FREE $19",
+  originalPrice: "$19",
   title: "Dieta Afrodita",
   subtitle: "Plan nutricional",
   description: "Plan de alimentación diseñado para balancear hormonas, reducir inflamación y potenciar tu feminidad desde la nutrición.",
@@ -33,8 +33,8 @@ const gifts = [{
   description: "Plantilla práctica con los hábitos esenciales del 20% que generan el 80% de resultados en tu transformación hormonal y física.",
   image: giftHabitos8020
 }, {
-  badge: "FREE $25",
-  originalPrice: "$25",
+  badge: "FREE $37",
+  originalPrice: "$37",
   title: "Mascara travel",
   subtitle: "Tamaño viaje",
   description: "Máscara premium tamaño viaje perfecta para llevar contigo. Potencia tu look natural mientras cuidas tus pestañas.",
