@@ -64,31 +64,37 @@ const ComparisonSection = () => {
         </div>
 
         <div className="overflow-hidden rounded-2xl shadow-lg">
-          {/* Header Row */}
-          <div className="grid grid-cols-[1.5fr,1fr,1fr] md:grid-cols-[2fr,1fr,1fr]">
-            <div className="bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB] p-3 md:p-4 border-b border-white/50"></div>
-            <div className="bg-white p-3 md:p-4 text-center border-b border-border/10">
-              <span className="text-xs md:text-sm font-semibold text-primary">Realifestación</span>
-            </div>
-            <div className="bg-white p-3 md:p-4 text-center border-b border-border/10">
-              <span className="text-xs md:text-sm font-semibold text-muted-foreground">Otros Productos</span>
-            </div>
-          </div>
-          
-          {/* Feature Rows */}
-          {features.map((feature, idx) => (
-            <div key={idx} className="grid grid-cols-[1.5fr,1fr,1fr] md:grid-cols-[2fr,1fr,1fr]">
-              <div className="bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB] p-3 md:p-4 flex items-center border-b border-white/50">
-                <span className="text-xs md:text-sm text-foreground font-medium">{feature}</span>
-              </div>
-              <div className="bg-white p-3 md:p-4 flex items-center justify-center border-b border-border/10">
-                <Check className="w-5 h-5 md:w-6 md:h-6 text-green-600" strokeWidth={2.5} />
-              </div>
-              <div className="bg-white p-3 md:p-4 flex items-center justify-center border-b border-border/10">
-                <X className="w-5 h-5 md:w-6 md:h-6 text-muted-foreground/60" strokeWidth={2.5} />
-              </div>
-            </div>
-          ))}
+          <table className="w-full border-collapse">
+            {/* Header Row */}
+            <thead>
+              <tr>
+                <th className="w-[45%] md:w-[50%] bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB] p-3 md:p-4 border-b border-white/50"></th>
+                <th className="w-[27.5%] md:w-[25%] bg-white p-3 md:p-4 text-center border-b border-border/10">
+                  <span className="text-xs md:text-sm font-semibold text-primary">Realifestación</span>
+                </th>
+                <th className="w-[27.5%] md:w-[25%] bg-white p-3 md:p-4 text-center border-b border-border/10">
+                  <span className="text-xs md:text-sm font-semibold text-muted-foreground">Otros Productos</span>
+                </th>
+              </tr>
+            </thead>
+            
+            {/* Feature Rows */}
+            <tbody>
+              {features.map((feature, idx) => (
+                <tr key={idx}>
+                  <td className="bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB] p-3 md:p-4 border-b border-white/50">
+                    <span className="text-xs md:text-sm text-foreground font-medium">{feature}</span>
+                  </td>
+                  <td className="bg-white p-3 md:p-4 text-center border-b border-border/10">
+                    <Check className="w-5 h-5 md:w-6 md:h-6 text-green-600 inline-block" strokeWidth={2.5} />
+                  </td>
+                  <td className="bg-white p-3 md:p-4 text-center border-b border-border/10">
+                    <X className="w-5 h-5 md:w-6 md:h-6 text-muted-foreground/60 inline-block" strokeWidth={2.5} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
 
