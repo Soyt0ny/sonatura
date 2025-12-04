@@ -12,22 +12,22 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 const gifts = [{
-  badge: "FREE $10",
-  originalPrice: "$10",
+  badge: "FREE $19",
+  originalPrice: "$19",
   title: "Rutina Afrodita",
   subtitle: "Guía completa",
   description: "Plan de ejercicios semanal con foco en músculos \"atractivos\": glúteos, cintura, clavículas, glúteo medio, etc. Para crear una postura elegante que proyecte energía femenina, piel firme y glúteos redondos. Usando sesiones cortas de ejercicios (45-60 min Max) de fuerza, movilidad y estética. *Plantilla de Notion*",
   image: giftRutinaAfrodita
 }, {
-  badge: "FREE $6",
-  originalPrice: "$6",
+  badge: "FREE $15",
+  originalPrice: "$15",
   title: "Dieta Afrodita",
   subtitle: "Plan nutricional",
   description: "Plan de alimentación diseñado para balancear hormonas, reducir inflamación y potenciar tu feminidad desde la nutrición.",
   image: giftDietaAfrodita
 }, {
-  badge: "FREE $19",
-  originalPrice: "$19",
+  badge: "FREE $9",
+  originalPrice: "$9",
   title: "Hábitos 80/20",
   subtitle: "Plantilla diaria",
   description: "Plantilla práctica con los hábitos esenciales del 20% que generan el 80% de resultados en tu transformación hormonal y física.",
