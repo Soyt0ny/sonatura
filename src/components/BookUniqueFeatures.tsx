@@ -18,7 +18,7 @@ const BookUniqueFeatures = () => {
     {
       icon: <DollarSign className="w-6 h-6" />,
       title: "Ahorra +$10k al Año",
-      description: "Deja de gastar en suplementos caros, tratamientos costosos y productos que no funcionan.",
+      description: "Deja de gastar en suplementos caros, tratamientos costosos y productos que no funcionan. Resuelve el problema desde adentro y de raíz.",
       badges: ["Económico", "Alta Efectividad"]
     },
     {
