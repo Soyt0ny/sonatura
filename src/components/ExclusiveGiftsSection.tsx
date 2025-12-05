@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import giftRutinaAfrodita from "@/assets/gift-rutina-afrodita.png";
 import giftDietaAfrodita from "@/assets/gift-dieta-afrodita.png";
 import giftHabitos8020 from "@/assets/gift-habitos-80-20.png";
-import giftMascara from "@/assets/gift-mascara.jpg";
+import realifestacionBook from "@/assets/realifestacion-book.png";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Info } from "lucide-react";
 import {
@@ -35,10 +35,10 @@ const gifts = [{
 }, {
   badge: "FREE $37",
   originalPrice: "$37",
-  title: "Mascara travel",
-  subtitle: "Tamaño viaje",
-  description: "Máscara premium tamaño viaje perfecta para llevar contigo. Potencia tu look natural mientras cuidas tus pestañas.",
-  image: giftMascara
+  title: "Descuento Libro Físico",
+  subtitle: "Versión impresa",
+  description: "Obtén $37 de descuento en la versión física del libro. Exactamente lo que pagas por la versión digital, lo obtienes de descuento para tener el libro en tus manos.",
+  image: realifestacionBook
 }];
 const ExclusiveGiftsSection = () => {
   const [timeLeft, setTimeLeft] = useState(() => {
