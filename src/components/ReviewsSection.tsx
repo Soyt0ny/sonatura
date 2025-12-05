@@ -196,6 +196,9 @@ const ReviewsSection = () => {
         <h2 className="text-2xl md:text-3xl font-bold text-foreground">
           Por Qué Aman Realifestacion
         </h2>
+        <p className="text-muted-foreground mt-3 max-w-2xl mx-auto">
+          Miles de mujeres ya transformaron su cuerpo, piel y bienestar. Estas son sus historias reales.
+        </p>
       </div>
 
       {/* Review Images Gallery */}
