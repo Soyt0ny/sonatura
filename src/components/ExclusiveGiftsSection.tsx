@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import giftRutinaAfrodita from "@/assets/gift-rutina-afrodita.png";
 import giftDietaAfrodita from "@/assets/gift-dieta-afrodita.png";
 import giftHabitos8020 from "@/assets/gift-habitos-80-20.png";
-import realifestacionBook from "@/assets/realifestacion-book.png";
+import giftLibroFisico from "@/assets/gift-libro-fisico.png";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Info } from "lucide-react";
 import {
@@ -38,7 +38,7 @@ const gifts = [{
   title: "Descuento Libro Físico",
   subtitle: "Versión impresa",
   description: "Obtén $37 de descuento en la versión física del libro. Exactamente lo que pagas por la versión digital, lo obtienes de descuento para tener el libro en tus manos.",
-  image: realifestacionBook
+  image: giftLibroFisico
 }];
 const ExclusiveGiftsSection = () => {
   const [timeLeft, setTimeLeft] = useState(() => {
