@@ -7,6 +7,12 @@ import beforeAfterNew5 from "@/assets/before-after-new-5.png";
 import beforeAfterNew6 from "@/assets/before-after-new-6.png";
 import beforeAfterNew7 from "@/assets/before-after-new-7.png";
 import beforeAfterNew8 from "@/assets/before-after-new-8.png";
+import result1 from "@/assets/result-1.png";
+import result2 from "@/assets/result-2.png";
+import result3 from "@/assets/result-3.png";
+import result4 from "@/assets/result-4.png";
+import result5 from "@/assets/result-5.png";
+import result6 from "@/assets/result-6.png";
 
 const testimonials = [
   [
@@ -20,6 +26,16 @@ const testimonials = [
     { id: 6, image: beforeAfterNew6, name: "Sofia L.", days: 30, description: "En 30 días con la Rutina Afrodita y los protocolos, mi cuerpo se transformó completamente. Perdí grasa y gané definición. Cualquiera puede tener estos resultados, solo sigue el plan" },
     { id: 7, image: beforeAfterNew7, name: "Emma G.", days: 14, description: "El detox de dopamina + Dieta Afrodita eliminaron mi acné hormonal en 2 semanas. Mi piel está radiante y limpia. El glow up es real si sigues los protocolos del libro" },
     { id: 8, image: beforeAfterNew8, name: "Olivia F.", days: 30, description: "Seguí los protocolos del libro y en 1 mes bajé la grasa abdominal que me frustraba. Mi cuerpo está tonificado y me siento increíble. Este libro tiene todo lo que necesitas para transformarte" },
+  ],
+  [
+    { id: 9, image: result1, name: "Ana L.", days: 45, description: "Me siento más segura que nunca. Los protocolos me dieron la figura que siempre quise—cintura definida y cuerpo tonificado. Por fin me veo en el espejo y me encanta lo que veo" },
+    { id: 10, image: result2, name: "Daniela M.", days: 30, description: "La Rutina Afrodita literally cambió mi cuerpo. Mis glúteos están más redondos y mi postura mejoró muchísimo. Me siento como una nueva persona, con más confianza en todo" },
+    { id: 11, image: result3, name: "Victoria S.", days: 21, description: "Los protocolos me dieron resultados que ningún producto me había dado. Mi cuerpo se siente ligero, tonificado y fuerte. Me siento empoderada y en control de mi salud" },
+    { id: 12, image: result4, name: "Renata G.", days: 30, description: "Mi piel brilla naturalmente gracias a la Dieta Afrodita. Ese glow que buscaba por años con cremas caras lo conseguí desde adentro. Me siento radiante y llena de energía" },
+  ],
+  [
+    { id: 13, image: result5, name: "Carolina P.", days: 28, description: "Finalmente tengo esa piel glass que siempre quise. Los protocolos del libro me enseñaron que la belleza viene de adentro. Me siento hermosa sin maquillaje por primera vez" },
+    { id: 14, image: result6, name: "Mariana T.", days: 45, description: "El gym + los protocolos = resultados increíbles. Mi cuerpo está más definido que nunca y me siento fuerte y sexy. Esta combinación es game changer para cualquier chica fit" },
   ],
 ];
 
@@ -44,7 +60,7 @@ const BeforeAfterCarousel = () => {
           <CarouselContent>
             {testimonials.map((row, rowIndex) => (
               <CarouselItem key={rowIndex}>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                <div className={`grid grid-cols-1 md:grid-cols-2 ${row.length === 4 ? 'lg:grid-cols-4' : 'lg:grid-cols-2'} gap-4 md:gap-6 ${row.length === 2 ? 'lg:max-w-2xl lg:mx-auto' : ''}`}>
                   {row.map((testimonial) => (
                     <div
                       key={testimonial.id}
