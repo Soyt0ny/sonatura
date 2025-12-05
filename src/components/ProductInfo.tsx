@@ -149,22 +149,22 @@ const ProductInfo = () => {
           </div>
 
           <div className="space-y-2 mt-4">
-            <h3 className="text-base font-bold mb-3">+200 Protocolos de salud, belleza y wellness para:</h3>
+            <h3 className="text-base font-bold mb-3">+200 Protocolos naturales de salud, belleza y Wellness para:</h3>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">✦</div>
-              <span className="text-sm">Elimina grasa abdominal y Deshincha tu rostro (bajando tu cortisol)</span>
+              <span className="text-sm">Conseguir un Glow natural y un cambio físico sin usar productos químicos que dañan tu salud</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">≈</div>
-              <span className="text-sm">Elimina acne hormonal (protocolo super calm y protocolo Afrodita)</span>
+              <span className="text-sm">Eliminar grasa abdominal, limpiar acné y deshinchar tu rostro en 14 días</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">⇈</div>
-              <span className="text-sm">Elimina fatiga durante el día, insomnio y apariencia de cansancio.</span>
+              <span className="text-sm">Ahorrar $10k al año en productos de Skincare y suplementos que no necesitas y que tienen ingredientes químicos e invasivos que dañan tu salud</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0">◎</div>
-              <span className="text-sm">Reduce tu estrés de forma natural y acelera tu metabolismo sin depender de productos químicos que dañan tu salud.</span>
+              <span className="text-sm">Tener independencia total del sistema, cero dependencia a productos y no efectos secundarios. Solo soluciones naturales que tu cuerpo reconoce.</span>
             </div>
           </div>
         </div>
