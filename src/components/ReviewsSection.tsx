@@ -190,7 +190,7 @@ const ReviewsSection = () => {
   ];
 
   return (
-    <section className="mt-16 md:mt-24 py-12 md:py-16 bg-gradient-to-br from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB]">
+    <section className="mt-16 md:mt-24 py-12 md:py-16 bg-background">
       {/* Review Images Gallery */}
       <div className="mb-8 overflow-x-auto">
         <div className="flex gap-3 pb-4">
