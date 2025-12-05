@@ -1,35 +1,25 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import beforeAfter1 from "@/assets/before-after-1.jpg";
-import beforeAfter2 from "@/assets/before-after-2.jpg";
-import beforeAfter3 from "@/assets/before-after-3.jpg";
-import beforeAfter4 from "@/assets/before-after-4.jpg";
-import beforeAfter5 from "@/assets/before-after-5.jpg";
-import beforeAfter6 from "@/assets/before-after-6.jpg";
-import beforeAfter7 from "@/assets/before-after-7.jpg";
-import beforeAfter8 from "@/assets/before-after-8.jpg";
-import beforeAfter9 from "@/assets/before-after-9.jpg";
-import beforeAfter10 from "@/assets/before-after-10.jpg";
-import beforeAfter11 from "@/assets/before-after-11.jpg";
-import beforeAfter12 from "@/assets/before-after-12.jpg";
+import beforeAfterNew1 from "@/assets/before-after-new-1.png";
+import beforeAfterNew2 from "@/assets/before-after-new-2.png";
+import beforeAfterNew3 from "@/assets/before-after-new-3.png";
+import beforeAfterNew4 from "@/assets/before-after-new-4.png";
+import beforeAfterNew5 from "@/assets/before-after-new-5.png";
+import beforeAfterNew6 from "@/assets/before-after-new-6.png";
+import beforeAfterNew7 from "@/assets/before-after-new-7.png";
+import beforeAfterNew8 from "@/assets/before-after-new-8.png";
 
 const testimonials = [
   [
-    { id: 1, image: beforeAfter1, name: "Valentina R.", days: 30, description: "La Dieta Afrodita + el protocolo supercalm me ayudaron a bajar 8 kilos de grasa abdominal. Mi cara ya no está hinchada y mi piel tiene ese glow natural que buscaba. Literalmente cambió mi vida 360, ahora me siento segura con mi cuerpo" },
-    { id: 2, image: beforeAfter2, name: "Isabella M.", days: 14, description: "En solo 2 semanas con la Rutina Afrodita y el detox de dopamina, mi acné hormonal bajó un montón. Mi piel se ve más firme y radiante. Si yo pude, cualquiera puede—solo hay que seguir los protocolos tal cual vienen" },
-    { id: 3, image: beforeAfter3, name: "Camila S.", days: 30, description: "Gracias a los protocolos del libro bajé la pancita que llevaba años con ella. Mi cabello está más fuerte y mi piel tiene una textura increíble. La Rutina Afrodita fue clave para tonificar sin pasar horas en el gym" },
-    { id: 4, image: beforeAfter4, name: "Luna V.", days: 21, description: "El protocolo supercalm me desinflamo completamente. Mi cara ya no está hinchada y el acné que tenía en la frente desapareció. Esto funciona de verdad si te comprometes con lo que dice el libro" },
+    { id: 1, image: beforeAfterNew1, name: "Valentina R.", days: 30, description: "La Dieta Afrodita + el protocolo supercalm me ayudaron a eliminar el acné hormonal y la inflamación. Mi piel tiene ese glow natural que buscaba. Literalmente cambió mi vida 360, ahora me siento segura" },
+    { id: 2, image: beforeAfterNew2, name: "Isabella M.", days: 30, description: "En solo 1 mes con la Rutina Afrodita y la Dieta Afrodita, bajé 8 kilos de grasa abdominal. Mi cuerpo está más tonificado y definido. Si yo pude, cualquiera puede—solo hay que seguir los protocolos" },
+    { id: 3, image: beforeAfterNew3, name: "Camila S.", days: 21, description: "Gracias a los protocolos del libro bajé la pancita que llevaba años con ella. Mi cintura está más definida y mi cuerpo se ve completamente diferente. La Rutina Afrodita fue clave" },
+    { id: 4, image: beforeAfterNew4, name: "Luna V.", days: 30, description: "El protocolo supercalm me desinflamo completamente. Mi abdomen ya no está hinchado y bajé mucho la grasa abdominal. Esto funciona de verdad si te comprometes con lo que dice el libro" },
   ],
   [
-    { id: 5, image: beforeAfter5, name: "Mia P.", days: 30, description: "La Dieta Afrodita me cambió la vida. Perdí 6 kilos de grasa abdominal y mi piel tiene ese glow que siempre busqué con productos caros. Ahora sé que el cambio real viene de adentro, no de cremas" },
-    { id: 6, image: beforeAfter6, name: "Sofia L.", days: 14, description: "En 14 días con el detox de dopamina y los protocolos básicos, mi cara se desinflamo y mi acné bajo muchísimo. Mi piel está más suave y luminosa. Cualquiera puede tener estos resultados, solo sigue el plan" },
-    { id: 7, image: beforeAfter7, name: "Emma G.", days: 30, description: "La Rutina Afrodita + Dieta Afrodita me dieron ese cuerpo que siempre quise: cintura definida, glúteos firmes y piel radiante. Bajé peso y me tonifiqué sin morir en el proceso. Esto es para cualquier mujer que quiera verse bien" },
-    { id: 8, image: beforeAfter8, name: "Olivia F.", days: 21, description: "Seguí los protocolos del libro y en 3 semanas mi cabello está más sano, mi piel más limpia y bajé la grasa abdominal que me frustraba. El glow up es real si te tomas en serio lo que dice Realifestacion" },
-  ],
-  [
-    { id: 9, image: beforeAfter9, name: "Aitana H.", days: 30, description: "El protocolo supercalm + Dieta Afrodita me ayudaron a bajar 7 kilos y mi cara ya no está hinchada. Mi piel tiene ese brillo juvenil que no tenía hace años. Este libro tiene todo lo que necesitas para transformarte" },
-    { id: 10, image: beforeAfter10, name: "Renata D.", days: 14, description: "Con la Rutina Afrodita logré tonificar en tiempo récord. Mi piel está más firme, mi acné hormonal bajó y me siento más segura. Si sigues los protocolos paso a paso, los resultados llegan solos" },
-    { id: 11, image: beforeAfter11, name: "Victoria B.", days: 30, description: "La Dieta Afrodita me hizo bajar peso de forma natural y mi piel se ve radiante. El detox de dopamina me ayudo a controlar ansiedad y mi cara ya no está hinchada. Esto funciona para cualquier mujer, en serio" },
-    { id: 12, image: beforeAfter12, name: "Antonella C.", days: 21, description: "En 3 semanas con los protocolos del libro, mi cabello creció más sano, mi acné desapareció y mi piel tiene ese glow natural. La Rutina Afrodita me ayudó a tonificar sin sufrir. Esto cambió mi vida completamente" },
+    { id: 5, image: beforeAfterNew5, name: "Mia P.", days: 21, description: "La Dieta Afrodita me cambió la vida. Mi piel se desinflamo, tiene ese glow que siempre busqué con productos caros. Ahora sé que el cambio real viene de adentro, no de cremas" },
+    { id: 6, image: beforeAfterNew6, name: "Sofia L.", days: 30, description: "En 30 días con la Rutina Afrodita y los protocolos, mi cuerpo se transformó completamente. Perdí grasa y gané definición. Cualquiera puede tener estos resultados, solo sigue el plan" },
+    { id: 7, image: beforeAfterNew7, name: "Emma G.", days: 14, description: "El detox de dopamina + Dieta Afrodita eliminaron mi acné hormonal en 2 semanas. Mi piel está radiante y limpia. El glow up es real si sigues los protocolos del libro" },
+    { id: 8, image: beforeAfterNew8, name: "Olivia F.", days: 30, description: "Seguí los protocolos del libro y en 1 mes bajé la grasa abdominal que me frustraba. Mi cuerpo está tonificado y me siento increíble. Este libro tiene todo lo que necesitas para transformarte" },
   ],
 ];
 
