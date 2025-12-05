@@ -125,7 +125,7 @@ const ExclusiveGiftsSection = () => {
               minWidth: "50px",
               minHeight: "28px"
             }}>
-                  <span className="text-[9px] font-bold uppercase leading-none" style={{
+                  <span className="text-[11px] font-bold uppercase leading-none" style={{
                 fontFamily: "Inter, sans-serif",
                 color: "#1B1B1B"
               }}>
