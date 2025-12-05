@@ -18,6 +18,10 @@ import reviewImg3 from "@/assets/review-img-3.png";
 import reviewImg4 from "@/assets/review-img-4.png";
 import reviewImg5 from "@/assets/review-img-5.png";
 import reviewImg6 from "@/assets/review-img-6.png";
+import reviewImg7 from "@/assets/review-img-7.png";
+import reviewImg8 from "@/assets/review-img-8.png";
+import reviewImg9 from "@/assets/review-img-9.png";
+import reviewImg10 from "@/assets/review-img-10.png";
 
 const ReviewsSection = () => {
   const [rating, setRating] = useState(0);
@@ -32,6 +36,10 @@ const ReviewsSection = () => {
     reviewImg4,
     reviewImg5,
     reviewImg6,
+    reviewImg7,
+    reviewImg8,
+    reviewImg9,
+    reviewImg10,
   ];
 
   const ratingDistribution = [
