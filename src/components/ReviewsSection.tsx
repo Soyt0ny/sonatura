@@ -12,24 +12,26 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import reviewImg1 from "@/assets/review-img-1.png";
+import reviewImg2 from "@/assets/review-img-2.png";
+import reviewImg3 from "@/assets/review-img-3.png";
+import reviewImg4 from "@/assets/review-img-4.png";
+import reviewImg5 from "@/assets/review-img-5.png";
+import reviewImg6 from "@/assets/review-img-6.png";
 
 const ReviewsSection = () => {
   const [rating, setRating] = useState(0);
   const [hoveredRating, setHoveredRating] = useState(0);
   const [visibleReviews, setVisibleReviews] = useState(5);
 
-  // Mock review images
+  // Review images
   const reviewImages = [
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
-    "/placeholder.svg",
+    reviewImg1,
+    reviewImg2,
+    reviewImg3,
+    reviewImg4,
+    reviewImg5,
+    reviewImg6,
   ];
 
   const ratingDistribution = [
