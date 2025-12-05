@@ -12,7 +12,7 @@ const BookExplanationSection = () => {
               <span key={i} className="text-primary text-sm">★</span>
             ))}
             <span className="text-xs text-muted-foreground ml-2">
-              4.9/5 por 18,640 clientas
+              4.9/5 por 72,500+ clientas
             </span>
           </div>
           
