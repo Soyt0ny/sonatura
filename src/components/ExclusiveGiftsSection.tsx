@@ -135,7 +135,7 @@ const ExclusiveGiftsSection = () => {
                 fontFamily: "Inter, sans-serif",
                 color: "#1B1B1B",
                 textDecorationColor: "rgba(27, 27, 27, 0.5)",
-                textDecorationThickness: "0.8px"
+                textDecorationThickness: "1px"
               }}>
                     {gift.originalPrice}
                   </span>
