@@ -1,4 +1,4 @@
-import { Star, Clock, DollarSign, Sparkles, TrendingUp, Timer, Mail, Info, FileText, Zap, Hand, Package, Leaf } from "lucide-react";
+import { Star, Clock, DollarSign, Sparkles, TrendingUp, Timer, Mail, Info, FileText, Zap, Hand, Package, Leaf, ShieldCheck, Ban, Target, Eye, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -357,9 +357,35 @@ const ProductInfo = () => {
                     <span>Bueno Saber</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-xs text-muted-foreground space-y-2">
-                  <p>Realifestación es un libro digital con +200 protocolos de salud, belleza y biohacking que te ayudarán a transformar tu vida usando ingredientes naturales que tu cuerpo reconoce.</p>
-                  <p>Aprenderás a eliminar la dependencia de productos químicos costosos y dañinos, mientras ahorras más de $10,000 al año en suplementos, skincare y tratamientos innecesarios.</p>
+                <AccordionContent className="text-sm text-foreground/90 space-y-3">
+                  <p className="font-semibold text-foreground">A diferencia de otros productos de belleza y bienestar, Realifestación:</p>
+                  <ul className="space-y-2.5">
+                    <li className="flex items-start gap-2">
+                      <ShieldCheck className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span><strong>No tiene ingredientes químicos ni sintéticos ocultos</strong> que dañan tu salud, tus hormonas y tu fertilidad.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Ban className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span><strong>No te obliga a suscripciones eternas</strong> a productos. Compras una vez y tienes el conocimiento para siempre.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Target className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span><strong>Ataca la raíz del problema:</strong> tus hormonas, tu estrés, tu gut health, metabolismo, sistema linfático y digestión. Mientras otros solo te venden un "calmante" para los síntomas.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Clock className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span><strong>Es fácil y rápido:</strong> cada protocolo se elabora en menos de 5 minutos con soluciones 100% naturales.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Eye className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span><strong>Sabes exactamente lo que le metes a tu cuerpo</strong> y el proceso de elaboración. Transparencia total.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <GraduationCap className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <span><strong>Te da conocimiento que dura para siempre.</strong> No dependes de nadie más que de ti misma.</span>
+                    </li>
+                  </ul>
+                  <p className="pt-2 text-foreground/80 italic border-t border-border/30 mt-3">Nosotros no intoxicamos tu cuerpo con disruptores hormonales que no resuelven el problema de raíz para mantenerte comprando. Te ofrecemos una solución natural, que te hace libre, consciente y te devuelve el poder a ti.</p>
                 </AccordionContent>
               </AccordionItem>
 
@@ -370,9 +396,9 @@ const ProductInfo = () => {
                     <span>Descripción</span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent className="text-xs text-muted-foreground space-y-2">
-                  <p>Este libro revolucionario combina protocolos respaldados por ciencia para abordar problemas desde la raíz: acné hormonal, grasa abdominal por cortisol elevado, fatiga crónica, insomnio y más.</p>
-                  <p>Perfecto para quienes buscan independencia del sistema farmacéutico y quieren lograr un glow-up natural sin productos químicos que dañan tus hormonas y tu salud a largo plazo.</p>
+                <AccordionContent className="text-sm text-foreground/90 space-y-2">
+                  <p>Realifestación es un libro digital con +200 protocolos de salud, belleza y biohacking que te ayudarán a transformar tu vida usando ingredientes naturales que tu cuerpo reconoce.</p>
+                  <p>Aprenderás a eliminar la dependencia de productos químicos costosos y dañinos, mientras ahorras más de $10,000 al año en suplementos, skincare y tratamientos innecesarios.</p>
                 </AccordionContent>
               </AccordionItem>
 
@@ -450,44 +476,6 @@ const ProductInfo = () => {
                 </AccordionContent>
               </AccordionItem>
 
-              <AccordionItem value="why-different">
-                <AccordionTrigger className="text-base font-bold">
-                  <div className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-primary" />
-                    <span>¿Por Qué Somos Diferentes?</span>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent className="text-xs text-muted-foreground space-y-3">
-                  <p className="font-semibold text-foreground">A diferencia de otros productos de belleza y bienestar, Realifestación:</p>
-                  <ul className="space-y-2.5">
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-bold">1.</span>
-                      <span><strong>No tiene ingredientes químicos ni sintéticos ocultos</strong> que dañan tu salud, tus hormonas y tu fertilidad.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-bold">2.</span>
-                      <span><strong>No te obliga a suscripciones eternas</strong> a productos. Compras una vez y tienes el conocimiento para siempre.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-bold">3.</span>
-                      <span><strong>Ataca la raíz del problema:</strong> tus hormonas, tu estrés, tu gut health, metabolismo, sistema linfático y digestión. Mientras otros solo te venden un "calmante" para los síntomas.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-bold">4.</span>
-                      <span><strong>Es fácil y rápido:</strong> cada protocolo se elabora en menos de 5 minutos con soluciones 100% naturales.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-bold">5.</span>
-                      <span><strong>Sabes exactamente lo que le metes a tu cuerpo</strong> y el proceso de elaboración. Transparencia total.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-primary font-bold">6.</span>
-                      <span><strong>Te da conocimiento que dura para siempre.</strong> No dependes de nadie más que de ti misma.</span>
-                    </li>
-                  </ul>
-                  <p className="pt-2 text-foreground/80 italic border-t border-border/30 mt-3">Nosotros no intoxicamos tu cuerpo con disruptores hormonales que no resuelven el problema de raíz para mantenerte comprando. Te ofrecemos una solución natural, que te hace libre, consciente y te devuelve el poder a ti.</p>
-                </AccordionContent>
-              </AccordionItem>
             </Accordion>
           </div>
         </div>
