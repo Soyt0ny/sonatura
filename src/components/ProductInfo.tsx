@@ -449,6 +449,45 @@ const ProductInfo = () => {
                   <p>Al ser digital, eliminamos el impacto ambiental del envío físico. Nuestro objetivo es empoderarte con conocimiento para que cuides tu salud de forma natural, económica y sostenible a largo plazo.</p>
                 </AccordionContent>
               </AccordionItem>
+
+              <AccordionItem value="why-different">
+                <AccordionTrigger className="text-base font-bold">
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-primary" />
+                    <span>¿Por Qué Somos Diferentes?</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-xs text-muted-foreground space-y-3">
+                  <p className="font-semibold text-foreground">A diferencia de otros productos de belleza y bienestar, Realifestación:</p>
+                  <ul className="space-y-2.5">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">1.</span>
+                      <span><strong>No tiene ingredientes químicos ni sintéticos ocultos</strong> que dañan tu salud, tus hormonas y tu fertilidad.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">2.</span>
+                      <span><strong>No te obliga a suscripciones eternas</strong> a productos. Compras una vez y tienes el conocimiento para siempre.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">3.</span>
+                      <span><strong>Ataca la raíz del problema:</strong> tus hormonas, tu estrés, tu gut health, metabolismo, sistema linfático y digestión. Mientras otros solo te venden un "calmante" para los síntomas.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">4.</span>
+                      <span><strong>Es fácil y rápido:</strong> cada protocolo se elabora en menos de 5 minutos con soluciones 100% naturales.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">5.</span>
+                      <span><strong>Sabes exactamente lo que le metes a tu cuerpo</strong> y el proceso de elaboración. Transparencia total.</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary font-bold">6.</span>
+                      <span><strong>Te da conocimiento que dura para siempre.</strong> No dependes de nadie más que de ti misma.</span>
+                    </li>
+                  </ul>
+                  <p className="pt-2 text-foreground/80 italic border-t border-border/30 mt-3">Nosotros no intoxicamos tu cuerpo con disruptores hormonales que no resuelven el problema de raíz para mantenerte comprando. Te ofrecemos una solución natural, que te hace libre, consciente y te devuelve el poder a ti.</p>
+                </AccordionContent>
+              </AccordionItem>
             </Accordion>
           </div>
         </div>
