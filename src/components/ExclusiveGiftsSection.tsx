@@ -131,11 +131,11 @@ const ExclusiveGiftsSection = () => {
               }}>
                     GRATIS
                   </span>
-                  <span className="text-[10px] line-through mt-0.5 font-bold" style={{
+                  <span className="text-[13px] line-through mt-0.5 font-bold" style={{
                 fontFamily: "Inter, sans-serif",
                 color: "#1B1B1B",
-                textDecorationColor: "#1B1B1B",
-                textDecorationThickness: "1px"
+                textDecorationColor: "rgba(27, 27, 27, 0.5)",
+                textDecorationThickness: "0.5px"
               }}>
                     {gift.originalPrice}
                   </span>
