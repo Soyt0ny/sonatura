@@ -71,7 +71,7 @@ const Index = () => {
 
 
         {/* Testimonials */}
-        <section className="mt-16 md:mt-24 bg-accent/20 rounded-xl p-8 md:p-12">
+        <section className="mt-16 md:mt-24 bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB] rounded-xl p-8 md:p-12">
           <h2 className="text-3xl font-bold text-center mb-12">Lo Que Dicen Nuestras Clientas</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {/* Review 1 */}
