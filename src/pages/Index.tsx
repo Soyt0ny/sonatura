@@ -116,24 +116,6 @@ const Index = () => {
           <Accordion type="multiple" defaultValue={["item-1", "item-2", "item-3"]} className="space-y-4">
             <AccordionItem value="item-1" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Cuánto me gastaría en materiales para los protocolos del libro?
-              </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">
-                Los protocolos están diseñados con ingredientes accesibles y económicos. En promedio, gastarías entre $15-30 USD al mes en materiales, dependiendo del protocolo que sigas. Todos los ingredientes son naturales y se encuentran fácilmente en supermercados o tiendas naturistas.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-2" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
-              <AccordionTrigger className="hover:no-underline">
-                ¿Cómo recibo el libro y los regalos?
-              </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">
-                Recibirás el libro en formato digital (PDF) inmediatamente por correo electrónico después de tu compra. Los regalos exclusivos también son digitales y los recibirás en el mismo email. Puedes acceder a todo desde cualquier dispositivo y empezar de inmediato.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-3" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
-              <AccordionTrigger className="hover:no-underline">
                 ¿Funcionará para mí?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
@@ -141,7 +123,7 @@ const Index = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-4" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+            <AccordionItem value="item-2" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
                 ¿Cuánto tiempo tardaré en ver resultados?
               </AccordionTrigger>
@@ -150,12 +132,30 @@ const Index = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-5" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+            <AccordionItem value="item-3" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Puedo cancelar mi orden?
+                ¿Cómo funciona?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
-                Como es un producto digital, no es posible cancelar después de recibirlo. Sin embargo, ofrecemos una garantía de satisfacción de 60 días. Si no estás satisfecha con el contenido, te devolvemos tu dinero sin hacer preguntas.
+                El libro contiene protocolos paso a paso que identifican la raíz de tus problemas hormonales y te guían con métodos naturales específicos. Sigues el protocolo correspondiente a tu situación durante 7-14 días y observas los cambios. Es simple, natural y efectivo.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+              <AccordionTrigger className="hover:no-underline">
+                ¿Cómo recibo el libro y los regalos?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                Recibirás el libro en formato digital (PDF) inmediatamente por correo electrónico después de tu compra. Los regalos exclusivos también son digitales y los recibirás en el mismo email. Puedes acceder a todo desde cualquier dispositivo y empezar de inmediato.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+              <AccordionTrigger className="hover:no-underline">
+                ¿Es seguro de usar?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                ¡Totalmente! Todos los protocolos utilizan ingredientes 100% naturales que tu cuerpo reconoce. No contienen químicos dañinos, disruptores hormonales ni ingredientes artificiales. Es seguro para cualquier persona y sin efectos secundarios adversos.
               </AccordionContent>
             </AccordionItem>
 
@@ -170,24 +170,6 @@ const Index = () => {
 
             <AccordionItem value="item-7" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Si mi tarjeta de crédito es rechazada?
-              </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">
-                Si tu tarjeta es rechazada, verifica que los datos estén correctos y que tengas fondos suficientes. También puedes intentar con otra tarjeta o usar PayPal. Si el problema persiste, contacta a tu banco o escríbenos a soporte@sonatura.com para ayudarte.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-8" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
-              <AccordionTrigger className="hover:no-underline">
-                ¿Cómo puedo contactarlos?
-              </AccordionTrigger>
-              <AccordionContent className="text-sm text-muted-foreground">
-                Puedes escribirnos a soporte@sonatura.com y nuestro equipo responderá en menos de 24 horas. También puedes contactarnos a través de nuestras redes sociales. Estamos aquí para ayudarte con cualquier pregunta o inquietud.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-9" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
-              <AccordionTrigger className="hover:no-underline">
                 ¿Venden en todo el mundo?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
@@ -195,21 +177,30 @@ const Index = () => {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-10" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+            <AccordionItem value="item-8" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Cómo funciona?
+                ¿Puedo cancelar mi orden?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
-                El libro contiene protocolos paso a paso que identifican la raíz de tus problemas hormonales y te guían con métodos naturales específicos. Sigues el protocolo correspondiente a tu situación durante 7-14 días y observas los cambios. Es simple, natural y efectivo.
+                Como es un producto digital, no es posible cancelar después de recibirlo. Sin embargo, ofrecemos una garantía de satisfacción de 60 días. Si no estás satisfecha con el contenido, te devolvemos tu dinero sin hacer preguntas.
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-11" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+            <AccordionItem value="item-9" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
               <AccordionTrigger className="hover:no-underline">
-                ¿Es seguro de usar?
+                ¿Si mi tarjeta de crédito es rechazada?
               </AccordionTrigger>
               <AccordionContent className="text-sm text-muted-foreground">
-                ¡Totalmente! Todos los protocolos utilizan ingredientes 100% naturales que tu cuerpo reconoce. No contienen químicos dañinos, disruptores hormonales ni ingredientes artificiales. Es seguro para cualquier persona y sin efectos secundarios adversos.
+                Si tu tarjeta es rechazada, verifica que los datos estén correctos y que tengas fondos suficientes. También puedes intentar con otra tarjeta o usar PayPal. Si el problema persiste, contacta a tu banco o escríbenos a soporte@sonatura.com para ayudarte.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-10" className="bg-background border border-border/40 rounded-lg px-6 shadow-sm">
+              <AccordionTrigger className="hover:no-underline">
+                ¿Cómo puedo contactarlos?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                Puedes escribirnos a soporte@sonatura.com y nuestro equipo responderá en menos de 24 horas. También puedes contactarnos a través de nuestras redes sociales. Estamos aquí para ayudarte con cualquier pregunta o inquietud.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
