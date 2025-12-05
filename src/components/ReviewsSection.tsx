@@ -191,6 +191,13 @@ const ReviewsSection = () => {
 
   return (
     <section className="mt-16 md:mt-24 py-12 md:py-16 bg-background">
+      {/* Section Title */}
+      <div className="text-center mb-10">
+        <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+          Por Qué Aman Realifestacion
+        </h2>
+      </div>
+
       {/* Review Images Gallery */}
       <div className="mb-8 overflow-x-auto">
         <div className="flex gap-3 pb-4">
