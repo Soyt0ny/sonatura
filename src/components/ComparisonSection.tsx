@@ -1,5 +1,5 @@
 import { Check, X } from "lucide-react";
-import radiantSkinImage from "@/assets/radiant-skin.jpg";
+import bookLifestyleSpa from "@/assets/book-lifestyle-spa.png";
 
 const ComparisonSection = () => {
   const competitorPrices = [
@@ -21,75 +21,83 @@ const ComparisonSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 max-w-5xl mx-auto px-4">
+    <section className="py-12 md:py-16 max-w-5xl mx-auto px-4">
       {/* Price Comparison - Two Column Layout */}
-      <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-start">
         {/* Left Column - Image */}
-        <div>
-          <img 
-            src={radiantSkinImage} 
-            alt="Mujer con piel radiante" 
-            className="w-full h-[450px] md:h-[520px] object-cover rounded-xl"
-          />
+        <div className="relative flex justify-center">
+          <div className="relative aspect-[3/4] w-full max-w-[320px] overflow-hidden rounded-2xl shadow-xl border border-border/30">
+            <img 
+              src={bookLifestyleSpa} 
+              alt="Libro Realifestación en spa de lujo" 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
         {/* Right Column - Price Comparison */}
-        <div className="space-y-8">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-semibold text-foreground leading-tight">
-              Invierte <span className="text-[#C7A867]">$37</span> una vez.
-              <br />Para siempre.
-            </h2>
+        <div className="space-y-5">
+          <h2 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight">
+            Invierte <span className="text-primary">$37</span> una vez.
+            <br />Para siempre.
+          </h2>
+          
+          <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+            <p>
+              Y corta la dependencia de{" "}
+              <span className="font-medium text-foreground">+$10,000 al año</span>{" "}
+              en productos con ingredientes químicos agresivos que no arreglan el problema de raíz.
+            </p>
           </div>
 
           {/* Competitor Prices */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             <p className="text-xs font-medium text-muted-foreground uppercase tracking-widest">
               Podrías gastar:
             </p>
-            <div className="space-y-3">
+            <ul className="space-y-2">
               {competitorPrices.map((item, idx) => (
-                <div key={idx} className="flex items-baseline gap-4">
-                  <span className="w-1.5 h-1.5 rounded-full bg-red-400 flex-shrink-0 mt-2"></span>
-                  <span className="text-lg md:text-xl font-semibold text-foreground min-w-[90px]">{item.price}</span>
-                  <span className="text-sm text-muted-foreground">{item.description}</span>
-                </div>
+                <li key={idx} className="flex items-start gap-3 text-sm">
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-400 flex-shrink-0 mt-1.5"></span>
+                  <span className="font-medium text-foreground min-w-[70px]">{item.price}</span>
+                  <span className="text-muted-foreground">{item.description}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           {/* Divider */}
-          <div className="border-t border-[#C7A867]/30 w-full"></div>
+          <div className="border-t border-border/30 w-full"></div>
 
           {/* Our Price */}
-          <div className="space-y-3">
+          <div className="space-y-2">
             <p className="text-sm text-muted-foreground">
               O escoge <span className="font-medium text-foreground">Realifestación</span> por:
             </p>
-            <div className="flex items-baseline gap-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#C7A867] flex-shrink-0 mt-3"></span>
-              <span className="text-4xl md:text-5xl font-semibold text-[#C7A867]">$37</span>
+            <div className="flex items-baseline gap-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
+              <span className="text-3xl md:text-4xl font-semibold text-primary">$37</span>
               <span className="text-sm text-muted-foreground">una sola vez</span>
             </div>
           </div>
 
           <p className="text-xs text-muted-foreground">
-            +17,000 mujeres ya dejaron de depender de productos costosos
+            <span className="text-primary font-medium">+17,000 mujeres</span> ya dejaron de depender de productos costosos
           </p>
         </div>
       </div>
 
       {/* Elegant Separator */}
-      <div className="flex items-center justify-center gap-4 my-16 md:my-20">
-        <div className="h-px bg-gradient-to-r from-transparent via-[#C7A867]/40 to-transparent flex-1 max-w-[200px]"></div>
-        <div className="w-1.5 h-1.5 rounded-full bg-[#C7A867]/40"></div>
-        <div className="h-px bg-gradient-to-r from-transparent via-[#C7A867]/40 to-transparent flex-1 max-w-[200px]"></div>
+      <div className="flex items-center justify-center gap-4 my-12 md:my-16">
+        <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent flex-1 max-w-[200px]"></div>
+        <div className="w-1.5 h-1.5 rounded-full bg-primary/40"></div>
+        <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent flex-1 max-w-[200px]"></div>
       </div>
 
       {/* Feature Comparison Table */}
       <div className="space-y-6">
         <div className="text-center">
-          <h3 className="text-xl md:text-2xl font-semibold mb-2">
+          <h3 className="text-xl md:text-2xl font-semibold leading-tight tracking-tight mb-2">
             Cómo Nos Comparamos
           </h3>
           <p className="text-sm text-muted-foreground max-w-lg mx-auto">
@@ -103,7 +111,7 @@ const ComparisonSection = () => {
               <tr>
                 <th className="w-[45%] md:w-[50%] bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB] p-3 md:p-4 border-b border-white/50"></th>
                 <th className="w-[27.5%] md:w-[25%] bg-white p-3 md:p-4 text-center border-b border-border/10">
-                  <span className="text-xs md:text-sm font-medium text-[#C7A867]">Realifestación</span>
+                  <span className="text-xs md:text-sm font-medium text-primary">Realifestación</span>
                 </th>
                 <th className="w-[27.5%] md:w-[25%] bg-white p-3 md:p-4 text-center border-b border-border/10">
                   <span className="text-xs md:text-sm font-medium text-muted-foreground">Otros</span>
@@ -130,7 +138,7 @@ const ComparisonSection = () => {
         </div>
 
         {/* Reflection Text */}
-        <div className="text-center max-w-md mx-auto pt-6">
+        <div className="text-center max-w-md mx-auto pt-4">
           <p className="text-xs text-muted-foreground leading-relaxed">
             Podrías seguir comprando productos que no arreglan el problema de raíz, o darle a tu cuerpo lo que realmente necesita.
           </p>
