@@ -35,7 +35,7 @@ const gifts = [{
 }, {
   badge: "FREE $37",
   originalPrice: "$37",
-  title: "Descuento Libro Físico",
+  title: "$37 OFF en Libro Físico",
   subtitle: "Versión impresa",
   description: "Obtén $37 de descuento en la versión física del libro. Exactamente lo que pagas por la versión digital, lo obtienes de descuento para tener el libro en tus manos.",
   image: giftLibroFisico
