@@ -60,7 +60,7 @@ const StickyCartBar = () => {
                   <span key={i} className="text-primary text-sm">★</span>
                 ))}
               </div>
-              <span className="text-xs text-muted-foreground">4.9 / 5</span>
+              <span className="text-xs text-muted-foreground">4.7 / 5</span>
             </div>
           </div>
 
