@@ -288,6 +288,142 @@ const getFlagEmoji = (countryCode: string): string => {
   return String.fromCodePoint(...codePoints);
 };
 
+// Cache country detection in localStorage for 24 hours
+const COUNTRY_CACHE_KEY = 'detected_country';
+const COUNTRY_CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
+
+interface CachedCountry {
+  countryCode: string;
+  timestamp: number;
+}
+
+const getCachedCountry = (): string | null => {
+  try {
+    const cached = localStorage.getItem(COUNTRY_CACHE_KEY);
+    if (cached) {
+      const parsed: CachedCountry = JSON.parse(cached);
+      if (Date.now() - parsed.timestamp < COUNTRY_CACHE_DURATION) {
+        return parsed.countryCode;
+      }
+    }
+  } catch (e) {
+    console.error('Error reading cached country:', e);
+  }
+  return null;
+};
+
+const setCachedCountry = (countryCode: string) => {
+  try {
+    const cacheData: CachedCountry = {
+      countryCode,
+      timestamp: Date.now(),
+    };
+    localStorage.setItem(COUNTRY_CACHE_KEY, JSON.stringify(cacheData));
+  } catch (e) {
+    console.error('Error caching country:', e);
+  }
+};
+
+// Multiple geolocation APIs with fallbacks
+const detectCountryFromIP = async (): Promise<string> => {
+  // Check cache first
+  const cachedCountry = getCachedCountry();
+  if (cachedCountry) {
+    return cachedCountry;
+  }
+
+  // Try multiple APIs in order of reliability
+  const geoApis = [
+    {
+      url: 'https://api.country.is/',
+      parser: (data: any) => data.country
+    },
+    {
+      url: 'https://get.geojs.io/v1/ip/country.json',
+      parser: (data: any) => data.country
+    },
+    {
+      url: 'https://freeipapi.com/api/json',
+      parser: (data: any) => data.countryCode
+    },
+    {
+      url: 'https://ipwho.is/',
+      parser: (data: any) => data.country_code
+    }
+  ];
+
+  for (const api of geoApis) {
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 3000); // 3 second timeout
+      
+      const response = await fetch(api.url, { 
+        signal: controller.signal,
+        mode: 'cors'
+      });
+      clearTimeout(timeoutId);
+      
+      if (response.ok) {
+        const data = await response.json();
+        const countryCode = api.parser(data);
+        if (countryCode && countryCode.length === 2) {
+          setCachedCountry(countryCode);
+          return countryCode;
+        }
+      }
+    } catch (e) {
+      console.warn(`Geolocation API failed: ${api.url}`, e);
+      continue;
+    }
+  }
+
+  // If all APIs fail, try to detect from browser timezone
+  try {
+    const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const timezoneCountryMap: Record<string, string> = {
+      'America/Mexico_City': 'MX',
+      'America/Tijuana': 'MX',
+      'America/Cancun': 'MX',
+      'America/Monterrey': 'MX',
+      'America/Chihuahua': 'MX',
+      'America/Mazatlan': 'MX',
+      'America/Hermosillo': 'MX',
+      'America/New_York': 'US',
+      'America/Los_Angeles': 'US',
+      'America/Chicago': 'US',
+      'America/Denver': 'US',
+      'America/Phoenix': 'US',
+      'America/Bogota': 'CO',
+      'America/Lima': 'PE',
+      'America/Buenos_Aires': 'AR',
+      'America/Sao_Paulo': 'BR',
+      'America/Santiago': 'CL',
+      'Europe/Madrid': 'ES',
+      'Europe/London': 'GB',
+      'Europe/Paris': 'FR',
+      'Europe/Berlin': 'DE',
+      'Europe/Rome': 'IT',
+      'Asia/Tokyo': 'JP',
+      'Asia/Shanghai': 'CN',
+      'Asia/Hong_Kong': 'HK',
+      'Asia/Seoul': 'KR',
+      'Asia/Singapore': 'SG',
+      'Australia/Sydney': 'AU',
+      'Pacific/Auckland': 'NZ',
+    };
+    
+    const countryFromTz = timezoneCountryMap[timezone];
+    if (countryFromTz) {
+      setCachedCountry(countryFromTz);
+      return countryFromTz;
+    }
+  } catch (e) {
+    console.warn('Timezone detection failed:', e);
+  }
+
+  return 'US'; // Default fallback
+};
+
 export const useCurrencyDetection = (): CurrencyInfo => {
   const [currencyInfo, setCurrencyInfo] = useState<CurrencyInfo>({
     countryCode: 'US',
@@ -301,10 +437,8 @@ export const useCurrencyDetection = (): CurrencyInfo => {
   useEffect(() => {
     const detectCurrency = async () => {
       try {
-        // Step 1: Detect country from IP
-        const geoResponse = await fetch('https://ipapi.co/json/');
-        const geoData = await geoResponse.json();
-        const countryCode = geoData.country_code || 'US';
+        // Step 1: Detect country from IP with multiple fallbacks
+        const countryCode = await detectCountryFromIP();
         
         const currencyData = countryCurrencyMap[countryCode] || { code: 'USD', symbol: '$', flag: getFlagEmoji(countryCode) };
         const flag = currencyData.flag || getFlagEmoji(countryCode);
@@ -343,19 +477,28 @@ export const useCurrencyDetection = (): CurrencyInfo => {
             console.error('Error fetching exchange rates:', rateError);
             // Fallback to approximate rates if API fails
             const fallbackRates: Record<string, number> = {
-              MXN: 17.5,
+              MXN: 20.5,
               EUR: 0.92,
               GBP: 0.79,
-              CAD: 1.36,
-              ARS: 875,
-              COP: 4000,
-              CLP: 900,
-              PEN: 3.7,
-              BRL: 5.0,
-              JPY: 150,
-              CNY: 7.2,
-              INR: 83,
-              AUD: 1.53,
+              CAD: 1.41,
+              ARS: 1050,
+              COP: 4400,
+              CLP: 980,
+              PEN: 3.8,
+              BRL: 6.1,
+              JPY: 154,
+              CNY: 7.3,
+              INR: 84,
+              AUD: 1.58,
+              KRW: 1420,
+              SGD: 1.35,
+              HKD: 7.8,
+              TWD: 32,
+              THB: 35,
+              PHP: 59,
+              IDR: 16000,
+              MYR: 4.5,
+              VND: 25500,
             };
             exchangeRate = fallbackRates[currencyData.code] || 1;
           }
