@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useCartStore } from "@/stores/cartStore";
 import cartProduct from "@/assets/cart-product.png";
 import { ShopifyProduct } from "@/lib/shopify";
-
+import { useCurrencyDetection, formatPrice } from "@/hooks/useCurrencyDetection";
 // Producto real de Shopify - Realifestación
 const realifestacionProduct: ShopifyProduct = {
   node: {
@@ -46,6 +46,12 @@ const realifestacionProduct: ShopifyProduct = {
 const StickyCartBar = () => {
   const [isVisible, setIsVisible] = useState(false);
   const { addItem } = useCartStore();
+  const currencyInfo = useCurrencyDetection();
+
+  // Precios base en USD
+  const originalPriceUSD = 123;
+  const currentPriceUSD = 37;
+  const monthlyPriceUSD = 6.17;
 
   const handleAddToCart = () => {
     const variant = realifestacionProduct.node.variants.edges[0].node;
@@ -105,11 +111,15 @@ const StickyCartBar = () => {
           {/* Middle - Pricing */}
           <div className="flex flex-col items-end gap-0.5">
             <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground line-through">$123</span>
-              <span className="text-xl md:text-2xl font-bold text-foreground">$37</span>
+              <span className="text-sm text-muted-foreground line-through">
+                {currencyInfo.isLoading ? '$123' : formatPrice(originalPriceUSD, currencyInfo)}
+              </span>
+              <span className="text-xl md:text-2xl font-bold text-foreground">
+                {currencyInfo.isLoading ? '$37' : formatPrice(currentPriceUSD, currencyInfo)}
+              </span>
             </div>
             <span className="hidden md:block text-xs text-muted-foreground">
-              O 6 pagos de <span className="font-semibold">$6.17/mes</span>
+              O 6 pagos de <span className="font-semibold">{currencyInfo.isLoading ? '$6.17' : formatPrice(monthlyPriceUSD, currencyInfo)}/mes</span>
             </span>
           </div>
 

@@ -21,7 +21,7 @@ import ExclusiveGiftsSection from "@/components/ExclusiveGiftsSection";
 import { useCartStore } from "@/stores/cartStore";
 import cartProduct from "@/assets/cart-product.png";
 import { ShopifyProduct } from "@/lib/shopify";
-
+import { useCurrencyDetection, formatPrice } from "@/hooks/useCurrencyDetection";
 // Producto real de Shopify - Realifestación
 const realifestacionProduct: ShopifyProduct = {
   node: {
@@ -117,6 +117,12 @@ const ProductInfo = () => {
   const [liveUsers, setLiveUsers] = useState(1150);
   const [copied, setCopied] = useState(false);
   const { addItem } = useCartStore();
+  const currencyInfo = useCurrencyDetection();
+
+  // Precios base en USD
+  const originalPriceUSD = 123;
+  const currentPriceUSD = 37;
+  const monthlyPriceUSD = 6.17;
 
   const handleAddToCart = () => {
     const variant = realifestacionProduct.node.variants.edges[0].node;
@@ -181,13 +187,17 @@ const ProductInfo = () => {
           <div>
             <div className="flex items-center gap-2">
               <div className="flex items-baseline gap-2">
-                <p className="text-2xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$123</p>
-                <p className="text-2xl font-bold text-foreground">$37</p>
+                <p className="text-2xl font-bold text-foreground line-through decoration-1 text-muted-foreground">
+                  {currencyInfo.isLoading ? '$123' : formatPrice(originalPriceUSD, currencyInfo)}
+                </p>
+                <p className="text-2xl font-bold text-foreground">
+                  {currencyInfo.isLoading ? '$37' : formatPrice(currentPriceUSD, currencyInfo)}
+                </p>
               </div>
               <span className="bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] text-[#0C1520] text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">70% OFF TERMINA HOY</span>
             </div>
             <p className="text-xs text-foreground mt-1">
-              O solo <span className="font-bold underline">$6.17/mes</span> a 6 meses sin intereses
+              O solo <span className="font-bold underline">{currencyInfo.isLoading ? '$6.17' : formatPrice(monthlyPriceUSD, currencyInfo)}/mes</span> a 6 meses sin intereses
             </p>
           </div>
 
@@ -243,13 +253,17 @@ const ProductInfo = () => {
           <div>
             <div className="flex items-center gap-2">
               <div className="flex items-baseline gap-2">
-                <p className="text-xl font-bold text-foreground line-through decoration-1 text-muted-foreground">$123</p>
-                <p className="text-xl font-bold text-foreground">$37</p>
+                <p className="text-xl font-bold text-foreground line-through decoration-1 text-muted-foreground">
+                  {currencyInfo.isLoading ? '$123' : formatPrice(originalPriceUSD, currencyInfo)}
+                </p>
+                <p className="text-xl font-bold text-foreground">
+                  {currencyInfo.isLoading ? '$37' : formatPrice(currentPriceUSD, currencyInfo)}
+                </p>
               </div>
               <span className="bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] text-[#0C1520] text-[10px] font-semibold px-3 py-1 rounded-full shadow-sm">70% OFF</span>
             </div>
             <p className="text-xs text-foreground mt-1">
-              O solo <span className="font-bold underline">$6.17/mes</span> a 6 meses sin intereses
+              O solo <span className="font-bold underline">{currencyInfo.isLoading ? '$6.17' : formatPrice(monthlyPriceUSD, currencyInfo)}/mes</span> a 6 meses sin intereses
             </p>
           </div>
 
@@ -297,7 +311,7 @@ const ProductInfo = () => {
               className="w-full text-base font-bold h-14 uppercase tracking-wide"
               onClick={handleAddToCart}
             >
-              Agregar al Carrito | $37
+              Agregar al Carrito | {currencyInfo.isLoading ? '$37' : formatPrice(currentPriceUSD, currencyInfo)}
             </Button>
             
             {/* Warranty Icons Section */}
