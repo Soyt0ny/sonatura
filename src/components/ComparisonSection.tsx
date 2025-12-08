@@ -1,13 +1,20 @@
 import { Check, X } from "lucide-react";
 import bookLifestyleSpa from "@/assets/book-lifestyle-spa.png";
+import { useCurrencyDetection, formatPrice } from "@/hooks/useCurrencyDetection";
 
 const ComparisonSection = () => {
-  const competitorPrices = [
-    { price: "$3,000+", description: "en inyecciones" },
-    { price: "$1,800+", description: "en dermatólogo" },
-    { price: "$1,400+", description: "en suplementos" },
-    { price: "$2,200+", description: "en belleza" },
-    { price: "$1,500+", description: "en skincare" },
+  const currencyInfo = useCurrencyDetection();
+  
+  // Precios base en USD
+  const bookPriceUSD = 37;
+  const annualSavingsUSD = 10000;
+  
+  const competitorPricesUSD = [
+    { priceUSD: 3000, description: "en inyecciones" },
+    { priceUSD: 1800, description: "en dermatólogo" },
+    { priceUSD: 1400, description: "en suplementos" },
+    { priceUSD: 2200, description: "en belleza" },
+    { priceUSD: 1500, description: "en skincare" },
   ];
 
   const features = [
@@ -38,14 +45,14 @@ const ComparisonSection = () => {
         {/* Right Column - Price Comparison */}
         <div className="space-y-5">
           <h2 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight">
-            Invierte <span className="text-primary">$37</span> una vez.
+            Invierte <span className="text-primary">{currencyInfo.isLoading ? '$37' : formatPrice(bookPriceUSD, currencyInfo)}</span> una vez.
             <br />Para siempre.
           </h2>
           
           <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
             <p>
               Y corta la dependencia de{" "}
-              <span className="font-medium text-foreground">+$10,000 al año</span>{" "}
+              <span className="font-medium text-foreground">+{currencyInfo.isLoading ? '$10,000' : formatPrice(annualSavingsUSD, currencyInfo)} al año</span>{" "}
               en productos con ingredientes químicos agresivos que no arreglan el problema de raíz.
             </p>
           </div>
@@ -56,10 +63,12 @@ const ComparisonSection = () => {
               Podrías gastar:
             </p>
             <ul className="space-y-2">
-              {competitorPrices.map((item, idx) => (
+              {competitorPricesUSD.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3 text-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-red-400 flex-shrink-0 mt-1.5"></span>
-                  <span className="font-medium text-foreground min-w-[70px]">{item.price}</span>
+                  <span className="font-medium text-foreground min-w-[70px]">
+                    {currencyInfo.isLoading ? `$${item.priceUSD.toLocaleString()}+` : `${formatPrice(item.priceUSD, currencyInfo)}+`}
+                  </span>
                   <span className="text-muted-foreground">{item.description}</span>
                 </li>
               ))}
@@ -76,7 +85,9 @@ const ComparisonSection = () => {
             </p>
             <div className="flex items-baseline gap-3">
               <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
-              <span className="text-3xl md:text-4xl font-semibold text-primary">$37</span>
+              <span className="text-3xl md:text-4xl font-semibold text-primary">
+                {currencyInfo.isLoading ? '$37' : formatPrice(bookPriceUSD, currencyInfo)}
+              </span>
               <span className="text-sm text-muted-foreground">una sola vez</span>
             </div>
           </div>

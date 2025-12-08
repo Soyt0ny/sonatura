@@ -11,35 +11,8 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-const gifts = [{
-  badge: "FREE $29",
-  originalPrice: "$29",
-  title: "Rutina Afrodita",
-  subtitle: "Guía completa",
-  description: "Plan de ejercicios semanal con foco en músculos \"atractivos\": glúteos, cintura, clavículas, glúteo medio, etc. Para crear una postura elegante que proyecte energía femenina, piel firme y glúteos redondos. Usando sesiones cortas de ejercicios (45-60 min Max) de fuerza, movilidad y estética. *Plantilla de Notion*",
-  image: giftRutinaAfrodita
-}, {
-  badge: "FREE $19",
-  originalPrice: "$19",
-  title: "Dieta Afrodita",
-  subtitle: "Plan nutricional",
-  description: "Plan de alimentación diseñado para balancear hormonas, reducir inflamación y potenciar tu feminidad desde la nutrición.",
-  image: giftDietaAfrodita
-}, {
-  badge: "FREE $9",
-  originalPrice: "$9",
-  title: "Hábitos 80/20",
-  subtitle: "Plantilla diaria",
-  description: "Plantilla práctica con los hábitos esenciales del 20% que generan el 80% de resultados en tu transformación hormonal y física.",
-  image: giftHabitos8020
-}, {
-  badge: "FREE $37",
-  originalPrice: "$37",
-  title: "$37 OFF en Libro Físico",
-  subtitle: "Versión impresa",
-  description: "Obtén $37 de descuento en la versión física del libro. Exactamente lo que pagas por la versión digital, lo obtienes de descuento para tener el libro en tus manos.",
-  image: giftLibroFisico
-}];
+import { useCurrencyDetection, formatPrice } from "@/hooks/useCurrencyDetection";
+
 const ExclusiveGiftsSection = () => {
   const [timeLeft, setTimeLeft] = useState(() => {
     const saved = localStorage.getItem("giftsCountdown");
@@ -50,6 +23,36 @@ const ExclusiveGiftsSection = () => {
     return saved ? parseInt(saved) : 127;
   });
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const currencyInfo = useCurrencyDetection();
+
+  // Precios base en USD para los regalos
+  const giftPricesUSD = [29, 19, 9, 37];
+
+  const gifts = [{
+    priceUSD: 29,
+    title: "Rutina Afrodita",
+    subtitle: "Guía completa",
+    description: "Plan de ejercicios semanal con foco en músculos \"atractivos\": glúteos, cintura, clavículas, glúteo medio, etc. Para crear una postura elegante que proyecte energía femenina, piel firme y glúteos redondos. Usando sesiones cortas de ejercicios (45-60 min Max) de fuerza, movilidad y estética. *Plantilla de Notion*",
+    image: giftRutinaAfrodita
+  }, {
+    priceUSD: 19,
+    title: "Dieta Afrodita",
+    subtitle: "Plan nutricional",
+    description: "Plan de alimentación diseñado para balancear hormonas, reducir inflamación y potenciar tu feminidad desde la nutrición.",
+    image: giftDietaAfrodita
+  }, {
+    priceUSD: 9,
+    title: "Hábitos 80/20",
+    subtitle: "Plantilla diaria",
+    description: "Plantilla práctica con los hábitos esenciales del 20% que generan el 80% de resultados en tu transformación hormonal y física.",
+    image: giftHabitos8020
+  }, {
+    priceUSD: 37,
+    title: "OFF en Libro Físico",
+    subtitle: "Versión impresa",
+    description: "Obtén descuento en la versión física del libro. Exactamente lo que pagas por la versión digital, lo obtienes de descuento para tener el libro en tus manos.",
+    image: giftLibroFisico
+  }];
 
   // Get tomorrow's date
   const getTomorrowDate = () => {
@@ -60,6 +63,7 @@ const ExclusiveGiftsSection = () => {
     const month = months[tomorrow.getMonth()];
     return `${day} de ${month}`;
   };
+
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(prev => {
@@ -70,6 +74,7 @@ const ExclusiveGiftsSection = () => {
     }, 1000);
     return () => clearInterval(timer);
   }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setKitsAvailable(prev => {
@@ -86,9 +91,11 @@ const ExclusiveGiftsSection = () => {
     }, 45000);
     return () => clearInterval(interval);
   }, []);
+
   const hours = Math.floor(timeLeft / 3600);
   const minutes = Math.floor(timeLeft % 3600 / 60);
   const seconds = timeLeft % 60;
+
   const handleAddToCart = () => {
     const cartButton = document.getElementById("original-cart-button");
     if (cartButton) {
@@ -99,6 +106,7 @@ const ExclusiveGiftsSection = () => {
       cartButton.click();
     }
   };
+
   return <section className="w-full py-3">
       <div className="w-full">
         {/* Recuadro con fondo claro */}
@@ -137,7 +145,7 @@ const ExclusiveGiftsSection = () => {
                 textDecorationColor: "#1B1B1B",
                 textDecorationThickness: "1px"
               }}>
-                    {gift.originalPrice}
+                    {currencyInfo.isLoading ? `$${gift.priceUSD}` : formatPrice(gift.priceUSD, currencyInfo)}
                   </span>
                 </div>
 
@@ -161,7 +169,11 @@ const ExclusiveGiftsSection = () => {
                     <h3 className="text-[9px] md:text-[10px] font-semibold leading-tight text-[#1B1B1B]/80" style={{
                   fontFamily: "Inter, sans-serif"
                 }}>
-                      {gift.title}
+                      {index === 3 ? (
+                        <>
+                          {currencyInfo.isLoading ? `$${gift.priceUSD}` : formatPrice(gift.priceUSD, currencyInfo)} {gift.title}
+                        </>
+                      ) : gift.title}
                     </h3>
                     <TooltipProvider>
                       <Tooltip delayDuration={200}>
