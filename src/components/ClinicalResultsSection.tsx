@@ -1,5 +1,5 @@
 import clinicalResults from "@/assets/clinical-results.png";
-import { useCurrencyDetection, formatPrice } from "@/hooks/useCurrencyDetection";
+import { useCurrencyDetection, formatLargePrice } from "@/hooks/useCurrencyDetection";
 
 const CircularProgress = ({
   percentage
@@ -56,7 +56,7 @@ const ClinicalResultsSection = () => {
           <div className="flex items-center gap-6">
             <CircularProgress percentage={98} />
             <p className="text-sm md:text-base text-foreground">
-              afirman ahorrar +{currencyInfo.isLoading ? '$4,000' : formatPrice(annualSavingsUSD, currencyInfo)} al año en promedio
+              afirman ahorrar +{currencyInfo.isLoading ? '$4,000' : formatLargePrice(annualSavingsUSD, currencyInfo)} al año en promedio
             </p>
           </div>
 
@@ -95,4 +95,5 @@ const ClinicalResultsSection = () => {
       </div>
     </section>;
 };
+
 export default ClinicalResultsSection;

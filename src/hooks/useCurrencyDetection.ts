@@ -574,6 +574,24 @@ const roundToPsychologicalPrice = (value: number): number => {
   return closest;
 };
 
+// Round large numbers to clean round figures (for $10k+ amounts)
+const roundToCleanNumber = (value: number): number => {
+  // For values >= 100,000, round to nearest 1,000
+  if (value >= 100000) {
+    return Math.round(value / 1000) * 1000;
+  }
+  // For values >= 10,000, round to nearest 500
+  if (value >= 10000) {
+    return Math.round(value / 500) * 500;
+  }
+  // For values >= 1,000, round to nearest 100
+  if (value >= 1000) {
+    return Math.round(value / 100) * 100;
+  }
+  // For smaller values, round to nearest 10
+  return Math.round(value / 10) * 10;
+};
+
 // Utility function to format price with currency
 export const formatPrice = (
   priceUSD: number,
@@ -582,7 +600,7 @@ export const formatPrice = (
 ): string => {
   // If USD, return without conversion
   if (currencyInfo.currencyCode === 'USD') {
-    return `$${priceUSD}`;
+    return `$${priceUSD.toLocaleString()}`;
   }
   
   const convertedPrice = priceUSD * currencyInfo.exchangeRate;
@@ -603,6 +621,33 @@ export const formatPrice = (
   if (showOriginal && currencyInfo.currencyCode !== 'USD') {
     return `${formatted} (~$${priceUSD} USD)`;
   }
+
+  return formatted;
+};
+
+// Format large prices with clean round numbers (for $1,000+ USD amounts)
+export const formatLargePrice = (
+  priceUSD: number,
+  currencyInfo: CurrencyInfo
+): string => {
+  // If USD, return with K notation for large numbers
+  if (currencyInfo.currencyCode === 'USD') {
+    if (priceUSD >= 1000) {
+      return `$${(priceUSD / 1000).toLocaleString()}k`;
+    }
+    return `$${priceUSD.toLocaleString()}`;
+  }
+  
+  const convertedPrice = priceUSD * currencyInfo.exchangeRate;
+  const roundedPrice = roundToCleanNumber(convertedPrice);
+  
+  // Format with proper currency symbol, no decimals
+  const formatted = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: currencyInfo.currencyCode,
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(roundedPrice);
 
   return formatted;
 };
