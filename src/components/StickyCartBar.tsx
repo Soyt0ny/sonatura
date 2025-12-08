@@ -1,37 +1,75 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { useCart } from "@/contexts/CartContext";
+import { useCartStore } from "@/stores/cartStore";
 import cartProduct from "@/assets/cart-product.png";
+import { ShopifyProduct } from "@/lib/shopify";
+
+// Producto hardcodeado para Realifestación (se usará hasta que haya productos en Shopify)
+const realifestacionProduct: ShopifyProduct = {
+  node: {
+    id: "gid://shopify/Product/realifestacion-libro",
+    title: "Libro Realifestación® Digital",
+    description: "Libro digital con +200 protocolos naturales de salud, belleza y Wellness",
+    handle: "realifestacion-libro",
+    priceRange: {
+      minVariantPrice: {
+        amount: "37.00",
+        currencyCode: "MXN"
+      }
+    },
+    images: {
+      edges: [{
+        node: {
+          url: cartProduct,
+          altText: "Libro Realifestación Digital"
+        }
+      }]
+    },
+    variants: {
+      edges: [{
+        node: {
+          id: "gid://shopify/ProductVariant/realifestacion-libro-variant",
+          title: "Default Title",
+          price: {
+            amount: "37.00",
+            currencyCode: "MXN"
+          },
+          availableForSale: true,
+          selectedOptions: []
+        }
+      }]
+    },
+    options: []
+  }
+};
 
 const StickyCartBar = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { addItem } = useCart();
+  const { addItem } = useCartStore();
 
   const handleAddToCart = () => {
+    const variant = realifestacionProduct.node.variants.edges[0].node;
     addItem({
-      id: "realifestacion-libro",
-      name: "Libro Realifestación® Digital",
-      price: 37,
-      originalPrice: 123,
-      image: cartProduct,
+      product: realifestacionProduct,
+      variantId: variant.id,
+      variantTitle: variant.title,
+      price: variant.price,
+      quantity: 1,
+      selectedOptions: variant.selectedOptions,
     });
   };
 
   useEffect(() => {
-    // Observar el botón de compra original
     const originalButton = document.getElementById("original-cart-button");
     
     if (!originalButton) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // Mostrar el botón sticky cuando el botón original NO está visible
         setIsVisible(!entry.isIntersecting);
       },
       {
-        // El threshold de 0 significa que se activará cuando cualquier parte del elemento entre o salga
         threshold: 0,
-        // rootMargin negativo para activar un poco antes de que el elemento salga completamente
         rootMargin: "-50px 0px -50px 0px"
       }
     );
