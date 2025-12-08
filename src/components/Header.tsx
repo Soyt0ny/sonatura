@@ -2,10 +2,12 @@ import { ShoppingCart, User, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import sonaturaLogo from "@/assets/sonatura-logo.png";
 import { useCartStore } from "@/stores/cartStore";
+import { useCurrencyDetection } from "@/hooks/useCurrencyDetection";
 
 const Header = () => {
   const { openCart, totalItems } = useCartStore();
   const itemCount = totalItems();
+  const { countryFlag, currencyCode, isLoading } = useCurrencyDetection();
 
   return (
     <header className="bg-background border-b border-border/40 sticky top-0 z-50 backdrop-blur-sm bg-background/95">
@@ -25,8 +27,15 @@ const Header = () => {
             />
           </div>
 
-          {/* Iconos de usuario y carrito a la derecha */}
-          <div className="flex items-center gap-2">
+          {/* Iconos de moneda, usuario y carrito a la derecha */}
+          <div className="flex items-center gap-1 md:gap-2">
+            {/* Currency indicator */}
+            {!isLoading && (
+              <div className="flex items-center gap-1 px-2 py-1 rounded-md bg-secondary/30 text-xs md:text-sm font-medium">
+                <span className="text-base">{countryFlag}</span>
+                <span className="text-muted-foreground">{currencyCode}</span>
+              </div>
+            )}
             <Button variant="ghost" size="icon">
               <User className="h-5 w-5" />
             </Button>
