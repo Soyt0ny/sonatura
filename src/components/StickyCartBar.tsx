@@ -14,7 +14,7 @@ const realifestacionProduct: ShopifyProduct = {
     priceRange: {
       minVariantPrice: {
         amount: "37.00",
-        currencyCode: "MXN"
+        currencyCode: "USD"
       }
     },
     images: {
@@ -32,7 +32,7 @@ const realifestacionProduct: ShopifyProduct = {
           title: "Default Title",
           price: {
             amount: "37.00",
-            currencyCode: "MXN"
+            currencyCode: "USD"
           },
           availableForSale: true,
           selectedOptions: []
