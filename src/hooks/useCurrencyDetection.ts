@@ -1,33 +1,80 @@
 import { useState, useEffect } from 'react';
 
-interface CurrencyInfo {
+export interface CurrencyInfo {
   countryCode: string;
   currencyCode: string;
   currencySymbol: string;
   exchangeRate: number;
+  countryFlag: string;
   isLoading: boolean;
 }
 
-// Map of country codes to currency info
-const countryCurrencyMap: Record<string, { code: string; symbol: string }> = {
-  US: { code: 'USD', symbol: '$' },
-  MX: { code: 'MXN', symbol: '$' },
-  ES: { code: 'EUR', symbol: '€' },
-  AR: { code: 'ARS', symbol: '$' },
-  CO: { code: 'COP', symbol: '$' },
-  CL: { code: 'CLP', symbol: '$' },
-  PE: { code: 'PEN', symbol: 'S/' },
-  BR: { code: 'BRL', symbol: 'R$' },
-  GB: { code: 'GBP', symbol: '£' },
-  CA: { code: 'CAD', symbol: '$' },
-  DE: { code: 'EUR', symbol: '€' },
-  FR: { code: 'EUR', symbol: '€' },
-  IT: { code: 'EUR', symbol: '€' },
-  JP: { code: 'JPY', symbol: '¥' },
-  CN: { code: 'CNY', symbol: '¥' },
-  IN: { code: 'INR', symbol: '₹' },
-  AU: { code: 'AUD', symbol: '$' },
-  // Add more as needed
+// Map of country codes to currency info and flag emoji
+const countryCurrencyMap: Record<string, { code: string; symbol: string; flag: string }> = {
+  US: { code: 'USD', symbol: '$', flag: '🇺🇸' },
+  MX: { code: 'MXN', symbol: '$', flag: '🇲🇽' },
+  ES: { code: 'EUR', symbol: '€', flag: '🇪🇸' },
+  AR: { code: 'ARS', symbol: '$', flag: '🇦🇷' },
+  CO: { code: 'COP', symbol: '$', flag: '🇨🇴' },
+  CL: { code: 'CLP', symbol: '$', flag: '🇨🇱' },
+  PE: { code: 'PEN', symbol: 'S/', flag: '🇵🇪' },
+  BR: { code: 'BRL', symbol: 'R$', flag: '🇧🇷' },
+  GB: { code: 'GBP', symbol: '£', flag: '🇬🇧' },
+  CA: { code: 'CAD', symbol: '$', flag: '🇨🇦' },
+  DE: { code: 'EUR', symbol: '€', flag: '🇩🇪' },
+  FR: { code: 'EUR', symbol: '€', flag: '🇫🇷' },
+  IT: { code: 'EUR', symbol: '€', flag: '🇮🇹' },
+  JP: { code: 'JPY', symbol: '¥', flag: '🇯🇵' },
+  CN: { code: 'CNY', symbol: '¥', flag: '🇨🇳' },
+  IN: { code: 'INR', symbol: '₹', flag: '🇮🇳' },
+  AU: { code: 'AUD', symbol: '$', flag: '🇦🇺' },
+  NZ: { code: 'NZD', symbol: '$', flag: '🇳🇿' },
+  KR: { code: 'KRW', symbol: '₩', flag: '🇰🇷' },
+  SG: { code: 'SGD', symbol: '$', flag: '🇸🇬' },
+  HK: { code: 'HKD', symbol: '$', flag: '🇭🇰' },
+  TW: { code: 'TWD', symbol: '$', flag: '🇹🇼' },
+  TH: { code: 'THB', symbol: '฿', flag: '🇹🇭' },
+  PH: { code: 'PHP', symbol: '₱', flag: '🇵🇭' },
+  MY: { code: 'MYR', symbol: 'RM', flag: '🇲🇾' },
+  ID: { code: 'IDR', symbol: 'Rp', flag: '🇮🇩' },
+  VN: { code: 'VND', symbol: '₫', flag: '🇻🇳' },
+  RU: { code: 'RUB', symbol: '₽', flag: '🇷🇺' },
+  UA: { code: 'UAH', symbol: '₴', flag: '🇺🇦' },
+  PL: { code: 'PLN', symbol: 'zł', flag: '🇵🇱' },
+  CZ: { code: 'CZK', symbol: 'Kč', flag: '🇨🇿' },
+  SE: { code: 'SEK', symbol: 'kr', flag: '🇸🇪' },
+  NO: { code: 'NOK', symbol: 'kr', flag: '🇳🇴' },
+  DK: { code: 'DKK', symbol: 'kr', flag: '🇩🇰' },
+  CH: { code: 'CHF', symbol: 'Fr', flag: '🇨🇭' },
+  ZA: { code: 'ZAR', symbol: 'R', flag: '🇿🇦' },
+  AE: { code: 'AED', symbol: 'د.إ', flag: '🇦🇪' },
+  SA: { code: 'SAR', symbol: '﷼', flag: '🇸🇦' },
+  IL: { code: 'ILS', symbol: '₪', flag: '🇮🇱' },
+  TR: { code: 'TRY', symbol: '₺', flag: '🇹🇷' },
+  EG: { code: 'EGP', symbol: 'E£', flag: '🇪🇬' },
+  NG: { code: 'NGN', symbol: '₦', flag: '🇳🇬' },
+  KE: { code: 'KES', symbol: 'KSh', flag: '🇰🇪' },
+  EC: { code: 'USD', symbol: '$', flag: '🇪🇨' },
+  VE: { code: 'VES', symbol: 'Bs', flag: '🇻🇪' },
+  UY: { code: 'UYU', symbol: '$', flag: '🇺🇾' },
+  PY: { code: 'PYG', symbol: '₲', flag: '🇵🇾' },
+  BO: { code: 'BOB', symbol: 'Bs', flag: '🇧🇴' },
+  CR: { code: 'CRC', symbol: '₡', flag: '🇨🇷' },
+  PA: { code: 'USD', symbol: '$', flag: '🇵🇦' },
+  GT: { code: 'GTQ', symbol: 'Q', flag: '🇬🇹' },
+  HN: { code: 'HNL', symbol: 'L', flag: '🇭🇳' },
+  SV: { code: 'USD', symbol: '$', flag: '🇸🇻' },
+  NI: { code: 'NIO', symbol: 'C$', flag: '🇳🇮' },
+  DO: { code: 'DOP', symbol: 'RD$', flag: '🇩🇴' },
+  CU: { code: 'CUP', symbol: '$', flag: '🇨🇺' },
+  PR: { code: 'USD', symbol: '$', flag: '🇵🇷' },
+  PT: { code: 'EUR', symbol: '€', flag: '🇵🇹' },
+  NL: { code: 'EUR', symbol: '€', flag: '🇳🇱' },
+  BE: { code: 'EUR', symbol: '€', flag: '🇧🇪' },
+  AT: { code: 'EUR', symbol: '€', flag: '🇦🇹' },
+  IE: { code: 'EUR', symbol: '€', flag: '🇮🇪' },
+  GR: { code: 'EUR', symbol: '€', flag: '🇬🇷' },
+  FI: { code: 'EUR', symbol: '€', flag: '🇫🇮' },
 };
 
 // Cache exchange rates in localStorage for 1 hour
@@ -66,12 +113,26 @@ const setCachedRates = (rates: Record<string, number>) => {
   }
 };
 
+// Function to get flag emoji from country code
+const getFlagEmoji = (countryCode: string): string => {
+  const country = countryCurrencyMap[countryCode];
+  if (country) return country.flag;
+  
+  // Generate flag emoji from country code (works for most countries)
+  const codePoints = countryCode
+    .toUpperCase()
+    .split('')
+    .map(char => 127397 + char.charCodeAt(0));
+  return String.fromCodePoint(...codePoints);
+};
+
 export const useCurrencyDetection = (): CurrencyInfo => {
   const [currencyInfo, setCurrencyInfo] = useState<CurrencyInfo>({
     countryCode: 'US',
     currencyCode: 'USD',
     currencySymbol: '$',
     exchangeRate: 1,
+    countryFlag: '🇺🇸',
     isLoading: true,
   });
 
@@ -83,7 +144,8 @@ export const useCurrencyDetection = (): CurrencyInfo => {
         const geoData = await geoResponse.json();
         const countryCode = geoData.country_code || 'US';
         
-        const currencyData = countryCurrencyMap[countryCode] || { code: 'USD', symbol: '$' };
+        const currencyData = countryCurrencyMap[countryCode] || { code: 'USD', symbol: '$', flag: getFlagEmoji(countryCode) };
+        const flag = currencyData.flag || getFlagEmoji(countryCode);
         
         // If USD, no conversion needed
         if (currencyData.code === 'USD') {
@@ -92,6 +154,7 @@ export const useCurrencyDetection = (): CurrencyInfo => {
             currencyCode: 'USD',
             currencySymbol: '$',
             exchangeRate: 1,
+            countryFlag: flag,
             isLoading: false,
           });
           return;
@@ -141,6 +204,7 @@ export const useCurrencyDetection = (): CurrencyInfo => {
           currencyCode: currencyData.code,
           currencySymbol: currencyData.symbol,
           exchangeRate,
+          countryFlag: flag,
           isLoading: false,
         });
       } catch (error) {
@@ -151,6 +215,7 @@ export const useCurrencyDetection = (): CurrencyInfo => {
           currencyCode: 'USD',
           currencySymbol: '$',
           exchangeRate: 1,
+          countryFlag: '🇺🇸',
           isLoading: false,
         });
       }
