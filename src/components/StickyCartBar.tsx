@@ -4,13 +4,13 @@ import { useCartStore } from "@/stores/cartStore";
 import cartProduct from "@/assets/cart-product.png";
 import { ShopifyProduct } from "@/lib/shopify";
 
-// Producto hardcodeado para Realifestación (se usará hasta que haya productos en Shopify)
+// Producto real de Shopify - Realifestación
 const realifestacionProduct: ShopifyProduct = {
   node: {
-    id: "gid://shopify/Product/realifestacion-libro",
+    id: "gid://shopify/Product/14884385390964",
     title: "Libro Realifestación® Digital",
     description: "Libro digital con +200 protocolos naturales de salud, belleza y Wellness",
-    handle: "realifestacion-libro",
+    handle: "libro-realifestacion-digital",
     priceRange: {
       minVariantPrice: {
         amount: "37.00",
@@ -20,7 +20,7 @@ const realifestacionProduct: ShopifyProduct = {
     images: {
       edges: [{
         node: {
-          url: cartProduct,
+          url: "https://cdn.shopify.com/s/files/1/0962/3099/8388/files/cart-product.png?v=1765178637",
           altText: "Libro Realifestación Digital"
         }
       }]
@@ -28,7 +28,7 @@ const realifestacionProduct: ShopifyProduct = {
     variants: {
       edges: [{
         node: {
-          id: "gid://shopify/ProductVariant/realifestacion-libro-variant",
+          id: "gid://shopify/ProductVariant/53730495922548",
           title: "Default Title",
           price: {
             amount: "37.00",
