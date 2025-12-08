@@ -162,21 +162,73 @@ export const useCurrencyDetection = (): CurrencyInfo => {
   return currencyInfo;
 };
 
+// Round to psychological pricing (ending in 7 or 9)
+const roundToPsychologicalPrice = (value: number): number => {
+  // For very small values, don't apply this logic
+  if (value < 5) {
+    return Math.round(value * 100) / 100;
+  }
+  
+  // For values under 20, round to nearest .97 or .99
+  if (value < 20) {
+    const base = Math.floor(value);
+    const options = [base - 0.03, base + 0.97, base + 0.99, base + 1.97];
+    return options.reduce((closest, opt) => 
+      Math.abs(opt - value) < Math.abs(closest - value) ? opt : closest
+    );
+  }
+  
+  // For larger values, round to end in 7 or 9
+  const rounded = Math.round(value);
+  const base = Math.floor(rounded / 10) * 10;
+  
+  const candidates = [
+    base - 3,  // ends in 7 (previous ten)
+    base - 1,  // ends in 9 (previous ten)
+    base + 7,  // ends in 7
+    base + 9,  // ends in 9
+  ].filter(c => c > 0);
+  
+  // Find closest, prefer 7 on ties (like $37, $67, $97)
+  let closest = candidates[0];
+  let minDist = Math.abs(rounded - closest);
+  
+  for (const c of candidates) {
+    const dist = Math.abs(rounded - c);
+    if (dist < minDist || (dist === minDist && c % 10 === 7)) {
+      minDist = dist;
+      closest = c;
+    }
+  }
+  
+  return closest;
+};
+
 // Utility function to format price with currency
 export const formatPrice = (
   priceUSD: number,
   currencyInfo: CurrencyInfo,
   showOriginal: boolean = false
 ): string => {
+  // If USD, return without conversion
+  if (currencyInfo.currencyCode === 'USD') {
+    return `$${priceUSD}`;
+  }
+  
   const convertedPrice = priceUSD * currencyInfo.exchangeRate;
+  const psychologicalPrice = roundToPsychologicalPrice(convertedPrice);
+  
+  // Currencies that don't use decimals
+  const noDecimalCurrencies = ['JPY', 'CLP', 'KRW', 'VND', 'IDR'];
+  const useDecimals = !noDecimalCurrencies.includes(currencyInfo.currencyCode) && psychologicalPrice < 100;
   
   // Format based on currency
-  const formatted = new Intl.NumberFormat('es-MX', {
+  const formatted = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: currencyInfo.currencyCode,
-    minimumFractionDigits: currencyInfo.currencyCode === 'JPY' || currencyInfo.currencyCode === 'CLP' ? 0 : 2,
-    maximumFractionDigits: currencyInfo.currencyCode === 'JPY' || currencyInfo.currencyCode === 'CLP' ? 0 : 2,
-  }).format(convertedPrice);
+    minimumFractionDigits: useDecimals ? 2 : 0,
+    maximumFractionDigits: useDecimals ? 2 : 0,
+  }).format(psychologicalPrice);
 
   if (showOriginal && currencyInfo.currencyCode !== 'USD') {
     return `${formatted} (~$${priceUSD} USD)`;
