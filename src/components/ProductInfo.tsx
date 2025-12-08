@@ -18,8 +18,49 @@ import { es } from "date-fns/locale";
 import { toast } from "@/hooks/use-toast";
 import { Copy, Check } from "lucide-react";
 import ExclusiveGiftsSection from "@/components/ExclusiveGiftsSection";
-import { useCart } from "@/contexts/CartContext";
+import { useCartStore } from "@/stores/cartStore";
 import cartProduct from "@/assets/cart-product.png";
+import { ShopifyProduct } from "@/lib/shopify";
+
+// Producto hardcodeado para Realifestación (se usará hasta que haya productos en Shopify)
+const realifestacionProduct: ShopifyProduct = {
+  node: {
+    id: "gid://shopify/Product/realifestacion-libro",
+    title: "Libro Realifestación® Digital",
+    description: "Libro digital con +200 protocolos naturales de salud, belleza y Wellness",
+    handle: "realifestacion-libro",
+    priceRange: {
+      minVariantPrice: {
+        amount: "37.00",
+        currencyCode: "MXN"
+      }
+    },
+    images: {
+      edges: [{
+        node: {
+          url: cartProduct,
+          altText: "Libro Realifestación Digital"
+        }
+      }]
+    },
+    variants: {
+      edges: [{
+        node: {
+          id: "gid://shopify/ProductVariant/realifestacion-libro-variant",
+          title: "Default Title",
+          price: {
+            amount: "37.00",
+            currencyCode: "MXN"
+          },
+          availableForSale: true,
+          selectedOptions: []
+        }
+      }]
+    },
+    options: []
+  }
+};
+
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState(59 * 60); // 59 minutos en segundos
 
@@ -75,15 +116,17 @@ const ProductInfo = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const [liveUsers, setLiveUsers] = useState(1150);
   const [copied, setCopied] = useState(false);
-  const { addItem } = useCart();
+  const { addItem } = useCartStore();
 
   const handleAddToCart = () => {
+    const variant = realifestacionProduct.node.variants.edges[0].node;
     addItem({
-      id: "realifestacion-libro",
-      name: "Libro Realifestación® Digital",
-      price: 37,
-      originalPrice: 123,
-      image: cartProduct,
+      product: realifestacionProduct,
+      variantId: variant.id,
+      variantTitle: variant.title,
+      price: variant.price,
+      quantity: 1,
+      selectedOptions: variant.selectedOptions,
     });
   };
 
