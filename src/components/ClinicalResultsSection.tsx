@@ -1,4 +1,6 @@
 import clinicalResults from "@/assets/clinical-results.png";
+import { useCurrencyDetection, formatPrice } from "@/hooks/useCurrencyDetection";
+
 const CircularProgress = ({
   percentage
 }: {
@@ -19,7 +21,11 @@ const CircularProgress = ({
       </div>
     </div>;
 };
+
 const ClinicalResultsSection = () => {
+  const currencyInfo = useCurrencyDetection();
+  const annualSavingsUSD = 4000;
+
   return <section className="mt-16 md:mt-24 max-w-6xl mx-auto px-4">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
         Resultados Comprobados por Miles de Clientas
@@ -49,7 +55,9 @@ const ClinicalResultsSection = () => {
           {/* Stat 1 */}
           <div className="flex items-center gap-6">
             <CircularProgress percentage={98} />
-            <p className="text-sm md:text-base text-foreground">afirman ahorrar +$4,000 dólares al año en promedio</p>
+            <p className="text-sm md:text-base text-foreground">
+              afirman ahorrar +{currencyInfo.isLoading ? '$4,000' : formatPrice(annualSavingsUSD, currencyInfo)} al año en promedio
+            </p>
           </div>
 
           {/* Stat 2 */}

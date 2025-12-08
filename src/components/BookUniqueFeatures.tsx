@@ -1,7 +1,11 @@
 import bookImage from "@/assets/book-lifestyle-bath.png";
 import { Sparkles, Shield, DollarSign, Stars } from "lucide-react";
+import { useCurrencyDetection, formatPrice } from "@/hooks/useCurrencyDetection";
 
 const BookUniqueFeatures = () => {
+  const currencyInfo = useCurrencyDetection();
+  const savingsUSD = 10000;
+
   const features = [
     {
       icon: <Sparkles className="w-6 h-6" />,
@@ -17,7 +21,7 @@ const BookUniqueFeatures = () => {
     },
     {
       icon: <DollarSign className="w-6 h-6" />,
-      title: "Ahorra +$10k al Año",
+      title: `Ahorra +${currencyInfo.isLoading ? '$10k' : formatPrice(savingsUSD, currencyInfo).replace(/,/g, '')} al Año`,
       description: "Deja de gastar en suplementos caros, tratamientos costosos y productos que no funcionan. Resuelve el problema desde adentro y de raíz.",
       badges: ["Económico", "Alta Efectividad"]
     },

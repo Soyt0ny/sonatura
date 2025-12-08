@@ -1,7 +1,11 @@
 import bookLifestyle1 from "@/assets/book-lifestyle-1.png";
 import bookLifestyle2 from "@/assets/book-lifestyle-2.png";
+import { useCurrencyDetection, formatPrice } from "@/hooks/useCurrencyDetection";
 
 const BookExplanationSection = () => {
+  const currencyInfo = useCurrencyDetection();
+  const savingsUSD = 10000;
+
   return (
     <section className="mb-16 md:mb-20 max-w-5xl mx-auto px-4">
       {/* Primera sección */}
@@ -105,13 +109,18 @@ const BookExplanationSection = () => {
               "Alivio de acné, grasa por cortisol e inflamación",
               "Resultados visibles en 7-14 días",
               "Sin malestar de pastillas y tratamientos químicos",
-              "Ahorra más de $10,000/año vs. suplementos"
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-2 text-xs">
                 <span className="text-primary mt-0.5 flex-shrink-0">✓</span>
                 <span className="text-muted-foreground">{item}</span>
               </li>
             ))}
+            <li className="flex items-start gap-2 text-xs">
+              <span className="text-primary mt-0.5 flex-shrink-0">✓</span>
+              <span className="text-muted-foreground">
+                Ahorra más de {currencyInfo.isLoading ? '$10,000' : formatPrice(savingsUSD, currencyInfo)}/año vs. suplementos
+              </span>
+            </li>
           </ul>
           
           <div className="pt-2">
