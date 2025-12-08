@@ -424,17 +424,45 @@ const detectCountryFromIP = async (): Promise<string> => {
   return 'US'; // Default fallback
 };
 
-export const useCurrencyDetection = (): CurrencyInfo => {
-  const [currencyInfo, setCurrencyInfo] = useState<CurrencyInfo>({
+// Get initial state from cache immediately (non-blocking)
+const getInitialState = (): CurrencyInfo => {
+  try {
+    const cachedCountry = getCachedCountry();
+    if (cachedCountry) {
+      const currencyData = countryCurrencyMap[cachedCountry] || { code: 'USD', symbol: '$', flag: '🇺🇸' };
+      const cachedRates = getCachedRates();
+      const exchangeRate = cachedRates?.rates[currencyData.code] || 1;
+      
+      return {
+        countryCode: cachedCountry,
+        currencyCode: currencyData.code,
+        currencySymbol: currencyData.symbol,
+        exchangeRate,
+        countryFlag: currencyData.flag,
+        isLoading: false,
+      };
+    }
+  } catch (e) {
+    // Ignore cache errors
+  }
+  
+  return {
     countryCode: 'US',
     currencyCode: 'USD',
     currencySymbol: '$',
     exchangeRate: 1,
     countryFlag: '🇺🇸',
     isLoading: true,
-  });
+  };
+};
+
+export const useCurrencyDetection = (): CurrencyInfo => {
+  const [currencyInfo, setCurrencyInfo] = useState<CurrencyInfo>(getInitialState);
 
   useEffect(() => {
+    // If we have cached data, skip detection
+    if (!currencyInfo.isLoading) return;
+    
     const detectCurrency = async () => {
       try {
         // Step 1: Detect country from IP with multiple fallbacks
@@ -464,44 +492,25 @@ export const useCurrencyDetection = (): CurrencyInfo => {
         if (cached && cached.rates[currencyData.code]) {
           exchangeRate = cached.rates[currencyData.code];
         } else {
-          // Fetch fresh rates (using free API)
-          try {
-            const ratesResponse = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
-            const ratesData = await ratesResponse.json();
-            
-            if (ratesData.rates) {
-              setCachedRates(ratesData.rates);
-              exchangeRate = ratesData.rates[currencyData.code] || 1;
-            }
-          } catch (rateError) {
-            console.error('Error fetching exchange rates:', rateError);
-            // Fallback to approximate rates if API fails
-            const fallbackRates: Record<string, number> = {
-              MXN: 20.5,
-              EUR: 0.92,
-              GBP: 0.79,
-              CAD: 1.41,
-              ARS: 1050,
-              COP: 4400,
-              CLP: 980,
-              PEN: 3.8,
-              BRL: 6.1,
-              JPY: 154,
-              CNY: 7.3,
-              INR: 84,
-              AUD: 1.58,
-              KRW: 1420,
-              SGD: 1.35,
-              HKD: 7.8,
-              TWD: 32,
-              THB: 35,
-              PHP: 59,
-              IDR: 16000,
-              MYR: 4.5,
-              VND: 25500,
-            };
-            exchangeRate = fallbackRates[currencyData.code] || 1;
-          }
+          // Fetch fresh rates (using free API) - don't await, just fire and forget for speed
+          fetch('https://api.exchangerate-api.com/v4/latest/USD')
+            .then(res => res.json())
+            .then(ratesData => {
+              if (ratesData.rates) {
+                setCachedRates(ratesData.rates);
+              }
+            })
+            .catch(() => {});
+          
+          // Use fallback rates immediately
+          const fallbackRates: Record<string, number> = {
+            MXN: 20.5, EUR: 0.92, GBP: 0.79, CAD: 1.41, ARS: 1050,
+            COP: 4400, CLP: 980, PEN: 3.8, BRL: 6.1, JPY: 154,
+            CNY: 7.3, INR: 84, AUD: 1.58, KRW: 1420, SGD: 1.35,
+            HKD: 7.8, TWD: 32, THB: 35, PHP: 59, IDR: 16000,
+            MYR: 4.5, VND: 25500,
+          };
+          exchangeRate = fallbackRates[currencyData.code] || 1;
         }
 
         setCurrencyInfo({
@@ -514,7 +523,6 @@ export const useCurrencyDetection = (): CurrencyInfo => {
         });
       } catch (error) {
         console.error('Error detecting currency:', error);
-        // Default to USD on error
         setCurrencyInfo({
           countryCode: 'US',
           currencyCode: 'USD',
@@ -527,7 +535,7 @@ export const useCurrencyDetection = (): CurrencyInfo => {
     };
 
     detectCurrency();
-  }, []);
+  }, [currencyInfo.isLoading]);
 
   return currencyInfo;
 };

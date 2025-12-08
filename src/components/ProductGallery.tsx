@@ -1,14 +1,17 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import product1 from "@/assets/product-1.png";
-import product2 from "@/assets/product-2.png";
-import product3 from "@/assets/product-3.png";
-import product4 from "@/assets/product-4.png";
-import product5 from "@/assets/product-5.png";
 
-const ProductGallery = () => {
-  const images = [product1, product2, product3, product4, product5];
+// Use public folder for faster loading
+const images = [
+  "/products/product-1.png",
+  "/products/product-2.png",
+  "/products/product-3.png",
+  "/products/product-4.png",
+  "/products/product-5.png"
+];
+
+const ProductGallery = memo(() => {
   const [selectedImage, setSelectedImage] = useState(0);
 
   const handlePrevious = () => {
@@ -26,6 +29,11 @@ const ProductGallery = () => {
           src={images[selectedImage]}
           alt="Producto"
           className="w-full h-full object-cover"
+          loading={selectedImage === 0 ? "eager" : "lazy"}
+          width="600"
+          height="600"
+          decoding="async"
+          fetchPriority={selectedImage === 0 ? "high" : "auto"}
         />
         
         {/* Best Seller Badge */}
@@ -59,12 +67,22 @@ const ProductGallery = () => {
               selectedImage === idx ? "border-primary" : "border-transparent"
             }`}
           >
-            <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
+            <img 
+              src={img} 
+              alt={`Thumbnail ${idx + 1}`} 
+              className="w-full h-full object-cover"
+              loading="lazy"
+              width="120"
+              height="120"
+              decoding="async"
+            />
           </button>
         ))}
       </div>
     </div>
   );
-};
+});
+
+ProductGallery.displayName = "ProductGallery";
 
 export default ProductGallery;
