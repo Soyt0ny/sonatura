@@ -1,6 +1,6 @@
 import bookLifestyle1 from "@/assets/book-lifestyle-1.png";
 import bookLifestyle2 from "@/assets/book-lifestyle-2.png";
-import { useCurrencyDetection, formatPrice } from "@/hooks/useCurrencyDetection";
+import { useCurrencyDetection, formatLargePrice } from "@/hooks/useCurrencyDetection";
 
 const BookExplanationSection = () => {
   const currencyInfo = useCurrencyDetection();
@@ -118,7 +118,7 @@ const BookExplanationSection = () => {
             <li className="flex items-start gap-2 text-xs">
               <span className="text-primary mt-0.5 flex-shrink-0">✓</span>
               <span className="text-muted-foreground">
-                Ahorra más de {currencyInfo.isLoading ? '$10,000' : formatPrice(savingsUSD, currencyInfo)}/año vs. suplementos
+                Ahorra más de {currencyInfo.isLoading ? '$10,000' : formatLargePrice(savingsUSD, currencyInfo)}/año vs. suplementos
               </span>
             </li>
           </ul>

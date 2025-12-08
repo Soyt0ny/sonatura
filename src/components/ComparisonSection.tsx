@@ -1,6 +1,6 @@
 import { Check, X } from "lucide-react";
 import bookLifestyleSpa from "@/assets/book-lifestyle-spa.png";
-import { useCurrencyDetection, formatPrice } from "@/hooks/useCurrencyDetection";
+import { useCurrencyDetection, formatPrice, formatLargePrice } from "@/hooks/useCurrencyDetection";
 
 const ComparisonSection = () => {
   const currencyInfo = useCurrencyDetection();
@@ -52,7 +52,7 @@ const ComparisonSection = () => {
           <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
             <p>
               Y corta la dependencia de{" "}
-              <span className="font-medium text-foreground">+{currencyInfo.isLoading ? '$10,000' : formatPrice(annualSavingsUSD, currencyInfo)} al año</span>{" "}
+              <span className="font-medium text-foreground">+{currencyInfo.isLoading ? '$10,000' : formatLargePrice(annualSavingsUSD, currencyInfo)} al año</span>{" "}
               en productos con ingredientes químicos agresivos que no arreglan el problema de raíz.
             </p>
           </div>
@@ -66,10 +66,10 @@ const ComparisonSection = () => {
               {competitorPricesUSD.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-3 text-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-red-400 flex-shrink-0 mt-1.5"></span>
-                  <span className="font-medium text-foreground min-w-[70px]">
-                    {currencyInfo.isLoading ? `$${item.priceUSD.toLocaleString()}+` : `${formatPrice(item.priceUSD, currencyInfo)}+`}
+                  <span className="font-medium text-foreground min-w-[90px]">
+                    {currencyInfo.isLoading ? `$${item.priceUSD.toLocaleString()}+` : `${formatLargePrice(item.priceUSD, currencyInfo)}+`}
                   </span>
-                  <span className="text-muted-foreground">{item.description}</span>
+                  <span className="text-muted-foreground">{item.description} <span className="text-foreground/60">al año</span></span>
                 </li>
               ))}
             </ul>

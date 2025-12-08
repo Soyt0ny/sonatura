@@ -21,7 +21,7 @@ import ExclusiveGiftsSection from "@/components/ExclusiveGiftsSection";
 import { useCartStore } from "@/stores/cartStore";
 import cartProduct from "@/assets/cart-product.png";
 import { ShopifyProduct } from "@/lib/shopify";
-import { useCurrencyDetection, formatPrice } from "@/hooks/useCurrencyDetection";
+import { useCurrencyDetection, formatPrice, formatLargePrice } from "@/hooks/useCurrencyDetection";
 // Producto real de Shopify - Realifestación
 const realifestacionProduct: ShopifyProduct = {
   node: {
@@ -232,7 +232,7 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0 w-6 text-center">⇈</div>
-              <span className="text-sm">Ahorrar {currencyInfo.isLoading ? '$10k' : formatPrice(annualSavingsUSD, currencyInfo)} al año en productos de Skincare y suplementos que no necesitas y que tienen ingredientes químicos e invasivos que dañan tu salud</span>
+              <span className="text-sm">Ahorrar {currencyInfo.isLoading ? '$10k' : formatLargePrice(annualSavingsUSD, currencyInfo)} al año en productos de Skincare y suplementos que no necesitas y que tienen ingredientes químicos e invasivos que dañan tu salud</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0 w-6 text-center">◎</div>
@@ -298,7 +298,7 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0 w-6 text-center">⇈</div>
-              <span className="text-sm">Ahorrar {currencyInfo.isLoading ? '$10k' : formatPrice(annualSavingsUSD, currencyInfo)} al año en productos de Skincare y suplementos que no necesitas y que tienen ingredientes químicos e invasivos que dañan tu salud</span>
+              <span className="text-sm">Ahorrar {currencyInfo.isLoading ? '$10k' : formatLargePrice(annualSavingsUSD, currencyInfo)} al año en productos de Skincare y suplementos que no necesitas y que tienen ingredientes químicos e invasivos que dañan tu salud</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0 w-6 text-center">◎</div>
@@ -474,7 +474,7 @@ const ProductInfo = () => {
                 </AccordionTrigger>
                 <AccordionContent className="text-sm text-foreground/90 space-y-2">
                   <p>Realifestación es un libro digital con +200 protocolos de salud, belleza y biohacking que te ayudarán a transformar tu vida usando ingredientes naturales que tu cuerpo reconoce.</p>
-                  <p>Aprenderás a eliminar la dependencia de productos químicos costosos y dañinos, mientras ahorras más de {currencyInfo.isLoading ? '$10,000' : formatPrice(annualSavingsUSD, currencyInfo)} al año en suplementos, skincare y tratamientos innecesarios.</p>
+                  <p>Aprenderás a eliminar la dependencia de productos químicos costosos y dañinos, mientras ahorras más de {currencyInfo.isLoading ? '$10,000' : formatLargePrice(annualSavingsUSD, currencyInfo)} al año en suplementos, skincare y tratamientos innecesarios.</p>
                 </AccordionContent>
               </AccordionItem>
 
