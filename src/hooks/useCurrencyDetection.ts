@@ -426,12 +426,22 @@ const detectCountryFromIP = async (): Promise<string> => {
 
 // Get initial state from cache immediately (non-blocking)
 const getInitialState = (): CurrencyInfo => {
+  // Fallback rates for immediate use
+  const fallbackRates: Record<string, number> = {
+    MXN: 18.2, EUR: 0.86, GBP: 0.75, CAD: 1.38, ARS: 1440,
+    COP: 3810, CLP: 920, PEN: 3.37, BRL: 5.32, JPY: 155,
+    CNY: 7.08, INR: 90, AUD: 1.51, KRW: 1473, SGD: 1.3,
+    HKD: 7.78, TWD: 31.3, THB: 31.9, PHP: 59, IDR: 16674,
+    MYR: 4.11, VND: 26280, GTQ: 7.67, CRC: 490, DOP: 63.9,
+    HNL: 26.4, NIO: 36.8, BOB: 6.93, PYG: 6954, UYU: 39.2,
+  };
+
   try {
     const cachedCountry = getCachedCountry();
     if (cachedCountry) {
       const currencyData = countryCurrencyMap[cachedCountry] || { code: 'USD', symbol: '$', flag: '🇺🇸' };
       const cachedRates = getCachedRates();
-      const exchangeRate = cachedRates?.rates[currencyData.code] || 1;
+      const exchangeRate = cachedRates?.rates[currencyData.code] || fallbackRates[currencyData.code] || 1;
       
       return {
         countryCode: cachedCountry,
@@ -446,6 +456,7 @@ const getInitialState = (): CurrencyInfo => {
     // Ignore cache errors
   }
   
+  // Default to USD while loading
   return {
     countryCode: 'US',
     currencyCode: 'USD',
@@ -502,13 +513,14 @@ export const useCurrencyDetection = (): CurrencyInfo => {
             })
             .catch(() => {});
           
-          // Use fallback rates immediately
+          // Use fallback rates immediately - updated with current rates
           const fallbackRates: Record<string, number> = {
-            MXN: 20.5, EUR: 0.92, GBP: 0.79, CAD: 1.41, ARS: 1050,
-            COP: 4400, CLP: 980, PEN: 3.8, BRL: 6.1, JPY: 154,
-            CNY: 7.3, INR: 84, AUD: 1.58, KRW: 1420, SGD: 1.35,
-            HKD: 7.8, TWD: 32, THB: 35, PHP: 59, IDR: 16000,
-            MYR: 4.5, VND: 25500,
+            MXN: 18.2, EUR: 0.86, GBP: 0.75, CAD: 1.38, ARS: 1440,
+            COP: 3810, CLP: 920, PEN: 3.37, BRL: 5.32, JPY: 155,
+            CNY: 7.08, INR: 90, AUD: 1.51, KRW: 1473, SGD: 1.3,
+            HKD: 7.78, TWD: 31.3, THB: 31.9, PHP: 59, IDR: 16674,
+            MYR: 4.11, VND: 26280, GTQ: 7.67, CRC: 490, DOP: 63.9,
+            HNL: 26.4, NIO: 36.8, BOB: 6.93, PYG: 6954, UYU: 39.2,
           };
           exchangeRate = fallbackRates[currencyData.code] || 1;
         }

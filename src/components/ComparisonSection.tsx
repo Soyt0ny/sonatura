@@ -45,14 +45,14 @@ const ComparisonSection = () => {
         {/* Right Column - Price Comparison */}
         <div className="space-y-5">
           <h2 className="text-2xl md:text-3xl font-semibold leading-tight tracking-tight">
-            Invierte <span className="text-primary">{currencyInfo.isLoading ? '$37' : formatPrice(bookPriceUSD, currencyInfo)}</span> una vez.
+            Invierte <span className="text-primary">{formatPrice(bookPriceUSD, currencyInfo)}</span> una vez.
             <br />Para siempre.
           </h2>
           
           <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
             <p>
               Y corta la dependencia de{" "}
-              <span className="font-medium text-foreground">+{currencyInfo.isLoading ? '$10,000' : formatLargePrice(annualSavingsUSD, currencyInfo)} al año</span>{" "}
+              <span className="font-medium text-foreground">+{formatLargePrice(annualSavingsUSD, currencyInfo)} al año</span>{" "}
               en productos con ingredientes químicos agresivos que no arreglan el problema de raíz.
             </p>
           </div>
@@ -67,7 +67,7 @@ const ComparisonSection = () => {
                 <li key={idx} className="flex items-start gap-3 text-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-red-400 flex-shrink-0 mt-1.5"></span>
                   <span className="font-medium text-foreground min-w-[90px]">
-                    {currencyInfo.isLoading ? `$${item.priceUSD.toLocaleString()}+` : `${formatLargePrice(item.priceUSD, currencyInfo)}+`}
+                    {formatLargePrice(item.priceUSD, currencyInfo)}+
                   </span>
                   <span className="text-muted-foreground">{item.description} <span className="text-foreground/60">al año</span></span>
                 </li>
@@ -86,7 +86,7 @@ const ComparisonSection = () => {
             <div className="flex items-baseline gap-3">
               <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0 mt-2"></span>
               <span className="text-3xl md:text-4xl font-semibold text-primary">
-                {currencyInfo.isLoading ? '$37' : formatPrice(bookPriceUSD, currencyInfo)}
+                {formatPrice(bookPriceUSD, currencyInfo)}
               </span>
               <span className="text-sm text-muted-foreground">una sola vez</span>
             </div>
