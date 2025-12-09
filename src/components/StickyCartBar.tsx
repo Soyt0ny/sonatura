@@ -112,14 +112,14 @@ const StickyCartBar = () => {
           <div className="flex flex-col items-end gap-0.5">
             <div className="flex items-center gap-2">
               <span className="text-sm text-muted-foreground line-through">
-                {currencyInfo.isLoading ? '$123' : formatPrice(originalPriceUSD, currencyInfo)}
+                {formatPrice(originalPriceUSD, currencyInfo)}
               </span>
               <span className="text-xl md:text-2xl font-bold text-foreground">
-                {currencyInfo.isLoading ? '$37' : formatPrice(currentPriceUSD, currencyInfo)}
+                {formatPrice(currentPriceUSD, currencyInfo)}
               </span>
             </div>
             <span className="hidden md:block text-xs text-muted-foreground">
-              O 6 pagos de <span className="font-semibold">{currencyInfo.isLoading ? '$6.17' : formatPrice(monthlyPriceUSD, currencyInfo)}/mes</span>
+              O 6 pagos de <span className="font-semibold">{formatPrice(monthlyPriceUSD, currencyInfo)}/mes</span>
             </span>
           </div>
 

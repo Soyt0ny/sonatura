@@ -145,7 +145,7 @@ const ExclusiveGiftsSection = () => {
                 textDecorationColor: "#1B1B1B",
                 textDecorationThickness: "1px"
               }}>
-                    {currencyInfo.isLoading ? `$${gift.priceUSD}` : formatPrice(gift.priceUSD, currencyInfo)}
+                    {formatPrice(gift.priceUSD, currencyInfo)}
                   </span>
                 </div>
 
@@ -171,7 +171,7 @@ const ExclusiveGiftsSection = () => {
                 }}>
                       {index === 3 ? (
                         <>
-                          {currencyInfo.isLoading ? `$${gift.priceUSD}` : formatPrice(gift.priceUSD, currencyInfo)} {gift.title}
+                          {formatPrice(gift.priceUSD, currencyInfo)} {gift.title}
                         </>
                       ) : gift.title}
                     </h3>
