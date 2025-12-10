@@ -92,41 +92,27 @@ const CountdownTimer = () => {
     </div>;
 };
 // Precios mencionados en reseñas (USD)
-const reviewPricesUSD = {
-  creams: 80,
-  monthlySupplements: 200,
-  bookPrice: 37,
-  dermatologist: 150
-};
-
-const getFeaturedReviews = (currencyInfo: any) => {
-  const formatReviewPrice = (usd: number) => {
-    if (currencyInfo.isLoading) return `$${usd}`;
-    return formatPrice(usd, currencyInfo);
-  };
-
-  return [{
-    name: "Mariana G.",
-    date: "hace 1 día",
-    review: `Honestamente no esperaba ver cambios tan rápido. En 10 días mi cara ya no está tan hinchada y el acné que tenía en la frente casi desapareció. He probado cremas de ${formatReviewPrice(reviewPricesUSD.creams)} que no hicieron nada, esto es completamente diferente porque atacas desde lo que comes y no solo la piel por fuera.`
-  }, {
-    name: "Daniela P.",
-    date: "hace 3 días",
-    review: `Antes gastaba como ${formatReviewPrice(reviewPricesUSD.monthlySupplements)} al mes en suplementos y productos para la piel, literal ya llevaba años así. Con el libro dejé todo eso y en 3 semanas vi más resultados que con cualquier cosa que haya comprado. Además está en mi celular, lo leo en el gym o donde sea. Lo voy a comprar físico también porque me encantó.`
-  }, {
-    name: "Andrea T.",
-    date: "hace 6 días",
-    review: "Por fin algo que funciona de verdad. Ya había probado de todo y nada me duraba, siempre volvía lo mismo. Aquí aprendes a balancear tus hormonas de forma natural y eso hace que los cambios sean permanentes. En 2 semanas bajé grasa del abdomen que llevaba meses estancada."
-  }, {
-    name: "Fernanda K.",
-    date: "20 Nov 2025",
-    review: `Al principio dudé porque es digital, pero es súper práctico. Lo tengo en mi tablet, en el celular y en la computadora. Lo consulto cuando cocino y así no se me olvida nada. Lo mejor es que gasté ${formatReviewPrice(reviewPricesUSD.bookPrice)} una sola vez y ya no tengo que estar comprando cosas cada mes. Mucho más económico y efectivo.`
-  }, {
-    name: "Regina H.",
-    date: "15 Nov 2025",
-    review: `Llevaba años con acné hormonal y gastando fácil ${formatReviewPrice(reviewPricesUSD.dermatologist)} mensuales en dermatólogo y tratamientos. Nada funcionaba más de 2 semanas. Con este libro entendí que el problema era interno, no externo. En 12 días mi piel cambió completamente, es increíble como algo tan natural puede ser tan potente.`
-  }];
-};
+const featuredReviews = [{
+  name: "Mariana G.",
+  date: "hace 1 día",
+  review: "Honestamente no esperaba ver cambios tan rápido. En 10 días mi cara ya no está tan hinchada y el acné que tenía en la frente casi desapareció. He probado cremas de +$1,500 que no hicieron nada, esto es completamente diferente porque atacas desde lo que comes y no solo la piel por fuera."
+}, {
+  name: "Daniela P.",
+  date: "hace 3 días",
+  review: "Antes gastaba como +$200 al mes en suplementos y productos para la piel, literal ya llevaba años así. Con el libro dejé todo eso y en 3 semanas vi más resultados que con cualquier cosa que haya comprado. Además está en mi celular, lo leo en el gym o donde sea. Lo voy a comprar físico también porque me encantó."
+}, {
+  name: "Andrea T.",
+  date: "hace 6 días",
+  review: "Por fin algo que funciona de verdad. Ya había probado de todo y nada me duraba, siempre volvía lo mismo. Aquí aprendes a balancear tus hormonas de forma natural y eso hace que los cambios sean permanentes. En 2 semanas bajé grasa del abdomen que llevaba meses estancada."
+}, {
+  name: "Fernanda K.",
+  date: "20 Nov 2025",
+  review: "Al principio dudé porque es digital, pero es súper práctico. Lo tengo en mi tablet, en el celular y en la computadora. Lo consulto cuando cocino y así no se me olvida nada. Lo mejor es que gasté $37 una sola vez y ya no tengo que estar comprando cosas cada mes. Mucho más económico y efectivo."
+}, {
+  name: "Regina H.",
+  date: "15 Nov 2025",
+  review: "Llevaba años con acné hormonal y gastando fácil +$150 mensuales en dermatólogo y tratamientos. Nada funcionaba más de 2 semanas. Con este libro entendí que el problema era interno, no externo. En 12 días mi piel cambió completamente, es increíble como algo tan natural puede ser tan potente."
+}];
 const ProductInfo = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const [liveUsers, setLiveUsers] = useState(1150);
@@ -140,8 +126,6 @@ const ProductInfo = () => {
   const monthlyPriceUSD = 6.17;
   const annualSavingsUSD = 10000;
 
-  // Generate featured reviews with dynamic currency
-  const featuredReviews = getFeaturedReviews(currencyInfo);
 
   const handleAddToCart = () => {
     const variant = realifestacionProduct.node.variants.edges[0].node;
