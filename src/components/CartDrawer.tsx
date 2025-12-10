@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useCartStore } from "@/stores/cartStore";
 import { Minus, Plus, Trash2, ShoppingBag, Loader2, ExternalLink } from "lucide-react";
 import { toast } from "sonner";
+import { useCurrencyDetection, formatPrice } from "@/hooks/useCurrencyDetection";
 
 const CartDrawer = () => {
   const { 
@@ -15,6 +16,8 @@ const CartDrawer = () => {
     isLoading,
     createCheckout 
   } = useCartStore();
+
+  const currencyInfo = useCurrencyDetection();
 
   const handleCheckout = async () => {
     try {
@@ -35,7 +38,7 @@ const CartDrawer = () => {
     }
   };
 
-  const total = totalPrice();
+  const totalUSD = totalPrice();
 
   return (
     <Sheet open={isOpen} onOpenChange={closeCart}>
@@ -56,68 +59,71 @@ const CartDrawer = () => {
           ) : (
             <>
               <div className="flex-1 overflow-y-auto space-y-4 pr-2 min-h-0">
-                {items.map((item) => (
-                  <div
-                    key={item.variantId}
-                    className="flex gap-4 p-4 bg-card rounded-xl border border-border/30"
-                  >
-                    {item.product.node.images?.edges?.[0]?.node && (
-                      <img
-                        src={item.product.node.images.edges[0].node.url}
-                        alt={item.product.node.title}
-                        className="w-20 h-20 object-cover rounded-lg"
-                      />
-                    )}
-                    <div className="flex-1 min-w-0">
-                      <h4 className="font-semibold text-foreground text-sm truncate">
-                        {item.product.node.title}
-                      </h4>
-                      {item.variantTitle !== "Default Title" && (
-                        <p className="text-xs text-muted-foreground">
-                          {item.selectedOptions.map(option => option.value).join(' • ')}
-                        </p>
+                {items.map((item) => {
+                  const itemPriceUSD = parseFloat(item.price.amount);
+                  return (
+                    <div
+                      key={item.variantId}
+                      className="flex gap-4 p-4 bg-card rounded-xl border border-border/30"
+                    >
+                      {item.product.node.images?.edges?.[0]?.node && (
+                        <img
+                          src={item.product.node.images.edges[0].node.url}
+                          alt={item.product.node.title}
+                          className="w-20 h-20 object-cover rounded-lg"
+                        />
                       )}
-                      <div className="flex items-center gap-2 mt-1">
-                        <span className="font-bold text-foreground">
-                          {item.price.currencyCode} ${parseFloat(item.price.amount).toFixed(2)}
-                        </span>
-                      </div>
-                      
-                      <div className="flex items-center justify-between mt-3">
-                        <div className="flex items-center gap-2">
-                          <button
-                            onClick={() => updateQuantity(item.variantId, item.quantity - 1)}
-                            className="w-7 h-7 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
-                          >
-                            <Minus className="w-3 h-3" />
-                          </button>
-                          <span className="w-6 text-center text-sm font-medium">
-                            {item.quantity}
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-semibold text-foreground text-sm truncate">
+                          {item.product.node.title}
+                        </h4>
+                        {item.variantTitle !== "Default Title" && (
+                          <p className="text-xs text-muted-foreground">
+                            {item.selectedOptions.map(option => option.value).join(' • ')}
+                          </p>
+                        )}
+                        <div className="flex items-center gap-2 mt-1">
+                          <span className="font-bold text-foreground">
+                            {formatPrice(itemPriceUSD, currencyInfo)}
                           </span>
+                        </div>
+                        
+                        <div className="flex items-center justify-between mt-3">
+                          <div className="flex items-center gap-2">
+                            <button
+                              onClick={() => updateQuantity(item.variantId, item.quantity - 1)}
+                              className="w-7 h-7 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
+                            >
+                              <Minus className="w-3 h-3" />
+                            </button>
+                            <span className="w-6 text-center text-sm font-medium">
+                              {item.quantity}
+                            </span>
+                            <button
+                              onClick={() => updateQuantity(item.variantId, item.quantity + 1)}
+                              className="w-7 h-7 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
+                            >
+                              <Plus className="w-3 h-3" />
+                            </button>
+                          </div>
                           <button
-                            onClick={() => updateQuantity(item.variantId, item.quantity + 1)}
-                            className="w-7 h-7 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
+                            onClick={() => removeItem(item.variantId)}
+                            className="text-muted-foreground hover:text-destructive transition-colors"
                           >
-                            <Plus className="w-3 h-3" />
+                            <Trash2 className="w-4 h-4" />
                           </button>
                         </div>
-                        <button
-                          onClick={() => removeItem(item.variantId)}
-                          className="text-muted-foreground hover:text-destructive transition-colors"
-                        >
-                          <Trash2 className="w-4 h-4" />
-                        </button>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
 
               <div className="flex-shrink-0 border-t border-border/50 pt-4 mt-4 space-y-4 pb-8 bg-background">
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Subtotal</span>
                   <span className="font-bold text-xl text-foreground">
-                    ${total.toFixed(2)}
+                    {formatPrice(totalUSD, currencyInfo)}
                   </span>
                 </div>
                 
