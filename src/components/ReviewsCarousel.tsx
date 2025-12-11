@@ -7,7 +7,7 @@ const ReviewsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currencyInfo = useCurrencyDetection();
 
-  // Format price to rounded local currency
+  // Format price to rounded local currency with currency code for clarity
   const formatRoundedPrice = (usdAmount: number) => {
     const converted = usdAmount * currencyInfo.exchangeRate;
     // Round to nice number based on currency
@@ -19,7 +19,11 @@ const ReviewsCarousel = () => {
     } else {
       rounded = Math.round(converted / 100) * 100; // Round to nearest 100
     }
-    return `${currencyInfo.currencySymbol}${rounded.toLocaleString()}`;
+    // Show currency code for non-USD currencies to make conversion clear
+    if (currencyInfo.currencyCode !== 'USD') {
+      return `${currencyInfo.currencySymbol}${rounded.toLocaleString()} ${currencyInfo.currencyCode}`;
+    }
+    return `$${rounded.toLocaleString()}`;
   };
 
   const reviews = [{
