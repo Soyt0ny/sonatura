@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { CheckCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useCurrencyDetection } from "@/hooks/useCurrencyDetection";
@@ -7,26 +7,36 @@ const ReviewsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { currencyCode, currencySymbol, exchangeRate } = useCurrencyDetection();
 
-  // Format USD price to rounded local currency
-  const formatPrice = (usdAmount: number) => {
-    const converted = Math.round(usdAmount * exchangeRate);
-    // Round to nice number based on size
+  // Format USD price to rounded local currency - ALWAYS show currency code for clarity
+  const formatPrice = (usdAmount: number): string => {
+    // For USD, just return with dollar sign
+    if (currencyCode === 'USD' || exchangeRate === 1) {
+      return `$${usdAmount} USD`;
+    }
+    
+    // Convert to local currency
+    const converted = usdAmount * exchangeRate;
+    
+    // Round to nice clean number based on size
     let rounded: number;
     if (converted < 100) {
       rounded = Math.round(converted / 5) * 5;
-    } else if (converted < 1000) {
+    } else if (converted < 500) {
+      rounded = Math.round(converted / 10) * 10;
+    } else if (converted < 2000) {
       rounded = Math.round(converted / 50) * 50;
-    } else {
+    } else if (converted < 10000) {
       rounded = Math.round(converted / 100) * 100;
+    } else {
+      rounded = Math.round(converted / 500) * 500;
     }
     
-    if (currencyCode === 'USD') {
-      return `$${rounded.toLocaleString()}`;
-    }
+    // Always include currency code for non-USD to make conversion visible
     return `${currencySymbol}${rounded.toLocaleString()} ${currencyCode}`;
   };
 
-  const reviews = [
+  // Memoize reviews to update when currency changes
+  const reviews = useMemo(() => [
     {
       id: 1,
       name: "Sofia V.",
@@ -57,7 +67,7 @@ const ReviewsCarousel = () => {
       date: "15 Nov 2025",
       text: `Llevaba años luchando con acné hormonal y gastando fácil +${formatPrice(150)} al mes en derma y tratamientos. Nada me funcionaba más de 2 semanas. Con este libro entendí que el problema era interno, no lo que me ponía en la cara. En 12 días mi piel hizo un glow up increíble. Es wild cómo algo tan natural puede ser tan potente 🌿`
     }
-  ];
+  ], [currencyCode, currencySymbol, exchangeRate]);
 
   useEffect(() => {
     const interval = setInterval(() => {
