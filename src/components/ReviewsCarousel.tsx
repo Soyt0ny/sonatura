@@ -1,53 +1,22 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
 import { CheckCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import { useCurrencyDetection } from "@/hooks/useCurrencyDetection";
 
 const ReviewsCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { currencyCode, currencySymbol, exchangeRate } = useCurrencyDetection();
 
-  // Format USD price to rounded local currency - ALWAYS show currency code for clarity
-  const formatPrice = (usdAmount: number): string => {
-    // For USD, just return with dollar sign
-    if (currencyCode === 'USD' || exchangeRate === 1) {
-      return `$${usdAmount} USD`;
-    }
-    
-    // Convert to local currency
-    const converted = usdAmount * exchangeRate;
-    
-    // Round to nice clean number based on size
-    let rounded: number;
-    if (converted < 100) {
-      rounded = Math.round(converted / 5) * 5;
-    } else if (converted < 500) {
-      rounded = Math.round(converted / 10) * 10;
-    } else if (converted < 2000) {
-      rounded = Math.round(converted / 50) * 50;
-    } else if (converted < 10000) {
-      rounded = Math.round(converted / 100) * 100;
-    } else {
-      rounded = Math.round(converted / 500) * 500;
-    }
-    
-    // Always include currency code for non-USD to make conversion visible
-    return `${currencySymbol}${rounded.toLocaleString()} ${currencyCode}`;
-  };
-
-  // Memoize reviews to update when currency changes
-  const reviews = useMemo(() => [
+  const reviews = [
     {
       id: 1,
       name: "Sofia V.",
       date: "hace 1 día",
-      text: `No les miento, en 10 días ya se notaba el cambio. Mi cara estaba súper desinflada y el acné de la frente? Casi nada. He probado cremas de +${formatPrice(80)} que literally no hacían nada, pero esto es diferente porque trabajas desde adentro, no solo ponerte cosas encima. Total game changer para mi skin care routine ✨`
+      text: "No les miento, en 10 días ya se notaba el cambio. Mi cara estaba súper desinflada y el acné de la frente? Casi nada. He probado cremas de +$80 dólares que literally no hacían nada, pero esto es diferente porque trabajas desde adentro, no solo ponerte cosas encima. Total game changer para mi skin care routine ✨"
     },
     {
       id: 2,
       name: "Isabella M.",
       date: "hace 3 días",
-      text: `Antes gastaba como +${formatPrice(200)} al mes en suplementos y skincare, literal llevaba AÑOS así. Con el libro dejé todo eso y en 3 semanas vi más resultados que con cualquier producto que haya probado. Lo mejor? Lo tengo en mi cel, lo leo en el gym, mientras cocino... y ya lo quiero en físico porque es mi nueva biblia de wellness 📖`
+      text: "Antes gastaba como +$200 dólares al mes en suplementos y skincare, literal llevaba AÑOS así. Con el libro dejé todo eso y en 3 semanas vi más resultados que con cualquier producto que haya probado. Lo mejor? Lo tengo en mi cel, lo leo en el gym, mientras cocino... y ya lo quiero en físico porque es mi nueva biblia de wellness 📖"
     },
     {
       id: 3,
@@ -59,15 +28,15 @@ const ReviewsCarousel = () => {
       id: 4,
       name: "Luna S.",
       date: "20 Nov 2025",
-      text: `Al principio dudé porque era digital, pero honestly es súper práctico. Lo tengo en mi tablet, en el cel, en la compu... lo consulto cuando estoy en la cocina preparando mis meals. Lo mejor es que fueron ${formatPrice(37)} una sola vez y ya no tengo que estar comprando productos cada mes. Best investment que he hecho en mi wellness journey 💫`
+      text: "Al principio dudé porque era digital, pero honestly es súper práctico. Lo tengo en mi tablet, en el cel, en la compu... lo consulto cuando estoy en la cocina preparando mis meals. Lo mejor es que fueron $37 dólares una sola vez y ya no tengo que estar comprando productos cada mes. Best investment que he hecho en mi wellness journey 💫"
     },
     {
       id: 5,
       name: "Valentina L.",
       date: "15 Nov 2025",
-      text: `Llevaba años luchando con acné hormonal y gastando fácil +${formatPrice(150)} al mes en derma y tratamientos. Nada me funcionaba más de 2 semanas. Con este libro entendí que el problema era interno, no lo que me ponía en la cara. En 12 días mi piel hizo un glow up increíble. Es wild cómo algo tan natural puede ser tan potente 🌿`
+      text: "Llevaba años luchando con acné hormonal y gastando fácil +$150 dólares al mes en derma y tratamientos. Nada me funcionaba más de 2 semanas. Con este libro entendí que el problema era interno, no lo que me ponía en la cara. En 12 días mi piel hizo un glow up increíble. Es wild cómo algo tan natural puede ser tan potente 🌿"
     }
-  ], [currencyCode, currencySymbol, exchangeRate]);
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
