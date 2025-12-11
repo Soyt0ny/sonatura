@@ -27,6 +27,7 @@ const ReviewsSection = () => {
   const [rating, setRating] = useState(0);
   const [hoveredRating, setHoveredRating] = useState(0);
   const [visibleReviews, setVisibleReviews] = useState(5);
+  const [helpfulVotes, setHelpfulVotes] = useState<Record<number, { helpful: number; notHelpful: number; voted: 'helpful' | 'notHelpful' | null }>>({});
 
   // Review images
   const reviewImages = [
@@ -189,6 +190,58 @@ const ReviewsSection = () => {
     }
   ];
 
+  const handleVote = (reviewId: number, voteType: 'helpful' | 'notHelpful') => {
+    setHelpfulVotes(prev => {
+      const currentVote = prev[reviewId];
+      const review = mockReviews.find(r => r.id === reviewId);
+      if (!review) return prev;
+
+      // If already voted the same way, remove vote
+      if (currentVote?.voted === voteType) {
+        return {
+          ...prev,
+          [reviewId]: {
+            helpful: voteType === 'helpful' ? (currentVote.helpful - 1) : currentVote.helpful,
+            notHelpful: voteType === 'notHelpful' ? (currentVote.notHelpful - 1) : currentVote.notHelpful,
+            voted: null
+          }
+        };
+      }
+
+      // If changing vote
+      if (currentVote?.voted) {
+        return {
+          ...prev,
+          [reviewId]: {
+            helpful: voteType === 'helpful' ? (currentVote.helpful + 1) : (currentVote.helpful - 1),
+            notHelpful: voteType === 'notHelpful' ? (currentVote.notHelpful + 1) : (currentVote.notHelpful - 1),
+            voted: voteType
+          }
+        };
+      }
+
+      // New vote
+      return {
+        ...prev,
+        [reviewId]: {
+          helpful: voteType === 'helpful' ? (review.helpful + 1) : review.helpful,
+          notHelpful: voteType === 'notHelpful' ? (review.notHelpful + 1) : review.notHelpful,
+          voted: voteType
+        }
+      };
+    });
+  };
+
+  const getVoteCount = (reviewId: number, voteType: 'helpful' | 'notHelpful') => {
+    const review = mockReviews.find(r => r.id === reviewId);
+    if (!review) return 0;
+    const votes = helpfulVotes[reviewId];
+    if (votes) {
+      return voteType === 'helpful' ? votes.helpful : votes.notHelpful;
+    }
+    return voteType === 'helpful' ? review.helpful : review.notHelpful;
+  };
+
   return (
     <section className="mt-16 md:mt-24 py-12 md:py-16 bg-background">
       {/* Section Title */}
@@ -293,11 +346,11 @@ const ReviewsSection = () => {
       <div className="flex justify-between items-center mb-6">
         <p className="text-sm font-medium">1,855 reseñas</p>
         <div className="flex items-center gap-2">
-          <span className="text-sm text-muted-foreground">Sort</span>
+          <span className="text-sm text-muted-foreground">Ordenar</span>
           <select className="text-sm border border-border/40 rounded px-3 py-1 bg-background">
-            <option>Highest Rating</option>
-            <option>Lowest Rating</option>
-            <option>Most Recent</option>
+            <option>Mayor calificación</option>
+            <option>Menor calificación</option>
+            <option>Más recientes</option>
           </select>
         </div>
       </div>
@@ -320,7 +373,7 @@ const ReviewsSection = () => {
                    {review.verified && (
                     <div className="flex items-center gap-1 text-xs text-foreground mt-1">
                       <CheckCircle2 className="w-3 h-3" />
-                      <span>Verified Buyer</span>
+                      <span>Comprador Verificado</span>
                     </div>
                   )}
                 </div>
@@ -328,10 +381,10 @@ const ReviewsSection = () => {
 
               {/* Product Info */}
               <div>
-                <p className="text-xs font-medium mb-2">Reviewing</p>
+                <p className="text-xs font-medium mb-2">Reseñando</p>
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 bg-background rounded border border-border/40">
-                    <img src={review.productImage} alt="Product" className="w-full h-full object-cover" />
+                    <img src={review.productImage} alt="Producto" className="w-full h-full object-cover" />
                   </div>
                   <p className="text-xs flex-1">{review.product}</p>
                 </div>
@@ -340,7 +393,7 @@ const ReviewsSection = () => {
               {/* Recommendation Badge */}
               <div className="flex items-center gap-2 text-xs text-foreground">
                 <CheckCircle2 className="w-4 h-4" />
-                <span>I recommend this product</span>
+                <span>Recomiendo este producto</span>
               </div>
 
               {/* User Info */}
@@ -382,14 +435,28 @@ const ReviewsSection = () => {
               <p className="text-sm text-foreground/80 leading-relaxed">{review.text}</p>
 
               <div className="flex items-center gap-4 pt-2">
-                <span className="text-sm text-muted-foreground">Was this helpful?</span>
-                <button className="flex items-center gap-1 text-sm hover:text-foreground transition-colors">
+                <span className="text-sm text-muted-foreground">¿Te fue útil?</span>
+                <button 
+                  onClick={() => handleVote(review.id, 'helpful')}
+                  className={`flex items-center gap-1 text-sm transition-colors ${
+                    helpfulVotes[review.id]?.voted === 'helpful' 
+                      ? 'text-green-600' 
+                      : 'hover:text-foreground'
+                  }`}
+                >
                   <ThumbsUp className="w-4 h-4" />
-                  <span>{review.helpful}</span>
+                  <span>{getVoteCount(review.id, 'helpful')}</span>
                 </button>
-                <button className="flex items-center gap-1 text-sm hover:text-foreground transition-colors">
+                <button 
+                  onClick={() => handleVote(review.id, 'notHelpful')}
+                  className={`flex items-center gap-1 text-sm transition-colors ${
+                    helpfulVotes[review.id]?.voted === 'notHelpful' 
+                      ? 'text-red-500' 
+                      : 'hover:text-foreground'
+                  }`}
+                >
                   <ThumbsDown className="w-4 h-4" />
-                  <span>{review.notHelpful}</span>
+                  <span>{getVoteCount(review.id, 'notHelpful')}</span>
                 </button>
               </div>
             </div>
