@@ -174,7 +174,7 @@ const ProductInfo = () => {
               <div className="flex">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
               </div>
-              <span className="text-xs text-foreground font-medium">4.7 / 5</span>
+              <span className="text-xs text-foreground font-medium">4.9 / 5</span>
               <span className="text-muted-foreground text-xs">●</span>
               <span className="text-xs text-foreground font-medium">Loved by 72,500+ customers</span>
             </div>
@@ -242,7 +242,7 @@ const ProductInfo = () => {
               <div className="flex">
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-[hsl(var(--star))] text-[hsl(var(--star))]" />)}
               </div>
-              <span className="text-xs text-foreground font-medium">4.7 / 5</span>
+              <span className="text-xs text-foreground font-medium">4.9 / 5</span>
               <span className="text-muted-foreground text-xs">●</span>
               <span className="text-xs text-foreground font-medium">72,500+ Clientes lo aman</span>
             </div>
