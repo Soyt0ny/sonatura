@@ -111,7 +111,7 @@ const featuredReviews = [{
 }, {
   name: "Regina H.",
   date: "15 Nov 2025",
-  review: "Llevaba años con acné hormonal y gastando fácil +$150 mensuales en dermatólogo y tratamientos. Nada funcionaba más de 2 semanas. Con este libro entendí que el problema era interno, no externo. En 12 días mi piel cambió completamente, es increíble como algo tan natural puede ser tan potente."
+  review: "Llevaba años con acné hormonal y gastando fácil más de $200 mensuales en dermatólogo y tratamientos. Nada funcionaba más de 2 semanas. Con este libro entendí que el problema era interno (en mis hormonas y mi salud intestinal), no externo. En 12 días mi piel cambió completamente solo con los shots y el protocolo super calm, también me gusta que tiene remedios naturales para todo no solo el acné, es increíble cómo lo natural puede ser tan potente."
 }];
 const ProductInfo = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
