@@ -95,7 +95,7 @@ const CountdownTimer = () => {
 const featuredReviews = [{
   name: "Mariana G.",
   date: "hace 1 día",
-  review: "Honestamente no esperaba ver cambios tan rápido. En 10 días mi cara ya no está tan hinchada y el acné que tenía en la frente casi desapareció. He probado cremas de +$1,500 que no hicieron nada, esto es completamente diferente porque atacas desde lo que comes y no solo la piel por fuera."
+  review: "Honestamente no esperaba ver cambios tan rápido. En 10 días mi cara ya no está tan hinchada y el acné que tenía en la frente casi desapareció. He probado cremas de +$300 dólares que no hicieron nada, esto es completamente diferente porque atacas desde lo que comes y no solo la piel por fuera."
 }, {
   name: "Daniela P.",
   date: "hace 3 días",
