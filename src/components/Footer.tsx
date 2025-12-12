@@ -15,8 +15,8 @@ const Footer = () => {
           />
           
           <div className="flex items-center gap-6 text-xs text-muted-foreground">
-            <a href="mailto:hola@sonnatura.com" className="hover:text-[#C7A867] transition-colors">
-              hola@sonnatura.com
+            <a href="mailto:contacto.sonatura@gmail.com" className="hover:text-[#C7A867] transition-colors">
+              contacto.sonatura@gmail.com
             </a>
             <a 
               href="https://instagram.com" 

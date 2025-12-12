@@ -82,7 +82,7 @@ const FAQSection = () => {
             ¿Si mi tarjeta de crédito es rechazada?
           </AccordionTrigger>
           <AccordionContent className="text-sm text-muted-foreground">
-            Si tu tarjeta es rechazada, verifica que los datos estén correctos y que tengas fondos suficientes. También puedes intentar con otra tarjeta o usar PayPal. Si el problema persiste, contacta a tu banco o escríbenos a soporte@sonatura.com para ayudarte.
+            Si tu tarjeta es rechazada, verifica que los datos estén correctos y que tengas fondos suficientes. También puedes intentar con otra tarjeta o usar PayPal. Si el problema persiste, contacta a tu banco o escríbenos a contacto.sonatura@gmail.com para ayudarte.
           </AccordionContent>
         </AccordionItem>
 
@@ -91,7 +91,7 @@ const FAQSection = () => {
             ¿Cómo puedo contactarlos?
           </AccordionTrigger>
           <AccordionContent className="text-sm text-muted-foreground">
-            Puedes escribirnos a soporte@sonatura.com y nuestro equipo responderá en menos de 24 horas. También puedes contactarnos a través de nuestras redes sociales. Estamos aquí para ayudarte con cualquier pregunta o inquietud.
+            Puedes escribirnos a contacto.sonatura@gmail.com y nuestro equipo responderá en menos de 24 horas. También puedes contactarnos a través de nuestras redes sociales. Estamos aquí para ayudarte con cualquier pregunta o inquietud.
           </AccordionContent>
         </AccordionItem>
       </Accordion>
