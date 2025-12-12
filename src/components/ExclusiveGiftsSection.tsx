@@ -115,7 +115,7 @@ const ExclusiveGiftsSection = () => {
           <h3 className="text-center text-[15px] md:text-[17px] font-bold tracking-wide mb-2 text-[#1B1B1B]" style={{
             fontFamily: "Inter, sans-serif"
           }}>
-            OFERTA BLACK FRIDAY
+            HOLIDAY SALE
           </h3>
           
           {/* Message Above Gifts */}
