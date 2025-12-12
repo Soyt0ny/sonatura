@@ -23,8 +23,8 @@ const CartDrawer = () => {
     try {
       const checkoutUrl = await createCheckout();
       if (checkoutUrl) {
-        window.open(checkoutUrl, '_blank');
-        closeCart();
+        // Usar redirección directa en lugar de window.open para evitar bloqueo en móviles
+        window.location.href = checkoutUrl;
       } else {
         toast.error("Error al crear el checkout", {
           description: "Por favor intenta de nuevo",
