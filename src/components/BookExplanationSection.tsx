@@ -1,10 +1,58 @@
 import bookLifestyle1 from "@/assets/book-lifestyle-1.png";
 import bookLifestyle2 from "@/assets/book-lifestyle-2.png";
 import { useCurrencyDetection, formatLargePrice } from "@/hooks/useCurrencyDetection";
+import { useCartStore } from "@/stores/cartStore";
+import cartProductImage from "@/assets/cart-product.png";
 
 const BookExplanationSection = () => {
   const currencyInfo = useCurrencyDetection();
   const savingsUSD = 10000;
+  const { addItem, openCart } = useCartStore();
+
+  const handleAddToCart = () => {
+    addItem({
+      product: {
+        node: {
+          id: "gid://shopify/Product/realifestacion-libro",
+          title: "Libro Realifestación® Digital",
+          description: "Libro digital con más de 200 protocolos naturales",
+          handle: "realifestacion-libro",
+          priceRange: {
+            minVariantPrice: {
+              amount: "37.00",
+              currencyCode: "USD"
+            }
+          },
+          images: {
+            edges: [{
+              node: {
+                url: cartProductImage,
+                altText: "Libro Realifestación"
+              }
+            }]
+          },
+          variants: {
+            edges: [{
+              node: {
+                id: "gid://shopify/ProductVariant/realifestacion-digital",
+                title: "Digital",
+                price: { amount: "37.00", currencyCode: "USD" },
+                availableForSale: true,
+                selectedOptions: [{ name: "Formato", value: "Digital" }]
+              }
+            }]
+          },
+          options: [{ name: "Formato", values: ["Digital"] }]
+        }
+      },
+      variantId: "gid://shopify/ProductVariant/realifestacion-digital",
+      variantTitle: "Digital",
+      price: { amount: "37.00", currencyCode: "USD" },
+      quantity: 1,
+      selectedOptions: [{ name: "Formato", value: "Digital" }]
+    });
+    openCart();
+  };
 
   return (
     <section className="mb-16 md:mb-20 max-w-5xl mx-auto px-4">
@@ -44,7 +92,10 @@ const BookExplanationSection = () => {
           </div>
           
           <div className="pt-2">
-            <button className="bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520] font-medium px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm">
+            <button 
+              onClick={handleAddToCart}
+              className="bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520] font-medium px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm"
+            >
               Comprar Ahora
             </button>
             <p className="text-xs text-muted-foreground mt-2">
@@ -124,7 +175,10 @@ const BookExplanationSection = () => {
           </ul>
           
           <div className="pt-2">
-            <button className="bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520] font-medium px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm">
+            <button 
+              onClick={handleAddToCart}
+              className="bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520] font-medium px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-sm"
+            >
               Obtén el Tuyo Ahora
             </button>
           </div>
