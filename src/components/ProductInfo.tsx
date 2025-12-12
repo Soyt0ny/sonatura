@@ -107,7 +107,7 @@ const featuredReviews = [{
 }, {
   name: "Fernanda K.",
   date: "20 Nov 2025",
-  review: "Al principio dudé porque es digital, pero es súper práctico. Lo tengo en mi tablet, en el celular y en la computadora. Lo consulto cuando cocino y así no se me olvida nada. Lo mejor es que gasté $37 una sola vez y ya no tengo que estar comprando cosas cada mes. Mucho más económico y efectivo."
+  review: "Al principio dudé porque es digital, pero es súper práctico. Lo tengo en mi tablet, en el celular y en la computadora. Lo uso cuando cocino y así no se me olvida nada. Lo que más me gusta es que pagué los $37 dólares y ya no tengo que estar comprando cosas cada mes. A parte de siempre he preferido más lo natural. Mucho más económico y efectivo."
 }, {
   name: "Regina H.",
   date: "15 Nov 2025",
