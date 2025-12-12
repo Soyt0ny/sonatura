@@ -19,7 +19,7 @@ const Footer = () => {
               contacto.sonatura@gmail.com
             </a>
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/sonatura_ch/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="hover:text-[#C7A867] transition-colors"
