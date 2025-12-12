@@ -99,7 +99,7 @@ const featuredReviews = [{
 }, {
   name: "Daniela P.",
   date: "hace 3 días",
-  review: "Antes gastaba como +$200 al mes en suplementos y productos para la piel, literal ya llevaba años así. Con el libro dejé todo eso y en 3 semanas vi más resultados que con cualquier cosa que haya comprado. Además está en mi celular, lo leo en el gym o donde sea. Lo voy a comprar físico también porque me encantó."
+  review: "Antes gastaba como $400 dólares al mes en suplementos y productos para la piel, literal ya llevaba años así. Con el libro dejé todo eso y en 3 semanas vi más resultados que con cualquier cosa que haya comprado, desde la piel, el cabello, todo. Además está en mi celular, lo leo en el gym o donde sea. Lo voy a comprar físico también porque me encantó."
 }, {
   name: "Andrea T.",
   date: "hace 6 días",
