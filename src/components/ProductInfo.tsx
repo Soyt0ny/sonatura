@@ -216,7 +216,7 @@ const ProductInfo = () => {
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0 w-6 text-center">⇈</div>
-              <span className="text-sm">Ahorrar {formatLargePrice(annualSavingsUSD, currencyInfo)} al año en productos de Skincare y suplementos que no necesitas y que tienen ingredientes químicos e invasivos que dañan tu salud</span>
+              <span className="text-sm">Sustituir el equivalente a {formatLargePrice(annualSavingsUSD, currencyInfo)} al año en productos de Skincare y suplementos que no necesitas y que tienen ingredientes químicos e invasivos que dañan tu salud</span>
             </div>
             <div className="flex items-start gap-2">
               <div className="text-primary text-lg flex-shrink-0 w-6 text-center">◎</div>
