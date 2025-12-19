@@ -222,8 +222,13 @@ export async function createStorefrontCheckout(items: CartItem[]): Promise<strin
       throw new Error('No checkout URL returned from Shopify');
     }
 
+    // Replace custom domain with .myshopify.com domain for checkout
+    // because sonaturach.com now points to Lovable, not Shopify
+    let checkoutUrl = cart.checkoutUrl;
+    checkoutUrl = checkoutUrl.replace('sonaturach.com', SHOPIFY_STORE_PERMANENT_DOMAIN);
+    
     // Add channel parameter for checkout to work
-    const url = new URL(cart.checkoutUrl);
+    const url = new URL(checkoutUrl);
     url.searchParams.set('channel', 'online_store');
     return url.toString();
   } catch (error) {
