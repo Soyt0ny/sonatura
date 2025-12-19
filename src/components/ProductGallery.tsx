@@ -19,7 +19,9 @@ const ProductGallery = memo(() => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true,
     dragFree: false,
-    containScroll: "trimSnaps"
+    containScroll: "trimSnaps",
+    duration: 20,
+    skipSnaps: false
   });
 
   // Preload first 2 images immediately on mount
