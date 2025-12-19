@@ -1,4 +1,4 @@
-import { useState, memo, useEffect } from "react";
+import { useState, memo, useEffect, useRef, TouchEvent } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -14,6 +14,11 @@ const images = [
 const ProductGallery = memo(() => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState<boolean[]>([false, false, false, false, false]);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+
+  // Minimum swipe distance to trigger navigation
+  const minSwipeDistance = 50;
 
   // Preload first 2 images immediately on mount
   useEffect(() => {
@@ -39,9 +44,43 @@ const ProductGallery = memo(() => {
     setSelectedImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
+  const onTouchStart = (e: TouchEvent) => {
+    touchEndX.current = null;
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchMove = (e: TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    
+    const distance = touchStartX.current - touchEndX.current;
+    const isSwipe = Math.abs(distance) > minSwipeDistance;
+
+    if (isSwipe) {
+      if (distance > 0) {
+        // Swiped left -> next image
+        handleNext();
+      } else {
+        // Swiped right -> previous image
+        handlePrevious();
+      }
+    }
+    
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   return (
     <div className="space-y-4">
-      <div className="relative aspect-square bg-accent rounded-lg overflow-hidden group">
+      <div 
+        className="relative aspect-square bg-accent rounded-lg overflow-hidden group touch-pan-y"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
         {/* Show skeleton while first image loads */}
         {!imagesLoaded[0] && selectedImage === 0 && (
           <div className="absolute inset-0 bg-gradient-to-br from-accent to-accent/80 animate-pulse" />
