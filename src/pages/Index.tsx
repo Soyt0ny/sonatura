@@ -4,6 +4,7 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductInfo from "@/components/ProductInfo";
 import StickyCartBar from "@/components/StickyCartBar";
 import DailyOrdersNotification from "@/components/DailyOrdersNotification";
+import LazySection from "@/components/LazySection";
 
 // Lazy load below-the-fold components
 const BeforeAfterCarousel = lazy(() => import("@/components/BeforeAfterCarousel"));
@@ -17,6 +18,7 @@ const ComparisonSection = lazy(() => import("@/components/ComparisonSection"));
 const ProfessionalEndorsements = lazy(() => import("@/components/ProfessionalEndorsements"));
 const CertificationBadges = lazy(() => import("@/components/CertificationBadges"));
 const GuaranteeSection = lazy(() => import("@/components/GuaranteeSection"));
+const LazyFAQ = lazy(() => import("@/components/FAQSection"));
 
 // Minimal loading skeleton
 const SectionSkeleton = () => (
@@ -47,88 +49,112 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Lazy loaded sections */}
-        <Suspense fallback={<SectionSkeleton />}>
-          <UGCCarousel />
-        </Suspense>
+        {/* Lazy loaded sections with Intersection Observer */}
+        <LazySection minHeight="20rem" rootMargin="300px">
+          <Suspense fallback={<SectionSkeleton />}>
+            <UGCCarousel />
+          </Suspense>
+        </LazySection>
 
-        <Suspense fallback={<SectionSkeleton />}>
-          <BookExplanationSection />
-        </Suspense>
+        <LazySection minHeight="24rem" rootMargin="300px">
+          <Suspense fallback={<SectionSkeleton />}>
+            <BookExplanationSection />
+          </Suspense>
+        </LazySection>
 
-        <Suspense fallback={<SectionSkeleton />}>
-          <BeforeAfterCarousel />
-        </Suspense>
+        <LazySection minHeight="28rem" rootMargin="250px">
+          <Suspense fallback={<SectionSkeleton />}>
+            <BeforeAfterCarousel />
+          </Suspense>
+        </LazySection>
 
-        <Suspense fallback={<SectionSkeleton />}>
-          <ProfessionalEndorsements />
-        </Suspense>
+        <LazySection minHeight="16rem" rootMargin="200px">
+          <Suspense fallback={<SectionSkeleton />}>
+            <ProfessionalEndorsements />
+          </Suspense>
+        </LazySection>
 
-        <Suspense fallback={<SectionSkeleton />}>
-          <CertificationBadges />
-        </Suspense>
+        <LazySection minHeight="10rem" rootMargin="200px">
+          <Suspense fallback={<SectionSkeleton />}>
+            <CertificationBadges />
+          </Suspense>
+        </LazySection>
 
-        <Suspense fallback={<SectionSkeleton />}>
-          <BookUniqueFeatures />
-        </Suspense>
+        <LazySection minHeight="24rem" rootMargin="200px">
+          <Suspense fallback={<SectionSkeleton />}>
+            <BookUniqueFeatures />
+          </Suspense>
+        </LazySection>
 
-        <Suspense fallback={<SectionSkeleton />}>
-          <ComparisonSection />
-        </Suspense>
+        <LazySection minHeight="20rem" rootMargin="200px">
+          <Suspense fallback={<SectionSkeleton />}>
+            <ComparisonSection />
+          </Suspense>
+        </LazySection>
 
-        <Suspense fallback={<SectionSkeleton />}>
-          <ClinicalResultsSection />
-        </Suspense>
+        <LazySection minHeight="20rem" rootMargin="200px">
+          <Suspense fallback={<SectionSkeleton />}>
+            <ClinicalResultsSection />
+          </Suspense>
+        </LazySection>
 
         {/* Testimonials - inline for faster paint */}
-        <section className="mt-16 md:mt-24 bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB] rounded-xl p-8 md:p-12">
-          <h2 className="text-3xl font-bold text-center mb-12">Lo Que Dicen Nuestras Clientas</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-background border border-border/40 rounded-lg p-6">
-              <div className="flex mb-3">
-                {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
+        <LazySection minHeight="20rem" rootMargin="200px">
+          <section className="mt-16 md:mt-24 bg-gradient-to-r from-[#F5F3EE] via-[#EDE9E0] to-[#E8E4DB] rounded-xl p-8 md:p-12">
+            <h2 className="text-3xl font-bold text-center mb-12">Lo Que Dicen Nuestras Clientas</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-background border border-border/40 rounded-lg p-6">
+                <div className="flex mb-3">
+                  {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
+                </div>
+                <p className="text-sm mb-4">
+                  "¡Resultados increíbles! En solo 2 semanas noté cambios reales en mi piel y mi energía. ¡Lo recomiendo totalmente!"
+                </p>
+                <p className="text-sm font-semibold">- María L.</p>
+                <p className="text-xs text-muted-foreground">Compradora Verificada · Hace 3 días</p>
               </div>
-              <p className="text-sm mb-4">
-                "¡Resultados increíbles! En solo 2 semanas noté cambios reales en mi piel y mi energía. ¡Lo recomiendo totalmente!"
-              </p>
-              <p className="text-sm font-semibold">- María L.</p>
-              <p className="text-xs text-muted-foreground">Compradora Verificada · Hace 3 días</p>
-            </div>
-            <div className="bg-background border border-border/40 rounded-lg p-6">
-              <div className="flex mb-3">
-                {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
+              <div className="bg-background border border-border/40 rounded-lg p-6">
+                <div className="flex mb-3">
+                  {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
+                </div>
+                <p className="text-sm mb-4">
+                  "$37 me parece poco a comparación de lo que viene en el libro, es una BARBARIDAD lo que hay dentro y sobre todo que funciona, 10/10 sin duda."
+                </p>
+                <p className="text-sm font-semibold">- Sarah M.</p>
+                <p className="text-xs text-muted-foreground">Compradora Verificada · Hace 1 semana</p>
               </div>
-              <p className="text-sm mb-4">
-                "$37 me parece poco a comparación de lo que viene en el libro, es una BARBARIDAD lo que hay dentro y sobre todo que funciona, 10/10 sin duda."
-              </p>
-              <p className="text-sm font-semibold">- Sarah M.</p>
-              <p className="text-xs text-muted-foreground">Compradora Verificada · Hace 1 semana</p>
-            </div>
-            <div className="bg-background border border-border/40 rounded-lg p-6">
-              <div className="flex mb-3">
-                {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
+              <div className="bg-background border border-border/40 rounded-lg p-6">
+                <div className="flex mb-3">
+                  {[...Array(5)].map((_, idx) => <span key={idx} className="text-primary">★</span>)}
+                </div>
+                <p className="text-sm mb-4">
+                  "Pensé que era otra estafa más, pero los protocolos funcionan de verdad. Mi acné hormonal prácticamente desapareció."
+                </p>
+                <p className="text-sm font-semibold">- Ana R.</p>
+                <p className="text-xs text-muted-foreground">Compradora Verificada · Hace 12 días</p>
               </div>
-              <p className="text-sm mb-4">
-                "Pensé que era otra estafa más, pero los protocolos funcionan de verdad. Mi acné hormonal prácticamente desapareció."
-              </p>
-              <p className="text-sm font-semibold">- Ana R.</p>
-              <p className="text-xs text-muted-foreground">Compradora Verificada · Hace 12 días</p>
             </div>
-          </div>
-        </section>
+          </section>
+        </LazySection>
 
-        {/* FAQ - Lazy load accordion */}
-        <Suspense fallback={<SectionSkeleton />}>
-          <LazyFAQ />
-        </Suspense>
+        {/* FAQ */}
+        <LazySection minHeight="24rem" rootMargin="200px">
+          <Suspense fallback={<SectionSkeleton />}>
+            <LazyFAQ />
+          </Suspense>
+        </LazySection>
 
-        <Suspense fallback={<SectionSkeleton />}>
-          <GuaranteeSection />
-        </Suspense>
+        <LazySection minHeight="16rem" rootMargin="200px">
+          <Suspense fallback={<SectionSkeleton />}>
+            <GuaranteeSection />
+          </Suspense>
+        </LazySection>
 
-        <Suspense fallback={<SectionSkeleton />}>
-          <ReviewsSection />
-        </Suspense>
+        <LazySection minHeight="24rem" rootMargin="200px">
+          <Suspense fallback={<SectionSkeleton />}>
+            <ReviewsSection />
+          </Suspense>
+        </LazySection>
 
       </main>
 
@@ -138,8 +164,5 @@ const Index = () => {
     </div>
   );
 };
-
-// Lazy FAQ component
-const LazyFAQ = lazy(() => import("@/components/FAQSection"));
 
 export default Index;
