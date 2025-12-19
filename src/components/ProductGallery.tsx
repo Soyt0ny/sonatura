@@ -1,5 +1,5 @@
 import { useState, memo, useEffect, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import useEmblaCarousel from "embla-carousel-react";
 
@@ -15,6 +15,7 @@ const images = [
 const ProductGallery = memo(() => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState<boolean[]>([false, false, false, false, false]);
+  const [isZoomed, setIsZoomed] = useState(false);
   
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true,
@@ -66,7 +67,18 @@ const ProductGallery = memo(() => {
     if (emblaApi) emblaApi.scrollTo(index);
   }, [emblaApi]);
 
+  const openZoom = useCallback(() => {
+    setIsZoomed(true);
+    document.body.style.overflow = 'hidden';
+  }, []);
+
+  const closeZoom = useCallback(() => {
+    setIsZoomed(false);
+    document.body.style.overflow = '';
+  }, []);
+
   return (
+    <>
     <div className="space-y-4">
       <div className="relative aspect-square bg-accent rounded-lg overflow-hidden group">
         {/* Show skeleton while first image loads */}
@@ -135,6 +147,14 @@ const ProductGallery = memo(() => {
             />
           ))}
         </div>
+        {/* Zoom indicator */}
+        <button
+          onClick={openZoom}
+          className="absolute bottom-3 right-3 w-8 h-8 rounded-full bg-white/90 hover:bg-white shadow-lg flex items-center justify-center z-20 md:opacity-0 md:group-hover:opacity-100 transition-opacity"
+          aria-label="Ampliar imagen"
+        >
+          <ZoomIn className="w-4 h-4 text-foreground" />
+        </button>
       </div>
 
       {/* Thumbnails */}
@@ -160,6 +180,62 @@ const ProductGallery = memo(() => {
         ))}
       </div>
     </div>
+
+    {/* Zoom Modal */}
+    {isZoomed && (
+      <div 
+        className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center animate-fade-in"
+        onClick={closeZoom}
+      >
+        <button
+          onClick={closeZoom}
+          className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors z-10"
+          aria-label="Cerrar zoom"
+        >
+          <X className="w-6 h-6 text-white" />
+        </button>
+        
+        <button
+          onClick={(e) => { e.stopPropagation(); handlePrevious(); }}
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors z-10"
+          aria-label="Imagen anterior"
+        >
+          <ChevronLeft className="w-6 h-6 text-white" />
+        </button>
+        
+        <button
+          onClick={(e) => { e.stopPropagation(); handleNext(); }}
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors z-10"
+          aria-label="Imagen siguiente"
+        >
+          <ChevronRight className="w-6 h-6 text-white" />
+        </button>
+        
+        <img
+          src={images[selectedImage]}
+          alt={`Libro Realifestación Digital - Vista ${selectedImage + 1}`}
+          className="max-w-[90vw] max-h-[90vh] object-contain"
+          onClick={(e) => e.stopPropagation()}
+        />
+        
+        {/* Dot indicators */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+          {images.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={(e) => { e.stopPropagation(); scrollTo(idx); }}
+              className={`w-2.5 h-2.5 rounded-full transition-all ${
+                selectedImage === idx 
+                  ? "bg-white w-6" 
+                  : "bg-white/40 hover:bg-white/60"
+              }`}
+              aria-label={`Ir a imagen ${idx + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+    )}
+    </>
   );
 });
 
