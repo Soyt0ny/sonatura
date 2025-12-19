@@ -1,6 +1,7 @@
-import { useState, memo, useEffect, useRef, TouchEvent } from "react";
+import { useState, memo, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import useEmblaCarousel from "embla-carousel-react";
 
 // Use public folder for faster loading
 const images = [
@@ -14,11 +15,12 @@ const images = [
 const ProductGallery = memo(() => {
   const [selectedImage, setSelectedImage] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState<boolean[]>([false, false, false, false, false]);
-  const touchStartX = useRef<number | null>(null);
-  const touchEndX = useRef<number | null>(null);
-
-  // Minimum swipe distance to trigger navigation
-  const minSwipeDistance = 50;
+  
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    dragFree: false,
+    containScroll: "trimSnaps"
+  });
 
   // Preload first 2 images immediately on mount
   useEffect(() => {
@@ -36,78 +38,73 @@ const ProductGallery = memo(() => {
     });
   }, []);
 
-  const handlePrevious = () => {
-    setSelectedImage((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedImage(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
 
-  const handleNext = () => {
-    setSelectedImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
+  useEffect(() => {
+    if (!emblaApi) return;
+    emblaApi.on("select", onSelect);
+    onSelect();
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi, onSelect]);
 
-  const onTouchStart = (e: TouchEvent) => {
-    touchEndX.current = null;
-    touchStartX.current = e.targetTouches[0].clientX;
-  };
+  const handlePrevious = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
 
-  const onTouchMove = (e: TouchEvent) => {
-    touchEndX.current = e.targetTouches[0].clientX;
-  };
+  const handleNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
-  const onTouchEnd = () => {
-    if (!touchStartX.current || !touchEndX.current) return;
-    
-    const distance = touchStartX.current - touchEndX.current;
-    const isSwipe = Math.abs(distance) > minSwipeDistance;
-
-    if (isSwipe) {
-      if (distance > 0) {
-        // Swiped left -> next image
-        handleNext();
-      } else {
-        // Swiped right -> previous image
-        handlePrevious();
-      }
-    }
-    
-    touchStartX.current = null;
-    touchEndX.current = null;
-  };
+  const scrollTo = useCallback((index: number) => {
+    if (emblaApi) emblaApi.scrollTo(index);
+  }, [emblaApi]);
 
   return (
     <div className="space-y-4">
-      <div 
-        className="relative aspect-square bg-accent rounded-lg overflow-hidden group touch-pan-y"
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
-        onTouchEnd={onTouchEnd}
-      >
+      <div className="relative aspect-square bg-accent rounded-lg overflow-hidden group">
         {/* Show skeleton while first image loads */}
         {!imagesLoaded[0] && selectedImage === 0 && (
-          <div className="absolute inset-0 bg-gradient-to-br from-accent to-accent/80 animate-pulse" />
+          <div className="absolute inset-0 bg-gradient-to-br from-accent to-accent/80 animate-pulse z-10" />
         )}
-        <img
-          src={images[selectedImage]}
-          alt="Libro Realifestación Digital"
-          className={`w-full h-full object-cover transition-opacity duration-200 ${
-            selectedImage === 0 && !imagesLoaded[0] ? 'opacity-0' : 'opacity-100'
-          }`}
-          loading="eager"
-          width={600}
-          height={600}
-          decoding={selectedImage === 0 ? "sync" : "async"}
-          // @ts-ignore - fetchpriority is valid HTML attribute
-          fetchpriority={selectedImage === 0 ? "high" : "auto"}
-        />
+        
+        {/* Embla Carousel */}
+        <div className="overflow-hidden h-full" ref={emblaRef}>
+          <div className="flex h-full touch-pan-y">
+            {images.map((img, idx) => (
+              <div 
+                key={idx} 
+                className="flex-[0_0_100%] min-w-0 h-full"
+              >
+                <img
+                  src={img}
+                  alt={`Libro Realifestación Digital - Vista ${idx + 1}`}
+                  className="w-full h-full object-cover"
+                  loading={idx < 2 ? "eager" : "lazy"}
+                  width={600}
+                  height={600}
+                  decoding={idx === 0 ? "sync" : "async"}
+                  // @ts-ignore - fetchpriority is valid HTML attribute
+                  fetchpriority={idx === 0 ? "high" : "auto"}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
         
         {/* Best Seller Badge */}
-        <Badge className="absolute top-3 left-3 bg-primary text-primary-foreground font-semibold shadow-lg">
+        <Badge className="absolute top-3 left-3 bg-primary text-primary-foreground font-semibold shadow-lg z-20">
           Más Vendido
         </Badge>
         
         {/* Navigation Arrows */}
         <button
           onClick={handlePrevious}
-          className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/90 hover:bg-white shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/90 hover:bg-white shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20"
           aria-label="Imagen anterior"
         >
           <ChevronLeft className="w-5 h-5 text-foreground" />
@@ -115,17 +112,35 @@ const ProductGallery = memo(() => {
         
         <button
           onClick={handleNext}
-          className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/90 hover:bg-white shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+          className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/90 hover:bg-white shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20"
           aria-label="Imagen siguiente"
         >
           <ChevronRight className="w-5 h-5 text-foreground" />
         </button>
+
+        {/* Dot indicators for mobile */}
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-20 md:hidden">
+          {images.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => scrollTo(idx)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                selectedImage === idx 
+                  ? "bg-primary w-4" 
+                  : "bg-white/60"
+              }`}
+              aria-label={`Ir a imagen ${idx + 1}`}
+            />
+          ))}
+        </div>
       </div>
+
+      {/* Thumbnails */}
       <div className="grid grid-cols-5 gap-2">
         {images.map((img, idx) => (
           <button
             key={idx}
-            onClick={() => setSelectedImage(idx)}
+            onClick={() => scrollTo(idx)}
             className={`aspect-square rounded-lg overflow-hidden border-2 transition-all ${
               selectedImage === idx ? "border-primary" : "border-transparent"
             }`}
