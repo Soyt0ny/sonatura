@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import useEmblaCarousel from "embla-carousel-react";
 
-// Use public folder for faster loading
+// Use public folder for faster loading - images are preloaded in index.html
 const images = [
   "/products/product-1.png",
   "/products/product-2.png",
@@ -14,7 +14,8 @@ const images = [
 
 const ProductGallery = memo(() => {
   const [selectedImage, setSelectedImage] = useState(0);
-  const [imagesLoaded, setImagesLoaded] = useState<boolean[]>([false, false, false, false, false]);
+  // First two images are preloaded in HTML head, mark them as loaded immediately
+  const [imagesLoaded, setImagesLoaded] = useState<boolean[]>([true, true, false, false, false]);
   const [isZoomed, setIsZoomed] = useState(false);
   
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
@@ -25,23 +26,28 @@ const ProductGallery = memo(() => {
     skipSnaps: false
   });
 
-  // Only preload second image after first is ready
+  // Preload remaining images after component mounts (low priority)
   useEffect(() => {
-    const img = new Image();
-    img.src = images[1];
-    img.onload = () => {
-      setImagesLoaded(prev => {
-        const newState = [...prev];
-        newState[1] = true;
-        return newState;
+    // Use requestIdleCallback for non-blocking preload of remaining images
+    const preloadRemaining = () => {
+      [2, 3, 4].forEach((idx) => {
+        const img = new Image();
+        img.src = images[idx];
+        img.onload = () => {
+          setImagesLoaded(prev => {
+            const newState = [...prev];
+            newState[idx] = true;
+            return newState;
+          });
+        };
       });
     };
-    // Mark first as loaded immediately (preloaded in HTML)
-    setImagesLoaded(prev => {
-      const newState = [...prev];
-      newState[0] = true;
-      return newState;
-    });
+    
+    if ('requestIdleCallback' in window) {
+      (window as any).requestIdleCallback(preloadRemaining);
+    } else {
+      setTimeout(preloadRemaining, 100);
+    }
   }, []);
 
   const onSelect = useCallback(() => {
