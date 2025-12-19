@@ -40,10 +40,10 @@ const Index = () => {
         <section className="mb-8 md:mb-12 border-y border-border/20 py-12">
           <h2 className="text-sm md:text-base font-medium text-center mb-10 tracking-wider uppercase text-foreground">Como lo viste en</h2>
           <div className="flex items-center justify-center gap-2 md:gap-12 lg:gap-16 px-2 md:px-4">
-            <img src="/logos/vogue.png" alt="Vogue" loading="eager" width="176" height="40" className="w-16 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
-            <img src="/logos/elle.png" alt="Elle" loading="eager" width="176" height="40" className="w-16 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
-            <img src="/logos/goop.png" alt="Goop" loading="eager" width="176" height="40" className="w-16 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
-            <img src="/logos/womenshealth.png" alt="Women's Health" loading="eager" width="176" height="40" className="w-16 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
+            <img src="/logos/vogue.png" alt="Vogue" loading="lazy" width="176" height="40" className="w-16 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
+            <img src="/logos/elle.png" alt="Elle" loading="lazy" width="176" height="40" className="w-16 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
+            <img src="/logos/goop.png" alt="Goop" loading="lazy" width="176" height="40" className="w-16 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
+            <img src="/logos/womenshealth.png" alt="Women's Health" loading="lazy" width="176" height="40" className="w-16 md:w-36 lg:w-44 flex-shrink-0 object-contain mix-blend-multiply dark:mix-blend-normal dark:invert transition-all duration-300" />
           </div>
         </section>
 

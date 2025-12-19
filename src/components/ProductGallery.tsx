@@ -25,19 +25,22 @@ const ProductGallery = memo(() => {
     skipSnaps: false
   });
 
-  // Preload first 2 images immediately on mount
+  // Only preload second image after first is ready
   useEffect(() => {
-    const preloadImages = [images[0], images[1]];
-    preloadImages.forEach((src, idx) => {
-      const img = new Image();
-      img.src = src;
-      img.onload = () => {
-        setImagesLoaded(prev => {
-          const newState = [...prev];
-          newState[idx] = true;
-          return newState;
-        });
-      };
+    const img = new Image();
+    img.src = images[1];
+    img.onload = () => {
+      setImagesLoaded(prev => {
+        const newState = [...prev];
+        newState[1] = true;
+        return newState;
+      });
+    };
+    // Mark first as loaded immediately (preloaded in HTML)
+    setImagesLoaded(prev => {
+      const newState = [...prev];
+      newState[0] = true;
+      return newState;
     });
   }, []);
 
