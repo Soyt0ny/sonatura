@@ -17,12 +17,18 @@
     <link rel="dns-prefetch" href="https://api.country.is">
     <link rel="dns-prefetch" href="https://get.geojs.io">
     
-    <!-- Preload critical hero image -->
+    <!-- Preload critical hero images with highest priority -->
     <link rel="preload" href="/products/product-1.png" as="image" fetchpriority="high" type="image/png">
+    <link rel="preload" href="/products/product-2.png" as="image" type="image/png">
     
     <!-- Critical font with font-display swap -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Preload thumbnails for instant gallery feel -->
+    <link rel="prefetch" href="/products/product-3.png" as="image" type="image/png">
+    <link rel="prefetch" href="/products/product-4.png" as="image" type="image/png">
+    <link rel="prefetch" href="/products/product-5.png" as="image" type="image/png">
     
     <meta property="og:type" content="product" />
     <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/e5K2M9NpvNQsNTQHRRQrgahv0XR2/social-images/social-1765177824235-3ea00b22-e378-4477-a41f-833412480efc.png">
