@@ -21,19 +21,35 @@ const CartDrawer = () => {
 
   const handleCheckout = async () => {
     try {
+      console.log('🛒 Starting checkout process...');
       const checkoutUrl = await createCheckout();
+      console.log('🔗 Checkout URL received:', checkoutUrl);
+      
       if (checkoutUrl) {
-        // Usar redirección directa en lugar de window.open para evitar bloqueo en móviles
-        window.location.href = checkoutUrl;
+        // DEBUG: Show URL before redirect to verify it's correct
+        console.log('🚀 Redirecting to:', checkoutUrl);
+        
+        // Verificar que la URL contiene myshopify.com
+        if (!checkoutUrl.includes('myshopify.com')) {
+          console.error('⚠️ WARNING: URL does not contain myshopify.com!', checkoutUrl);
+          toast.error("Error en la URL de checkout", {
+            description: `URL incorrecta: ${checkoutUrl.substring(0, 50)}...`,
+          });
+          return;
+        }
+        
+        // Usar window.open para abrir en nueva pestaña
+        window.open(checkoutUrl, '_blank');
       } else {
+        console.error('❌ No checkout URL returned');
         toast.error("Error al crear el checkout", {
           description: "Por favor intenta de nuevo",
         });
       }
     } catch (error) {
-      console.error('Checkout failed:', error);
+      console.error('❌ Checkout failed:', error);
       toast.error("Error al proceder al pago", {
-        description: "Por favor intenta de nuevo más tarde",
+        description: error instanceof Error ? error.message : "Por favor intenta de nuevo más tarde",
       });
     }
   };
