@@ -160,7 +160,7 @@ const ExclusiveGiftsSection = () => {
                   onClick={() => setSelectedImage(gift.image)}
                 >
                   {/* Product Image */}
-                  <img src={gift.image} alt={gift.title} className="w-full h-full object-cover" />
+                  <img src={gift.image} alt={gift.title} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                 </div>
 
                 {/* Title & Info Icon */}

@@ -17,12 +17,12 @@
     <link rel="dns-prefetch" href="https://api.country.is">
     <link rel="dns-prefetch" href="https://get.geojs.io">
     
-    <!-- Preload critical hero images with responsive hints -->
+    <!-- Preload critical hero image -->
     <link rel="preload" href="/products/product-1.png" as="image" fetchpriority="high" type="image/png">
-    <link rel="preload" href="/products/product-2.png" as="image" type="image/png">
     
-    <!-- Critical font - display swap for faster text render -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Critical font with font-display swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
     
     <meta property="og:type" content="product" />
     <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/e5K2M9NpvNQsNTQHRRQrgahv0XR2/social-images/social-1765177824235-3ea00b22-e378-4477-a41f-833412480efc.png">
@@ -33,10 +33,25 @@
     <meta property="og:description" content="Realifestació de Sonatura libro digital 70% OFF + 4 Regalos GRATIS.">
     <meta name="twitter:description" content="Realifestació de Sonatura libro digital 70% OFF + 4 Regalos GRATIS.">
     <link rel="icon" type="image/x-icon" href="https://storage.googleapis.com/gpt-engineer-file-uploads/e5K2M9NpvNQsNTQHRRQrgahv0XR2/uploads/1765177741299-SONATURA (2).png">
+    
+    <!-- Inline critical CSS for faster first paint -->
+    <style>
+      :root{--background:45 20% 98%;--foreground:220 25% 10%}
+      body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:hsl(45 20% 98%)}
+      #root{min-height:100vh}
+      .skeleton{background:linear-gradient(90deg,hsl(45 10% 90%),hsl(45 10% 95%),hsl(45 10% 90%));background-size:200% 100%;animation:shimmer 1.5s infinite}
+      @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    </style>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Skeleton loader for instant feedback -->
+      <div style="padding:16px;max-width:1280px;margin:0 auto">
+        <div class="skeleton" style="height:48px;border-radius:8px;margin-bottom:16px"></div>
+        <div class="skeleton" style="height:400px;border-radius:12px;margin-bottom:16px"></div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
