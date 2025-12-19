@@ -26,10 +26,8 @@ const CartDrawer = () => {
       console.log('🔗 Checkout URL received:', checkoutUrl);
       
       if (checkoutUrl) {
-        // DEBUG: Show URL before redirect to verify it's correct
         console.log('🚀 Redirecting to:', checkoutUrl);
         
-        // Verificar que la URL contiene myshopify.com
         if (!checkoutUrl.includes('myshopify.com')) {
           console.error('⚠️ WARNING: URL does not contain myshopify.com!', checkoutUrl);
           toast.error("Error en la URL de checkout", {
@@ -38,8 +36,14 @@ const CartDrawer = () => {
           return;
         }
         
-        // Usar window.open para abrir en nueva pestaña
-        window.open(checkoutUrl, '_blank');
+        // En móvil usar redirección directa para evitar bloqueo de popups
+        const isMobile = window.innerWidth < 768;
+        
+        if (isMobile) {
+          window.location.href = checkoutUrl;
+        } else {
+          window.open(checkoutUrl, '_blank');
+        }
       } else {
         console.error('❌ No checkout URL returned');
         toast.error("Error al crear el checkout", {
