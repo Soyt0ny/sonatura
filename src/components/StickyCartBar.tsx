@@ -125,11 +125,10 @@ const StickyCartBar = () => {
 
           {/* Right side - CTA Button */}
           <Button 
-            className="h-9 md:h-11 px-4 md:px-8 text-xs md:text-sm font-semibold uppercase tracking-wide bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520] shadow-lg rounded-lg whitespace-nowrap"
+            className="h-10 md:h-11 px-5 md:px-8 text-xs md:text-sm font-semibold uppercase tracking-wide bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520] shadow-lg rounded-lg whitespace-nowrap"
             onClick={handleAddToCart}
           >
-            <span className="hidden md:inline">Agregar al Carrito</span>
-            <span className="md:hidden">Agregar</span>
+            Agregar al Carrito
           </Button>
         </div>
       </div>
