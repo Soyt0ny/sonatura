@@ -1,8 +1,7 @@
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { useCartStore } from "@/stores/cartStore";
-import { Minus, Plus, Trash2, ShoppingBag, Loader2, Lock, Star } from "lucide-react";
-import { toast } from "sonner";
+import { Minus, Plus, Trash2, ShoppingBag, Lock, Star } from "lucide-react";
 import { useCurrencyDetection, formatPrice } from "@/hooks/useCurrencyDetection";
 
 const CartDrawer = () => {
@@ -12,49 +11,21 @@ const CartDrawer = () => {
     closeCart, 
     removeItem, 
     updateQuantity, 
-    totalPrice, 
-    isLoading,
-    createCheckout 
+    totalPrice
   } = useCartStore();
 
   const currencyInfo = useCurrencyDetection();
 
-  const handleCheckout = async () => {
-    try {
-      console.log('🛒 Starting checkout process...');
-      const checkoutUrl = await createCheckout();
-      console.log('🔗 Checkout URL received:', checkoutUrl);
-      
-      if (checkoutUrl) {
-        console.log('🚀 Redirecting to:', checkoutUrl);
-        
-        if (!checkoutUrl.includes('myshopify.com')) {
-          console.error('⚠️ WARNING: URL does not contain myshopify.com!', checkoutUrl);
-          toast.error("Error en la URL de checkout", {
-            description: `URL incorrecta: ${checkoutUrl.substring(0, 50)}...`,
-          });
-          return;
-        }
-        
-        // En móvil usar redirección directa para evitar bloqueo de popups
-        const isMobile = window.innerWidth < 768;
-        
-        if (isMobile) {
-          window.location.href = checkoutUrl;
-        } else {
-          window.open(checkoutUrl, '_blank');
-        }
-      } else {
-        console.error('❌ No checkout URL returned');
-        toast.error("Error al crear el checkout", {
-          description: "Por favor intenta de nuevo",
-        });
-      }
-    } catch (error) {
-      console.error('❌ Checkout failed:', error);
-      toast.error("Error al proceder al pago", {
-        description: error instanceof Error ? error.message : "Por favor intenta de nuevo más tarde",
-      });
+  const handleCheckout = () => {
+    const checkoutUrl = "https://sonatura-2.myshopify.com/checkouts/cn/hWN6tXcBNbrpCSdJB5PLcN7p/es-mx";
+    
+    // En móvil usar redirección directa para evitar bloqueo de popups
+    const isMobile = window.innerWidth < 768;
+    
+    if (isMobile) {
+      window.location.href = checkoutUrl;
+    } else {
+      window.open(checkoutUrl, '_blank');
     }
   };
 
@@ -164,20 +135,11 @@ const CartDrawer = () => {
                 {/* Botón Proceder al Pago */}
                 <Button 
                   onClick={handleCheckout}
-                  disabled={items.length === 0 || isLoading}
+                  disabled={items.length === 0}
                   className="w-full h-12 text-base font-semibold uppercase tracking-wide bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520] rounded-lg"
                 >
-                  {isLoading ? (
-                    <>
-                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                      Procesando...
-                    </>
-                  ) : (
-                    <>
-                      <Lock className="w-4 h-4 mr-2" />
-                      Continuar al Pago
-                    </>
-                  )}
+                  <Lock className="w-4 h-4 mr-2" />
+                  Continuar al Pago
                 </Button>
                 
                 {/* Footer con rating a la izquierda y garantías a la derecha */}
