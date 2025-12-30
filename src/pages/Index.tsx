@@ -4,6 +4,7 @@ import AnnouncementBar from "@/components/AnnouncementBar";
 import ProductInfo from "@/components/ProductInfo";
 import StickyCartBar from "@/components/StickyCartBar";
 import DailyOrdersNotification from "@/components/DailyOrdersNotification";
+import ExitIntentPopup from "@/components/ExitIntentPopup";
 
 // Lazy load below-the-fold components
 const BeforeAfterCarousel = lazy(() => import("@/components/BeforeAfterCarousel"));
@@ -26,6 +27,7 @@ const SectionSkeleton = () => (
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <ExitIntentPopup />
       <AnnouncementBar />
       <DailyOrdersNotification />
       <StickyCartBar />
