@@ -17,7 +17,7 @@ const CartDrawer = () => {
   const currencyInfo = useCurrencyDetection();
 
   const handleCheckout = () => {
-    const checkoutUrl = "https://sonatura-2.myshopify.com/checkouts/cn/hWN718ZVaBM5wG38sbfFlLnu/es-mx?_r=AQABYEqj5Ms058YvVAccltIevC5ZK3l7IySQ5F-IR5ky7fA&adminUrl=admin.shopify.com&cart_link_id=dGcXwxrt&editedAt=2025-12-27T06%3A50%3A22Z&isPublished=true&preview_theme_id=160414433369&profileName=Configuraci%C3%B3n++de+Mi+tienda&profile_preview_token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxZnR1ZXItY3YubXlzaG9waWZ5LmNvbSIsImF1ZCI6IjFmdHVlci1jdi5teXNob3BpZnkuY29tIiwibmJmIjoxNzY3MDcyNjU4LCJjaGVja291dF9wcm9maWxlX2lkIjozNDEzMDgyMjAxLCJjaGVja291dF9wcm9maWxlX3B1Ymxpc2hlZCI6dHJ1ZSwidXNlcl9pZCI6MTA1OTM5NjY0OTg1LCJleHAiOjE3NjcwNzYyNTh9.8vl4vpMuNZdXb_3eK-Q9OmHd58tVW25eKLuRjKDV20M";
+    const checkoutUrl = "https://sonatura-2.myshopify.com/checkouts/cn/hWN718ZVaBM5wG38sbfFlLnu/es-mx?_r=AQABYgSb9v_4Q_hZv3iBqbDj_NLUcRMQWayi1-j0rwMGc8k&adminUrl=admin.shopify.com&cart_link_id=6winCclk&editedAt=2025-12-27T06%3A50%3A22Z&isPublished=true&preview_theme_id=160414433369&profileName=Configuraci%C3%B3n++de+Mi+tienda&profile_preview_token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxZnR1ZXItY3YubXlzaG9waWZ5LmNvbSIsImF1ZCI6IjFmdHVlci1jdi5teXNob3BpZnkuY29tIiwibmJmIjoxNzY5MDI5Nzc3LCJjaGVja291dF9wcm9maWxlX2lkIjozNDEzMDgyMjAxLCJjaGVja291dF9wcm9maWxlX3B1Ymxpc2hlZCI6dHJ1ZSwidXNlcl9pZCI6MTA1OTM5NjY0OTg1LCJleHAiOjE3NjkwMzMzNzd9.HkxnvvAsGoCCTYF2Ffl_meH48ay7m3kGzmTd7loKkNs";
     
     // En móvil usar redirección directa para evitar bloqueo de popups
     const isMobile = window.innerWidth < 768;
