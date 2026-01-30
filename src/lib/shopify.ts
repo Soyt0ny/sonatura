@@ -2,7 +2,7 @@
 const SHOPIFY_API_VERSION = '2025-07';
 const SHOPIFY_STORE_PERMANENT_DOMAIN = 'sonatura-qr7wi.myshopify.com';
 const SHOPIFY_STOREFRONT_URL = `https://${SHOPIFY_STORE_PERMANENT_DOMAIN}/api/${SHOPIFY_API_VERSION}/graphql.json`;
-const SHOPIFY_STOREFRONT_TOKEN = '708e19a92daa639736404afc6461272d';
+const SHOPIFY_STOREFRONT_TOKEN = 'a0e40b13dbec63fbd128e58cf5aa0010';
 
 export interface ShopifyProduct {
   node: {
