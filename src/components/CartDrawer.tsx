@@ -1,31 +1,34 @@
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { useCartStore } from "@/stores/cartStore";
-import { Minus, Plus, Trash2, ShoppingBag, Lock, Star } from "lucide-react";
+import { Minus, Plus, Trash2, ShoppingBag, Lock, Star, Loader2 } from "lucide-react";
 import { useCurrencyDetection, formatPrice } from "@/hooks/useCurrencyDetection";
 
 const CartDrawer = () => {
   const { 
     items, 
     isOpen, 
+    isLoading,
     closeCart, 
     removeItem, 
     updateQuantity, 
-    totalPrice
+    totalPrice,
+    createCheckout
   } = useCartStore();
 
   const currencyInfo = useCurrencyDetection();
 
-  const handleCheckout = () => {
-    const checkoutUrl = "https://sonatura-2.myshopify.com/checkouts/cn/hWN718ZVaBM5wG38sbfFlLnu/es-mx?_r=AQABYgSb9v_4Q_hZv3iBqbDj_NLUcRMQWayi1-j0rwMGc8k&adminUrl=admin.shopify.com&cart_link_id=6winCclk&editedAt=2025-12-27T06%3A50%3A22Z&isPublished=true&preview_theme_id=160414433369&profileName=Configuraci%C3%B3n++de+Mi+tienda&profile_preview_token=eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxZnR1ZXItY3YubXlzaG9waWZ5LmNvbSIsImF1ZCI6IjFmdHVlci1jdi5teXNob3BpZnkuY29tIiwibmJmIjoxNzY5MDI5Nzc3LCJjaGVja291dF9wcm9maWxlX2lkIjozNDEzMDgyMjAxLCJjaGVja291dF9wcm9maWxlX3B1Ymxpc2hlZCI6dHJ1ZSwidXNlcl9pZCI6MTA1OTM5NjY0OTg1LCJleHAiOjE3NjkwMzMzNzd9.HkxnvvAsGoCCTYF2Ffl_meH48ay7m3kGzmTd7loKkNs";
-    
-    // En móvil usar redirección directa para evitar bloqueo de popups
-    const isMobile = window.innerWidth < 768;
-    
-    if (isMobile) {
-      window.location.href = checkoutUrl;
-    } else {
-      window.open(checkoutUrl, '_blank');
+  const handleCheckout = async () => {
+    const checkoutUrl = await createCheckout();
+    if (checkoutUrl) {
+      // En móvil usar redirección directa para evitar bloqueo de popups
+      const isMobile = window.innerWidth < 768;
+      
+      if (isMobile) {
+        window.location.href = checkoutUrl;
+      } else {
+        window.open(checkoutUrl, '_blank');
+      }
     }
   };
 
@@ -135,11 +138,15 @@ const CartDrawer = () => {
                 {/* Botón Proceder al Pago */}
                 <Button 
                   onClick={handleCheckout}
-                  disabled={items.length === 0}
+                  disabled={items.length === 0 || isLoading}
                   className="w-full h-12 text-base font-semibold uppercase tracking-wide bg-gradient-to-r from-[#C7A867] to-[#D5C3A5] hover:from-[#D5C3A5] hover:to-[#C7A867] text-[#0C1520] rounded-lg"
                 >
-                  <Lock className="w-4 h-4 mr-2" />
-                  Continuar al Pago
+                  {isLoading ? (
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  ) : (
+                    <Lock className="w-4 h-4 mr-2" />
+                  )}
+                  {isLoading ? "Procesando..." : "Continuar al Pago"}
                 </Button>
                 
                 {/* Footer con rating a la izquierda y garantías a la derecha */}
